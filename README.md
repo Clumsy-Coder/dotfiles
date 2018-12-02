@@ -28,3 +28,15 @@ Clone or fork the repo.
 Add your own config and settings
 Commit and push it to remote (if you want to)
 Share it with others (coworkers, friends, etc)
+
+# Installation
+
+1. Clone the repo at unix **home** directory
+    1. `cd ~`
+    2. `git clone https://github.com/Clumsy-Coder/unix-terminal-config.git`
+2. Run the following command
+    1. `echo 'source unix-terminal-config/index' >> ~/.bashrc`
+3. Reinitialize bash (2 options)
+    1. Close and open your terminal
+    2. Reload bash configs
+        1. Run the following `source ~/.bashrc`
