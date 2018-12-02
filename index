@@ -2,6 +2,7 @@
 source ~/unix-terminal-config/alias/index
 
 # import environment variables
+source ~/unix-terminal/environment/index
 
 # import tools config
 source ~/unix-terminal-config/tools/index
