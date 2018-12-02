@@ -1,0 +1,7 @@
+# import aliases
+source ~/unix-terminal-config/alias/index
+
+# import environment variables
+
+# run command after loading config and settings
+echo hello $(whoami)
