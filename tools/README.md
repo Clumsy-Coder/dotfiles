@@ -26,10 +26,13 @@ Ex:
 1. Make a folder called **vim**
 2. Create a vimrc file and add your own config
 3. Create a index file and place it in the vim folder
-4. Add script for the vim/index file to setup the vimrc file. In this case create a symbolic link to the vimrc file at ~
+4. Add script for the vim/index file to setup the vimrc file. In this case create a hard link to the vimrc file at ~
 5. Import the vim/index file in tools/index file
 
-# Why symbolic link
-So the changes to the .vimrc for example file are made in one place, and since the symbolic link will automatically make those changes apparent
+# Why hard link
+Hard links are used for files only.
+Symbolic link are used for folders only
 
-Go to [**link**](https://www.nixtutor.com/freebsd/understanding-symbolic-links/) for more details about symbolic link
+So the changes to the .vimrc for example file are made in one place, and since the hard link will automatically make those changes apparent
+
+Go to [**link**](https://www.nixtutor.com/freebsd/understanding-symbolic-links/) for more details about hard and symbolic link
