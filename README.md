@@ -29,6 +29,11 @@ Add your own config and settings
 Commit and push it to remote (if you want to)
 Share it with others (coworkers, friends, etc)
 
+# Prerequisite
+1. You have **bash** available in your system
+2. bash is the **default shell** in your terminal
+3. You have **git** installed on your machine
+
 # Installation
 
 1. Clone the repo at unix **home** directory
