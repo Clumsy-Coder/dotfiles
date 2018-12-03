@@ -18,16 +18,16 @@ Import the shellscript file for each tool folder in the unix-terminal-config/too
 # Adding tools settings and config
 1. Make a folder for the corresponding tool
 2. Add your settings and config in the folder
-3. Create a **index** file for the folder
+3. Create a **index.sh** file for the folder
 4. Write a script to setup the index file in the folder
 5. Add the folder index file to the tools/index file
 
 Ex:
 1. Make a folder called **vim**
 2. Create a vimrc file and add your own config
-3. Create a index file and place it in the vim folder
+3. Create a vim.sh file and place it in the vim folder
 4. Add script for the vim/index file to setup the vimrc file. In this case create a hard link to the vimrc file at ~
-5. Import the vim/index file in tools/index file
+5. Import the vim/vim.sh file in tools/tools.sh file
 
 # Why hard link
 Hard links are used for files only.
