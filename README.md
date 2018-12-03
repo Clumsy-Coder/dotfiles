@@ -1,6 +1,5 @@
-# unix-terminal-config
-Your personal config for setting up Unix in terminal
-Ex: config for bash, zsh, fish, etc
+# zsh-terminal-config
+Your personal config for setting up a zsh terminal
 
 All your configurations on setting the terminal is done here.
 
@@ -18,10 +17,10 @@ This can also be extended to focus on one specific Unix shell. Just fork the rep
 # Why create this repo
 When a user is setting up their new unix machine, they end up manually add configs to their liking.
 
-Instead of repeatidly manualy set the machine, Have a scripts do it for. Better yet, fork your own version.
+Instead of repeatedly manually set the machine, Have a scripts do it for. Better yet, fork your own version.
 
 This can be especially annoying when setting up a workstation, where all the machines must have the same config.
-Ex: terminal config, enviornment variables set right, aliases to set that a company would use.
+Ex: terminal config, environment variables set right, aliases to set that a company would use.
 
 # What do I do with this
 Clone or fork the repo.
@@ -30,18 +29,23 @@ Commit and push it to remote (if you want to)
 Share it with others (coworkers, friends, etc)
 
 # Prerequisite
-1. You have **bash** available in your system
-2. bash is the **default shell** in your terminal
+1. You have **zsh** installed in your system
+    1. Go to **[link](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH#zsh)** to install zsh
+        1. Tip: debian based OS have zsh in a package manager in **apt** or **apt-get**
+2. zsh is the **default shell** in your terminal
+    1. Go to **[link](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH#install-and-set-up-zsh-as-default)** to set zsh as default
 3. You have **git** installed on your machine
+4. You have **oh-my-zsh** installed on your machine
+    1. Go to **[link](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH#how-to-install-zsh-in-many-platforms)**
 
 # Installation
 
 1. Clone the repo at unix **home** directory
     1. `cd ~`
-    2. `git clone https://github.com/Clumsy-Coder/unix-terminal-config.git`
+    2. `git clone https://github.com/Clumsy-Coder/zsh-terminal-config.git`
 2. Run the following command
-    1. `echo 'source unix-terminal-config/index' >> ~/.bashrc`
-3. Reinitialize bash (2 options)
+    1. `echo 'source zsh-terminal-config/index' >> ~/.zshrc`
+3. Reinitialize zsh (2 options)
     1. Close and open your terminal
-    2. Reload bash configs
-        1. Run the following `source ~/.bashrc`
+    2. Reload zsh configs
+        1. Run the following `source ~/.zshrc`
