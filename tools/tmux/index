@@ -1,2 +1,0 @@
-# create a hard link to ~/tmux.conf
-ln -f ~/unix-terminal-config/tools/tmux/tmux.conf ~/tmux.conf
