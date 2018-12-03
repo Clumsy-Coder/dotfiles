@@ -1,11 +1,11 @@
 # import aliases
-source ~/unix-terminal-config/alias/index
+source ~/zsh-terminal-config/alias/index
 
 # import environment variables
-source ~/unix-terminal/environment/index
+source ~/zsh-terminal/environment/index
 
 # import tools config
-source ~/unix-terminal-config/tools/index
+source ~/zsh-terminal-config/tools/index
 
 # run command after loading config and settings
 echo hello $(whoami)
