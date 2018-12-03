@@ -1,7 +1,6 @@
 # import alias
-alias l='ls -lah'
-
-# if the file is getting big, split the aliases into groups. Ex alias for git, alias for tmux
-# source aliasFile1
-# source aliasFile2
-# source aliasFile3
+alias l='ls -lah --group-directories-first'
+alias cls='clear'
+alias mkcd='function _mkcd(){ mkdir $1; cd $1;}; _mkcd'   # make a dir and cd to it. mkcd newDir
+alias c='xclip'
+alias v='xclip -o'
