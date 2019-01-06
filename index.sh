@@ -1,5 +1,5 @@
 # import environment variables
-source ~/zsh-terminal/environment/environment.sh
+source ~/zsh-terminal-config/environment/environment.sh
 
 # import tools config
 source ~/zsh-terminal-config/tools/tools.sh
