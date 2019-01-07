@@ -24,7 +24,6 @@ antigen bundle djui/alias-tips                      # display aliases based on t
 antigen bundle ael-code/zsh-colored-man-pages       # adds a bit of colour to man pages
 antigen bundle joel-porquet/zsh-dircolors-solarized # adding colour when listing current directory contents
 antigen bundle webyneter/docker-aliases             # aliases for Docker
-antigen bundle so-fancy/diff-so-fancy               # adding human readability for Git diff's
 # antigen bundle gretzky/auto-color-ls
 # antigen bundle hchbaw/auto-fu.zsh
 # antigen bundle arzzen/calc.plugin.zsh
