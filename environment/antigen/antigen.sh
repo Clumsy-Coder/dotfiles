@@ -1,4 +1,7 @@
-source /usr/local/share/antigen/antigen.zsh
+# Assuming antigen is installed
+# If antigen is not installed the run the following command
+# curl -L git.io/antigen > ~/antigen.zsh
+source ~/antigen.zsh
 
 # load antigen plugins
 antigen bundle git                # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#git
