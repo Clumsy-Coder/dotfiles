@@ -8,3 +8,4 @@ source ~/zsh-terminal-config/tools/tools.sh
 source ~/zsh-terminal-config/alias/alias.sh
 
 # run command after loading config and settings
+neofetch --config ~/zsh-terminal-config/environment/neofetch/config.conf
