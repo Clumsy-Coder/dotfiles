@@ -1,11 +1,11 @@
 # import environment variables
-source ~/zsh-terminal-config/environment/environment.sh
+source ~/dotfiles/environment/environment.sh
 
 # import tools config
-source ~/zsh-terminal-config/tools/tools.sh
+source ~/dotfiles/tools/tools.sh
 
 # import aliases
-source ~/zsh-terminal-config/alias/alias.sh
+source ~/dotfiles/alias/alias.sh
 
 # run command after loading config and settings
-neofetch --config ~/zsh-terminal-config/environment/neofetch/config.conf
+neofetch --config ~/dotfiles/environment/neofetch/config.conf
