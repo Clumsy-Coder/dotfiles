@@ -1,23 +1,22 @@
-OS="`uname`"
-case $OS in
+case `uname` in
   'Linux')
-    OS='Linux'
+    #OS='Linux'
     alias ls='ls --color=auto'
     source ~/dotfiles/alias/debian/alias.sh
     ;;
   'FreeBSD')
-    OS='FreeBSD'
+    #OS='FreeBSD'
     alias ls='ls -G'
     ;;
   'WindowsNT')
-    OS='Windows'
+    #OS='Windows'
     ;;
   'Darwin') 
-    OS='Mac'
+    #OS='Mac'
     source ~/dotfiles/alias/osx/alias.sh
     ;;
   'SunOS')
-    OS='Solaris'
+    #OS='Solaris'
     ;;
   'AIX') ;;
   *) ;;
