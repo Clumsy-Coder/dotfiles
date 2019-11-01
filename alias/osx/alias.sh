@@ -21,7 +21,7 @@ alias pythonDev='cd ~/Documents/Development/python'
 
 #command alias
 alias cls='clear'
-# alias ls='gls --color'    # need 'coreutils' package. install with brew install coreutils
+alias ls='gls --color'    # need 'coreutils' package. install with brew install coreutils
 alias l='ls -lah --group-directories-first'
 alias ls-all-dir='ls -la | grep "^d"'   #list all folders, even the hidden ones
 alias ls-dir='ls -l | grep "^d"'        #list all folders
