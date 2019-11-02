@@ -54,6 +54,7 @@ set shiftwidth=2
 set expandtab
 set colorcolumn=100
 colorscheme gruvbox
-let g:gruvbox_contrast_dark = 'soft'	" 'hard' , 'medium' or 'soft'
+set background=dark    " Setting dark mode
+let g:gruvbox_contrast_dark = 'hard'	" 'hard' , 'medium' or 'soft'
 let g:airline_powerline_fonts = 1
 "let g:rainbow_active = 1
