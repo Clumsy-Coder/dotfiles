@@ -1,4 +1,4 @@
-# zsh-terminal-config
+# dotfiles
 
 Your personal config for setting up a zsh terminal
 
@@ -39,19 +39,3 @@ This can also be extended to focus on one specific Unix shell. Just fork the rep
    1. Close and open your terminal
    2. Reload zsh configs
       1. Run the following `source ~/.zshrc`
-
-# Why create this repo
-
-When a user is setting up their new unix machine, they end up manually add configs to their liking.
-
-Instead of repeatedly manually set the machine, Have a scripts do it for. Better yet, fork your own version.
-
-This can be especially annoying when setting up a workstation, where all the machines must have the same config.
-Ex: terminal config, environment variables set right, aliases to set that a company would use.
-
-# What do I do with this
-
-Clone or fork the repo.
-Add your own config and settings
-Commit and push it to remote (if you want to)
-Share it with others (coworkers, friends, etc)
