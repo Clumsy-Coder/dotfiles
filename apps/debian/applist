@@ -1,6 +1,5 @@
 git
 vim
-gotop
 nano
 htop
 neofetch
@@ -13,7 +12,7 @@ wget
 tldr
 tree
 gnome-tweak-tool
-7zip
-unrar
+p7zip-full
 zip
 unzip
+tmuxinator
