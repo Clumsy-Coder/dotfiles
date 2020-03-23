@@ -33,6 +33,7 @@ antigen bundle webyneter/docker-aliases             # aliases for Docker
 # antigen bundle Tarrasch/zsh-colors
 # antigen bundle adrieankhisbe/diractions
 # antigen bundle zpm-zsh/ls
+antigen bundle 'wfxr/forgit'                        # cmd utility for Git using fzf
 
 # Load a theme
 antigen theme bhilburn/powerlevel9k                 # load powerlevel9k zsh theme
