@@ -5,13 +5,7 @@ set encoding=utf-8
 
 source ~/dotfiles/tools/vim/plugins.vim     " load Vim plugins
 source ~/dotfiles/tools/vim/hotkeys.vim     " load custom Vim hotkeys
-
-"---------------------------------------------
-" NERDTree config
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-" autocmd vimenter * NERDTree	" open NERDTree when starting vim
-let NERDTreeShowHidden=1
+source ~/dotfiles/tools/vim/nerdtree.vim    " load NERDtree settings
 
 "---------------------------------------------
 " vim editor config
