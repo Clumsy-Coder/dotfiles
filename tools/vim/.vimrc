@@ -1,38 +1,9 @@
 set encoding=utf-8
 
 "---------------------------------------------
-" vim-plug plugin install
-call plug#begin('~/.vim/plugged')
+" import settings from files
 
-Plug 'scrooloose/nerdtree'
-Plug 'airblade/vim-gitgutter'
-Plug 'vim-airline/vim-airline'
-Plug 'majutsushi/tagbar'
-Plug 'morhetz/gruvbox'
-Plug 'pangloss/vim-javascript'
-Plug 'othree/yajs.vim'
-Plug 'yggdroot/indentline'
-Plug 'ekalinin/dockerfile.vim'
-Plug 'elzr/vim-json'
-Plug 'othree/html5.vim'
-Plug 'sheerun/vim-polyglot'
-Plug 'plasticboy/vim-markdown'
-Plug 'leafgarland/typescript-vim'
-Plug 'chrisbra/colorizer'
-Plug 'machakann/vim-highlightedyank'
-Plug 'itchyny/vim-cursorword'
-Plug 'vim-scripts/Rainbow-Parenthesis'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'jparise/vim-graphql'
-Plug 'vim-scripts/SyntaxComplete'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'rhysd/git-messenger.vim'
-Plug 'chun-yang/auto-pairs'
-Plug 'yuttie/comfortable-motion.vim'
-Plug 'mxw/vim-jsx'
-Plug 'ryanoasis/vim-devicons'
-
-call plug#end()
+source ~/dotfiles/tools/vim/plugins.vim     " load Vim plugins
 
 "---------------------------------------------
 " keyboard shortcut
