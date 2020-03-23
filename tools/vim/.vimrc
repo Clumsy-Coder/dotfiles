@@ -4,11 +4,7 @@ set encoding=utf-8
 " import settings from files
 
 source ~/dotfiles/tools/vim/plugins.vim     " load Vim plugins
-
-"---------------------------------------------
-" keyboard shortcut
-" Toggle NERDTree with Ctrl+n 
-map <C-n> :NERDTreeToggle<CR>
+source ~/dotfiles/tools/vim/hotkeys.vim     " load custom Vim hotkeys
 
 "---------------------------------------------
 " NERDTree config
