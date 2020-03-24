@@ -29,6 +29,8 @@ This can also be extended to focus on one specific Unix shell. Just fork the rep
    1. Go to **[link](https://github.com/zsh-users/antigen)**
 6. You have VimPlug installed
    1. Go to **[link](https://github.com/junegunn/vim-plug#installation)**
+   2. Install plugins
+      1. `vim +PlugInstall +qall`
 
 # Installation
 
