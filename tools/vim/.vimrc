@@ -5,5 +5,4 @@ set encoding=utf-8
 
 source ~/dotfiles/tools/vim/plugins.vim     " load Vim plugins
 source ~/dotfiles/tools/vim/hotkeys.vim     " load custom Vim hotkeys
-source ~/dotfiles/tools/vim/nerdtree.vim    " load NERDtree settings
 source ~/dotfiles/tools/vim/editor.vim      " load Vim editor settings
