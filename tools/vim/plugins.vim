@@ -40,7 +40,6 @@ Plug 'chun-yang/auto-pairs'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'mxw/vim-jsx'
 Plug 'ryanoasis/vim-devicons'
-Plug 'leafgarland/typescript-vim'
 Plug 'ianks/vim-tsx'
 Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp'
@@ -48,9 +47,7 @@ Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'xuyuanp/nerdtree-git-plugin'
-Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'preservim/nerdcommenter'
 Plug 'herringtondarkholme/yats.vim'
