@@ -56,3 +56,11 @@ Plug 'preservim/nerdcommenter'
 Plug 'herringtondarkholme/yats.vim'
 
 call plug#end()
+
+" import all plugin configs
+" plugin configs are located in ~/dotfiles/tools/vim/pluginConfig
+" these contain config for their respective plugins
+" any hotkeys for the plugins will be placed in ~/dotfiles/tools/vim/hotkeys.vim
+for pluginConfigFile in split(glob('~/dotfiles/tools/vim/pluginConfig/*.config.vim'), '\n')
+    exe 'source' pluginConfigFile
+endfor
