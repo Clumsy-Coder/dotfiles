@@ -30,7 +30,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'chrisbra/colorizer'
 Plug 'machakann/vim-highlightedyank'
 Plug 'itchyny/vim-cursorword'
-Plug 'vim-scripts/Rainbow-Parenthesis'
+Plug 'frazrepo/vim-rainbow'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jparise/vim-graphql'
 Plug 'vim-scripts/SyntaxComplete'
@@ -51,6 +51,8 @@ Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'preservim/nerdcommenter'
 Plug 'herringtondarkholme/yats.vim'
+Plug 'chrisbra/colorizer'
+Plug 'ap/vim-css-color'
 
 call plug#end()
 
@@ -61,3 +63,5 @@ call plug#end()
 for pluginConfigFile in split(glob('~/dotfiles/tools/vim/pluginConfig/*.config.vim'), '\n')
     exe 'source' pluginConfigFile
 endfor
+
+let g:rainbow_active = 1              " enable vim-rainbow plugin
