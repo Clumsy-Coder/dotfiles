@@ -8,4 +8,4 @@ source ~/dotfiles/tools/tools.sh
 source ~/dotfiles/alias/alias.sh
 
 # run command after loading config and settings
-neofetch --config ~/dotfiles/environment/neofetch/config.conf
+#neofetch --config ~/dotfiles/environment/neofetch/config.conf
