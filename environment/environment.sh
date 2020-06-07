@@ -12,7 +12,8 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH="$HOME/.fastlane/bin:$PATH"
-
+export GEM_HOME=~/.gems
+export PATH="$GEM_HOME/bin:$PATH"
 # setting up homebrew autoupdate
 # using https://github.com/DomT4/homebrew-autoupdate
 # auto update in 24 hours (represented in seconds)
