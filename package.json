@@ -4,6 +4,7 @@
   "description": "Your personal config for setting up a zsh terminal",
   "license": "MIT",
   "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/commit-analyzer": "^8.0.1",
     "@semantic-release/release-notes-generator": "^9.0.1"
   }
