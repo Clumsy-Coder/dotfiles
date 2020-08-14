@@ -1,3 +1,11 @@
+## [1.1.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.0.0...1.1.0) (2020-08-14)
+
+
+### Features
+
+* **dependabot:** add dependabot config file ([28e0150](https://github.com/Clumsy-Coder/dotfiles/commit/28e015097fec5dc3952aca9bbc6202fbb943ff25))
+* **github-action:** add github action for automerging dependabot pull requests ([84602a9](https://github.com/Clumsy-Coder/dotfiles/commit/84602a9a3babb834c082b3f1b4a7c4dd83842f44))
+
 ## 1.0.0 (2020-08-14)
 
 
