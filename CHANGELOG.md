@@ -1,3 +1,22 @@
+## [1.3.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.2.4...1.3.0) (2021-09-22)
+
+
+### Features
+
+* **script:** add script to install NodeJS v16 ([9669661](https://github.com/Clumsy-Coder/dotfiles/commit/9669661f0fac69fead08235f2239f6b723ef12c2))
+* **script:** add script to install nvm and global npm packages ([45c14f0](https://github.com/Clumsy-Coder/dotfiles/commit/45c14f0d2464380b47c90956ed6a83d605944eb3))
+* **setup:** add script to install docker ([2e59f08](https://github.com/Clumsy-Coder/dotfiles/commit/2e59f08fdcacbe5de3ec0ea0482af7c71054aead))
+* **setup:** add script to install vscode and it's extensions ([14b1226](https://github.com/Clumsy-Coder/dotfiles/commit/14b12269660d1450388054bec5ad88e1865ecc04))
+* **setup:** create a setup script for debian based system ([00d880f](https://github.com/Clumsy-Coder/dotfiles/commit/00d880fe1ca5de9ad24537f35b7e6716ebb64aad))
+* **setup:** enable running scripts in setup/debian/programs/ folder ([8cc17b7](https://github.com/Clumsy-Coder/dotfiles/commit/8cc17b74d32be84a6d43850cd44a34ae0ba93187))
+
+
+### Miscellaneous Chores
+
+* **alias:** add alias using program 'exa' for osx ([c8a9793](https://github.com/Clumsy-Coder/dotfiles/commit/c8a979380b959c6971a3fc5bfb25c4222068291a))
+* **applist:** add nmap, cmatrix, figlet, glances to file ([e05e02b](https://github.com/Clumsy-Coder/dotfiles/commit/e05e02b4dd9fe1d08c81f4b4baca6aa00f5032c6))
+* **script:** update script to install applications without asking for conformation ([4a6513b](https://github.com/Clumsy-Coder/dotfiles/commit/4a6513b05282ad350eed74450bf81f3d693d9c71))
+
 ### [1.2.4](https://github.com/Clumsy-Coder/dotfiles/compare/1.2.3...1.2.4) (2021-09-22)
 
 
