@@ -1,3 +1,11 @@
+### [1.2.2](https://github.com/Clumsy-Coder/dotfiles/compare/1.2.1...1.2.2) (2021-09-22)
+
+
+### Build System
+
+* **deps:** bump ini from 1.3.5 to 1.3.8 ([#19](https://github.com/Clumsy-Coder/dotfiles/issues/19)) ([0ecc0ea](https://github.com/Clumsy-Coder/dotfiles/commit/0ecc0eacd1a215086b897d261265294e5ff443b4))
+* **devDep:** bump conventional-changelog-conventionalcommits ([#54](https://github.com/Clumsy-Coder/dotfiles/issues/54)) ([b19b527](https://github.com/Clumsy-Coder/dotfiles/commit/b19b527bd26b7833d3f9f11ff215009571d4a70e))
+
 ### [1.2.1](https://github.com/Clumsy-Coder/dotfiles/compare/1.2.0...1.2.1) (2021-09-22)
 
 
