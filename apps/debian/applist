@@ -16,3 +16,7 @@ p7zip-full
 zip
 unzip
 tmuxinator
+nmap
+cmatrix
+figlet
+glances
