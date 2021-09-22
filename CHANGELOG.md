@@ -1,3 +1,23 @@
+### [1.2.3](https://github.com/Clumsy-Coder/dotfiles/compare/1.2.2...1.2.3) (2021-09-22)
+
+
+### Build System
+
+* **deps:** bump glob-parent from 5.1.1 to 5.1.2 ([#45](https://github.com/Clumsy-Coder/dotfiles/issues/45)) ([30e1fe9](https://github.com/Clumsy-Coder/dotfiles/commit/30e1fe96a15c1f6d8be8759330101c275274d388))
+* **deps:** bump handlebars from 4.7.6 to 4.7.7 ([#37](https://github.com/Clumsy-Coder/dotfiles/issues/37)) ([10b5692](https://github.com/Clumsy-Coder/dotfiles/commit/10b56921b16cb2600a3f73354863279f96e1fc51))
+* **deps:** bump hosted-git-info from 2.8.8 to 2.8.9 ([#38](https://github.com/Clumsy-Coder/dotfiles/issues/38)) ([468e934](https://github.com/Clumsy-Coder/dotfiles/commit/468e934fae02d40b021a1c2a6c9b0df51608b011))
+* **deps:** bump lodash from 4.17.20 to 4.17.21 ([#40](https://github.com/Clumsy-Coder/dotfiles/issues/40)) ([ec62dac](https://github.com/Clumsy-Coder/dotfiles/commit/ec62dacf2f36d2905f57d916cea4aa4331386f78))
+* **deps:** bump normalize-url from 5.1.0 to 5.3.1 ([#42](https://github.com/Clumsy-Coder/dotfiles/issues/42)) ([2e61eac](https://github.com/Clumsy-Coder/dotfiles/commit/2e61eac6e285a71797d3b2a22a5b89c47af5f6ee))
+* **deps:** bump npm-user-validate from 1.0.0 to 1.0.1 ([#11](https://github.com/Clumsy-Coder/dotfiles/issues/11)) ([d1cc154](https://github.com/Clumsy-Coder/dotfiles/commit/d1cc15476552cc076bbf52c86e16fb808ef17960))
+* **deps:** bump path-parse from 1.0.6 to 1.0.7 ([#48](https://github.com/Clumsy-Coder/dotfiles/issues/48)) ([978543a](https://github.com/Clumsy-Coder/dotfiles/commit/978543a9f3060113ad9a1112f344fb81a906b6d3))
+* **deps:** bump ssri from 6.0.1 to 6.0.2 ([#35](https://github.com/Clumsy-Coder/dotfiles/issues/35)) ([726151c](https://github.com/Clumsy-Coder/dotfiles/commit/726151c628257098ae7ca4f671181f41bc2b0042))
+* **deps:** bump trim-newlines from 3.0.0 to 3.0.1 ([#43](https://github.com/Clumsy-Coder/dotfiles/issues/43)) ([91d90bb](https://github.com/Clumsy-Coder/dotfiles/commit/91d90bb61e0ad2f6df450d4a4a9e9e0f4e0443d4))
+* **deps:** bump y18n from 3.2.1 to 3.2.2 ([#32](https://github.com/Clumsy-Coder/dotfiles/issues/32)) ([3b2929c](https://github.com/Clumsy-Coder/dotfiles/commit/3b2929c9895df9d4e7263155f5ca839f0b47af41))
+* **devDep:** bump @google/semantic-release-replace-plugin ([#52](https://github.com/Clumsy-Coder/dotfiles/issues/52)) ([572d983](https://github.com/Clumsy-Coder/dotfiles/commit/572d983ca316dff811ec39484ed086b6409dbf44))
+* **devDep:** bump @semantic-release/github from 7.0.7 to 7.2.3 ([#39](https://github.com/Clumsy-Coder/dotfiles/issues/39)) ([faa3e00](https://github.com/Clumsy-Coder/dotfiles/commit/faa3e0036aa8e6ae761c20e8ec89d22fcd4d4036))
+* **devDep:** bump @semantic-release/release-notes-generator ([#44](https://github.com/Clumsy-Coder/dotfiles/issues/44)) ([5d54487](https://github.com/Clumsy-Coder/dotfiles/commit/5d5448791cb40eccd910c76a96c9911bcdb777df))
+* **devDep:** bump semantic-release from 17.1.1 to 17.4.7 ([#51](https://github.com/Clumsy-Coder/dotfiles/issues/51)) ([1cb3acf](https://github.com/Clumsy-Coder/dotfiles/commit/1cb3acf92ce1f5d4605bdc468fc9202ecca6b36d))
+
 ### [1.2.2](https://github.com/Clumsy-Coder/dotfiles/compare/1.2.1...1.2.2) (2021-09-22)
 
 
