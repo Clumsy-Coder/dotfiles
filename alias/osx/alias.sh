@@ -28,6 +28,7 @@ alias ls-dir='ls -l | grep "^d"'        #list all folders
 alias mkcd='function _mkcd(){ mkdir $1; cd $1;};_mkcd'			#make a directory and go into it
 alias cntFiles='ls -F |grep -v / | wc -l'
 alias ..='cd ..'
+alias lse='exa -lahFHmguU --git --group-directories-first'
 
 #git alias
 # alias gits='git status'
