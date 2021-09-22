@@ -3,8 +3,8 @@
 # update and upgrade
 sudo apt update && sudo apt full-upgrade -y
 
-# install programs
-while read line; do sudo apt install $line; done < ../../apps/debian/applist
+# install programs. Use ../../apps/debian/applist
+while read line; do sudo apt install $line -y; done < ../../apps/debian/applist
 
 # run all scripts from ./programs/ folder
 for f in programs/*.sh; do bash "$f" -H; done
