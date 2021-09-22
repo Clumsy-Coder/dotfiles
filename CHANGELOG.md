@@ -1,3 +1,11 @@
+### [1.2.4](https://github.com/Clumsy-Coder/dotfiles/compare/1.2.3...1.2.4) (2021-09-22)
+
+
+### Build System
+
+* **devDep:** bump @semantic-release/git from 9.0.0 to 9.0.1 ([#59](https://github.com/Clumsy-Coder/dotfiles/issues/59)) ([f1b1616](https://github.com/Clumsy-Coder/dotfiles/commit/f1b161681e443460517d7c529a2f92349f607c3f))
+* **devDep:** bump semantic-release from 17.2.3 to 17.4.7 ([#58](https://github.com/Clumsy-Coder/dotfiles/issues/58)) ([49de0cf](https://github.com/Clumsy-Coder/dotfiles/commit/49de0cf5a8eca0ab21af8b03fee150397b8e058c))
+
 ### [1.2.3](https://github.com/Clumsy-Coder/dotfiles/compare/1.2.2...1.2.3) (2021-09-22)
 
 
