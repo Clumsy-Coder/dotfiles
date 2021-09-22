@@ -1,3 +1,16 @@
+## [1.2.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.1.0...1.2.0) (2021-09-22)
+
+
+### Features
+
+* **github-action:** use fastify/github-action-merge-dependabot to handle Dependabot automerge ([7440e4b](https://github.com/Clumsy-Coder/dotfiles/commit/7440e4b5081c16bf5e3155ac5b7d1b23bc48f53f))
+
+
+### Continuous Integration
+
+* **github-action:** run Dependabot action on any event regarding pull request ([08665ca](https://github.com/Clumsy-Coder/dotfiles/commit/08665ca80f89ded1304f7c92adedf3ac92a9cf40))
+* **github-actions:** specify version when using fastify/github-action-merge-dependabot ([3fd86fb](https://github.com/Clumsy-Coder/dotfiles/commit/3fd86fb718a505cd8829c5e1850f34c93d8ba30f))
+
 ## [1.1.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.0.0...1.1.0) (2020-08-14)
 
 
