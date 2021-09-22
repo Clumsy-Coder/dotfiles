@@ -1,3 +1,10 @@
+### [1.2.1](https://github.com/Clumsy-Coder/dotfiles/compare/1.2.0...1.2.1) (2021-09-22)
+
+
+### Build System
+
+* **deps:** bump tar from 4.4.13 to 4.4.19 ([#53](https://github.com/Clumsy-Coder/dotfiles/issues/53)) ([d989ced](https://github.com/Clumsy-Coder/dotfiles/commit/d989ced4573342d376dc6ef9c77951c8a2d24764))
+
 ## [1.2.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.1.0...1.2.0) (2021-09-22)
 
 
