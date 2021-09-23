@@ -1,3 +1,16 @@
+### [1.3.1](https://github.com/Clumsy-Coder/dotfiles/compare/1.3.0...1.3.1) (2021-09-23)
+
+
+### Miscellaneous Chores
+
+* **applist:** add fail2ban, ufw, unattended-upgrades ([c99f428](https://github.com/Clumsy-Coder/dotfiles/commit/c99f4287dd31304f14230d797a5ea71cf9bbfd57))
+* **script:** add script for installing pihole ([6dfcc1c](https://github.com/Clumsy-Coder/dotfiles/commit/6dfcc1ce0096c186f85b7f2d5ed0f755181f0390))
+
+
+### Build System
+
+* **devDep:** bump semantic-release, @semantic-release/changelog, @semantic-release/commit-analyzer, @semantic-release/git, @semantic-release/github and @semantic-release/release-notes-generator ([#61](https://github.com/Clumsy-Coder/dotfiles/issues/61)) ([a125c95](https://github.com/Clumsy-Coder/dotfiles/commit/a125c954c9a09a9e67521c694db86948993ededa))
+
 ## [1.3.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.2.4...1.3.0) (2021-09-22)
 
 
