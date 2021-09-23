@@ -20,3 +20,6 @@ nmap
 cmatrix
 figlet
 glances
+fail2ban
+ufw
+unattended-upgrades
