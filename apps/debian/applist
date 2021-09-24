@@ -23,3 +23,6 @@ glances
 fail2ban
 ufw
 unattended-upgrades
+exa
+fzf
+neovim
