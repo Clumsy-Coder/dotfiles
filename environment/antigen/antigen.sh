@@ -1,6 +1,13 @@
 # Assuming antigen is installed
 # If antigen is not installed the run the following command
 # curl -L git.io/antigen > ~/antigen.zsh
+# 
+# download antigen if it's NOT installed
+if [[ ! -d ~/.antigen ]]; then
+  echo "\nDownloading antigen plugin\n"
+  curl -L git.io/antigen > ~/antigen.zsh
+fi
+
 source ~/antigen.zsh
 
 # load antigen plugins
