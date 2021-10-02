@@ -1,3 +1,16 @@
+## [1.6.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.5.0...1.6.0) (2021-10-02)
+
+
+### Features
+
+* **setup:** add script to install oh-my-zsh ([56d82d7](https://github.com/Clumsy-Coder/dotfiles/commit/56d82d74fa7b3cf7e70866d090afb47b079c707b))
+
+
+### Miscellaneous Chores
+
+* **setup:** move asking for installing terminal and GUI based software at the top ([07d7ac9](https://github.com/Clumsy-Coder/dotfiles/commit/07d7ac9c95a6b7195d2ad02f18d10814eee82b99))
+* **setup:** remove setup file for pihole ([477643f](https://github.com/Clumsy-Coder/dotfiles/commit/477643fc4a59ccc3bfc480a5cd5b26c7c79897dd))
+
 ## [1.5.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.4.0...1.5.0) (2021-10-02)
 
 
