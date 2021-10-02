@@ -43,4 +43,4 @@ echo "# Run ~/dotfiles/index.sh for oh-my-zsh" >> ~/.zshrc
 echo "source ~/dotfiles/index.sh" >> ~/.zshrc
 
 # install zsh and oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
