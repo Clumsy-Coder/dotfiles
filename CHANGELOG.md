@@ -1,3 +1,17 @@
+### [1.6.1](https://github.com/Clumsy-Coder/dotfiles/compare/1.6.0...1.6.1) (2021-10-02)
+
+
+### Bug Fixes
+
+* **env:** fix filepath ([deab6f5](https://github.com/Clumsy-Coder/dotfiles/commit/deab6f5d1cdf3d608f4c8c37a164f66a64496b7a))
+
+
+### Miscellaneous Chores
+
+* **setup:** add flag to keep existing ~/.zshrc file when installing oh-my-zsh ([59b59f3](https://github.com/Clumsy-Coder/dotfiles/commit/59b59f33d12910ec15090819aacf82789f0fe1eb))
+* **setup:** download figlet font 'ANSI Shadow' and use it before running install scripts ([7695b6d](https://github.com/Clumsy-Coder/dotfiles/commit/7695b6d49a2f325bd37d966306cbd434eba32122))
+* **setup:** use full path when installing terminal and GUI based soft ([2e4bace](https://github.com/Clumsy-Coder/dotfiles/commit/2e4bacea67bea298308adc8ab1c841c057115022))
+
 ## [1.6.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.5.0...1.6.0) (2021-10-02)
 
 
