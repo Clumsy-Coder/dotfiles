@@ -1,3 +1,18 @@
+## [1.5.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.4.0...1.5.0) (2021-10-02)
+
+
+### Features
+
+* **env:** load ENV exports using ~/dotfiles/environment/exports.sh ([dcc58c1](https://github.com/Clumsy-Coder/dotfiles/commit/dcc58c1bdb0392f11c9ed77f56285a79910c56ac))
+
+
+### Miscellaneous Chores
+
+* **antigen:** install antigen IF ~/.antigen folder is NOT found ([e0e97df](https://github.com/Clumsy-Coder/dotfiles/commit/e0e97dfcd2b5836ce486276fe9f7005c33ee4721))
+* **applist:** add 'most' man page view ([041824d](https://github.com/Clumsy-Coder/dotfiles/commit/041824d2be1a0aa9b4ecc962e8fff2954bed8208))
+* **env:** create a file for loading ENV variables for debian based OS ([336190e](https://github.com/Clumsy-Coder/dotfiles/commit/336190e6cae5338f528c0730075016b2c768e380))
+* **env:** create a file for loading ENV variables for mac-OS ([1caa64f](https://github.com/Clumsy-Coder/dotfiles/commit/1caa64f9f9c1105e3f4eab44ea9e3c7f86de4e7a))
+
 ## [1.4.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.3.1...1.4.0) (2021-10-02)
 
 
