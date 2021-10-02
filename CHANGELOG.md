@@ -1,3 +1,20 @@
+## [1.4.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.3.1...1.4.0) (2021-10-02)
+
+
+### Features
+
+* **setup:** add script to install terminal based and GUI based software ([499426d](https://github.com/Clumsy-Coder/dotfiles/commit/499426d549f7a4552191ad164bdbb4ff5d572977))
+
+
+### Miscellaneous Chores
+
+* **alias:** add alias to display current directory contents using 'exa' for debian OS ([b712e78](https://github.com/Clumsy-Coder/dotfiles/commit/b712e7881e20b4fbd2e7ae6798b5b58bfdc4f4d9))
+* **applist:** add 'exa', 'fzf' and 'neovim' to applist ([5168560](https://github.com/Clumsy-Coder/dotfiles/commit/51685600a0e58c25d8813a3f44243fcb074fef82))
+* **setup:** add execute permission for 'user' and remove read permission for 'group' and 'others' ([ed08903](https://github.com/Clumsy-Coder/dotfiles/commit/ed0890312bc0fc1feb93cd8f519f8e5f11548c24))
+* **setup:** move shellscript to a seperate installation folder for terminal based software ([de9caa1](https://github.com/Clumsy-Coder/dotfiles/commit/de9caa147c4e7f82351ad00e00e800cd7fd1b136))
+* **setup:** move shellscript to seperate installation folder ([2bf785f](https://github.com/Clumsy-Coder/dotfiles/commit/2bf785fafc3af0e3d9b9e71a76626b4604a5b691))
+* **vim:** add vim config 'hlsearch' and 'cursorline' ([90d59cb](https://github.com/Clumsy-Coder/dotfiles/commit/90d59cb06d4b7a19f3456c1fda9b5068429a7e90))
+
 ### [1.3.1](https://github.com/Clumsy-Coder/dotfiles/compare/1.3.0...1.3.1) (2021-09-23)
 
 
