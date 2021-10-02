@@ -13,7 +13,7 @@ export LC_ALL='en_CA.UTF-8';
 case `uname` in
   'Linux')
     #OS='Linux'
-    source ~/dotfile/environment/exports/debian-exports.sh
+    source ~/dotfiles/environment/exports/debian-exports.sh
     ;;
   'FreeBSD')
     #OS='FreeBSD'
