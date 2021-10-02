@@ -30,3 +30,14 @@ fi
 sudo apt update
 sudo apt upgrade -y
 sudo apt autoremove -y
+
+# download default .zshrc from Oh-my-zsh
+curl https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/templates/zshrc.zsh-template -o ~/.zshrc
+
+# reference dotfile zsh
+echo "" >> ~/.zshrc
+echo "# Run ~/dotfiles/index.sh for oh-my-zsh" >> ~/.zshrc
+echo "source ~/dotfiles/index.sh" >> ~/.zshrc
+
+# install zsh and oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
