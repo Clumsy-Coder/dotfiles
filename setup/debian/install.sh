@@ -15,13 +15,18 @@ sudo apt update && sudo apt full-upgrade -y
 # install programs. Use ../../apps/debian/applist
 while read line; do sudo apt install $line -y; done < ~/dotfiles/apps/debian/applist
 
+# download ANSI Shadow figlet font
+sudo curl https://raw.githubusercontent.com/xero/figlet-fonts/master/ANSI%20Shadow.flf -o '/usr/share/figlet/ANSI Shadow.flf'
+
 if [[ $installTerminalSoft =~ ^[Yy]$ ]]
 then
+    figlet -w 150 -f 'ANSI Shadow' "installing terminal software" ;
     for f in ~/dotfiles/setup/debian/programs/terminal-based/*.sh; do bash "$f" -H; done
 fi
 
 if [[ $installGuiSoft =~ ^[Yy]$ ]]
 then
+    figlet -w 150 -f 'ANSI Shadow' "installing GUI based software";
     for f in ~/dotfiles/setup/debian/programs/gui-based/*.sh; do bash "$f" -H; done
 fi
 
