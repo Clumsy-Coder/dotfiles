@@ -1,16 +1,19 @@
 #!/bin/bash
 
+# ask if user wishes to install terminal based software
+read -p "Do want to install terminal based software (y/n)? " -n 1 -r installTerminalSoft
+echo    # (optional) move to a new line
+
+# ask if user wishes to install GUI based software
+read -p "Do want to install GUI based software (y/n)? " -n 1 -r installGuiSoft
+echo    # (optional) move to a new line
+echo    # (optional) move to a new line
+
 # update and upgrade
 sudo apt update && sudo apt full-upgrade -y
 
 # install programs. Use ../../apps/debian/applist
 while read line; do sudo apt install $line -y; done < ../../apps/debian/applist
-
-read -p "Do want to install terminal based software (y/n)? " -n 1 -r installTerminalSoft
-echo    # (optional) move to a new line
-read -p "Do want to install GUI based software (y/n)? " -n 1 -r installGuiSoft
-echo    # (optional) move to a new line
-echo    # (optional) move to a new line
 
 if [[ $installTerminalSoft =~ ^[Yy]$ ]]
 then
