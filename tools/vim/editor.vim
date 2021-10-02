@@ -4,6 +4,8 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set colorcolumn=100
+set cursorline
+set hlsearch
 
 silent! colorscheme gruvbox
 silent! set background=dark    " Setting dark mode
