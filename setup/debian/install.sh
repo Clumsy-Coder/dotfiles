@@ -13,18 +13,16 @@ echo    # (optional) move to a new line
 sudo apt update && sudo apt full-upgrade -y
 
 # install programs. Use ../../apps/debian/applist
-while read line; do sudo apt install $line -y; done < ../../apps/debian/applist
+while read line; do sudo apt install $line -y; done < ~/dotfiles/apps/debian/applist
 
 if [[ $installTerminalSoft =~ ^[Yy]$ ]]
 then
-    echo "installing terminal based software";
-    for f in ./programs/terminal-based/*.sh; do bash "$f" -H; done
+    for f in ~/dotfiles/setup/debian/programs/terminal-based/*.sh; do bash "$f" -H; done
 fi
 
 if [[ $installGuiSoft =~ ^[Yy]$ ]]
 then
-    echo "installing GUI based software";
-    for f in ./programs/gui-based/*.sh; do bash "$f" -H; done
+    for f in ~/dotfiles/setup/debian/programs/gui-based/*.sh; do bash "$f" -H; done
 fi
 
 sudo apt update
