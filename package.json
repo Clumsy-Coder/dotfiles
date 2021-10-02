@@ -1,6 +1,6 @@
 {
   "name": "dotfiles",
-  "version": "1.3.1",
+  "version": "1.4.0",
   "description": "Your personal config for setting up a zsh terminal",
   "license": "MIT",
   "devDependencies": {
