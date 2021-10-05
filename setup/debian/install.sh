@@ -16,7 +16,7 @@ sudo apt update && sudo apt full-upgrade -y
 # while read line; do sudo apt install $line -y; done < ~/dotfiles/apps/debian/applist
 sudo apt install -y $(cat ~/dotfiles/apps/debian/applist);
 
-# download ANSI Shadow figlet font
+# download 'ANSI Shadow' figlet font
 sudo curl https://raw.githubusercontent.com/xero/figlet-fonts/master/ANSI%20Shadow.flf -o '/usr/share/figlet/ANSI Shadow.flf'
 
 if [[ $installTerminalSoft =~ ^[Yy]$ ]]
@@ -35,6 +35,13 @@ sudo apt update
 sudo apt upgrade -y
 sudo apt autoremove -y
 
+# installing vim plugins
+figlet -w 150 -f 'ANSI Shadow' "installing Vim plugins";
+source ~/dotfiles/tools/tools.sh;
+vim +PlugInstall +qall;
+
+# setup ZSH and oh-my-zsh
+figlet -w 150 -f 'ANSI Shadow' "installing ZSH and oh-my-zsh";
 # download default .zshrc from Oh-my-zsh
 curl https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/templates/zshrc.zsh-template -o ~/.zshrc
 
