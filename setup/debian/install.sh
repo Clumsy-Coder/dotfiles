@@ -13,7 +13,8 @@ echo    # (optional) move to a new line
 sudo apt update && sudo apt full-upgrade -y
 
 # install programs. Use ../../apps/debian/applist
-while read line; do sudo apt install $line -y; done < ~/dotfiles/apps/debian/applist
+# while read line; do sudo apt install $line -y; done < ~/dotfiles/apps/debian/applist
+sudo apt install -y $(cat ~/dotfiles/apps/debian/applist);
 
 # download ANSI Shadow figlet font
 sudo curl https://raw.githubusercontent.com/xero/figlet-fonts/master/ANSI%20Shadow.flf -o '/usr/share/figlet/ANSI Shadow.flf'
