@@ -1,3 +1,18 @@
+## [1.7.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.6.1...1.7.0) (2021-10-06)
+
+
+### Features
+
+* **setup:** install vim plugins ([745df15](https://github.com/Clumsy-Coder/dotfiles/commit/745df15c89f9b2212ff29a8ae223d7b9fa8a2a2b))
+
+
+### Miscellaneous Chores
+
+* **applist:** move debian applist to dotfiles/setup/debian/programs/applist ([0ac4f95](https://github.com/Clumsy-Coder/dotfiles/commit/0ac4f951008be60e5706f7000297fd4b0d3a3cb1))
+* **env:** set default nvm dir when running shell ([4c08d3d](https://github.com/Clumsy-Coder/dotfiles/commit/4c08d3d00c4ea7cc7a6c1cbdd34a82f01bc6b5b1))
+* **setup:** update filepath for debian applist install ([dfd1134](https://github.com/Clumsy-Coder/dotfiles/commit/dfd113423d042f5dd48824154ed6427eda5b94cf))
+* **setup:** use better script when installing apt packages when reading from applist ([084d809](https://github.com/Clumsy-Coder/dotfiles/commit/084d809f115bf606f488575ceb9183066e5d3dc8))
+
 ### [1.6.1](https://github.com/Clumsy-Coder/dotfiles/compare/1.6.0...1.6.1) (2021-10-02)
 
 
