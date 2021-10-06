@@ -35,16 +35,19 @@ sudo apt install -y $(cat ~/dotfiles/setup/debian/programs/applist);
 
 # download 'ANSI Shadow' figlet font
 sudo curl https://raw.githubusercontent.com/xero/figlet-fonts/master/ANSI%20Shadow.flf -o '/usr/share/figlet/ANSI Shadow.flf'
+sudo curl https://raw.githubusercontent.com/xero/figlet-fonts/master/ANSI%20Regular.flf -o '/usr/share/figlet/ANSI Regular.flf'
 
 if [[ $installTerminalSoft =~ ^[Yy]$ ]]
 then
-    figlet -w 150 -f 'ANSI Shadow' "installing terminal software" ;
+    # figlet -w 150 -f 'ANSI Shadow' "installing terminal software" ;
+    figlet -w 150 -f 'ANSI Regular' "installing terminal software" ;
     for f in ~/dotfiles/setup/debian/programs/terminal-based/*.sh; do bash "$f" -H; done
 fi
 
 if [[ $installGuiSoft =~ ^[Yy]$ ]]
 then
-    figlet -w 150 -f 'ANSI Shadow' "installing GUI based software";
+    # figlet -w 150 -f 'ANSI Shadow' "installing GUI based software";
+    figlet -w 150 -f 'ANSI Regular' "installing GUI based software";
     for f in ~/dotfiles/setup/debian/programs/gui-based/*.sh; do bash "$f" -H; done
 fi
 
@@ -53,12 +56,14 @@ sudo apt upgrade -y
 sudo apt autoremove -y
 
 # installing vim plugins
-figlet -w 150 -f 'ANSI Shadow' "installing Vim plugins";
+# figlet -w 150 -f 'ANSI Shadow' "installing Vim plugins";
+figlet -w 150 -f 'ANSI Regular' "installing Vim plugins";
 source ~/dotfiles/tools/tools.sh;
 vim +PlugInstall +qall;
 
 # setup ZSH and oh-my-zsh
-figlet -w 150 -f 'ANSI Shadow' "installing ZSH and oh-my-zsh";
+# figlet -w 150 -f 'ANSI Shadow' "installing ZSH and oh-my-zsh";
+figlet -w 150 -f 'ANSI Regular' "installing ZSH and oh-my-zsh";
 # download default .zshrc from Oh-my-zsh
 curl https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/templates/zshrc.zsh-template -o ~/.zshrc
 
