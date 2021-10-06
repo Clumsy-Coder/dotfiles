@@ -54,6 +54,7 @@ Ex:
           - [Installing Vim plugins](#installing-vim-plugins)
           - [Updating Vim plugins](#updating-vim-plugins)
       - [pluginConfig/](#pluginconfig)
+  - [Directory tree view](#directory-tree-view)
 
 <!-- /TOC -->
 
@@ -392,3 +393,80 @@ Custom plugin configs to load.
 [`dotfiles/tools/vim/pluginConfig/*`](https://github.com/Clumsy-Coder/dotfiles/tree/master/tools/vim/pluginConfig)
 
 The files in this folder are being run in [`dotfiles/tools/vim/plugins.vim`](https://github.com/Clumsy-Coder/dotfiles/blob/master/tools/vim/plugins.vim)
+
+---
+
+## Directory tree view
+
+```
+.
+├── alias
+│   ├── debian
+│   │   └── alias.sh
+│   ├── osx
+│   │   └── alias.sh
+│   └── alias.sh
+├── apps
+│   ├── debian
+│   ├── osx
+│   │   ├── README.md
+│   │   ├── applist
+│   │   ├── casklist
+│   │   └── taplist
+│   └── README.md
+├── environment
+│   ├── antigen
+│   │   └── antigen.sh
+│   ├── exports
+│   │   ├── debian-exports.sh
+│   │   └── osx-exports.sh
+│   ├── images
+│   │   ├── one-punch-man-ok-rs.jpg
+│   │   └── one-punch-man.png
+│   ├── neofetch
+│   │   └── config.conf
+│   ├── theme
+│   │   └── powerlevel9k
+│   │       └── powerlevel9k.sh
+│   ├── environment.sh
+│   └── exports.sh
+├── setup
+│   └── debian
+│       ├── programs
+│       │   ├── gui-based
+│       │   │   └── vscode.sh
+│       │   ├── terminal-based
+│       │   │   ├── docker.sh
+│       │   │   ├── node.sh
+│       │   │   └── nvm-npm-node-packages.sh
+│       │   └── applist
+│       └── install.sh
+├── tools
+│   ├── neovim
+│   │   ├── init.vim
+│   │   └── neovim.sh
+│   ├── tmux
+│   │   ├── hotkeys.tmux.conf
+│   │   ├── plugins.tmux.conf
+│   │   ├── theme.tmux.conf
+│   │   ├── tmux.conf
+│   │   └── tmux.sh
+│   ├── vim
+│   │   ├── pluginConfig
+│   │   │   ├── nerdcommenter.config.vim
+│   │   │   └── nerdtree.config.vim
+│   │   ├── editor.vim
+│   │   ├── hotkeys.vim
+│   │   ├── plugins.vim
+│   │   └── vim.sh
+│   └── tools.sh
+├── CHANGELOG.md
+├── LICENSE
+├── README.md
+├── index.sh
+├── package.json
+└── yarn.lock
+
+23 directories, 43 files
+
+```
