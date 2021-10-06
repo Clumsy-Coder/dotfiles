@@ -1,3 +1,18 @@
+### [1.7.1](https://github.com/Clumsy-Coder/dotfiles/compare/1.7.0...1.7.1) (2021-10-06)
+
+
+### Miscellaneous Chores
+
+* **remove-file:** remove markdown files ([e2d4bb4](https://github.com/Clumsy-Coder/dotfiles/commit/e2d4bb44cf1e52ae15c03686b2252423704426bc))
+* **setup:** use a different font when using figlet in debian install script ([589a34e](https://github.com/Clumsy-Coder/dotfiles/commit/589a34e34c533c6c770b202411acfb11664d1f8a))
+
+
+### Documentation
+
+* **readme:** add tree view of dotfiles folder ([5cf5317](https://github.com/Clumsy-Coder/dotfiles/commit/5cf5317f2b3832e2d0b46bcf2e83f78a591c80af))
+* **readme:** update documentation for README.md ([b7a2353](https://github.com/Clumsy-Coder/dotfiles/commit/b7a2353f5161cfd980d90e0f3a3104e4f2341ccf))
+* **setup:** add docs for debian install script ([945f568](https://github.com/Clumsy-Coder/dotfiles/commit/945f568243071f97a86658cbd5a509db3c0f0b06))
+
 ## [1.7.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.6.1...1.7.0) (2021-10-06)
 
 
