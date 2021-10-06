@@ -1,3 +1,10 @@
+### [1.7.2](https://github.com/Clumsy-Coder/dotfiles/compare/1.7.1...1.7.2) (2021-10-06)
+
+
+### Build System
+
+* **npm:** update yarn.lock ([f4d0e05](https://github.com/Clumsy-Coder/dotfiles/commit/f4d0e053857cfc756fc7f5f897628c040c67059a))
+
 ### [1.7.1](https://github.com/Clumsy-Coder/dotfiles/compare/1.7.0...1.7.1) (2021-10-06)
 
 
