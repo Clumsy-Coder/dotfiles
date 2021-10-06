@@ -1,5 +1,22 @@
 #!/bin/bash
 
+# what the script does
+# 
+# 1. Asks if you wish to install Terminal and GUI based software (outside of APT)
+# 2. Update and upgrade APT packages
+# 3. Install APT packages from dotfiles/setup/debian/programs/applist
+# 4. Install software outside of APT repos
+#    1. Install terminal based software. dotfiles/setup/debian/programs/terminal-based/*
+#    2. Install GUI based software. dotfiles/setup/debian/programs/gui-based/*
+# 5. Install Vim plugins
+# 6. Install ZSH and Oh-my-zsh
+# 7. Download default .zshrc from oh-my-zsh (will overwrite existing ~/.zshrc)
+# 8. Source dotfiles ZSH config to ~/.zshrc
+#    1. `source ~/dotfiles/index.sh`
+# 9. Install oh-my-zsh plugins (done with antigen plugin manager)
+# 
+# ##################################################################################################
+
 # ask if user wishes to install terminal based software
 read -p "Do want to install terminal based software (y/n)? " -n 1 -r installTerminalSoft
 echo    # (optional) move to a new line
