@@ -1,3 +1,21 @@
+## [1.8.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.7.2...1.8.0) (2021-11-01)
+
+
+### Features
+
+* **setup:** create setup script for macos ([7f4ffdd](https://github.com/Clumsy-Coder/dotfiles/commit/7f4ffdd9ed7599bab2f35b1a72392c4939b58905))
+
+
+### Miscellaneous Chores
+
+* **applist:** create brewfile of the install applications ([5ac5b74](https://github.com/Clumsy-Coder/dotfiles/commit/5ac5b74eb2ba05548c7e9cb09fc326afa2d8b854))
+
+
+### Build System
+
+* **devDep:** bump @semantic-release/changelog from 6.0.0 to 6.0.1 ([#63](https://github.com/Clumsy-Coder/dotfiles/issues/63)) ([64aec43](https://github.com/Clumsy-Coder/dotfiles/commit/64aec43c67c78564c49ebf26a18f195cf30f4fef))
+* **devDep:** bump @semantic-release/git from 10.0.0 to 10.0.1 ([#64](https://github.com/Clumsy-Coder/dotfiles/issues/64)) ([da47472](https://github.com/Clumsy-Coder/dotfiles/commit/da474724fb3f9506e5425c4c40681828abadb24f))
+
 ### [1.7.2](https://github.com/Clumsy-Coder/dotfiles/compare/1.7.1...1.7.2) (2021-10-06)
 
 
