@@ -1,3 +1,10 @@
+### [1.8.1](https://github.com/Clumsy-Coder/dotfiles/compare/1.8.0...1.8.1) (2021-11-03)
+
+
+### Build System
+
+* **devDep:** bump @semantic-release/github from 8.0.1 to 8.0.2 ([#65](https://github.com/Clumsy-Coder/dotfiles/issues/65)) ([ea4b490](https://github.com/Clumsy-Coder/dotfiles/commit/ea4b4902c6ac2dcbdf336589be069d2434ee21a8))
+
 ## [1.8.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.7.2...1.8.0) (2021-11-01)
 
 
