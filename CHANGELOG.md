@@ -1,3 +1,10 @@
+### [1.8.2](https://github.com/Clumsy-Coder/dotfiles/compare/1.8.1...1.8.2) (2021-11-23)
+
+
+### Build System
+
+* **devDep:** bump @semantic-release/commit-analyzer ([#66](https://github.com/Clumsy-Coder/dotfiles/issues/66)) ([6faae28](https://github.com/Clumsy-Coder/dotfiles/commit/6faae2847da5ff5b45756e0dd7f3ce631379a4c1))
+
 ### [1.8.1](https://github.com/Clumsy-Coder/dotfiles/compare/1.8.0...1.8.1) (2021-11-03)
 
 
