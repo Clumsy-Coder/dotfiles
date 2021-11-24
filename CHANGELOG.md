@@ -1,3 +1,11 @@
+### [1.8.3](https://github.com/Clumsy-Coder/dotfiles/compare/1.8.2...1.8.3) (2021-11-24)
+
+
+### Build System
+
+* **devDep:** bump @semantic-release/release-notes-generator ([#68](https://github.com/Clumsy-Coder/dotfiles/issues/68)) ([1a91bca](https://github.com/Clumsy-Coder/dotfiles/commit/1a91bca2b3d5051c488528011a4031b9bc53674e))
+* **devDep:** bump semantic-release from 18.0.0 to 18.0.1 ([#67](https://github.com/Clumsy-Coder/dotfiles/issues/67)) ([145609a](https://github.com/Clumsy-Coder/dotfiles/commit/145609ad3bffaff1b4d0f0c2514ab27c025f6849))
+
 ### [1.8.2](https://github.com/Clumsy-Coder/dotfiles/compare/1.8.1...1.8.2) (2021-11-23)
 
 
