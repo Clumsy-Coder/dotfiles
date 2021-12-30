@@ -1,3 +1,10 @@
+### [1.8.5](https://github.com/Clumsy-Coder/dotfiles/compare/1.8.4...1.8.5) (2021-12-30)
+
+
+### Build System
+
+* **devDep:** bump conventional-changelog-conventionalcommits ([#70](https://github.com/Clumsy-Coder/dotfiles/issues/70)) ([008502d](https://github.com/Clumsy-Coder/dotfiles/commit/008502df83750588e9f387301b548ecf8aa61cc8))
+
 ### [1.8.4](https://github.com/Clumsy-Coder/dotfiles/compare/1.8.3...1.8.4) (2021-12-27)
 
 
