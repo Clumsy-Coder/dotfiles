@@ -1,3 +1,10 @@
+### [1.8.6](https://github.com/Clumsy-Coder/dotfiles/compare/1.8.5...1.8.6) (2022-01-18)
+
+
+### Build System
+
+* **devDep:** bump semantic-release from 18.0.1 to 19.0.2 ([#71](https://github.com/Clumsy-Coder/dotfiles/issues/71)) ([d6e6c10](https://github.com/Clumsy-Coder/dotfiles/commit/d6e6c10af1546dbf27ce2c8e292934453b520194))
+
 ### [1.8.5](https://github.com/Clumsy-Coder/dotfiles/compare/1.8.4...1.8.5) (2021-12-30)
 
 
