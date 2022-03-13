@@ -11,7 +11,6 @@ trash-cli
 wget
 tldr
 tree
-gnome-tweak-tool
 p7zip-full
 zip
 unzip
