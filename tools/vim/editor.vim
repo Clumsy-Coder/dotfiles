@@ -11,6 +11,7 @@ set expandtab         " Use space when pressing the <Tab> key in Insert mode
 set smarttab          " When on, a <Tab> in front of a line inserts blanks according to 'shiftwidth'.  'tabstop' or 'softtabstop' 
 set softtabstop=2     " Number of spaces that a <Tab> key is pressed
 set mouse=a           " Enable use of mouse in Normal, Visual, Insert and Command mode
+set encoding=UTF-8
 
 silent! colorscheme gruvbox
 silent! set background=dark    " Setting dark mode
