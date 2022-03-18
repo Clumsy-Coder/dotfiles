@@ -1,3 +1,11 @@
+" ------------------------------------------------------------------------------
+" # Sane Defaults
+" ------------------------------------------------------------------------------
+" # Maybe you need a place to put all of your basic vim settings and
+" # sane defaults. Feel free to create as many files within this
+" # config folder as you wish. How you choose to organize the
+" # files within this config folder is totally up to you!
+
 " vim editor config
 set number            " show line number
 set colorcolumn=100   " View a vertical guide at 100 characters for each line
@@ -18,6 +26,18 @@ set showcmd           " Show partial command you type in the last line of the sc
 set showmatch         " Show matching words during a search.
 set history=100       " Set the commands to save in history default number is 20.
 set nocompatible      " Disable compatibility with vi which can cause unexpected issues.
+set autoread          " Auto update vim if file has changed outside of vim
+set clipboard=unnamed " connect vim clipboard with system's clipboard
+" set noshowmode        " If in Insert, Replace or Visual mode put a message on the last line.
+set splitbelow        " :split splitting a window will put the new window below the current one
+set splitright        " :vsplit splitting a window will put the new window right of the current one
+" set smartcase         " Override the 'ignorecase' option if the search pattern contains upper case characters.
+set completeopt=menu,menuone,preview,noselect " Insert mode completions. 
+set nowrap
+set shiftround        " Round indent to multiple of 'shiftwidth'
+set smartindent       " Do smart autoindenting when starting a new line
+set termguicolors     " Enables 24-bit RGB color in the |TUI|
+set scrolloff=10      " Minimal number of screen lines to keep above and below the cursor
 
 silent! colorscheme gruvbox
 silent! set background=dark    " Setting dark mode
@@ -36,4 +56,12 @@ let g:airline_powerline_fonts = 1
 " check https://stackoverflow.com/questions/9511253/how-to-effectively-use-vim-wildmenu
 set wildmenu
 set wildmode=longest:full,list:full
+
+" auto highlight matching search terms
+" check in help section. :help hlsearch
+" augroup vimrc-incsearch-highlight
+"   autocmd!
+"   autocmd CmdlineEnter /,\? :set hlsearch
+"   autocmd CmdlineLeave /,\? :set nohlsearch
+" augroup END
 
