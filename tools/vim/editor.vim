@@ -22,3 +22,12 @@ silent! let g:gruvbox_contrast_dark = 'medium'	" 'hard' , 'medium' or 'soft'
 
 let g:airline_powerline_fonts = 1
 "let g:rainbow_active = 1
+
+" Command mode autocomplete
+" autocomplete when typing in command + <Tab>
+" Ex: :help tab<Tab>
+" check :help wildmode
+" check https://stackoverflow.com/questions/9511253/how-to-effectively-use-vim-wildmenu
+set wildmenu
+set wildmode=longest:full,list:full
+
