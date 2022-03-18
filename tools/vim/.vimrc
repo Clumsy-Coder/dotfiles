@@ -9,5 +9,5 @@ source ~/dotfiles/tools/vim/editor.vim      " load Vim editor settings
 
 " other settings obtained from
 " https://www.youtube.com/watch?v=gnupOrSEikQ&t=40s
-"   https://gist.github.com/benawad/b768f5a5bbd92c8baabd363b7e79786f
-
+" https://gist.github.com/benawad/b768f5a5bbd92c8baabd363b7e79786f
+" https://www.freecodecamp.org/news/vimrc-configuration-guide-customize-your-vim-editor/
