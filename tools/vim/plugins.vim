@@ -58,7 +58,8 @@ call plug#end()
 
 " import all plugin configs
 " plugin configs are located in ~/dotfiles/tools/vim/pluginConfig
-" these contain config for their respective plugins
+" these contain config for their respective plugins.
+" plugin file will have the following format: <Repo author>.<Repo name>.config.vim
 " any hotkeys for the plugins will be placed in ~/dotfiles/tools/vim/hotkeys.vim
 for pluginConfigFile in split(glob('~/dotfiles/tools/vim/pluginConfig/*.config.vim'), '\n')
     exe 'source' pluginConfigFile
