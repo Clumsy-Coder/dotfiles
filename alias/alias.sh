@@ -1,3 +1,7 @@
+alias vim=nvim    # Use vim as alias to neovim.
+                  # NOTE: using vim
+                  # type in terminal \vim
+
 case `uname` in
   'Linux')
     #OS='Linux'
