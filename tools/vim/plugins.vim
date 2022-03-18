@@ -65,6 +65,7 @@ Plug 'yuttie/comfortable-motion.vim'                    " Smooth scrolling
 Plug 'TaDaa/vimade'                                     " Dim inactive pane
 Plug 'lukas-reineke/indent-blankline.nvim'              " View indentlines. Based of yggdroot/indentline
 " Plug 'yggdroot/indentline'                              " View indentlines
+Plug 'michaelb/vim-tips'                                " Show a Vim tip in the command prompt
 
 " -------------------------------------------------------------------------------------------------"
 " syntax plugins
