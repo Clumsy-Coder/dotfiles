@@ -39,16 +39,6 @@ set smartindent       " Do smart autoindenting when starting a new line
 set termguicolors     " Enables 24-bit RGB color in the |TUI|
 set scrolloff=10      " Minimal number of screen lines to keep above and below the cursor
 
-silent! colorscheme gruvbox
-silent! set background=dark    " Setting dark mode
-silent! let g:gruvbox_contrast_dark = 'medium'	" 'hard' , 'medium' or 'soft'
-" silent! let g:gruvbox_contrast_dark = 'hard'
-" silent! let g:gruvbox_contrast_dark = 'medium'
-" silent! let g:gruvbox_contrast_dark = 'soft'
-
-let g:airline_powerline_fonts = 1
-"let g:rainbow_active = 1
-
 " Command mode autocomplete
 " autocomplete when typing in command + <Tab>
 " Ex: :help tab<Tab>
