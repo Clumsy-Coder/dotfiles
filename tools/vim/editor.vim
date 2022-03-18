@@ -12,6 +12,12 @@ set smarttab          " When on, a <Tab> in front of a line inserts blanks accor
 set softtabstop=2     " Number of spaces that a <Tab> key is pressed
 set mouse=a           " Enable use of mouse in Normal, Visual, Insert and Command mode
 set encoding=UTF-8
+set incsearch         " While searching though a file incrementally highlight matching characters as you type.
+set ignorecase        " Ignore capital letters during search.
+set showcmd           " Show partial command you type in the last line of the screen.
+set showmatch         " Show matching words during a search.
+set history=100       " Set the commands to save in history default number is 20.
+set nocompatible      " Disable compatibility with vi which can cause unexpected issues.
 
 silent! colorscheme gruvbox
 silent! set background=dark    " Setting dark mode
