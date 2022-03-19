@@ -39,3 +39,9 @@ let g:floaterm_keymap_prev   = '<F10>'
 let g:floaterm_keymap_next   = '<F11>'
 let g:floaterm_keymap_toggle = '<F12>'
 
+" Mappings: dashboard
+" https://github.com/glepnir/dashboard-nvim
+nmap <Leader>ss :<C-u>SessionSave<CR>
+nmap <Leader>sl :<C-u>SessionLoad<CR>
+nmap <Leader>cn :<C-u>DashboardNewFile<CR>
+
