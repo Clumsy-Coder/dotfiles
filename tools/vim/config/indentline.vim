@@ -1,5 +1,5 @@
-" yggdroot/indentline Vim extension config
-" source: https://github.com/Yggdroot/indentLine
+" Config: indentline 
+" yggdroot/indentline
 
 let g:indentLine_char = '│'
 

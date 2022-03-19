@@ -1,4 +1,6 @@
-" NERDTree config
+" Config: nerdtree
+" scrooloose/nerdtree
+
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 " autocmd vimenter * NERDTree	" open NERDTree when starting vim
