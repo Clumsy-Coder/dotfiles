@@ -44,6 +44,7 @@ Plug 'voldikss/vim-floaterm'                            " Floating terminal
                                                         " :FloatermToggle
 Plug 'nvim-treesitter/nvim-treesitter' ,                " language parser, queries, modules, syntax highlighting
       \ {'do': ':TSUpdate'}
+Plug 'jesseleite/vim-sourcery'                          " help organize plugins, mappings, configs
 
 " -------------------------------------------------------------------------------------------------"
 " visual plugins
