@@ -31,3 +31,11 @@ nnoremap <C-n> :NERDTreeToggle<CR>    " Toggle NERDTree with Ctrl + n
 " Toggle TagBar plugin using F8 key
 nmap <F8> :TagbarToggle<CR>
 
+" Mappings:floaterm
+" https://github.com/voldikss/vim-floaterm#commands
+" https://github.com/voldikss/vim-floaterm#keymaps
+let g:floaterm_keymap_new    = '<F9>'
+let g:floaterm_keymap_prev   = '<F10>'
+let g:floaterm_keymap_next   = '<F11>'
+let g:floaterm_keymap_toggle = '<F12>'
+
