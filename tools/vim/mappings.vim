@@ -45,3 +45,16 @@ nmap <Leader>ss :<C-u>SessionSave<CR>
 nmap <Leader>sl :<C-u>SessionLoad<CR>
 nmap <Leader>cn :<C-u>DashboardNewFile<CR>
 
+" Fzf fuzzy finders
+" Mappings: fzf
+" https://github.com/junegunn/fzf.vim#commands
+" nmap <Leader>f :GFiles<CR>
+" nmap <Leader>F :Files<CR>
+" nmap <Leader>b :Buffers<CR>
+" nmap <Leader>l :BLines<CR>
+nmap <C-h> :Helptags!<CR>
+nnoremap <silent> <Leader>fb :Marks<CR>
+nnoremap <silent> <Leader>tc :Colors<CR>
+nnoremap <silent> <Leader>ff :Files<CR>
+nnoremap <silent> <Leader>fh :History<CR>
+nnoremap <silent> <Leader>fa :Rg<CR>
