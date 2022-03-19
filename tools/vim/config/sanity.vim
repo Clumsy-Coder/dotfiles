@@ -28,7 +28,7 @@ set history=100       " Set the commands to save in history default number is 20
 set nocompatible      " Disable compatibility with vi which can cause unexpected issues.
 set autoread          " Auto update vim if file has changed outside of vim
 set clipboard=unnamed " connect vim clipboard with system's clipboard
-" set noshowmode        " If in Insert, Replace or Visual mode put a message on the last line.
+set noshowmode        " don't show the mode you are on the last line, if in INSERT, REPLACE or VISUAL mode
 set splitbelow        " :split splitting a window will put the new window below the current one
 set splitright        " :vsplit splitting a window will put the new window right of the current one
 " set smartcase         " Override the 'ignorecase' option if the search pattern contains upper case characters.
