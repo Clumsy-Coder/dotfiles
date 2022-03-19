@@ -1,17 +1,6 @@
-" Contains all the plugins to be used by Vim.
-" Uses VimPlug for plugin managment.
-
-" For VimPlug commands, go to
-" https://github.com/junegunn/vim-plug#commands
-
-" autoinstall vim-plug
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-call plug#begin('~/.vim/plugged')
+" ------------------------------------------------------------------------------
+" # Plugin Definitions
+" ------------------------------------------------------------------------------
 
 " functional plugins
 Plug 'scrooloose/nerdtree'                              " File browser. Ctrl + n
@@ -34,7 +23,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }     " Fuzzy finder. Required
 Plug 'junegunn/fzf.vim'
 Plug 'glepnir/dashboard-nvim'                           " Vim dashboard. Displayed when starting neovim with no file provided
 " Plug 'terryma/vim-multiple-cursors'                    " CTRL + N for multiple cursors
-" Plug 'http://github.com/tpope/vim-surround'            " Surrounding ysw)
+" Plug 'tpope/vim-surround'                               " Surrounding ysw)
 " Plug 'mattn/emmet-vim'                                 " Emmet for vim
 Plug 'voldikss/vim-floaterm'                            " Floating terminal
                                                         " Commands:
@@ -71,18 +60,3 @@ Plug 'michaelb/vim-tips'                                " Show a Vim tip in the 
 " -------------------------------------------------------------------------------------------------"
 " syntax plugins
 Plug 'sheerun/vim-polyglot'                             " A collection of language packs for Vim.
-
-" -------------------------------------------------------------------------------------------------"
-
-call plug#end()
-
-" import all plugin configs
-" plugin configs are located in ~/dotfiles/tools/vim/pluginConfig
-" these contain config for their respective plugins.
-" plugin file will have the following format: <Repo author>.<Repo name>.config.vim
-" any hotkeys for the plugins will be placed in ~/dotfiles/tools/vim/hotkeys.vim
-for pluginConfigFile in split(glob('~/dotfiles/tools/vim/pluginConfig/*.config.vim'), '\n')
-  exe 'source' pluginConfigFile
-endfor
-
-let g:rainbow_active = 1              " enable vim-rainbow plugin
