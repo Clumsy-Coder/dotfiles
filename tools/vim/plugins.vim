@@ -2,7 +2,16 @@
 " # Plugin Definitions
 " ------------------------------------------------------------------------------
 
-" functional plugins
+" setting code folding to markers only
+" use commands in NORMAL mode
+" zo      open fold under current cursor
+" zc      close fold under current cursor
+" zR      open all folds
+" zM      close all folds
+setlocal foldmethod=marker
+
+" FUNCTIONAL PLUGINS ---------------------------------------------------------------- {{{
+
 Plug 'scrooloose/nerdtree'                              " File browser. Ctrl + n
 Plug 'airblade/vim-gitgutter'                           " shows a git diff in the sign column
 Plug 'majutsushi/tagbar'                                " View code tags. Ex: class (members, functions)
@@ -35,8 +44,10 @@ Plug 'nvim-treesitter/nvim-treesitter' ,                " language parser, queri
       \ {'do': ':TSUpdate'}
 Plug 'jesseleite/vim-sourcery'                          " help organize plugins, mappings, configs
 
-" -------------------------------------------------------------------------------------------------"
-" visual plugins
+" }}}
+
+" VISUAL PLUGINS -------------------------------------------------------------------- {{{
+
 Plug 'morhetz/gruvbox'                                  " Vim colourscheme
 Plug 'rafi/awesome-vim-colorschemes'                    " Collection Vim colour schemes
 Plug 'vim-airline/vim-airline'                          " Vim status bar
@@ -57,6 +68,10 @@ Plug 'lukas-reineke/indent-blankline.nvim'              " View indentlines. Base
 " Plug 'yggdroot/indentline'                              " View indentlines
 Plug 'michaelb/vim-tips'                                " Show a Vim tip in the command prompt
 
-" -------------------------------------------------------------------------------------------------"
-" syntax plugins
+" }}}
+
+" SYNTAX PLUGINS -------------------------------------------------------------------- {{{
+
 Plug 'sheerun/vim-polyglot'                             " A collection of language packs for Vim.
+
+" }}}
