@@ -1,3 +1,54 @@
+### [1.8.7](https://github.com/Clumsy-Coder/dotfiles/compare/1.8.6...1.8.7) (2022-03-21)
+
+
+### Code Refactoring
+
+* **vim:** move and refactor vim plugin configs to jesseleite/vim-sourcery specs ([c5cb27e](https://github.com/Clumsy-Coder/dotfiles/commit/c5cb27eceb793e90284b0355976a28d7374c4ea3))
+* **vim:** refactor .vimrc to vim-sourcery instructions ([21d4f3c](https://github.com/Clumsy-Coder/dotfiles/commit/21d4f3c50e88c55134f716c4b8eebf1fe77a47de))
+* **vim:** refactor keybindings to match jesseleite/vim-sourcery specs ([bd1d297](https://github.com/Clumsy-Coder/dotfiles/commit/bd1d297a729a946f53e7e623b9f577d3be920e7d))
+* **vim:** refactor lukas-reineke/indent-blankline.nvim config to be written in lua ([fd72d6d](https://github.com/Clumsy-Coder/dotfiles/commit/fd72d6d165b6fa1bcac7b723ad9c50593909b1f2))
+* **vim:** remove code that autoinstalls vim-plug and loads vim config files ([390a82b](https://github.com/Clumsy-Coder/dotfiles/commit/390a82bc5ccce33a2cc964cb6bb0faa729fc9a26))
+
+
+### Documentation
+
+* **vim:** add comments on purpose of the settings in editor.vim ([a22eb42](https://github.com/Clumsy-Coder/dotfiles/commit/a22eb426047ee164a2c4f639affe2f7ff95511e9))
+* **vim:** add custom code folding for easier readability ([1d43503](https://github.com/Clumsy-Coder/dotfiles/commit/1d435039f9bbfbfab68d33d8de84e8722ca94b48))
+* **vim:** add custom code folding in mappings.vim for easier readability ([b4c4336](https://github.com/Clumsy-Coder/dotfiles/commit/b4c4336db51761c8dfc6ea30998b7586160978db))
+* **vim:** add docs markers so jesseleite/vim-sourcery can index them ([90790b2](https://github.com/Clumsy-Coder/dotfiles/commit/90790b2e8d09fd22b107cd8134d5f4ca05312b79))
+* **vim:** add url on setting up vim tips ([49e3b94](https://github.com/Clumsy-Coder/dotfiles/commit/49e3b9481f412d9b79a72ed7166648a3ba853df1))
+* **vim:** update docs on how custom vim plugins configs files will be named ([0182293](https://github.com/Clumsy-Coder/dotfiles/commit/01822937aece7be435b4a13e9831f5c8c9202d74))
+
+
+### Miscellaneous Chores
+
+* **alias:** add alias vim pointing to neovim ([39a764e](https://github.com/Clumsy-Coder/dotfiles/commit/39a764eb7cf6ffb81f92cff890e970a987ca8a54))
+* **vim:** add config for glepnir/dashboard-nvim plugin ([d681862](https://github.com/Clumsy-Coder/dotfiles/commit/d6818622b451802c840612f4cda7c825f20abcfc))
+* **vim:** add config for lukas-reineke/indent-blankline.nvim plugin ([753be7d](https://github.com/Clumsy-Coder/dotfiles/commit/753be7d04d6df38152da618f1ed8f15f1ad47bfd))
+* **vim:** add config for nvim-treesitter/nvim-treesitter plugin ([81dff19](https://github.com/Clumsy-Coder/dotfiles/commit/81dff199bfb0ab2ebbee78a97dfdfeec5a12562f))
+* **vim:** add config for voldikss/vim-floaterm plugin ([8a91dd5](https://github.com/Clumsy-Coder/dotfiles/commit/8a91dd5b4f021f10c0d5507c4433bf60d2af6394))
+* **vim:** add config for Yggdroot/indentLine plugin ([6855f34](https://github.com/Clumsy-Coder/dotfiles/commit/6855f34e6fdc9b027a834987809f5d73895c1da4))
+* **vim:** add config for yuttie/comfortable-motion.vim plugin ([7fa6961](https://github.com/Clumsy-Coder/dotfiles/commit/7fa6961647e6b5c8133c997d2acc4c70a07e4b59))
+* **vim:** add hotkey for majutsushi/tagbar using F8 key ([a712373](https://github.com/Clumsy-Coder/dotfiles/commit/a71237352fed3e922d6f44feae58a01177384ad9))
+* **vim:** add jesseleite/vim-sourcery plugin ([e221c62](https://github.com/Clumsy-Coder/dotfiles/commit/e221c62a30ec8af4e14317c51757cd75c2c5bd08))
+* **vim:** add key mappings for glepnir/dashboard-nvim plugin ([05ee13a](https://github.com/Clumsy-Coder/dotfiles/commit/05ee13a00b7e9c7ceeab6837b8df19051575b4fe))
+* **vim:** add key mappings for junegunn/fzf.vim plugin ([e72ad79](https://github.com/Clumsy-Coder/dotfiles/commit/e72ad799bcc1f1b6ea87609cf08561151f1eb41f))
+* **vim:** add key mappings for vim-floaterm plugin ([2bd6d83](https://github.com/Clumsy-Coder/dotfiles/commit/2bd6d830e746526f8f6f6794fa4328e09abeabb6))
+* **vim:** add lines to change vim theme contrast for easier use ([1759caa](https://github.com/Clumsy-Coder/dotfiles/commit/1759caacbb6c38f9739af6eddb812b1da12716f1))
+* **vim:** add michaelb/vim-tips plugin ([3096701](https://github.com/Clumsy-Coder/dotfiles/commit/309670110846d9ce6ff88a4d8c2ac44161f43a03))
+* **vim:** add vim settings for tab spaces ([ce2b70e](https://github.com/Clumsy-Coder/dotfiles/commit/ce2b70ea7ffd8083ae5e98b36fb3e29f8f86e7d9))
+* **vim:** add which text encoding to use ([086582f](https://github.com/Clumsy-Coder/dotfiles/commit/086582fa752cd4a706576350426774ad71269c66))
+* **vim:** adding editor configs ([1b02561](https://github.com/Clumsy-Coder/dotfiles/commit/1b02561c43ccb451eb1bde227b2a712de320a570))
+* **vim:** create symbolic link for .vimrc to ~/.vimrc ([3fe23b4](https://github.com/Clumsy-Coder/dotfiles/commit/3fe23b4253ba2006d5a0335932c33c98cbc2bd0d))
+* **vim:** create symbolic links for neovim using jesseleite/vim-sourcery specs ([9cd8645](https://github.com/Clumsy-Coder/dotfiles/commit/9cd8645c1655af8a1d1b463faa14cbacde525f76))
+* **vim:** don't display message in last line when in INSERT, REPLACE or VISUAL mode ([d649693](https://github.com/Clumsy-Coder/dotfiles/commit/d649693a2bfddeb43e243271f05e9e75950860f2))
+* **vim:** enable mouse support for vim ([a224269](https://github.com/Clumsy-Coder/dotfiles/commit/a224269a12c92c33e83f172b27661d6c57884c3f))
+* **vim:** enable vim command mode autocomplete ([4844e91](https://github.com/Clumsy-Coder/dotfiles/commit/4844e913e4f4f922d714184df374264fd688bff0))
+* **vim:** move editor.vim to config/sanity.vim ([a5d83cc](https://github.com/Clumsy-Coder/dotfiles/commit/a5d83cce0872587cac06d5da53a9e05acadb55ea))
+* **vim:** move theme config to config/theme.vim ([03bbb69](https://github.com/Clumsy-Coder/dotfiles/commit/03bbb699808720d1da55ca2ee80bf14dda2647b6))
+* **vim:** rewrite which plugins to install and comment their purpose ([a33b9fd](https://github.com/Clumsy-Coder/dotfiles/commit/a33b9fd303140468799373e0b904309443f64526))
+* **vim:** use full URL when defining Vim Pluggins to use ([2a12b23](https://github.com/Clumsy-Coder/dotfiles/commit/2a12b2361f5c98b56437642f97e30e47f5eb1f11))
+
 ### [1.8.6](https://github.com/Clumsy-Coder/dotfiles/compare/1.8.5...1.8.6) (2022-01-18)
 
 
