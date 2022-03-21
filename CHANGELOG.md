@@ -1,3 +1,10 @@
+### [1.8.8](https://github.com/Clumsy-Coder/dotfiles/compare/1.8.7...1.8.8) (2022-03-21)
+
+
+### Build System
+
+* **deps:** bump node-fetch from 2.6.5 to 2.6.7 ([#72](https://github.com/Clumsy-Coder/dotfiles/issues/72)) ([470aad2](https://github.com/Clumsy-Coder/dotfiles/commit/470aad2e828b87fbb8efb0e11e16347e4fdbf6b1))
+
 ### [1.8.7](https://github.com/Clumsy-Coder/dotfiles/compare/1.8.6...1.8.7) (2022-03-21)
 
 
