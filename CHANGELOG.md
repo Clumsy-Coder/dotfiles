@@ -1,3 +1,11 @@
+### [1.8.9](https://github.com/Clumsy-Coder/dotfiles/compare/1.8.8...1.8.9) (2022-03-29)
+
+
+### Build System
+
+* **deps:** bump minimist from 1.2.5 to 1.2.6 ([#74](https://github.com/Clumsy-Coder/dotfiles/issues/74)) ([97b1ac4](https://github.com/Clumsy-Coder/dotfiles/commit/97b1ac4ae5e07e5fc431aab8a356c02908dd0982))
+* **devDep:** bump @semantic-release/github from 8.0.2 to 8.0.4 ([#73](https://github.com/Clumsy-Coder/dotfiles/issues/73)) ([149fa7b](https://github.com/Clumsy-Coder/dotfiles/commit/149fa7b0af5d4b3697844c4442de9bdb4f98410d))
+
 ### [1.8.8](https://github.com/Clumsy-Coder/dotfiles/compare/1.8.7...1.8.8) (2022-03-21)
 
 
