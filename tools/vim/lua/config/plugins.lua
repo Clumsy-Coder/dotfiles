@@ -74,6 +74,14 @@ return packer.startup(function(use)
     requires = { 'nvim-lua/plenary.nvim' },
   })
 
+  -- manage vim buffers as tabs
+  use({
+    "akinsho/bufferline.nvim",
+    event = "BufWinEnter",
+    requires = 'kyazdani42/nvim-web-devicons',
+    config = "require('config.bufferline')",
+  })
+
   -- colourschemes
   -- NOTE: if loading nvim and installing packer for the first time, it will throw an error,
   -- due to not being able to load gruvbox.nvim plugin.
