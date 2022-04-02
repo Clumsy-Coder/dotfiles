@@ -33,8 +33,10 @@ treesitter.setup({
     enable = true,
     enable_autocmd = false,
   },
+  -- TS rainbow
+  -- https://github.com/p00f/nvim-ts-rainbow
   rainbow = {
     enable = true,
-    extended_mode = true,
+    extended_mode = true,   -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
   },
 })
