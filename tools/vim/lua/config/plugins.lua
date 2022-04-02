@@ -98,6 +98,14 @@ return packer.startup(function(use)
     requires = 'hrsh7th/nvim-cmp'
   })
 
+  -- Treesitter
+  use({
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+    event = "BufWinEnter",
+    config = "require('config.treesitter')",
+  })
+
   -- colourschemes
   -- NOTE: if loading nvim and installing packer for the first time, it will throw an error,
   -- due to not being able to load gruvbox.nvim plugin.
