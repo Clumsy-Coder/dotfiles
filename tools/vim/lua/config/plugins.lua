@@ -66,6 +66,14 @@ return packer.startup(function(use)
     config = "require('config.kommentary')",
   })
 
+  -- git decorations
+  use({
+    "lewis6991/gitsigns.nvim",
+    event = "BufRead",
+    config = "require('config.gitsigns')",
+    requires = { 'nvim-lua/plenary.nvim' },
+  })
+
   -- colourschemes
   -- NOTE: if loading nvim and installing packer for the first time, it will throw an error,
   -- due to not being able to load gruvbox.nvim plugin.
