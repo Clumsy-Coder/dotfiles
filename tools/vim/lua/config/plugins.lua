@@ -49,6 +49,16 @@ return packer.startup(function(use)
   use("b0o/SchemaStore.nvim")          -- json collection of keywords for each dev files. Ex: package.json and docker-compose.yml
   use("kyazdani42/nvim-web-devicons")  -- dev icons
 
+  -- colourschemes
+  -- NOTE: if loading nvim and installing packer for the first time, it will throw an error,
+  -- due to not being able to load gruvbox.nvim plugin.
+  -- A better option is to install plugins without opening nvim.
+  -- run command:
+  --    nvim --headless --noplugin -c 'autocmd User PackerComplete quitall' -c 'PackerInstall'
+  use ({
+    "ellisonleao/gruvbox.nvim",
+    config = "require('config.theme')"
+  })
 
   -- Automatically set up the configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
