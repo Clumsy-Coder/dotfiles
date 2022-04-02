@@ -90,6 +90,14 @@ return packer.startup(function(use)
     config = "require('config.toggleterm')",
   })
 
+  -- Autopairs, integrates with both cmp and treesitter
+  use({
+    "windwp/nvim-autopairs",
+    after = "nvim-cmp",
+    config = "require('config.autopairs')",
+    requires = 'hrsh7th/nvim-cmp'
+  })
+
   -- colourschemes
   -- NOTE: if loading nvim and installing packer for the first time, it will throw an error,
   -- due to not being able to load gruvbox.nvim plugin.
