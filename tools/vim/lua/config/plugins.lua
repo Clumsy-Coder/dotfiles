@@ -109,6 +109,13 @@ return packer.startup(function(use)
   -- Treesitter Rainbow parenthesis
   use({ "p00f/nvim-ts-rainbow", after = "nvim-treesitter" })
 
+  -- blankline indents
+  use({
+    "lukas-reineke/indent-blankline.nvim",
+    event = "BufRead",
+    config = "require('config.indent-blankline')",
+  })
+
   -- colourschemes
   -- NOTE: if loading nvim and installing packer for the first time, it will throw an error,
   -- due to not being able to load gruvbox.nvim plugin.
