@@ -116,6 +116,13 @@ return packer.startup(function(use)
     config = "require('config.indent-blankline')",
   })
 
+  -- highlight CSS colours. Ex: #fff
+  use({
+    "norcalli/nvim-colorizer.lua",
+    -- ft = { "css", "html", "javascript", "json", "jsonc", "lua", "yaml" },
+    config = "require('config.colorizer')",
+  })
+
   -- colourschemes
   -- NOTE: if loading nvim and installing packer for the first time, it will throw an error,
   -- due to not being able to load gruvbox.nvim plugin.
