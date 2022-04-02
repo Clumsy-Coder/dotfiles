@@ -82,6 +82,14 @@ return packer.startup(function(use)
     config = "require('config.bufferline')",
   })
 
+  -- manage terminal in neovim
+  -- toggle terminal with Ctrl + \
+  use({
+    "akinsho/toggleterm.nvim",
+    -- cmd = "ToggleTerm",
+    config = "require('config.toggleterm')",
+  })
+
   -- colourschemes
   -- NOTE: if loading nvim and installing packer for the first time, it will throw an error,
   -- due to not being able to load gruvbox.nvim plugin.
