@@ -58,6 +58,14 @@ return packer.startup(function(use)
     config = "require('config.nvim-tree')",
   })
 
+  -- commenting lines of code
+  -- NORMAL mode: gcc
+  -- VISUAL mode: gc
+  use({
+    'b3nj5m1n/kommentary',
+    config = "require('config.kommentary')",
+  })
+
   -- colourschemes
   -- NOTE: if loading nvim and installing packer for the first time, it will throw an error,
   -- due to not being able to load gruvbox.nvim plugin.
