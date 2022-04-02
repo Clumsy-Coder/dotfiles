@@ -76,3 +76,35 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)     -- Alt + k
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)   -- Ctrl + k
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)   -- Ctrl + l
 
+-- telescope
+-- Find files using Telescope command-line sugar.
+-- https://github.com/nvim-telescope/telescope.nvim#usage
+keymap("n", "<leader>ff", ":Telescope find_files hidden=true no_ignore=true<cr>", opts)        -- NORMAL mode: Leader + ff
+keymap("n", "<leader>fg", ":Telescope live_grep<cr>", opts)         -- NORMAL mode: Leader + fg
+keymap("n", "<leader>fb", ":Telescope file_browser<cr>", opts)      -- NORMAL mode: Leader + fb
+keymap("n", "<leader>tb", ":Telescope buffers<cr>", opts)           -- NORMAL mode: Leader + tb
+keymap("n", "<leader>fh", ":Telescope help_tags<cr>", opts)         -- NORMAL mode: Leader + fh
+-- keymap("n", "<leader>mf", ":Telescope media_files<cr>", opts)       -- NORMAL mode: Leader + mf
+
+-- https://github.com/nvim-telescope/telescope.nvim#default-mappings
+-- While telescope is open
+-- Ctrl + n     -- Next item
+-- Ctrl + p     -- Previous item
+-- j/k          -- Next/Previous item in NORMAL mode
+-- H/M/L        -- H - go to top of list
+                -- M - go to the middle of the list
+                -- L - go to bottom of the list
+-- gg/G         -- Select first/last item in NORMAL mode
+-- <CR>         -- Confirm selection
+-- Ctrl + x     -- View selected file in horizontal mode
+-- Ctrl + v     -- View selected file in vertical mode
+-- Ctrl + t     -- Open selected file in a new tab
+-- Ctrl + u     -- Scroll up in preview window
+-- Ctrl + d     -- Scroll down in preview window
+-- ?            -- Show mappings for telescope in NORMAL mode
+-- Ctrl + c     -- Close telescope
+-- ESC          -- Close telescope in NORMAL mode
+-- Tab          -- Toggle selection and move to next selection
+-- Shift + Tab  -- Toggle selection and move to prev selection
+-- Ctrl + q     -- Send all items not filtered to quickfixlist (qflist)
+-- Alt + q      -- Send all selected items to qflist

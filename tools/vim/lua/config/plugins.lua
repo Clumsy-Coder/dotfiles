@@ -123,6 +123,17 @@ return packer.startup(function(use)
     config = "require('config.colorizer')",
   })
 
+  -- highly extendable fuzzy finder over lists
+  use({
+    "nvim-telescope/telescope.nvim",
+    cmd = "Telescope",
+    config = "require('config.telescope')",
+    requires = 'nvim-lua/plenary.nvim'
+  })
+  use({'nvim-telescope/telescope-fzf-native.nvim', run = 'make' })
+  use({ "nvim-telescope/telescope-file-browser.nvim" })
+  -- use("nvim-telescope/telescope-media-files.nvim")
+
   -- colourschemes
   -- NOTE: if loading nvim and installing packer for the first time, it will throw an error,
   -- due to not being able to load gruvbox.nvim plugin.
