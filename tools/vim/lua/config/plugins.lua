@@ -134,6 +134,26 @@ return packer.startup(function(use)
   use({ "nvim-telescope/telescope-file-browser.nvim" })
   -- use("nvim-telescope/telescope-media-files.nvim")
 
+  -- cmp code completion
+  use({
+    "hrsh7th/nvim-cmp",                                       -- The completion plugin
+    event = "InsertEnter",
+    requires = {
+      { "hrsh7th/cmp-buffer", after = "nvim-cmp" },           -- buffer completions
+      { "hrsh7th/cmp-path", after = "nvim-cmp" },             -- path completions
+      { "hrsh7th/cmp-cmdline", after = "nvim-cmp" },          -- cmdline completions
+      { "saadparwaiz1/cmp_luasnip", after = "nvim-cmp" },     -- snippet completions connecter for L3MON4D3/LuaSnip
+    },
+    config = "require('config.cmp')",
+  })
+
+  -- snippets
+  use({
+    "L3MON4D3/LuaSnip",                          -- snippet engine
+    event = "InsertEnter",
+    requires = "rafamadriz/friendly-snippets",   -- extra snippets for different languages
+  })
+
   -- colourschemes
   -- NOTE: if loading nvim and installing packer for the first time, it will throw an error,
   -- due to not being able to load gruvbox.nvim plugin.
