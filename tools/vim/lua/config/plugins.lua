@@ -172,6 +172,12 @@ return packer.startup(function(use)
     config = "require('config.theme')"
   })
 
+  -- scrollbar
+  use({
+    "petertriho/nvim-scrollbar",
+    config = function() require("scrollbar").setup() end
+  })
+
   -- Automatically set up the configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
     require("packer").sync()
