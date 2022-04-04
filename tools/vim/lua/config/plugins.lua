@@ -136,30 +136,30 @@ return packer.startup(function(use)
 
   -- cmp code completion
   use({
-    "hrsh7th/nvim-cmp",                                       -- The completion plugin
-    event = "InsertEnter",
-    requires = {
-      { "hrsh7th/cmp-buffer", after = "nvim-cmp" },           -- buffer completions
-      { "hrsh7th/cmp-path", after = "nvim-cmp" },             -- path completions
-      { "hrsh7th/cmp-cmdline", after = "nvim-cmp" },          -- cmdline completions
-      { "saadparwaiz1/cmp_luasnip", after = "nvim-cmp" },     -- snippet completions connecter for L3MON4D3/LuaSnip
-      { "hrsh7th/cmp-nvim-lsp" },                             -- nvim LSP connector
-                                                              -- connects neovim/nvim-lspconfig to hrsh7th/nvim-cmp
-      { "hrsh7th/cmp-nvim-lua", after = "nvim-cmp"},          -- completion for nvim Lua API
-    },
-    config = "require('config.cmp')",
-  })
+    "hrsh7th/nvim-cmp",
+    config = "require('config.cmp')" })
+  use({ "hrsh7th/cmp-buffer" })         -- buffer completions
+  use({ "hrsh7th/cmp-path" })           -- path completions
+  use({ "hrsh7th/cmp-cmdline", })       -- cmdline completions
+  use({ "saadparwaiz1/cmp_luasnip", })  -- snippet completions connecter for L3MON4D3/LuaSnip
+  use({ "hrsh7th/cmp-nvim-lsp", })      -- nvim LSP connector. connects neovim/nvim-lspconfig to hrsh7th/nvim-cmp
+  use({ "hrsh7th/cmp-nvim-lua", })      -- completion for nvim Lua API
+  -- use({ "ray-x/cmp-treesitter",     after = "nvim-cmp"}),      -- Using all treesitter highlight nodes as completion candidates
+  -- use({ "andersevenrud/cmp-tmux",   after = "nvim-cmp"}),      -- Tmux completion source for nvim-cmp
 
   -- LSP
-  use({ "neovim/nvim-lspconfig", config = "require('config.lsp')" })        -- enable LSP
-  use({ "williamboman/nvim-lsp-installer", requires = "nvim-lspconfig" })   -- simple to use language server installer
+  use({ "williamboman/nvim-lsp-installer", })   -- simple to use language server installer
+  use({
+    "neovim/nvim-lspconfig",                    -- enable LSP
+    config = "require('config.lsp')" })
+  -- use("jose-elias-alvarez/null-ls.nvim")                                    -- for formatters and linters
+
+  -- display keybindings
+  -- use "folke/which-key.nvim"
 
   -- snippets
-  use({
-    "L3MON4D3/LuaSnip",                          -- snippet engine
-    event = "InsertEnter",
-    requires = "rafamadriz/friendly-snippets",   -- extra snippets for different languages
-  })
+  use("L3MON4D3/LuaSnip")                   -- snippet engine
+  use("rafamadriz/friendly-snippets")       -- extra snippets for different languages
 
   -- colourschemes
   -- NOTE: if loading nvim and installing packer for the first time, it will throw an error,
