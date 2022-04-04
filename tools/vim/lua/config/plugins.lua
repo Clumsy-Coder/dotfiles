@@ -143,9 +143,16 @@ return packer.startup(function(use)
       { "hrsh7th/cmp-path", after = "nvim-cmp" },             -- path completions
       { "hrsh7th/cmp-cmdline", after = "nvim-cmp" },          -- cmdline completions
       { "saadparwaiz1/cmp_luasnip", after = "nvim-cmp" },     -- snippet completions connecter for L3MON4D3/LuaSnip
+      { "hrsh7th/cmp-nvim-lsp" },                             -- nvim LSP connector
+                                                              -- connects neovim/nvim-lspconfig to hrsh7th/nvim-cmp
+      { "hrsh7th/cmp-nvim-lua", after = "nvim-cmp"},          -- completion for nvim Lua API
     },
     config = "require('config.cmp')",
   })
+
+  -- LSP
+  use({ "neovim/nvim-lspconfig", config = "require('config.lsp')" })        -- enable LSP
+  use({ "williamboman/nvim-lsp-installer", requires = "nvim-lspconfig" })   -- simple to use language server installer
 
   -- snippets
   use({

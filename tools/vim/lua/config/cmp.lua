@@ -1,3 +1,4 @@
+-- plugin: hrsh7th/nvim-cmp
 -- config obtained from
 --    https://github.com/gmr458/nvim/blob/main/lua/config/cmp.lua
 --    https://github.com/LunarVim/Neovim-from-scratch/blob/master/lua/user/cmp.lua
@@ -121,9 +122,11 @@ cmp.setup({
       vim_item.kind = string.format("%s", lspkindicons[vim_item.kind])    -- load custom icons
       -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
       vim_item.menu = ({
-        luasnip = "[Snippet]",
-        buffer = "[Buffer]",
-        path = "[Path]",
+        nvim_lsp = "[LSP]",       -- use nvim plugin hrsh7th/cmp-nvim-lsp
+        nvim_lua = "[NVIM_LUA]",  -- use nvim plugin hrsh7th/cmp-nvim-lua
+        luasnip = "[Snippet]",    -- saadparwaiz1/cmp_luasnip
+        buffer = "[Buffer]",      -- hrsh7th/cmp-buffer
+        path = "[Path]",          -- hrsh7th/cmp-path
       })[entry.source.name]
       return vim_item
     end,
@@ -131,10 +134,12 @@ cmp.setup({
 
   -- loading CMP completion from multiple sources.
   -- https://www.youtube.com/watch?v=GuIcGxYqaQQ&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ&t=866s
-  sources = {     -- NOTE: the order of the array will have precedence
-    { name = "luasnip" },
-    { name = "buffer" },
-    { name = "path" },
+  sources = {     -- NOTE: the order of the array will have precedence for the completions offered
+    { name = "nvim_lsp" },        -- use nvim plugin hrsh7th/cmp-nvim-lsp
+    { name = "nvim_lua" },        -- use nvim plugin hrsh7th/cmp-nvim-lua
+    { name = "luasnip" },         -- saadparwaiz1/cmp_luasnip
+    { name = "buffer" },          -- hrsh7th/cmp-buffer
+    { name = "path" },            -- hrsh7th/cmp-path
   },
 
   -- confirm options
