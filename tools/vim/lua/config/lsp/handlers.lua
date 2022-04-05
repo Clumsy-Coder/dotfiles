@@ -92,6 +92,8 @@ local function lsp_keymaps(bufnr)
     "n", "gl", '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>', opts)    -- gl - show line diagnostics
   setKeymap(bufnr, "n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)     -- ]d -
   setKeymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)                   -- <Leader>q -
+  -- format file on when running command Format
+  -- https://www.youtube.com/watch?v=b7OguLuaYvE&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ&t=858
   vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
 end
 
@@ -99,6 +101,9 @@ end
 -- load highlighting keywords
 -- add custom config per LSP server. Ex: custom config for tsserver
 M.on_attach = function(client, bufnr)
+  -- use NullLS to handle formatting
+  -- using the command lua vim.lsp.buf.formatting_sync()
+  -- https://www.youtube.com/watch?v=b7OguLuaYvE&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ&t=1129
   if client.name == "tsserver" then
     client.resolved_capabilities.document_formatting = false
   end
