@@ -127,6 +127,7 @@ cmp.setup({
         luasnip = "[Snippet]",    -- saadparwaiz1/cmp_luasnip
         buffer = "[Buffer]",      -- hrsh7th/cmp-buffer
         path = "[Path]",          -- hrsh7th/cmp-path
+        cmp_git = "[Git]"         -- petertriho/cmp-git
       })[entry.source.name]
       return vim_item
     end,
@@ -159,3 +160,15 @@ cmp.setup({
     native_menu = false,
   },
 })
+
+-- Set configuration for specific filetype.
+-- https://github.com/hrsh7th/nvim-cmp#recommended-configuration
+-- https://github.com/petertriho/cmp-git#setup
+cmp.setup.filetype('gitcommit', {
+  sources = cmp.config.sources(
+    {{ name = 'cmp_git' }},     -- hrsh7th/cmp-path
+    {{ name = 'buffer' }}       -- hrsh7th/cmp-buffer
+  )
+})
+
+
