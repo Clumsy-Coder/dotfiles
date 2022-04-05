@@ -1,4 +1,4 @@
--- obtained starter code from 
+-- obtained starter code from
 -- https://github.com/LunarVim/Neovim-from-scratch/blob/master/lua/user/keymaps.lua
 -- https://github.com/gmr458/nvim/blob/main/lua/config/keymaps.lua
 
@@ -16,13 +16,13 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Modes
---    normal_mode = "n",
---    insert_mode = "i",
---    visual_mode = "v",
+--    normal_mode       = "n",
+--    insert_mode       = "i",
+--    visual_mode       = "v",
 --    visual_block_mode = "x",
---    term_mode = "t",
---    command_mode = "c",
--- 
+--    term_mode         = "t",
+--    command_mode      = "c",
+--
 --    C = Ctrl
 --    S = Shift
 --    A = Alt
@@ -76,6 +76,16 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)     -- Alt + k
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)   -- Ctrl + k
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)   -- Ctrl + l
 
+-- nvim-tree
+-- https://github.com/kyazdani42/nvim-tree.lua#setup
+keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
+-- r - rename file
+-- d - delete file/folder
+-- Ctrl + v - open in vertical split
+-- Ctrl + x - open in horizontal split
+-- Ctrl + k - will toggle a popup with file infos about the file under the cursor
+-- Backspace -  will close current opened directory or parent
+
 -- telescope
 -- Find files using Telescope command-line sugar.
 -- https://github.com/nvim-telescope/telescope.nvim#usage
@@ -87,6 +97,7 @@ keymap("n", "<leader>fh", ":Telescope help_tags<cr>", opts)         -- NORMAL mo
 -- keymap("n", "<leader>mf", ":Telescope media_files<cr>", opts)       -- NORMAL mode: Leader + mf
 
 -- https://github.com/nvim-telescope/telescope.nvim#default-mappings
+-- https://github.com/LunarVim/Neovim-from-scratch/blob/master/lua/user/telescope.lua
 -- While telescope is open
 -- Ctrl + n     -- Next item
 -- Ctrl + p     -- Previous item
