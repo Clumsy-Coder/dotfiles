@@ -166,7 +166,7 @@ cmp.setup({
 -- https://github.com/petertriho/cmp-git#setup
 cmp.setup.filetype('gitcommit', {
   sources = cmp.config.sources(
-    {{ name = 'cmp_git' }},     -- hrsh7th/cmp-path
+    {{ name = 'cmp_git' }},     -- petertriho/cmp-git
     {{ name = 'buffer' }}       -- hrsh7th/cmp-buffer
   )
 })
@@ -179,3 +179,11 @@ cmp.setup.cmdline('/', {
   }
 })
 
+-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+-- https://github.com/hrsh7th/nvim-cmp#recommended-configuration
+cmp.setup.cmdline(':', {
+  sources = cmp.config.sources(
+    {{ name = 'path', option = { trailing_slash = true }}},        -- hrsh7th/cmp-path
+    {{ name = 'cmdline' }}                                         -- hrsh7th/cmp-cmdline
+  )
+})
