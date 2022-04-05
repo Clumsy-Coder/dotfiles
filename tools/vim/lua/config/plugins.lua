@@ -146,6 +146,11 @@ return packer.startup(function(use)
   use({ "hrsh7th/cmp-nvim-lua", })      -- completion for nvim Lua API
   -- use({ "ray-x/cmp-treesitter",     after = "nvim-cmp"}),      -- Using all treesitter highlight nodes as completion candidates
   -- use({ "andersevenrud/cmp-tmux",   after = "nvim-cmp"}),      -- Tmux completion source for nvim-cmp
+  use({
+    "petertriho/cmp-git",
+    requires = "nvim-lua/plenary.nvim",
+    config = "require('config.cmp-git')"
+  })
 
   -- LSP
   use({ "williamboman/nvim-lsp-installer", })   -- simple to use language server installer
