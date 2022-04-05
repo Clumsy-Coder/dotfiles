@@ -171,4 +171,11 @@ cmp.setup.filetype('gitcommit', {
   )
 })
 
+-- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
+-- https://github.com/hrsh7th/nvim-cmp#recommended-configuration
+cmp.setup.cmdline('/', {
+  sources = {
+    { name = 'buffer' }         -- hrsh7th/cmp-buffer
+  }
+})
 
