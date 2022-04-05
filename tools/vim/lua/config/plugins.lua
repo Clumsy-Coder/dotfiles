@@ -62,8 +62,8 @@ return packer.startup(function(use)
   -- NORMAL mode: gcc
   -- VISUAL mode: gc
   use({
-    'b3nj5m1n/kommentary',
-    config = "require('config.kommentary')",
+    'numToStr/Comment.nvim',
+    config = "require('config.comment')",
   })
 
   -- git decorations
@@ -102,12 +102,11 @@ return packer.startup(function(use)
   use({
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
-    event = "BufWinEnter",
+    -- event = "BufWinEnter",
     config = "require('config.treesitter')",
   })
-
-  -- Treesitter Rainbow parenthesis
-  use({ "p00f/nvim-ts-rainbow", after = "nvim-treesitter" })
+  use({ "p00f/nvim-ts-rainbow", after = "nvim-treesitter" })  -- Treesitter Rainbow parenthesis
+  use({ "JoosepAlviste/nvim-ts-context-commentstring" })      -- context aware commenting. Works with numToStr/Comment.nvim
 
   -- blankline indents
   use({
