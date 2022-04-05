@@ -156,7 +156,7 @@ return packer.startup(function(use)
   use({
     "neovim/nvim-lspconfig",                    -- enable LSP
     config = "require('config.lsp')" })
-  -- use("jose-elias-alvarez/null-ls.nvim")                                    -- for formatters and linters
+  use("jose-elias-alvarez/null-ls.nvim")        -- for formatters and linters
 
   -- display keybindings
   -- use "folke/which-key.nvim"
