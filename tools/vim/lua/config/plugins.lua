@@ -189,6 +189,14 @@ return packer.startup(function(use)
     config = function() require("scrollbar").setup() end
   })
 
+  -- closing buffers without exiting neovim
+  -- Commands:
+  -- :Bdelete
+  -- :Bwipeout
+  -- Keymaps:
+  -- <Leader>q
+  use("moll/vim-bbye")
+
   -- Automatically set up the configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
     require("packer").sync()

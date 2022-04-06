@@ -119,3 +119,8 @@ keymap("n", "<leader>fh", ":Telescope help_tags<cr>", opts)         -- NORMAL mo
 -- Shift + Tab  -- Toggle selection and move to prev selection
 -- Ctrl + q     -- Send all items not filtered to quickfixlist (qflist)
 -- Alt + q      -- Send all selected items to qflist
+
+-- moll/vim-bbye
+-- closing buffers without exiting neovim
+-- WARNING: currently this keymap is being used by <Cmd>lua vim.diagnostic.setloclist()<CR>
+keymap("n", "<leader>q", ":Bdelete<cr>", opts)         -- NORMAL mode: Leader + q
