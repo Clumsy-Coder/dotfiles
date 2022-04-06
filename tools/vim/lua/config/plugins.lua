@@ -197,6 +197,13 @@ return packer.startup(function(use)
   -- <Leader>q
   use("moll/vim-bbye")
 
+  -- improve startup time
+  -- Is using a standard Neovim install, i.e. built from source or using a
+  -- provided appimage.
+  use("lewis6991/impatient.nvim")
+
+  -- //////////////////////////////////////////////////////////////////////////////////////////// --
+
   -- Automatically set up the configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
     require("packer").sync()
