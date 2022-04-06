@@ -176,6 +176,13 @@ return packer.startup(function(use)
     config = "require('config.theme')"
   })
 
+  -- vim status line
+  use({
+    'nvim-lualine/lualine.nvim',
+    requires = 'kyazdani42/nvim-web-devicons',
+    config = "require('config.lualine')"
+  })
+
   -- scrollbar
   use({
     "petertriho/nvim-scrollbar",
