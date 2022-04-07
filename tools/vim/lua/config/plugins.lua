@@ -216,6 +216,9 @@ return packer.startup(function(use)
   -- provided appimage.
   use("lewis6991/impatient.nvim")
 
+  -- A tree like view for symbols using LSP
+  use({"simrat39/symbols-outline.nvim", config = "require('config.symbols-outline')"})
+
   -- //////////////////////////////////////////////////////////////////////////////////////////// --
 
   -- Automatically set up the configuration after cloning packer.nvim
