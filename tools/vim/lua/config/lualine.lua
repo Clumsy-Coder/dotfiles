@@ -142,6 +142,8 @@ require('lualine').setup {
       "packer",
       -- "toggleterm",
       "lsp-installer",
+      "dashboard",
+      "alpha"
     },
   },
 
