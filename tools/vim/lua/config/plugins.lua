@@ -197,8 +197,15 @@ return packer.startup(function(use)
   -- <Leader>q
   use("moll/vim-bbye")
 
+  -- manage projects
+  use({
+    "ahmedkhalf/project.nvim",
+    config = "require('config.project')",
+    requires = 'nvim-telescope/telescope.nvim',
+  })
+
   -- welcome screen dashboard
-  use({ 
+  use({
     "goolord/alpha-nvim",
     requires = { 'kyazdani42/nvim-web-devicons' },
     config = "require('config.alpha')"
