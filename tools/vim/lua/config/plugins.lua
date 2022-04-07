@@ -159,7 +159,7 @@ return packer.startup(function(use)
   use("jose-elias-alvarez/null-ls.nvim")        -- for formatters and linters
 
   -- display keybindings
-  -- use "folke/which-key.nvim"
+  use({ "folke/which-key.nvim", config = "require('config.which-key')" })
 
   -- snippets
   use("L3MON4D3/LuaSnip")                   -- snippet engine

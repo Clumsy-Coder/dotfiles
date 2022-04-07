@@ -13,16 +13,16 @@ local dashboard = require("alpha.themes.dashboard")
 -- icons obtained from https://www.nerdfonts.com/cheat-sheet
 dashboard.section.buttons.val = {
   -- dashboard.button("SPC f b" , "  Jump to bookmarks",      ":Telescope marks <CR>"),
-  dashboard.button("SPC f f" , "  Find file",              ":Telescope find_files hidden=true no_ignore=true<CR>"),
-  dashboard.button("SPC p"   , "  Find project",           ":Telescope projects <CR>"),
-  dashboard.button("SPC f o" , "  Recently opened files",  ":Telescope oldfiles <CR>"),
-  dashboard.button("SPC f g" , "  Search text",            ":Telescope live_grep <CR>"),
-  dashboard.button("SPC f h" , "  Search help file",       ":Telescope help_tags <CR>"),
-  dashboard.button("SPC c"   , "  NeoVim Configuration",   ":e ~/.config/nvim/init.lua <CR>"),
-  dashboard.button("SPC d"   , "  Dotfiles Configuration", ":e ~/dotfiles <CR>"),
-  -- dashboard.button("SPC s l" , "  Open last session",      ""),
-  dashboard.button("SPC e"   , "  New file",               ":ene <BAR> startinsert <CR>"),
-  dashboard.button("SPC q"   , "  Quit Neovim",            ":qa<CR>"),
+  dashboard.button("SPC f",   "  Find file",              ":Telescope find_files hidden=true no_ignore=true<CR>"),
+  dashboard.button("SPC P",   "  Find project",           ":Telescope projects <CR>"),
+  dashboard.button("SPC s r", "  Recently opened files",  ":Telescope oldfiles <CR>"),
+  dashboard.button("SPC F",   "  Search text",            ":Telescope live_grep <CR>"),
+  dashboard.button("SPC s h", "  Search help file",       ":Telescope help_tags <CR>"),
+  dashboard.button("SPC c n", "  NeoVim Configuration",   ":e ~/.config/nvim/init.lua <CR>"),
+  dashboard.button("SPC c d", "  Dotfiles Configuration", ":e ~/dotfiles <CR>"),
+  -- dashboard.button("SPC s l", "  Open last session",      ""),
+  dashboard.button("SPC e",   "  New file",               ":ene <BAR> startinsert <CR>"),
+  dashboard.button("SPC q",   "  Quit Neovim",            ":qa<CR>"),
 }
 
 -- dashboard.section.footer.opts.hl = "Type"

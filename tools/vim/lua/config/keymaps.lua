@@ -3,7 +3,10 @@
 -- https://github.com/gmr458/nvim/blob/main/lua/config/keymaps.lua
 
 
-local opts = { noremap = true, silent = true }
+local opts = {
+  noremap = true,     -- non-recursive map. https://stackoverflow.com/a/3776182/3053548
+  silent = true
+}
 
 local term_opts = { silent = true }
 
@@ -76,9 +79,13 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)     -- Alt + k
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)   -- Ctrl + k
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)   -- Ctrl + l
 
+-- most of the keymaps will be set using Which-key. check config.which-key file
+
+
+
 -- nvim-tree
 -- https://github.com/kyazdani42/nvim-tree.lua#setup
-keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
+-- keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
 -- r - rename file
 -- d - delete file/folder
 -- Ctrl + v - open in vertical split
@@ -89,11 +96,11 @@ keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
 -- telescope
 -- Find files using Telescope command-line sugar.
 -- https://github.com/nvim-telescope/telescope.nvim#usage
-keymap("n", "<leader>ff", ":Telescope find_files hidden=true no_ignore=true<cr>", opts)        -- NORMAL mode: Leader + ff
-keymap("n", "<leader>fg", ":Telescope live_grep<cr>", opts)         -- NORMAL mode: Leader + fg
-keymap("n", "<leader>fb", ":Telescope file_browser<cr>", opts)      -- NORMAL mode: Leader + fb
-keymap("n", "<leader>tb", ":Telescope buffers<cr>", opts)           -- NORMAL mode: Leader + tb
-keymap("n", "<leader>fh", ":Telescope help_tags<cr>", opts)         -- NORMAL mode: Leader + fh
+-- keymap("n", "<leader>ff", ":Telescope find_files hidden=true no_ignore=true<cr>", opts)        -- NORMAL mode: Leader + ff
+-- keymap("n", "<leader>fg", ":Telescope live_grep<cr>", opts)         -- NORMAL mode: Leader + fg
+-- keymap("n", "<leader>fb", ":Telescope file_browser<cr>", opts)      -- NORMAL mode: Leader + fb
+-- keymap("n", "<leader>tb", ":Telescope buffers<cr>", opts)           -- NORMAL mode: Leader + tb
+-- keymap("n", "<leader>fh", ":Telescope help_tags<cr>", opts)         -- NORMAL mode: Leader + fh
 -- keymap("n", "<leader>mf", ":Telescope media_files<cr>", opts)       -- NORMAL mode: Leader + mf
 
 -- https://github.com/nvim-telescope/telescope.nvim#default-mappings
@@ -123,4 +130,4 @@ keymap("n", "<leader>fh", ":Telescope help_tags<cr>", opts)         -- NORMAL mo
 -- moll/vim-bbye
 -- closing buffers without exiting neovim
 -- WARNING: currently this keymap is being used by <Cmd>lua vim.diagnostic.setloclist()<CR>
-keymap("n", "<leader>q", ":Bdelete<cr>", opts)         -- NORMAL mode: Leader + q
+-- keymap("n", "<leader>q", ":Bdelete<cr>", opts)         -- NORMAL mode: Leader + q
