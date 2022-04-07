@@ -18,7 +18,8 @@ indent_blankline.setup {
     'toggleterm',
     'packer',
     'help',
-    'NvimTree'
+    'NvimTree',
+    'alpha'
   }
 }
 

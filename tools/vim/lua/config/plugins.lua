@@ -197,6 +197,13 @@ return packer.startup(function(use)
   -- <Leader>q
   use("moll/vim-bbye")
 
+  -- welcome screen dashboard
+  use({ 
+    "goolord/alpha-nvim",
+    requires = { 'kyazdani42/nvim-web-devicons' },
+    config = "require('config.alpha')"
+  })
+
   -- improve startup time
   -- Is using a standard Neovim install, i.e. built from source or using a
   -- provided appimage.
