@@ -1,4 +1,26 @@
--- all neovim plugins to load
+-- Packer - neovim plugin manager
+-- Commonly used commands - https://github.com/wbthomason/packer.nvim#quickstart
+-- PackerStatus
+--    Show status installed plugins
+-- PackerClean
+--    Remove any disabled or unused plugins
+-- PackerInstall
+--    Clean, then install missing plugins
+-- PackerUpdate
+--    Clean, then update and install plugins
+-- PackerSync
+--    Install plugins and compile (runs PackerUpdate and PackerCompile)
+-- PackerLoad [plugin]
+--    Loads opt plugin immediately
+--
+-- Specifying plugin installations
+--  Ex: install certain plugins, or loading certain plugins
+--  https://github.com/wbthomason/packer.nvim#specifying-plugins
+-- Dependencies: when using "requires" it will install those plugins before downloading the current one.
+--  https://github.com/wbthomason/packer.nvim#dependencies
+-- Sequencing: specifying the loading order with "after". It will load that plugin before
+-- loading the current. Can be important regarding plugin load order. Ex: CMP and LSP
+--  https://github.com/wbthomason/packer.nvim#sequencing
 
 local fn = vim.fn
 
@@ -44,8 +66,8 @@ packer.init({
 
 return packer.startup(function(use)
 
+  -- REQUIRED PLUGINS -------------------------------------------------------------------------- {{{
   -- //////////////////////////////////////////////////////////////////////////////////////////// --
-  -- prerequisites plugins.
   -- plugins that are required by other plugins
 
   use "wbthomason/packer.nvim"        -- package manager
@@ -54,8 +76,10 @@ return packer.startup(function(use)
   use "b0o/SchemaStore.nvim"          -- json collection of keywords for each dev files. Ex: package.json and docker-compose.yml
   use "kyazdani42/nvim-web-devicons"  -- dev icons
 
+  -- }}}
+
+  -- FUNCTIONAL PLUGINS ------------------------------------------------------------------------ {{{
   -- //////////////////////////////////////////////////////////////////////////////////////////// --
-  -- functional plugins
 
   -- highly extendable fuzzy finder over lists
   use "nvim-telescope/telescope.nvim"
@@ -108,8 +132,10 @@ return packer.startup(function(use)
   --   config = function() require("trouble").setup() end
   -- }
 
+  -- }}}
+
+  -- VISUAL PLUGINS ---------------------------------------------------------------------------- {{{
   -- //////////////////////////////////////////////////////////////////////////////////////////// --
-  -- visual plugins
 
   -- colourschemes
   -- NOTE: if loading nvim and installing packer for the first time, it will throw an error,
@@ -127,6 +153,8 @@ return packer.startup(function(use)
     "petertriho/nvim-scrollbar",
     config = function() require("scrollbar").setup() end
   }
+
+  -- }}}
 
   -- //////////////////////////////////////////////////////////////////////////////////////////// --
 
