@@ -13,9 +13,12 @@
 [merge]
   conflictstyle = diff3
 [core]
-  editor = nvim
+  editor = nvim +24 -c 'startinsert'
   excludesfile = ~/.gitignore_global
   pager = less --tabs=4 -RFX
+[commit]
+  template = ~/dotfiles/tools/git/git-commit-template-timmybytes.txt
+  # template = ~/dotfiles/tools/git/git-commit-template-joelparkerhenderson.txt
 [color "diff-highlight"]
   oldNormal = red bold
   oldHighlight = red bold 52
