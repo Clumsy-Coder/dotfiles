@@ -1,3 +1,32 @@
+## [1.10.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.9.0...1.10.0) (2022-04-08)
+
+
+### Features
+
+* **tmux:** add plugin jaclu/tmux-menus ([79929a1](https://github.com/Clumsy-Coder/dotfiles/commit/79929a1ce46be3f0666b83ca7738fff2750a7a7a))
+* **tmux:** add plugin MunifTanjim/tmux-mode-indicator ([513f9f2](https://github.com/Clumsy-Coder/dotfiles/commit/513f9f275faaf071b20675cdd746590f6075f09c))
+* **tmux:** add plugin ofirgall/tmux-window-name ([3fd017c](https://github.com/Clumsy-Coder/dotfiles/commit/3fd017c9f48941750a47e98e560639e0194a2a4a))
+
+
+### Code Refactoring
+
+* **tmux:** remove unused plugins ([29772e4](https://github.com/Clumsy-Coder/dotfiles/commit/29772e4f95706468443298646f417260bbc56852))
+* **tmux:** replace 'set-option' with 'set' ([cf7fa3c](https://github.com/Clumsy-Coder/dotfiles/commit/cf7fa3c88b0301614e683055161b9acc0ff96db1))
+* **tmux:** use symbolic link when linking tmux.conf ([39fbdcd](https://github.com/Clumsy-Coder/dotfiles/commit/39fbdcd1f860fbf02006a6c5acdfeabafb587f38))
+
+
+### Miscellaneous Chores
+
+* **tmux:** renumber tmux windows when closing or opening ([fe11b4c](https://github.com/Clumsy-Coder/dotfiles/commit/fe11b4c6ddea029167df5a5e140b9370df58abae))
+
+
+### Documentation
+
+* **tmux:** add brief comments on what the plugins used for ([7dd52ac](https://github.com/Clumsy-Coder/dotfiles/commit/7dd52ac8d87af05a2bf2e902bc6fbf2cae149542))
+* **tmux:** add comments on install, update and uninstall tmux plugins with keymaps ([16b26c7](https://github.com/Clumsy-Coder/dotfiles/commit/16b26c74a2bb2a573479880ddcbaf34cda834999))
+* **tmux:** add link to awesome-tmux github repo ([bc021d2](https://github.com/Clumsy-Coder/dotfiles/commit/bc021d2eaebb9792fd54544568d47cafb630027b))
+* **tmux:** add tmux-plugins/tmux-pain-control as potential plugin ([e493ca9](https://github.com/Clumsy-Coder/dotfiles/commit/e493ca989a6e47e724686c07bd13fd773e920f79))
+
 ## [1.9.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.8.9...1.9.0) (2022-04-08)
 
 
