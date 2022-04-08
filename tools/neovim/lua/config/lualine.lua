@@ -77,7 +77,7 @@ for i, type in pairs({'error', 'warn', 'info', 'hint'}) do  -- NOTE: the order o
     sections = { type },
     symbols = { [type] = diagnosticMetadata[type].symbol },
     diagnostics_color = { [type] = diagnosticMetadata[type]},
-    always_visible = true,    -- Show diagnostics even if there are none.
+    always_visible = false,    -- Show diagnostics even if there are none.
     update_in_insert = true, -- Update diagnostics in insert mode.
   })
 end
