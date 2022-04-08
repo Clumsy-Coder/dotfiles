@@ -1,3 +1,12 @@
+## [1.11.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.10.0...1.11.0) (2022-04-08)
+
+
+### Features
+
+* **git:** add git commit template ([976b5df](https://github.com/Clumsy-Coder/dotfiles/commit/976b5df5d12255f31f6f3b6de4f528412b1f24e9))
+* **git:** add gitconfig file ([face293](https://github.com/Clumsy-Coder/dotfiles/commit/face29385db1f227a150c839132aa87d7dc7e2b1))
+* **git:** add gitignore_global file ([3368187](https://github.com/Clumsy-Coder/dotfiles/commit/33681872c0cb37ee6d2e1c3032170841413b03c5))
+
 ## [1.10.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.9.0...1.10.0) (2022-04-08)
 
 
