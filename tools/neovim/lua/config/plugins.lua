@@ -21,6 +21,14 @@
 -- Sequencing: specifying the loading order with "after". It will load that plugin before
 -- loading the current. Can be important regarding plugin load order. Ex: CMP and LSP
 --  https://github.com/wbthomason/packer.nvim#sequencing
+--
+--
+--  WARNING: IF you're going to lazy load a plugin, make sure the config is loaded when defining
+--           the plugin to install, NOT loading the config file in config.load-plugin-config .
+--           Loading config file in config.load-plugin-config for plugin that's lazy loaded will
+--           cause an error, due to not being able to find the said plugin.
+--           If you're going to lazyload, than load the plugin config in config.load-plugin-config.
+
 
 local fn = vim.fn
 
@@ -116,11 +124,11 @@ return packer.startup(function(use)
   use "lewis6991/impatient.nvim"                            -- improve startup time
   use "folke/which-key.nvim"                                -- display keybindings
   use "akinsho/toggleterm.nvim"                             -- manage terminal in neovim. toggle terminal with Ctrl + \
-  use { "akinsho/bufferline.nvim", event = "BufWinEnter" }  -- manage vim buffers as tabs
+  use "akinsho/bufferline.nvim"                             -- manage vim buffers as tabs
   use "moll/vim-bbye"                                       -- closing buffers without exiting neovim
   use "kyazdani42/nvim-tree.lua"                            -- file explorer
   use "simrat39/symbols-outline.nvim"                       -- A tree like view for symbols using LSP. :SymbolsOutline
-  use { "lewis6991/gitsigns.nvim", event = "BufRead" }      -- git decorations
+  use "lewis6991/gitsigns.nvim"                             -- git decorations
   use "numToStr/Comment.nvim"                               -- commenting lines of code
   use "windwp/nvim-autopairs"                               -- Autopairs, integrates with both cmp and treesitter
   use "goolord/alpha-nvim"                                  -- welcome screen dashboard
@@ -144,7 +152,7 @@ return packer.startup(function(use)
   -- run command:
   --    nvim --headless --noplugin -c "autocmd User PackerComplete quitall" -c "PackerInstall"
   use "ellisonleao/gruvbox.nvim"
-  use { "lukas-reineke/indent-blankline.nvim", event = "BufRead" }  -- blankline indents
+  use "lukas-reineke/indent-blankline.nvim"                         -- blankline indents
   use "norcalli/nvim-colorizer.lua"                                 -- highlight CSS colours. Ex: #fff
   use "nvim-lualine/lualine.nvim"                                   -- vim status line
 
