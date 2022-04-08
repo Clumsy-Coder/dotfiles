@@ -1,3 +1,11 @@
+-- neovim config
+--
+-- other settings obtained from
+-- https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ
+-- https://www.youtube.com/watch?v=gnupOrSEikQ&t=40s
+-- https://gist.github.com/benawad/b768f5a5bbd92c8baabd363b7e79786f
+-- https://www.freecodecamp.org/news/vimrc-configuration-guide-customize-your-vim-editor/
+
 -- lewis6991/impatient.nvim plugin is required to be loaded first to improve startup time, as per instructions
 -- https://github.com/lewis6991/impatient.nvim#setup
 local impatient_status_ok, impatient = pcall(require, "impatient")
