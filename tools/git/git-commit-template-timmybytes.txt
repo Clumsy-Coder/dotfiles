@@ -1,0 +1,49 @@
+# -------------------------------------------------------------------------------------------------#
+# Header - type(scope): Brief description                                                          #
+# -------------------------------------------------------------------------------------------------#
+#    * feat             A new feature - SemVar MINOR.                                              #
+#    * fix              A bug fix - SemVar PATCH.                                                  #
+#    * BREAKING CHANGE  Breaking API change - SemVar MAJOR.                                        #
+#    * docs             Change to documentation only.                                              #
+#    * style            Changes that do not affect the meaning                                     #
+#                       of the code (white-space, formatting,                                      #
+#                       missing semi-colons, etc).                                                 #
+#    * refactor         A code change that neither fixes a bug nor adds a feature.                 #
+#    * perf             A code change that improves performance.                                   #
+#    * test             Adding missing tests or correcting existing tests.                         #
+#    * build            changes that affect the build system or external dependencies              #
+#                       Ex: (example scopes: gulp, broccoli, npm).                                 #
+#    * ci               Changes to our CI configuration files and scripts                          #
+#                       Ex: (example scopes: Travis, Circle, BrowserStack, SauceLabs)              #
+#    * chore            General tooling/config/min refactor.                                       #
+#                       Other changes that don't modify src or test files.                         #
+#    * revert           Reverts a previous commit.                                                 #
+#                                                                                                  #
+#    Ex: feat(neovim): add plugin nvim-treesitter/nvim-treesitter                                  #
+# -------------------------------------------------------------------------------------------------#
+
+
+# -------------------------------------------------------------------------------------------------#
+# Body - More description, if necessary                                                            #
+# -------------------------------------------------------------------------------------------------#
+#    * Motivation behind changes, more detail into how                                             #
+#      functionality might be affected, etc.                                                       #
+#    * What, how, why, where.                                                                      #
+# -------------------------------------------------------------------------------------------------#
+
+# -------------------------------------------------------------------------------------------------#
+# Breaking Changes - description that causes breaking changes                                      #
+# -------------------------------------------------------------------------------------------------#
+#    * Ex:                                                                                         #
+#      BREAKING CHANGE: plugin lazy-loading is causing neovim to cause error                       #
+#                                                                                                  #
+#                                                                                                  #
+# -------------------------------------------------------------------------------------------------#
+
+# -------------------------------------------------------------------------------------------------#
+# Footer - Associated issues, PRs, etc.                                                            #
+# -------------------------------------------------------------------------------------------------#
+#    * Ex: Resolves Issue #207, see PR #15, etc.                                                   #
+# -------------------------------------------------------------------------------------------------#
+
+# Template obtained from https://github.com/timmybytes/dotfiles/blob/main/git/commit-conventions.txt
