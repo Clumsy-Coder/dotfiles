@@ -1,0 +1,42 @@
+[user]
+  name = Clumsy-Coder
+  email = 19594044+Clumsy-Coder@users.noreply.github.com
+[color]
+  ui = true
+  status = true
+  branch = true
+  interactive = true
+[pull]
+  rebase = true
+[push]
+  default = upstream
+[merge]
+  conflictstyle = diff3
+[core]
+  editor = nvim
+  excludesfile = ~/.gitignore_global
+  pager = less --tabs=4 -RFX
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
+[color "diff"]
+  meta = yellow
+  frag = magenta bold
+  commit = yellow bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse
+# [diff]
+#   tool = vscode
+# [difftool "vscode"]
+#   cmd = code --wait --diff $LOCAL $REMOTE
+#   prompt = true
+# [merge]
+#   tool = vscode
+# [mergetool "vscode"]
+#   cmd = code --wait $MERGED
+[stash]
+  showPatch = false
+  showStat = true
