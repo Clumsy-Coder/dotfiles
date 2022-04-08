@@ -136,11 +136,13 @@ cmp.setup({
   -- loading CMP completion from multiple sources.
   -- https://www.youtube.com/watch?v=GuIcGxYqaQQ&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ&t=866s
   sources = {     -- NOTE: the order of the array will have precedence for the completions offered
-    { name = "nvim_lsp" },        -- use nvim plugin hrsh7th/cmp-nvim-lsp
-    { name = "nvim_lua" },        -- use nvim plugin hrsh7th/cmp-nvim-lua
-    { name = "luasnip" },         -- saadparwaiz1/cmp_luasnip
-    { name = "buffer" },          -- hrsh7th/cmp-buffer
-    { name = "path" },            -- hrsh7th/cmp-path
+    { name = "nvim_lsp" },                    -- use nvim plugin hrsh7th/cmp-nvim-lsp
+    { name = "nvim_lua" },                    -- use nvim plugin hrsh7th/cmp-nvim-lua
+    -- { name = "treesitter" },                  -- use nvim plugin ray-x/cmp-treesitter
+    -- { name = "tmux" },                        -- use nvim plugin andersevenrud/cmp-tmux
+    { name = "luasnip" },                     -- saadparwaiz1/cmp_luasnip
+    { name = "buffer", keyword_length = 5 },  -- hrsh7th/cmp-buffer
+    { name = "path" },                        -- hrsh7th/cmp-path
   },
 
   -- confirm options
