@@ -10,11 +10,12 @@
 -- https://github.com/lewis6991/impatient.nvim#setup
 local impatient_status_ok, impatient = pcall(require, "impatient")
 if impatient_status_ok then                     -- using pcall to prevent errors when setting up neovim for the first time
-  require('impatient').enable_profile()
+  impatient.enable_profile()
 end
 
 local packer_status_ok, packer = pcall(require, 'packer')
 if not packer_status_ok then      -- this is for first time neovim plugin setup
+  require('config.general-config')
   require('config.plugins')
   -- print("restart neovim for plugins to take affect")
 else
