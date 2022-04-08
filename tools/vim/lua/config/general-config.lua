@@ -1,7 +1,7 @@
 -- :help options
 vim.opt.fileencoding = "utf-8"                  -- the encoding written to a file
 vim.opt.number = true                           -- set numbered lines
-vim.opt.cursorline = true                       -- highlight the current line
+vim.opt.cursorline = false                       -- highlight the current line
 vim.opt.relativenumber = false                  -- set relative numbered lines
 vim.opt.colorcolumn = { 100 }                       -- View a vertical guide at 100 characters for each line
 vim.opt.numberwidth = 4                         -- set number column width to 2 {default 4}
