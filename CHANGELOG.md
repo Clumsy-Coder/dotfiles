@@ -1,3 +1,73 @@
+## [1.9.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.8.9...1.9.0) (2022-04-08)
+
+
+### Features
+
+* **neovim:** add neovim autocommands config file ([369499a](https://github.com/Clumsy-Coder/dotfiles/commit/369499aa56a4c917c133be51261567aa79461dce))
+* **neovim:** add plugin ahmedkhalf/project.nvim ([c726a75](https://github.com/Clumsy-Coder/dotfiles/commit/c726a7511a1d5d4e9e8c3b11e823dc8c8dba7365))
+* **neovim:** add plugin akinsho/bufferline.nvim ([4c2927e](https://github.com/Clumsy-Coder/dotfiles/commit/4c2927e19f1b26b617629fe7b1fba8007ca7773e))
+* **neovim:** add plugin akinsho/toggleterm.nvim ([90d80e4](https://github.com/Clumsy-Coder/dotfiles/commit/90d80e4234f649551b09522069f5d3ca7dd8d87a))
+* **neovim:** add plugin b3nj5m1n/kommentary ([fdf7b45](https://github.com/Clumsy-Coder/dotfiles/commit/fdf7b455facdc9ff23046a15f178bf3268397672))
+* **neovim:** add plugin ellisonleao/gruvbox.nvim ([ba3cf94](https://github.com/Clumsy-Coder/dotfiles/commit/ba3cf9494f2354b02923d3d2f6cc7e29ed909c3c))
+* **neovim:** add plugin folke/which-key.nvim ([d6340fe](https://github.com/Clumsy-Coder/dotfiles/commit/d6340fe894373af74be75c694bbcd2b10ecae95a))
+* **neovim:** add plugin goolord/alpha-nvim ([ecd28de](https://github.com/Clumsy-Coder/dotfiles/commit/ecd28de63bf3b58ee5379ce05304fed8b63096b2))
+* **neovim:** add plugin hrsh7th/nvim-cmp ([881d327](https://github.com/Clumsy-Coder/dotfiles/commit/881d32760678174e14d2b51db342a9036505e20a))
+* **neovim:** add plugin jose-elias-alvarez/null-ls.nvim ([195caf9](https://github.com/Clumsy-Coder/dotfiles/commit/195caf96a8d17c0f183b4234b298be74b49b00e5))
+* **neovim:** add plugin kyazdani42/nvim-tree.lua ([bf8cf41](https://github.com/Clumsy-Coder/dotfiles/commit/bf8cf412fefac0ae7809f2ccb6dba25d889e3f52))
+* **neovim:** add plugin lewis6991/gitsigns.nvim ([1bbe3bc](https://github.com/Clumsy-Coder/dotfiles/commit/1bbe3bc54f83823a03a72051c6adeb7d91fd3e42))
+* **neovim:** add plugin lewis6991/impatient.nvim ([97290b7](https://github.com/Clumsy-Coder/dotfiles/commit/97290b7ac7e27bb19cd8ac3b062189bd1da9d67f))
+* **neovim:** add plugin lukas-reineke/indent-blankline.nvim ([ef0c935](https://github.com/Clumsy-Coder/dotfiles/commit/ef0c93574b7fbbe6fcb93e647de087072b7bcea6))
+* **neovim:** add plugin moll/vim-bbye ([e7ee41d](https://github.com/Clumsy-Coder/dotfiles/commit/e7ee41ddb23b4dc6b0bf6ccb09acfc9b121dd6e6))
+* **neovim:** add plugin neovim/nvim-lspconfig ([ef1c5d4](https://github.com/Clumsy-Coder/dotfiles/commit/ef1c5d43f32e17dceaa206e01271461a0c851e06))
+* **neovim:** add plugin norcalli/nvim-colorizer.lua ([d179264](https://github.com/Clumsy-Coder/dotfiles/commit/d179264d4d935bd322ffedeceaf5ab0f642fe9d7))
+* **neovim:** add plugin nvim-lualine/lualine.nvim ([bfc9f0e](https://github.com/Clumsy-Coder/dotfiles/commit/bfc9f0e43361be45b4a6f35450f5fb9157778dde))
+* **neovim:** add plugin nvim-telescope/telescope.nvim ([a7a0ecf](https://github.com/Clumsy-Coder/dotfiles/commit/a7a0ecf2e220674a0e4f5abac53332ceac9f1b94))
+* **neovim:** add plugin nvim-treesitter/nvim-treesitter ([1da95f6](https://github.com/Clumsy-Coder/dotfiles/commit/1da95f6d265f3b4012565f8827c6df7facf715c2))
+* **neovim:** add plugin p00f/nvim-ts-rainbow ([bb378cc](https://github.com/Clumsy-Coder/dotfiles/commit/bb378cc980770fe93b0b7d9372a8b6a03bde1eda))
+* **neovim:** add plugin petertriho/cmp-git ([dbad87d](https://github.com/Clumsy-Coder/dotfiles/commit/dbad87d9c836399c5aaf30d1f7e141bc24946dcf))
+* **neovim:** add plugin petertriho/nvim-scrollbar ([44c61c5](https://github.com/Clumsy-Coder/dotfiles/commit/44c61c512bc2f7e447f9573fcdfa8d4c8699fd4e))
+* **neovim:** add plugin simrat39/symbols-outline.nvim ([94272bd](https://github.com/Clumsy-Coder/dotfiles/commit/94272bd3e876ca207c6385a684700519f4370b18))
+* **neovim:** add plugin windwp/nvim-autopairs ([82bc743](https://github.com/Clumsy-Coder/dotfiles/commit/82bc7430e9da16939a6a9bcb8b7037d16be6bbbe))
+* **neovim:** replace plugin b3nj5m1n/kommentary with numToStr/Comment.nvim ([3e66f7a](https://github.com/Clumsy-Coder/dotfiles/commit/3e66f7aa83042dbf3660ace7b13506eb8f30445b))
+* **neovim:** use neovim Packer to manage plugins ([360d136](https://github.com/Clumsy-Coder/dotfiles/commit/360d1364a91510ebf846ff8ccafa4d51b1df03ed))
+
+
+### Bug Fixes
+
+* **neovim:** fix loading conflicts for CMP, LSP and LuaSnips ([3f87b2b](https://github.com/Clumsy-Coder/dotfiles/commit/3f87b2b8e778e060d4b2433ba9e2cb76236a39a0))
+* **neovim:** loading error when lazyloading plugins ([707077f](https://github.com/Clumsy-Coder/dotfiles/commit/707077f6a3a94037a0415173dce380a418fa1d16))
+
+
+### Miscellaneous Chores
+
+* **neovim:** disable cursorline because it interferes with gitsigns's git blame ([58bbc9d](https://github.com/Clumsy-Coder/dotfiles/commit/58bbc9d0686c71d92ca4afe07f1c880a22c97061))
+* **neovim:** enable hrsh7th/cmp-path and hrsh7th/cmp-cmdline in COMMAND mode ([f40593c](https://github.com/Clumsy-Coder/dotfiles/commit/f40593cda56283d1f14bfce6fdd860d3cade9f78))
+* **neovim:** enable plugin hrsh7th/cmp-buffer during searching ([0693a88](https://github.com/Clumsy-Coder/dotfiles/commit/0693a88b62b96470e1c5a99c04fe50c3a1c510e4))
+* **neovim:** remove deprecated neovim folder ([c8a90ac](https://github.com/Clumsy-Coder/dotfiles/commit/c8a90ac3ecf452fddb908d571f32068d85feeb02))
+* **neovim:** update config for kyazdani42/nvim-tree.lua plugin ([3ef8bcf](https://github.com/Clumsy-Coder/dotfiles/commit/3ef8bcffea59c29150374cbef42b9d5b900de2d9))
+* **vim:** add common key mappings for vim/lua/config/keymaps.lua ([37aa64c](https://github.com/Clumsy-Coder/dotfiles/commit/37aa64c68a1fd721f3a337b212597ed5e69f58f2))
+* **vim:** create init.lua file and import lua/config/general-config.lua ([d82fbe1](https://github.com/Clumsy-Coder/dotfiles/commit/d82fbe1eb80fae987f79d3f39028301329dddc63))
+* **vim:** remove vim related files ([08e4048](https://github.com/Clumsy-Coder/dotfiles/commit/08e4048009be0904c617c472c7de88da2aad9a84))
+
+
+### Code Refactoring
+
+* **neovim:** display buffer cmp after word length of 5 ([51f94ea](https://github.com/Clumsy-Coder/dotfiles/commit/51f94ea870071865f701c7fe20ebb16b5c5d1ac3))
+* **neovim:** move neovim files to neovim folder ([632bd26](https://github.com/Clumsy-Coder/dotfiles/commit/632bd26670b4e757bed05b07d1bc0427683f096e))
+* **neovim:** only display lualine diagnostics when available ([0fa6bb1](https://github.com/Clumsy-Coder/dotfiles/commit/0fa6bb1ca9dc7f4cede5c29756a1a8deeda1689b))
+* **neovim:** remove unused code and load general-config if packer is not installed ([c0b6593](https://github.com/Clumsy-Coder/dotfiles/commit/c0b65939347da26272edaa3cb0f5fe2e279ec265))
+* **neovim:** reorder plugin order ([96d9828](https://github.com/Clumsy-Coder/dotfiles/commit/96d9828005acdfae6eea87f6412023e22cb0d5f0))
+* **neovim:** specify a set of languages to download for treesitter ([329748b](https://github.com/Clumsy-Coder/dotfiles/commit/329748bc75bc2f3bc46039647df51607c67e8905))
+* **neovim:** write importing plugin config files in a simpler manner ([9862eda](https://github.com/Clumsy-Coder/dotfiles/commit/9862eda7749d6b5636f9eea9dd7f1239a12a5749))
+* **vim:** convert general vim config into a .lua file ([f7138fe](https://github.com/Clumsy-Coder/dotfiles/commit/f7138fe55d53871feb0e5c0290c9644de732c012))
+
+
+### Documentation
+
+* **neovim:** add a brief comments about neovim config ([232b849](https://github.com/Clumsy-Coder/dotfiles/commit/232b8490833bd71300d8432742e5f4035d224633))
+* **neovim:** add docs on how to use Packer ([708c2d2](https://github.com/Clumsy-Coder/dotfiles/commit/708c2d25f776f7eb49e3414497acb961030fc8d8))
+* **neovim:** add README.md docs ([d2c2d50](https://github.com/Clumsy-Coder/dotfiles/commit/d2c2d50e24d200ed46ae6e49041b5358354d28bc))
+
 ### [1.8.9](https://github.com/Clumsy-Coder/dotfiles/compare/1.8.8...1.8.9) (2022-03-29)
 
 
