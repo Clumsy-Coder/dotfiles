@@ -12,7 +12,9 @@ if not status_ok then
 end
 
 treesitter.setup({
-  ensure_installed = "maintained", -- download all maintained languages
+  ensure_installed = {
+    "bash", "comment", "css", "dockerfile", "help", "html", "http", "javascript", "jsdoc", "json", "json5", "jsonc", "lua", "markdown", "regex", "todotxt", "tsx", "typescript", "vim", "yaml"
+  },
   sync_install = false,
   highlight = {
     enable = true,
