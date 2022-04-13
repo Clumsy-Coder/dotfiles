@@ -11,3 +11,6 @@
 
 # Dependencies
 /node_modules
+/.vscode
+
+todo
