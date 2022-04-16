@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 #Alias
 #directory alias
 alias documents='cd ~/Documents'
