@@ -9,3 +9,5 @@ source ~/dotfiles/environment/theme/powerlevel9k/powerlevel9k.sh
 # load ZSH plugin manager (antigen)
 source ~/dotfiles/environment/antigen/antigen.sh
 
+# load alias
+source ~/dotfiles/zsh/aliases.zsh
