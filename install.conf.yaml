@@ -22,3 +22,8 @@
     ~/.zshenv: zshenv
     ~/.config/neofetch/config.conf: environment/neofetch/config.conf
 
+- shell:
+    - command: nvim --noplugin -c 'autocmd User PackerComplete quitall'
+      description: Installing Neovim packages
+    # - command: nvim --headless -c "TSInstallSync bash comment css dockerfile help html http javascript jsdoc json json5 jsonc lua markdown regex todotxt tsx typescript vim yaml" -c q
+    #   description: Installing TreeSitter languages
