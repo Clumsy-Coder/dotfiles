@@ -1,0 +1,24 @@
+- defaults:
+    link:
+      relink: true
+      create:
+        mode: 700
+      force: true
+    create:
+      mode: 700
+    shell:
+      stdout: true
+      stderr: true
+
+- clean: ["~"]
+
+- link:
+    ~/.tmux.conf: tools/tmux/tmux.conf
+    ~/.config/nvim/init.lua: tools/neovim/init.lua
+    ~/.config/nvim/lua: tools/neovim/lua/
+    ~/.gitconfig: tools/git/.gitconfig
+    ~/.gitignore_global: tools/git/.gitignore_global
+    ~/.zshrc: zshrc
+    ~/.zshenv: zshenv
+    ~/.config/neofetch/config.conf: environment/neofetch/config.conf
+
