@@ -20,7 +20,7 @@
     ~/.gitignore_global: tools/git/.gitignore_global
     ~/.zshrc: zshrc
     ~/.zshenv: zshenv
-    ~/.config/neofetch/config.conf: environment/neofetch/config.conf
+    ~/.config/neofetch/config.conf: tools/neofetch/config.conf
 
 - shell:
     - command: nvim --noplugin -c 'autocmd User PackerComplete quitall'
