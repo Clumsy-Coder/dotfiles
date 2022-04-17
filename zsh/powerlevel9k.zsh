@@ -1,6 +1,7 @@
+#!/usr/bin/env zsh
+
 # This file is used for setting custom settings for powerlevel9k theme used in 
 # oh-my-zsh.
-# This file is used in ~/zshPersonalConfig/index
 
 # prompt config
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time root_indicator background_jobs battery ip time)
@@ -10,14 +11,14 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time root_indicator backgr
 
 # Dislay the name of the user
 DEFAULT_USER=whoami
-POWERLEVEL9K_CONTEXT_TEMPLATE='%n'
-POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='blue'
-POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='white' 
+POWERLEVEL9K_CONTEXT_TEMPLATE='%n'              # displays the name of the user
+POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='blue'  # text colour for DEFAULT_USER
+POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='white' # background colour for DEFAULT_USER
 
 #------------------------------------------------------------------------------
 # current directory config
 
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1               # limit the size of the dir path being displayed
 POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='white'
 POWERLEVEL9K_DIR_HOME_FOREGROUND='white'
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='white'
