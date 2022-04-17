@@ -1,9 +1,11 @@
+#!/usr/bin/env zsh
+
 # Assuming antigen is installed
 # If antigen is not installed the run the following command
 # curl -L git.io/antigen > ~/antigen.zsh
 # 
 # download antigen if it's NOT installed
-if [[ ! -d ~/.antigen ]]; then
+if [ ! -d ~/.antigen ] || [ ! -e ~/antigen.zsh ]; then
   echo "\nDownloading antigen plugin\n"
   curl -L git.io/antigen > ~/antigen.zsh
 fi
@@ -23,7 +25,6 @@ antigen bundle extract            # https://github.com/robbyrussell/oh-my-zsh/wi
 antigen bundle history            # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#history
 # antigen bundle jsontools          # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#jsontools
 antigen bundle systemd            # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#systemd
-
 
 # Custom bundles
 antigen bundle zsh-users/zsh-autosuggestions        # suggests commands as you type
