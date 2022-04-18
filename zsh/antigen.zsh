@@ -38,7 +38,6 @@ antigen bundle tmuxinator         # https://github.com/ohmyzsh/ohmyzsh/tree/mast
 antigen bundle common-aliases     # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/common-aliases
 antigen bundle extract            # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/extract
 antigen bundle history            # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/history
-# antigen bundle jsontools          # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jsontools
 antigen bundle nmap               # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/nmap
 antigen bundle web-search         # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search
 antigen bundle nvm                # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/nvm
@@ -52,12 +51,6 @@ antigen bundle djui/alias-tips                      # display aliases based on t
 antigen bundle ael-code/zsh-colored-man-pages       # adds a bit of colour to man pages
 antigen bundle joel-porquet/zsh-dircolors-solarized # adding colour when listing current directory contents
 antigen bundle webyneter/docker-aliases             # aliases for Docker
-# antigen bundle gretzky/auto-color-ls
-# antigen bundle hchbaw/auto-fu.zsh
-# antigen bundle arzzen/calc.plugin.zsh
-# antigen bundle Tarrasch/zsh-colors
-# antigen bundle adrieankhisbe/diractions
-# antigen bundle zpm-zsh/ls
 antigen bundle 'wfxr/forgit'                        # cmd utility for Git using fzf
 
 # Load a theme
