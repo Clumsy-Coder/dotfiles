@@ -12,10 +12,13 @@ case "$UNIX_NAME" in
   *) export IS_UNKNOWN=1;;
 esac
 
-# set ENV variables to check if a program exists
+# set ENV variables to check if a program or folder exists
 hash npm 2>/dev/null && export HAS_NPM=1
 hash node 2>/dev/null && export HAS_NODE=1
 hash brew 2>/dev/null && export HAS_BREW=1
 hash apt-get 2>/dev/null && export HAS_APT=1
 hash yum 2>/dev/null && export HAS_YUM=1
 hash chocolatey 2>/dev/null && export HAS_CHOC=1
+
+# set ENV variable if file or folder found, otherwise unset ENV
+if [ -d "$NVIM_PACKER_DIR_PATH" ] ; then export HAS_NVIM_PACKER=1 ; else unset HAS_NVIM_PACKER ; fi
