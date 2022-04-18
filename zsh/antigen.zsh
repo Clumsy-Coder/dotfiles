@@ -13,18 +13,18 @@ fi
 source ~/antigen.zsh
 
 # load antigen plugins
-antigen bundle git                # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#git
-antigen bundle command-not-found  # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#command-not-found
-antigen bundle npm                # npm autocomplete
-antigen bundle node               # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#node
-antigen bundle yarn               # Yarn autocomplete
-antigen bundle tmux               # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#tmux
-antigen bundle tmuxinator         # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#tmuxinator
-antigen bundle common-aliases     # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#common-aliases
-antigen bundle extract            # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#extract
-antigen bundle history            # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#history
-# antigen bundle jsontools          # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#jsontools
-antigen bundle systemd            # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#systemd
+antigen bundle git                # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
+antigen bundle command-not-found  # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/command-not-found
+antigen bundle npm                # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/npm
+antigen bundle node               # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/node
+antigen bundle yarn               # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/yarn
+antigen bundle tmux               # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/tmux
+antigen bundle tmuxinator         # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/tmuxinator
+antigen bundle common-aliases     # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/common-aliases
+antigen bundle extract            # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/extract
+antigen bundle history            # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/history
+# antigen bundle jsontools          # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jsontools
+antigen bundle systemd            # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/systemd
 
 # Custom bundles
 antigen bundle zsh-users/zsh-autosuggestions        # suggests commands as you type
