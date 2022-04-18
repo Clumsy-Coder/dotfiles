@@ -3,6 +3,7 @@
 # config inspired by https://github.com/cchamberlain/zdotdir/blob/master/zsh/exports.zsh
 
 export SHELL="/bin/zsh"       # default shell
+# export TERM="xterm-256color"
 export LANG='en_CA.UTF-8';    # Prefer CA English and use UTF-8.
 export LC_ALL='en_CA.UTF-8';  # Prefer CA English and use UTF-8.
 
