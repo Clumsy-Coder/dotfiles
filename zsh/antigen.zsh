@@ -45,6 +45,7 @@ antigen bundle web-search         # https://github.com/ohmyzsh/ohmyzsh/tree/mast
 antigen bundle nvm                # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/nvm
 antigen bundle copyfile           # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/copyfile
 antigen bundle systemadmin        # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/systemadmin
+antigen bundle alias-finder       # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/alias-finder
 antigen bundle sudo               # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo
 
 # Custom bundles
