@@ -1,6 +1,8 @@
 #!/usr/bin/env zsh
 
-# zsh shell options https://zsh.sourceforge.io/Doc/Release/Options.html#Options
+# zsh shell options
+#     https://zsh.sourceforge.io/Doc/Release/Options.html#Options
+#     https://scriptingosx.com/2019/06/moving-to-zsh-part-3-shell-options/
 # config obtained from https://github.com/cchamberlain/zdotdir/blob/master/zsh/setopt.zsh
 
 # -------------------------------------------------------------------------------------------------#
