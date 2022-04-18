@@ -25,6 +25,9 @@ antigen bundle extract            # https://github.com/ohmyzsh/ohmyzsh/tree/mast
 antigen bundle history            # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/history
 # antigen bundle jsontools          # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jsontools
 antigen bundle systemd            # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/systemd
+antigen bundle nmap               # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/nmap
+antigen bundle web-search         # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search
+antigen bundle nvm                # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/nvm
 
 # Custom bundles
 antigen bundle zsh-users/zsh-autosuggestions        # suggests commands as you type
