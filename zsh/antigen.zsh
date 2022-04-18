@@ -43,6 +43,7 @@ antigen bundle history            # https://github.com/ohmyzsh/ohmyzsh/tree/mast
 antigen bundle nmap               # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/nmap
 antigen bundle web-search         # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search
 antigen bundle nvm                # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/nvm
+antigen bundle copyfile           # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/copyfile
 
 # Custom bundles
 antigen bundle zsh-users/zsh-autosuggestions        # suggests commands as you type
