@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 
 # config inspired by https://github.com/cchamberlain/zdotdir/blob/master/zsh/exports.zsh
+# bullet-proof setting PATH https://unix.stackexchange.com/a/415028
 
 export SHELL="/bin/zsh"       # default shell
 # export TERM="xterm-256color"
