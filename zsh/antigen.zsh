@@ -17,6 +17,8 @@ source ~/antigen.zsh
 # -------------------------------------------------------------------------------------------------#
 if [[ $IS_MAC -eq 1 ]]; then
   antigen bundle brew               # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/brew
+  antigen bundle macos              # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/macos
+
 fi # END if [[ $IS_MAC -eq 1 ]]; then
 # -------------------------------------------------------------------------------------------------#
 # Linux only ZSH plugins. $IS_LINUX is set in zsh/checks.sh
