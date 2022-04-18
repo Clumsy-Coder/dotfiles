@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -101,27 +103,19 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 #-------------------------------------------------------------------------------
-# load antigen. A plugin manager for oh my zsh
-# source /usr/local/share/antigen/antigen.zsh
-# source ./zshConfig-personal/.antigen-config
-#source ~/zshConfig/index
+# load ZSH files
+# config inspired by https://github.com/cchamberlain/zdotdir/blob/master/.zshrc
 
-#load custom settings
-# source ~/.zshTheme
-# source ~/.alias
-#load zsh auto suggestion
-# source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-# fpath=(/usr/local/share/zsh-completions $fpath)
-# source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# prevent command history from being shared
-# each tab has their own history
-unsetopt inc_append_history
-unsetopt share_history
-export PATH="/usr/local/sbin:$PATH"
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH="/usr/local/opt/node@10/bin:$PATH"
-export PATH="/usr/local/opt/node@10/bin:$PATH"
-source ~/dotfiles/index.sh
+source "$ZSCRIPTDIR/checks.zsh"
+# source "$ZSCRIPTDIR/colors.zsh"
+source "$ZSCRIPTDIR/setopt.zsh"
+source "$ZSCRIPTDIR/exports.zsh"
+# source "$ZSCRIPTDIR/bindkeys.zsh"
+# source "$ZSCRIPTDIR/prompt.zsh"
+# source "$ZSCRIPTDIR/completion.zsh"
+# source "$ZSCRIPTDIR/hashes.zsh"
+source "$ZSCRIPTDIR/aliases.zsh"
+# source "$ZSCRIPTDIR/functions.zsh"
+# source "$ZSCRIPTDIR/history.zsh"
+source "$ZSCRIPTDIR/powerlevel9k.zsh"
+source "$ZSCRIPTDIR/antigen.zsh"
