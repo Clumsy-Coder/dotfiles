@@ -1,1 +1,4 @@
 node_modules/
+.zsh_history
+.zcompdump*
+antigen.zsh.zwc
