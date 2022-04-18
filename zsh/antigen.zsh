@@ -12,6 +12,21 @@ fi
 
 source ~/antigen.zsh
 
+# -------------------------------------------------------------------------------------------------#
+# MacOS only ZSH plugins. $IS_MAC is set in zsh/checks.sh
+# -------------------------------------------------------------------------------------------------#
+if [[ $IS_MAC -eq 1 ]]; then
+  antigen bundle brew               # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/brew
+fi # END if [[ $IS_MAC -eq 1 ]]; then
+# -------------------------------------------------------------------------------------------------#
+# Linux only ZSH plugins. $IS_LINUX is set in zsh/checks.sh
+# -------------------------------------------------------------------------------------------------#
+if [[ $IS_LINUX -eq 1 ]]; then
+  antigen bundle systemd            # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/systemd
+
+fi # END if [[ $IS_LINUX -eq 1 ]]; then
+# -------------------------------------------------------------------------------------------------#
+
 # load antigen plugins
 antigen bundle git                # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
 antigen bundle command-not-found  # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/command-not-found
@@ -24,7 +39,6 @@ antigen bundle common-aliases     # https://github.com/ohmyzsh/ohmyzsh/tree/mast
 antigen bundle extract            # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/extract
 antigen bundle history            # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/history
 # antigen bundle jsontools          # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jsontools
-antigen bundle systemd            # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/systemd
 antigen bundle nmap               # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/nmap
 antigen bundle web-search         # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search
 antigen bundle nvm                # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/nvm
