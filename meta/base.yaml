@@ -1,0 +1,23 @@
+# base config to be used by dotbot when running ./install-standalone or ./install-profile from repo root
+# obtained from https://github.com/ecarlson94/userspace/blob/main/meta/base.yaml
+
+- defaults:
+    link:
+      relink: true
+      create:
+        mode: 700
+      force: true
+    create:
+      mode: 700
+    shell:
+      stdout: true
+      stderr: true
+
+- create:
+    - $HOME/.config
+
+- clean:
+    $HOME:
+      force: true
+    $HOME/.config:
+      recursive: true
