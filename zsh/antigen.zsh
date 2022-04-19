@@ -3,7 +3,7 @@
 # Assuming antigen is installed
 # If antigen is not installed the run the following command
 # curl -L git.io/antigen > ~/antigen.zsh
-# 
+#
 # download antigen if it's NOT installed
 if [ ! -d ~/.antigen ] || [ ! -e ~/antigen.zsh ]; then
   echo "\nDownloading antigen plugin\n"
@@ -52,13 +52,13 @@ antigen bundle sudo               # https://github.com/ohmyzsh/ohmyzsh/tree/mast
 # Custom bundles
 antigen bundle zsh-users/zsh-autosuggestions        # suggests commands as you type
 antigen bundle zsh-users/zsh-syntax-highlighting    # highlights commands as you type
-antigen bundle zsh-users/zsh-completions            
+antigen bundle zsh-users/zsh-completions            # additional completions for ZSH
 antigen bundle chrissicool/zsh-256color             # enable 256 colours for the terminal
 antigen bundle djui/alias-tips                      # display aliases based on the previous command executed
 antigen bundle ael-code/zsh-colored-man-pages       # adds a bit of colour to man pages
 antigen bundle joel-porquet/zsh-dircolors-solarized # adding colour when listing current directory contents
 antigen bundle webyneter/docker-aliases             # aliases for Docker
-antigen bundle 'wfxr/forgit'                        # cmd utility for Git using fzf
+antigen bundle wfxr/forgit                          # cmd utility for Git using fzf
 
 # Load a theme
 antigen theme bhilburn/powerlevel9k                 # load powerlevel9k zsh theme
