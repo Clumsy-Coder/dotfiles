@@ -1,0 +1,9 @@
+- link:
+    ~/.tmux.conf: tools/tmux/tmux.conf
+- shell:
+    - command: tmux start-server
+      description: Installing tmux plugins...
+    - tmux new-session -d
+    - sleep 1
+    - ~/.tmux/plugins/tpm/scripts/install_plugins.sh
+    - tmux kill-server
