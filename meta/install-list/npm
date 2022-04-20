@@ -1,0 +1,31 @@
+# NPM global packages
+# IF you wish omit a package, either remove package from file OR
+# add comment character with a space in front of package name
+# Ex:
+# # typescript
+#
+# WARNING: IF you wish to install the NPM package, make sure there's not leading spaces
+#
+# ONLY acceptable format for commenting out package is as follows
+# # typescript
+
+# markdown-link-check
+markdownlint-cli
+# typescript
+# balzss/cli-typer
+commitizen
+cz-conventional-changelog
+cz-emoji
+# semantic-release-cli
+# create-react-app
+# react-native-cli
+# eslint
+# git-stats
+# lighthouse
+neovim
+npm-check-updates
+npm
+prettier
+# source-map-explorer
+# standard-version
+# yarn
