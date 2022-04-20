@@ -1,0 +1,8 @@
+- shell:
+    - command: 'echo yes | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
+      description: Installing Homebrew
+      stdout: true
+    # brewfile obtained with
+    # brew bundle dump --describe --file=meta/install-list/Brewfile --force
+    - command: brew bundle --file meta/install-list/Brewfile --verbose --cleanup --no-lock
+      description: Installing Homebrew packages
