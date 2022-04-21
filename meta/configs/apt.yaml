@@ -1,0 +1,10 @@
+# installing APT non-gui packages
+- shell:
+    - command: apt update
+      description: Update APT repository index
+    - command: apt upgrade -y
+      description: Upgrade installed packages
+    - command: grep -Ev '^#' meta/install-list/apt | xargs apt install -y
+      description: Installing APT packages
+    - command: apt autoremove -y
+      description: Remove unused packages
