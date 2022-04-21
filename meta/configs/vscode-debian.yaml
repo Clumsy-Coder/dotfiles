@@ -1,0 +1,22 @@
+# installing vscode
+# obtained from https://code.visualstudio.com/docs/setup/linux#_debian-and-ubuntu-based-distributions
+#
+# NOTE: running config as sudo
+# usage:
+# ./install-standalone vscode-debian-sudo
+- shell:
+    # installation steps obtained from https://code.visualstudio.com/docs/setup/linux
+    - command: apt-get install wget gpg
+      description: install wget and gpg
+    - command: wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+      description: Downloading VScode GPG keys
+    - command: install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+      description: Installing VScode GPG keys
+    - command: sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+      description: Adding VScode package to known APT packages
+    - command: rm -f packages.microsoft.gpg
+      description: Removing VScode GPG file. No longer needed
+    - command: apt install apt-transport-https
+    - command: apt update
+    - command: apt install code
+      description: Install VScode
