@@ -1,0 +1,10 @@
+# Install docker
+# Docker installation instructions obtained from
+# https://docs.docker.com/engine/install/debian/
+#
+# run as sudo
+# usage:
+# ./install-standalone docker-sudo
+- shell:
+    - command: curl -fsSL https://get.docker.com | bash
+      description: Install Docker
