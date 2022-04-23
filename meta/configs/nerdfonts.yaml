@@ -1,0 +1,11 @@
+# installing nerdfonts from https://github.com/ryanoasis/nerd-fonts
+#
+# usage:
+# ./install-standalone nerdfonts
+- shell:
+    - command: git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git /tmp/nerdfonts
+      description: Cloning ryanoasis/nerd-fonts repo
+    - command: /tmp/nerdfonts/install.sh
+      description: Installing fonts. This will take a while
+    - command: rm -rf /tmp/nerdfonts
+      description: Cleaning up nerdfonts repo. No longer needed.
