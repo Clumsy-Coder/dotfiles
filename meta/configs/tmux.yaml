@@ -1,3 +1,7 @@
+# setting up tmux config and installing tmux plugins
+#
+# usage:
+# ./install-standalone tmux
 - link:
     ~/.tmux.conf: tools/tmux/tmux.conf
 - shell:

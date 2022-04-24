@@ -1,3 +1,7 @@
+# setting up neovim configs and installing neovim plugins
+#
+# usage:
+# ./install-standalone nvim
 - link:
     ~/.config/nvim/init.lua: tools/neovim/init.lua
     ~/.config/nvim/lua: tools/neovim/lua/

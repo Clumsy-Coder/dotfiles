@@ -1,2 +1,6 @@
+# link neofetch config file
+#
+# usage:
+# ./install-standalone neofetch
 - link:
     ~/.config/neofetch/config.conf: tools/neofetch/config.conf

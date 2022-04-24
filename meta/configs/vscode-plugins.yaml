@@ -1,3 +1,7 @@
+# installing vscode extensions
+#
+# usage:
+# ./install-standalone vscode-plugins
 - shell:
     # - get vscode extensions from meta/install-list/vscode that are NOT commented out (commented with # )
     #   - ignore line starting with #
