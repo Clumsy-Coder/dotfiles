@@ -1,0 +1,36 @@
+# Colors (Material design Theme)
+# obtained from https://github.com/MartinSeeler/iterm2-material-design/blob/master/colors.md
+schemes:
+  material-design: &material-design
+    # Default colors
+    primary:
+      background: '#263238'
+      foreground: '#ECEFF1'
+
+    selected:
+      background: '#607D8B'
+      foreground: '#ECEFF1'
+
+    # Normal colors
+    normal:
+      black:   '#546E7A'
+      red:     '#FF5252'
+      green:   '#5CF19E'
+      yellow:  '#FFD740'
+      blue:    '#40C4FF'
+      magenta: '#FF4081'
+      cyan:    '#64FCDA'
+      white:   '#FFFFFF'
+
+    # Bright colors
+    bright:
+      black:   '#B0BEC5'
+      red:     '#FF8A80'
+      green:   '#B9F6CA'
+      yellow:  '#FFE57F'
+      blue:    '#80D8FF'
+      magenta: '#FF80AB'
+      cyan:    '#A7FDEB'
+      white:   '#FFFFFF'
+
+colors: *material-design
