@@ -1,0 +1,6 @@
+# add cron job to auto update pihole
+#
+# usage:
+# ./install-standalone pihole-cron-sudo
+- link:
+    /etc/cron.monthly/pihole-autoupdate: tools/cron/pihole-autoupdate
