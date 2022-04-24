@@ -88,6 +88,8 @@ brew "shellcheck"
 brew "slurm"
 # Command-line interface for https://speedtest.net bandwidth tests
 brew "speedtest-cli"
+# Version control system designed to be a better CVS
+brew "subversion"
 # Programmatically correct mistyped console commands
 brew "thefuck"
 # Simplified and community-driven man pages
