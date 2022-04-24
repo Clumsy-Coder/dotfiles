@@ -1,4 +1,7 @@
 # installing APT non-gui packages
+#
+# usage:
+# ./install-standalone apt-sudo
 - shell:
     - command: apt update
       description: Update APT repository index

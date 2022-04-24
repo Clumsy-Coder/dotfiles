@@ -1,3 +1,7 @@
+# link git config files
+#
+# usage:
+# ./install-standalone git
 - link:
     ~/.gitconfig: tools/git/.gitconfig
     ~/.gitignore_global: tools/git/.gitignore_global
