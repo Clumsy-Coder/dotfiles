@@ -3,5 +3,5 @@
 # usage:
 # ./install-standalone zsh
 - link:
-    ~/.zshrc: zsh/.zshrc
-    ~/.zshenv: zsh/.zshenv
+    ~/.zshrc: tools/zsh/.zshrc
+    ~/.zshenv: tools/zsh/.zshenv

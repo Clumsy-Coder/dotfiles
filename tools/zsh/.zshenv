@@ -5,15 +5,15 @@
 
 # DIRECTORIES
 export DOTDIR="$HOME/dotfiles"
-export ZDOTDIR="${ZDOTDIR:-"$HOME/dotfiles/zsh"}"
-export ZSCRIPTDIR="$DOTDIR/zsh"
+export ZDOTDIR="${ZDOTDIR:-"$HOME/dotfiles/tools/zsh"}"
+export ZSCRIPTDIR="$DOTDIR/tools/zsh"
 
 # DOTFILES
-export ZSHENV_PATH="$DOTDIR/zsh/.zshenv"
-export ZSHRC_PATH="$DOTDIR/zsh/.zshrc"
-# export ZPROFILE_PATH="$DOTDIR/.zprofile"
-# export ZLOGIN_PATH="$DOTDIR/.zlogin"
-# export ZLOGOUT_PATH="$DOTDIR/.zlogout"
+export ZSHENV_PATH="$ZSCRIPTDIR/.zshenv"
+export ZSHRC_PATH="$ZSCRIPTDIR/.zshrc"
+# export ZPROFILE_PATH="$ZSCRIPTDIR/.zprofile"
+# export ZLOGIN_PATH="$ZSCRIPTDIR/.zlogin"
+# export ZLOGOUT_PATH="$ZSCRIPTDIR/.zlogout"
 export NPMRC_PATH="$HOME/.npmrc"
 export NVIMRC_PATH="$HOME/.config/nvim/init.lua"
 export NVIM_PACKER_DIR_PATH="$HOME/.local/share/nvim/site/pack"
