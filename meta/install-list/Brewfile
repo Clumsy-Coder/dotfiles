@@ -114,6 +114,8 @@ brew "zsh"
 brew "cjbassi/gotop/gotop"
 # JDK from the Java User Group (JUG)
 cask "adoptopenjdk"
+# GPU-accelerated terminal emulator
+cask "alacritty"
 # Tools for building Android applications
 cask "android-studio"
 # Backup and restore SD cards, USB drives, external HDD, etc
