@@ -26,8 +26,6 @@ brew "coreutils"
 brew "cppcheck"
 # Modern replacement for 'ls'
 brew "exa"
-# Read-only implementation of ext4 for FUSE
-brew "ext4fuse"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Banner-like program prints strings as ASCII art
