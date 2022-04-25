@@ -1,0 +1,7 @@
+# linking up zsh files
+#
+# usage:
+# ./install-standalone zsh
+- link:
+    ~/.zshrc: zsh/.zshrc
+    ~/.zshenv: zsh/.zshenv
