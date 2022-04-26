@@ -1,0 +1,21 @@
+# building and installing neovim from source
+# building and installing:
+# https://github.com/neovim/neovim/wiki/Installing-Neovim#install-from-source
+# https://github.com/neovim/neovim/wiki/Building-Neovim#quick-start
+#
+# uninstalling:
+# https://github.com/neovim/neovim/wiki/Installing-Neovim#uninstall
+#
+# usage:
+# ./install-standalone neovim-source-build-sudo
+- shell:
+    - command: rm -rf /usr/local/bin/nvim /usr/local/share/nvim/
+      description: Remove currently installed Neovim(built from source)
+    - command: git clone --depth 1 --branch stable https://github.com/neovim/neovim /tmp/neovim
+      description: Clone Neovim repo on the latest stable branch
+    - command: cd /tmp/neovim && make CMAKE_BUILD_TYPE=Release
+    - command: cd /tmp/neovim && make install
+    - command: cd ~ && rm -rf /tmp/neovim
+      description: Removing neovim repo
+    - command: rm -rfv ~/.config/nvim/init.vim
+      description: remove init.vim file. Replaced with init.lua
