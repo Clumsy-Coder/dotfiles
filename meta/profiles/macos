@@ -2,6 +2,7 @@ homebrew
 git
 tmux
 neofetch
+alacritty
 nvm
 neovim-packages
 vscode-plugins
