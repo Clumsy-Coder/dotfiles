@@ -9,9 +9,20 @@
 # ONLY acceptable format for commenting out package is as follows
 # # typescript
 
+# required by neovim Language Server Protocol
 # markdown-link-check
 markdownlint-cli
-# typescript
+bash-language-server
+vscode-langservers-extracted
+dockerfile-language-server-nodejs
+emmet-ls
+remark
+remark-language-server
+typescript-language-server
+vim-language-server
+yaml-language-server
+
+typescript
 # balzss/cli-typer
 commitizen
 cz-conventional-changelog
