@@ -1,0 +1,9 @@
+# install fedora packages
+#
+# usage:
+# ./install-standalone dnf-sudo
+- shell:
+    - command: dnf update -y
+      description: Updating dnf packages
+    - command: cat meta/install-list/dnf | xargs dnf install -y
+      description: Install dnf packages
