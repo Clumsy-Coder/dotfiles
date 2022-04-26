@@ -3,7 +3,7 @@ git
 tmux
 neofetch
 nvm
-nvim
+neovim-packages
 vscode-plugins
 zsh
 ohmyzsh

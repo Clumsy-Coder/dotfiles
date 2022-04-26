@@ -1,7 +1,7 @@
 # setting up neovim configs and installing neovim plugins
 #
 # usage:
-# ./install-standalone nvim
+# ./install-standalone neovim-packages
 - link:
     ~/.config/nvim/init.lua: tools/neovim/init.lua
     ~/.config/nvim/lua: tools/neovim/lua/
@@ -11,12 +11,14 @@
     - command: nvim --noplugin -c 'autocmd User PackerComplete quitall'
       description: Installing Neovim packages
     # install TreeSitter languages
-    # extract languages from tools/neovim/lua/config/treesitter.lua
-    # put it result in a variable
-    # install Treesitter languages using the variable
+    # - extract languages from tools/neovim/lua/config/treesitter.lua
+    # - put it result in a variable
+    # - install Treesitter languages using the variable
     #
-    # command: sort | uniq : is used for removing duplicate entries
-    # command: tr '\\n' ' ' : replace newline into spaces. Putting all languages into oneline so it can be stored in a variable
+    # - sort | uniq
+    #   - is used for removing duplicate entries
+    # - tr '\\n' ' '
+    #   - replace newline into spaces. Putting all languages into oneline so it can be stored in a variable
     - command:
         tslang="$(grep -Eo '(\"\w+\",*?)' tools/neovim/lua/config/treesitter.lua | grep -Eo '\w+' |
         sort | uniq | tr '\\n' ' ')" &&
