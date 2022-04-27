@@ -80,6 +80,8 @@ brew "ripgrep"
 brew "ruby", link: true
 # Install various Ruby versions and implementations
 brew "ruby-build"
+# Safe, concurrent, practical language
+brew "rust"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # Yet another network load monitor
