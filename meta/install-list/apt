@@ -26,6 +26,7 @@ nmap
 p7zip-full
 pkg-config
 powerline
+python3
 shellcheck
 tldr
 tmux
