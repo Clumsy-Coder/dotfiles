@@ -1,0 +1,7 @@
+# installing Rust language compiler
+#
+# usage:
+# ./install-standalone rust
+- shell:
+    - command: curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+      description: Installing Rust language
