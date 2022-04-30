@@ -19,6 +19,11 @@ export PYTHONIOENCODING='UTF-8';
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
+  # export golang to PATH
+  # https://stackoverflow.com/a/13223578/3053548
+  export GOPATH=~/go
+  export PATH=$PATH:$GOPATH/bin
+
 # -------------------------------------------------------------------------------------------------#
 # MacOS only exports. $IS_MAC is set in zsh/checks.sh
 # -------------------------------------------------------------------------------------------------#
