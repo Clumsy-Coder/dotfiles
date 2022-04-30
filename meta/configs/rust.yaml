@@ -3,5 +3,5 @@
 # usage:
 # ./install-standalone rust
 - shell:
-    - command: curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+    - command: curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh -s -- -y
       description: Installing Rust language
