@@ -1,0 +1,6 @@
+# install Rust packages
+#
+# usage:
+# ./install-standalone rust-packages
+- shell:
+    - command: cat meta/install-list/cargo | xargs cargo install
