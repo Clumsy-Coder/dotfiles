@@ -1,0 +1,9 @@
+# install fedora gui packages
+#
+# usage:
+# ./install-standalone dnf-gui-sudo
+- shell:
+    - command: dnf update -y
+      description: Updating dnf packages
+    - command: grep -Ev '^#' meta/install-list/dnf-gui | xargs dnf install -y
+      description: Install dnf gui packages
