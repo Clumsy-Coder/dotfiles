@@ -1,0 +1,6 @@
+# install Golang packages
+#
+# usage:
+# ./install-standalone go-packages
+- shell:
+    - command: cat meta/install-list/go | xargs go install
