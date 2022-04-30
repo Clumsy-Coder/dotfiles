@@ -1,0 +1,12 @@
+apt-sudo
+git
+neofetch
+nvm
+neovim-source-build-sudo
+neovim-packages
+go-packages
+rust
+rust-packages
+tmux
+zsh
+ohmyzsh
