@@ -9,7 +9,6 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
-
 # Static checker for GitHub Actions workflow files
 brew "actionlint"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -18,8 +17,6 @@ brew "bash"
 brew "bat"
 # Fish completion for brew-cask
 brew "brew-cask-completion"
-# XML-based font configuration API for X Windows
-brew "fontconfig"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Static analysis of C and C++ code
@@ -30,6 +27,8 @@ brew "exa"
 brew "fd"
 # Banner-like program prints strings as ASCII art
 brew "figlet"
+# XML-based font configuration API for X Windows
+brew "fontconfig"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GitHub command-line tool
