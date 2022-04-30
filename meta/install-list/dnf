@@ -13,6 +13,9 @@ gettext
 git
 golang
 htop
+libstdc++
+libstdc++-devel
+libstdc++-static
 libtool
 make
 most
