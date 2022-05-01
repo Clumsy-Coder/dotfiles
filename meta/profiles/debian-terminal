@@ -2,7 +2,7 @@ apt-sudo
 git
 neofetch
 nvm
-neovim-source-build-sudo
+neovim-precompiled-sudo
 neovim-packages
 go-packages
 rust
