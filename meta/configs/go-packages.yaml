@@ -3,4 +3,4 @@
 # usage:
 # ./install-standalone go-packages
 - shell:
-    - command: cat meta/install-list/go | xargs go install
+    - command: source tools/zsh/exports.zsh && grep -Ev '^#' meta/install-list/go | xargs go install
