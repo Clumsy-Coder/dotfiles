@@ -1,0 +1,12 @@
+dnf-sudo
+git
+tmux
+neofetch
+nvm
+neovim-precompiled-sudo
+neovim-packages
+go-packages
+rust
+rust-packages
+zsh
+ohmyzsh
