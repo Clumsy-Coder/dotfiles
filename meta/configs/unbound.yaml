@@ -1,0 +1,11 @@
+# installing unbound DNS and linking config files
+# obtained from https://docs.pi-hole.net/guides/dns/unbound/
+#
+# usage:
+# ./install-standalone unbound-sudo
+- link:
+    /etc/unbound/unbound.conf.d/pi-hole.conf: tools/unbound/pi-hole.conf
+- shell:
+    - command: apt install -y unbound dns-root-data
+      description: Install unbound and dns-root-data package
+    - command: service unbound restart
