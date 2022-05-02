@@ -1,0 +1,66 @@
+# setting default configs for raspberry pi
+#
+# obtained from:
+#   https://loganmarchione.com/2021/07/raspi-configs-mostly-undocumented-non-interactive-mode/
+#   https://raspberrypi.stackexchange.com/a/66939
+#   https://gist.github.com/damoclark/ab3d700aafa140efb97e510650d9b1be
+#   https://github.com/RPi-Distro/raspi-config/blob/master/raspi-config
+#
+# usage:
+# ./install-standalone raspberrypi-configs-sudo
+- shell:
+    # System config
+    - command: raspi-config nonint do_boot_behaviour B1
+      description: Boot to CLI & require login
+    - command: raspi-config nonint do_boot_wait 0
+      description: Turn off waiting for network before booting
+    # - command: raspi-config nonint do_boot_splash 1
+    #   description: Disable the splash screen
+
+    # Display config
+
+    # Interface config
+    - command: raspi-config nonint do_camera 1
+      description: Disable the camera
+    - command: raspi-config nonint do_vnc 1
+      description: Disable VNC
+    - command: raspi-config nonint do_spi 1
+      description: Disable spi bus
+    - command: raspi-config nonint do_i2c 1
+      description: Disable the i2c bus
+    - command: raspi-config nonint do_serial 1
+      description: Disable the RS232 serial bus
+    - command: raspi-config nonint do_onewire 1
+      description: Disable onewire on GPIO4
+    - command: raspi-config nonint do_rgpio 1
+      description: Disable GPIO server
+
+    # Performance config
+
+    # Localization config
+    - command: raspi-config nonint do_change_locale en_CA.UTF-8
+      description: Set language to Canadian English
+    - command: raspi-config nonint do_configure_keyboard us
+      description: Specify US Keyboard
+    - command: raspi-config nonint do_wifi_country CA
+      description: Set wifi country as Canada
+
+    # Advanced config
+    - command: raspi-config nonint do_expand_rootfs
+      description: Ensures that all of the SD card is available
+    - command: raspi-config nonint do_net_names 1
+      description: Disable predictable network names
+
+    # disable ipv6
+    # obtained from https://gist.github.com/andreibosco/3badaac477446587bcd6751e186df446
+    - command: |
+        grep -E "^(net.ipv6.conf.all.disable_ipv6 = 1)" /etc/sysctl.conf || tee -a /etc/sysctl.conf << EOF
+
+        ###################################################################
+        # disable ipv6
+        # https://gist.github.com/andreibosco/3badaac477446587bcd6751e186df446
+        net.ipv6.conf.all.disable_ipv6 = 1
+        EOF
+      description: Disable ipv6
+    - command: sysctl -p
+      description: Apply changes for disabling ipv6
