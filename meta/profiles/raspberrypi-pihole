@@ -1,0 +1,14 @@
+raspberrypi-configs-sudo
+apt-sudo
+git
+neofetch
+tmux
+zsh
+ohmyzsh
+nvm
+neovim-source-build-sudo
+neovim-packages
+pihole-sudo
+unbound-sudo
+ufw-pihole-sudo
+pihole-cron-sudo
