@@ -1,0 +1,7 @@
+# install pihole DNS Ad-Blocker
+#
+# usage:
+# ./install-standalone pihole-sudo
+- shell:
+    - command: curl -sSL https://install.pi-hole.net | bash
+      description: install PiHole
