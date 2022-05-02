@@ -3,8 +3,8 @@
 # usage:
 # ./install-standalone ufw-pihole-sudo
 - shell:
-    # - command: ufw disable
-    #   description: Turn off ufw
+    - command: ufw disable
+      description: Turn off ufw
     - command: ufw default allow outgoing
       description: Allow outgoing traffic as default
     - command: ufw default deny incoming
@@ -13,6 +13,6 @@
       description: Allow port 80 for PiHole WebPortal
     - command: ufw allow 53 comment "PiHole DNS"
       description: Allow port 53 for PiHole DNS
-    - command: ufw reload
-      description: Reload ufw
+    - command: echo 'yes' | ufw enable
+      description: Turn on ufw
     - command: ufw status verbose
