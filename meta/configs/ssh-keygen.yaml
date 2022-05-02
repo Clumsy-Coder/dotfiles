@@ -1,0 +1,7 @@
+# generates SSH keys and upload to destination
+#
+# usage:
+# ./install-standalone ssh-keygen
+- shell:
+    - command: meta/install-script/ssh-keygen.sh
+      stdin: true
