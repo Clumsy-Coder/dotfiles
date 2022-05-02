@@ -9,6 +9,8 @@
       description: Allow outgoing traffic as default
     - command: ufw default deny incoming
       description: Block incoming traffic as default
+    - command: ufw allow 22 comment "SSH"
+      description: Allow port 22 for SSH
     - command: ufw allow 80 comment "PiHole WebPortal"
       description: Allow port 80 for PiHole WebPortal
     - command: ufw allow 53 comment "PiHole DNS"
