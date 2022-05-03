@@ -1,0 +1,12 @@
+# add debian apt sources
+#
+# obtained from:
+#   https://backports.debian.org/Instructions/
+#
+# usage:
+# ./install-standalone debian-apt-sources-sudo
+- shell:
+    - command: |
+        grep -E "^(deb http://deb.debian.org/debian bullseye-backports main)" /etc/apt/sources.list || \\
+        echo "deb http://deb.debian.org/debian bullseye-backports main" >> /etc/apt/sources.list
+      description: Add debian 'backport' APT source
