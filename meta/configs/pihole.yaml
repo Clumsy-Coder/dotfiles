@@ -2,6 +2,11 @@
 #
 # usage:
 # ./install-standalone pihole-sudo
+- link:
+    /etc/pihole/setupVars.conf: tools/pihole/setupVars.conf
 - shell:
-    - command: curl -sSL https://install.pi-hole.net | bash
+    # install without user interaction.
+    # needs /etc/pihole/setupVars.conf
+    # obtained from https://unix.stackexchange.com/a/423744
+    - command: curl -sSL https://install.pi-hole.net | bash /dev/stdin --unattended
       description: install PiHole
