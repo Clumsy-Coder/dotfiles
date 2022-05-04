@@ -9,6 +9,14 @@
 # usage:
 # ./install-standalone raspberrypi-configs-sudo
 - shell:
+    # Localization config
+    - command: raspi-config nonint do_change_locale en_CA.UTF-8
+      description: Set language to Canadian English
+    - command: raspi-config nonint do_configure_keyboard us
+      description: Specify US Keyboard
+    - command: raspi-config nonint do_wifi_country CA
+      description: Set wifi country as Canada
+
     # System config
     - command: raspi-config nonint do_boot_behaviour B1
       description: Boot to CLI & require login
@@ -36,14 +44,6 @@
       description: Disable GPIO server
 
     # Performance config
-
-    # Localization config
-    - command: raspi-config nonint do_change_locale en_CA.UTF-8
-      description: Set language to Canadian English
-    - command: raspi-config nonint do_configure_keyboard us
-      description: Specify US Keyboard
-    - command: raspi-config nonint do_wifi_country CA
-      description: Set wifi country as Canada
 
     # Advanced config
     - command: raspi-config nonint do_expand_rootfs
