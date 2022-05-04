@@ -1,0 +1,8 @@
+# enable fedora dnf copr (Cool Other Package Repo)
+#
+# usage:
+# ./install-standalone dnf-copr-sudo
+- shell:
+    - command: grep -Ev '^#' meta/install-list/dnf-copr | xargs dnf copr enable -y
+      description: Enable copr repos
+    - command: dnf update -f
