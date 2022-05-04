@@ -14,3 +14,4 @@ pihole-sudo
 unbound-sudo
 ufw-pihole-sudo
 pihole-cron-sudo
+fail2ban-sudo
