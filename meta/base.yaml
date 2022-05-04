@@ -4,11 +4,10 @@
 - defaults:
     link:
       relink: true
-      create:
-        mode: 700
+      create: true
       force: true
     create:
-      mode: 700
+      mode: 0700
     shell:
       stdout: true
       stderr: true
