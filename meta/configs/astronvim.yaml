@@ -1,0 +1,14 @@
+# install astronvim and link config files
+#
+# usage:
+# ./install-standalone astronvim
+- shell:
+    - command: test -d ~/.config/nvim/ && mv -i ~/.config/nvim ~/.config/nvimbackup || true
+      description: Backup old neovim configs
+      stdin: true
+    - command: rm -rf  ~/.local/share/nvim/site/pack
+      description: Remove old Neovim installed plugins
+    - command: git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+      description: Get AstroNvim repo
+    - command: nvim --headless -c 'PackerSync' -c 'autocmd User PackerComplete quitall'
+      description: Installing Neovim packages
