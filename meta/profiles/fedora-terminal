@@ -2,6 +2,7 @@ dnf-sudo
 git
 tmux
 neofetch
+spacevim
 nvm
 neovim-precompiled-sudo
 neovim-packages
