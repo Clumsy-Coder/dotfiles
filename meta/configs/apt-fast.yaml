@@ -1,0 +1,6 @@
+# install apt-fast and apt packages
+#
+# usage:
+# ./install-standalone apt-fast-sudo
+- shell:
+    - command: /bin/bash -c "$(curl -sL https://git.io/vokNn)"
