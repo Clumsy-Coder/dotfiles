@@ -4,6 +4,7 @@
 # ./install-standalone pihole-sudo
 - link:
     /etc/pihole/setupVars.conf: tools/pihole/setupVars.conf
+    /etc/pihole/adlists.list: tools/pihole/adlists.list
 - shell:
     # install without user interaction.
     # needs /etc/pihole/setupVars.conf
