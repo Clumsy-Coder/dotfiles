@@ -1,0 +1,9 @@
+# link fail2ban configs
+#
+# usage:
+# ./install-standalone fail2ban-sudo
+- link:
+    /etc/fail2ban/jail.local: tools/fail2ban/jail.local
+- shell:
+    - command: systemctl restart fail2ban
+      description: Restart fail2ban

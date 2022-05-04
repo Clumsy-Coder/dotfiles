@@ -1,0 +1,6 @@
+[DEFAULT]
+bantime = 1h
+banaction = ufw
+
+[sshd]
+enabled = true
