@@ -3,4 +3,14 @@
 # usage:
 # ./install-standalone go-packages
 - shell:
-    - command: source tools/zsh/exports.zsh && grep -Ev '^#' meta/install-list/go | xargs go install
+    # ascii colours obtained from https://stackoverflow.com/a/33206814/3053548
+    - command: |
+        source tools/zsh/exports.zsh
+
+        for plugin in $(grep -Ev '^#' meta/install-list/go)
+        do
+          echo "\\033[33mInstalling golang plugin \\033[1;33m$plugin \\033[0m"
+          go install $plugin
+          echo ""
+        done
+      description: Installing golang plugins
