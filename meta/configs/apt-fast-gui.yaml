@@ -1,0 +1,10 @@
+# install apt gui packages using apt-fast
+#
+# usage:
+# ./install-standalone apt-fast-gui-sudo
+- shell:
+    - command: apt-fast update
+    - command: apt-fast upgrade -y
+    - command: grep -Ev '^#' meta/install-list/apt-gui | xargs apt-fast install -y
+      description: Install apt packages
+    - command: apt-fast autoremove -y
