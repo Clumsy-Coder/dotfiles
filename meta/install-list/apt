@@ -21,6 +21,7 @@ libtool
 libtool-bin
 most
 nano
+ncdu
 neofetch
 ninja-build
 nmap
@@ -28,6 +29,7 @@ p7zip-full
 pkg-config
 powerline
 python3
+ripgrep
 shellcheck
 tldr
 tmux
