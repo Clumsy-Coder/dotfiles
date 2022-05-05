@@ -4,8 +4,10 @@
 # ./install-standalone ohmyzsh
 
 - shell:
-    # - command: chsh -s $(which zsh)
-    #   description: Changing default Shell to ZSH
+    - command: rm -rf ~/.oh-my-zsh
+      # - command: chsh -s $(which zsh)
+      # stdin: true
+      description: Changing default Shell to ZSH
     - command: KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
       description: Install Oh-my-zsh
     - command: echo -e "\\n\\033[1;33mReload your terminal to finish Oh-my-zsh installation"
