@@ -7,7 +7,12 @@
 # download antigen if it's NOT installed
 if [ ! -d ~/.antigen ] || [ ! -e ~/antigen.zsh ]; then
   echo "\nDownloading antigen plugin\n"
-  curl -L git.io/antigen > ~/antigen.zsh
+  curl  -L \
+        --max-time 10 \
+        --retry 5 \
+        --retry-delay 0 \
+        --retry-max-time 40 \
+    git.io/antigen > ~/antigen.zsh
 fi
 
 source ~/antigen.zsh
