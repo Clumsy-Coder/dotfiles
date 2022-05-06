@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# install-profile
 # used for running group of installation scripts as a profile located in ./meta/profiles/ folder
 # Ex: install script for MacOS, debian
 # Usage:
@@ -17,6 +18,7 @@
 # NOTE: to run a config in sudo, then add '-sudo' as a suffix of the config to run.
 # Ex: ./meta/profiles/debian contains
 # apt-sudo
+#
 # check example: https://github.com/ecarlson94/dotbot-template/blob/main/meta/profiles/exampleOS1
 # check: https://github.com/ecarlson94/dotbot-template#for-installing-single-configurations
 #
@@ -25,18 +27,11 @@
 
 set -e
 
-BASE_CONFIG="base"
-CONFIG_SUFFIX=".yaml"
-
 META_DIR="meta"
 CONFIG_DIR="configs"
 PROFILES_DIR="profiles"
 
-DOTBOT_DIR="dotbot"
-DOTBOT_BIN="bin/dotbot"
-
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
 
 cd "${BASE_DIR}"
 git submodule update --init --recursive
@@ -48,21 +43,6 @@ done < "${META_DIR}/${PROFILES_DIR}/$1"
 
 shift
 
-for config in ${CONFIGS} ${@}; do
-  echo -e "\nConfigure $config"
-  # create temporary file
-  configFile="$(mktemp)"
-  suffix="-sudo"
-  echo -e "$(<"${BASE_DIR}/${META_DIR}/${BASE_CONFIG}${CONFIG_SUFFIX}")\n$(<"${BASE_DIR}/${META_DIR}/${CONFIG_DIR}/${config%"$suffix"}${CONFIG_SUFFIX}")" > "$configFile"
-
-  cmd=("${BASE_DIR}/${META_DIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASE_DIR}" -c "$configFile")
-
-  if [[ $config == *"sudo"* ]]; then
-      cmd=(sudo "${cmd[@]}")
-  fi
-
-  "${cmd[@]}"
-  rm -f "$configFile"
-done
+source ./install-standalone ${CONFIGS}
 
 cd "${BASE_DIR}"
