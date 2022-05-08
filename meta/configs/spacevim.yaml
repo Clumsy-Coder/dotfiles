@@ -1,4 +1,4 @@
-# installing vim configs
+# installing spacevim configs
 #
 # usage:
 # ./install-standalone spacevim
@@ -8,4 +8,4 @@
     - command: curl -sLf https://spacevim.org/install.sh | bash -s -- --install vim
       description: Download SpaceVim configs and link to vim
 - link:
-    ~/.SpaceVim.d/init.toml: tools/vim/spacevim/init.toml
+    ~/.SpaceVim.d/init.toml: tools/spacevim/init.toml
