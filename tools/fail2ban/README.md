@@ -2,6 +2,10 @@
 
 Config for fail2ban.
 
+## dotbot config
+
+Used by [dotfiles/meta/configs/fail2ban.yaml](https://github.com/Clumsy-Coder/dotfiles/blob/master/meta/configs/fail2ban.yaml)
+
 ## File/Directory structure
 
 <pre>

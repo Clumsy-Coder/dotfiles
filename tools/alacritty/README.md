@@ -2,10 +2,14 @@
 
 Contains files related to [Alacritty terminal](https://github.com/alacritty/alacritty)
 
+## dotbot config
+
+Used by [dotfiles/meta/configs/alacritty.yaml](https://github.com/Clumsy-Coder/dotfiles/blob/master/meta/configs/alacritty.yaml)
+
 ## File/Directory structure
 
 <pre>
-<a href="../../../../">dotfiles/</a>tools/alacritty
+<a href="../../../../">dotfiles/</a>tools/alacritty/
 ├── <a href="./README.md">README.md</a>
 ├── <a href="./alacritty.yml">alacritty.yml</a>
 ├── <a href="./material-design.colorscheme.yml">material-design.colorscheme.yml</a>
