@@ -2,6 +2,10 @@
 
 git config files
 
+## dotbot config
+
+Used by [dotfiles/meta/configs/git.yaml](https://github.com/Clumsy-Coder/dotfiles/blob/master/meta/configs/git.yaml)
+
 ## File/Directory structure
 
 <pre>
