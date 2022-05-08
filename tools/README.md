@@ -6,6 +6,11 @@ These configs files are linked using dotbot. The configs used for linking the fi
 
 ## File/Directory structure
 
+<!--
+loaded tree structure with
+tree -a -C -H "." tools/ -L 1
+-->
+
 <pre>
 <a href="../../..">dotfiles/</a>tools/
 ├── <a href="./README.md">README.md</a>
@@ -17,8 +22,8 @@ These configs files are linked using dotbot. The configs used for linking the fi
 ├── <a href="./neofetch/">neofetch/</a>
 ├── <a href="./neovim/">neovim/</a>
 ├── <a href="./pihole/">pihole/</a>
+├── <a href="./spacevim/">spacevim/</a>
 ├── <a href="./tmux/">tmux/</a>
 ├── <a href="./unbound/">unbound/</a>
-├── <a href="./vim/">vim/</a>
 └── <a href="./zsh/">zsh/</a>
 </pre>
