@@ -13,7 +13,9 @@ if not config_status_ok then
   return
 end
 
-vim.g.nvim_tree_indent_markers = 1          -- 0 by default, this option shows indent markers when folders are open
+-- nvim-tree migration guide.
+-- https://github.com/kyazdani42/nvim-tree.lua/issues/674
+--
 vim.g.nvim_tree_group_empty = 1             -- 0 by default, compact folders that only contain a single folder into one node in the file tree
 vim.g.nvim_tree_highlight_opened_files = 1  -- 0 by default, will enable folder and file icon highlight for opened files/directories.
 vim.g.nvim_tree_add_trailing = 1            -- 0 by default, append a trailing slash to folder names
@@ -67,7 +69,6 @@ local tree_cb = nvim_tree_config.nvim_tree_callback
 nvim_tree.setup({
   auto_reload_on_write = true,                  -- reloads the explorer every time a buffer is written to
   disable_netrw = true,                         -- disable netrw (nvim builtin file explorer)
-  hide_root_folder = true,                      -- hide the path of the current working directory on top of the tree
   hijack_cursor = true,                         -- keeps the cursor on the first letter of the filename when moving in the tree
   hijack_netrw = true,                          -- hijack netrw windows (overridden if |disable_netrw| is `true`)
   -- hijack_unnamed_buffer_when_opening = false,   -- pens in place of the unnamed buffer if it's empty.
@@ -81,6 +82,7 @@ nvim_tree.setup({
   sort_by = "name",                          -- changes how files within the same directory are sorted
   update_cwd = true,                            -- changes the tree root directory on `DirChanged` and refreshes the tree.
   view = {
+    hide_root_folder = true,                    -- hide the path of the current working directory on top of the tree
     mappings = {
       list = {                                  -- a list of keymaps that will extend or override the default keymaps
         { key = "s", cb = tree_cb("vsplit") },
@@ -162,6 +164,11 @@ nvim_tree.setup({
       profile = false,                          -- timing of some operations
     },
   },
+  renderer = {
+    indent_markers = {
+      enable = true
+    }
+  }
 })
 
 -- autoclose nvim-tree. applies when not focused on nvim-tree.
