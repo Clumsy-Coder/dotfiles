@@ -127,7 +127,7 @@ cmp.setup({
         luasnip = "[Snippet]",    -- saadparwaiz1/cmp_luasnip
         buffer = "[Buffer]",      -- hrsh7th/cmp-buffer
         path = "[Path]",          -- hrsh7th/cmp-path
-        cmp_git = "[Git]"         -- petertriho/cmp-git
+        git = "[Git]"             -- petertriho/cmp-git
       })[entry.source.name]
       return vim_item
     end,
@@ -168,8 +168,9 @@ cmp.setup({
 -- https://github.com/petertriho/cmp-git#setup
 cmp.setup.filetype('gitcommit', {
   sources = cmp.config.sources(
-    {{ name = 'cmp_git' }},     -- petertriho/cmp-git
-    {{ name = 'buffer' }}       -- hrsh7th/cmp-buffer
+    {{ name = 'git' }},                             -- petertriho/cmp-git
+    {{ name = 'buffer', keyword_length = 5 }},      -- hrsh7th/cmp-buffer
+    {{ name = "path" }}                             -- hrsh7th/cmp-path
   )
 })
 
