@@ -13,7 +13,7 @@
 [merge]
   conflictstyle = diff3
 [core]
-  editor = nvim +24 -c 'startinsert'
+  editor = nvim +23 -c 'startinsert'
   excludesfile = ~/.gitignore_global
   pager = less --tabs=4 -RFX
 [commit]
