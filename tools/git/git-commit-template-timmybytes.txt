@@ -1,23 +1,22 @@
 # -------------------------------------------------------------------------------------------------#
 # Header - type(scope): Brief description                                                          #
 # -------------------------------------------------------------------------------------------------#
-#    * feat             A new feature - SemVar MINOR.                                              #
-#    * fix              A bug fix - SemVar PATCH.                                                  #
-#    * BREAKING CHANGE  Breaking API change - SemVar MAJOR.                                        #
-#    * docs             Change to documentation only.                                              #
-#    * style            Changes that do not affect the meaning                                     #
-#                       of the code (white-space, formatting,                                      #
-#                       missing semi-colons, etc).                                                 #
-#    * refactor         A code change that neither fixes a bug nor adds a feature.                 #
-#    * perf             A code change that improves performance.                                   #
-#    * test             Adding missing tests or correcting existing tests.                         #
-#    * build            changes that affect the build system or external dependencies              #
-#                       Ex: (example scopes: gulp, broccoli, npm).                                 #
-#    * ci               Changes to our CI configuration files and scripts                          #
-#                       Ex: (example scopes: Travis, Circle, BrowserStack, SauceLabs)              #
-#    * chore            General tooling/config/min refactor.                                       #
-#                       Other changes that don't modify src or test files.                         #
-#    * revert           Reverts a previous commit.                                                 #
+#    * feat       A new feature                                                       SemVer MINOR #
+#    * fix        A bug fix                                                           SemVer PATCH #
+#    * perf       A code change that improves performance.                            SemVer PATCH #
+#    * revert     Reverts a previous commit.                                                       #
+#    * docs       Change to documentation only.                                                    #
+#    * style      Changes that do not affect the meaning                                           #
+#                 of the code (white-space, formatting,                                            #
+#                 missing semi-colons, etc).                                                       #
+#    * chore      General tooling/config/min refactor.                                             #
+#                 Other changes that don't modify src or test files.                               #
+#    * refactor   A code change that neither fixes a bug nor adds a feature.                       #
+#    * test       Adding missing tests or correcting existing tests.                               #
+#    * build      changes that affect the build system or external dependencies                    #
+#                 Ex: (example scopes: gulp, broccoli, npm).                                       #
+#    * ci         Changes to our CI configuration files and scripts                                #
+#                 Ex: (example scopes: Travis, Circle, BrowserStack, SauceLabs)                    #
 #                                                                                                  #
 #    Ex: feat(neovim): add plugin nvim-treesitter/nvim-treesitter                                  #
 # -------------------------------------------------------------------------------------------------#
