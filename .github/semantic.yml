@@ -1,0 +1,6 @@
+# semantic-pull-requests github-action configs
+# https://github.com/zeke/semantic-pull-requests#configuration
+
+enabled: true
+# Always validate all commits, and ignore the PR title
+commitsOnly: true
