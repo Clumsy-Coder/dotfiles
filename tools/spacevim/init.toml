@@ -52,7 +52,18 @@
   auto_completion_return_key_behavior = "complete"
   auto_completion_tab_key_behavior = "smart"
 
+####################################################################################################
+# Core                                                                                             #
+####################################################################################################
+
+# SpaceVim core layer provides many default key bindings and features.
+# https://spacevim.org/layers/core/
 [[layers]]
+  name = "core"
+  filetree_show_hidden = true       # option for showing hidden file in filetree, disabled by default
+  enable_smooth_scrolling = true    # enable/disabled smooth scrolling key bindings, enabled by default.
+  filetree_opened_icon = ""
+  filetree_closed_icon = ""
 
 ####################################################################################################
 # Shell                                                                                            #
