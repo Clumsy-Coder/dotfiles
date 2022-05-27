@@ -173,3 +173,9 @@
 [[layers]]
   name = "lang#toml"
 
+# This layer is for TypeScript development, including code completion, 
+#   Syntax lint, and doc generation.
+# https://spacevim.org/layers/lang/typescript/
+[[layers]]
+  name = "lang#typescript"
+
