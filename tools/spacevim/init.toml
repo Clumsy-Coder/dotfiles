@@ -41,11 +41,16 @@
     # https://spacevim.org/documentation/#file-tree
     filetree_direction = "left"
 
+####################################################################################################
+# Autocomplete                                                                                     #
+####################################################################################################
+
 # Enable autocomplete layer
+# https://spacevim.org/layers/autocomplete/
 [[layers]]
-name = 'autocomplete'
-auto_completion_return_key_behavior = "complete"
-auto_completion_tab_key_behavior = "smart"
+  name = "autocomplete"
+  auto_completion_return_key_behavior = "complete"
+  auto_completion_tab_key_behavior = "smart"
 
 [[layers]]
 name = 'shell'
