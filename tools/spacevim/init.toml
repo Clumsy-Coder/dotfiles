@@ -141,3 +141,12 @@
 [[layers]]
   name = "lsp"
 
+####################################################################################################
+# Language support                                                                                 #
+####################################################################################################
+
+# Dockerfile language support, including syntax highlighting and code formatting.
+# https://spacevim.org/layers/lang/dockerfile/
+[[layers]]
+  name = "lang#dockerfile"
+
