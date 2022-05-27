@@ -219,3 +219,8 @@
   repo = "xuyuanp/nerdtree-git-plugin"
   merged = false
 
+# Developer Icons
+[[custom_plugins]]
+  repo = "ryanoasis/vim-devicons"
+  merged = false
+
