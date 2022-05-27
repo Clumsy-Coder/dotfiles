@@ -162,3 +162,9 @@
 [[layers]]
   name = "lang#javascript"
 
+# This layer is for Lua development, provides autocompletion, 
+#   syntax checking, and code format for Lua files.
+# https://spacevim.org/layers/lang/lua/
+[[layers]]
+  name = "lang#lua"
+
