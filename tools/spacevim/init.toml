@@ -204,3 +204,8 @@
   repo = "frazrepo/vim-rainbow"
   merged = false
 
+# Vim statusline
+[[custom_plugins]]
+  repo = "vim-airline/vim-airline"
+  merged = false
+
