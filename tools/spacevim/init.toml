@@ -179,3 +179,9 @@
 [[layers]]
   name = "lang#typescript"
 
+# This layer is for writing Vimscript, including code completion, 
+#   syntax checking and buffer formatting
+# https://spacevim.org/layers/lang/vim/
+[[layers]]
+  name = "lang#vim"
+
