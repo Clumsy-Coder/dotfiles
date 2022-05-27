@@ -224,3 +224,8 @@
   repo = "ryanoasis/vim-devicons"
   merged = false
 
+# Syntax for nerdtree on most common file extensions. Used with ryanoasis/vim-devicons
+[[custom_plugins]]
+  repo = "tiagofumo/vim-nerdtree-syntax-highlight"
+  merged = false
+
