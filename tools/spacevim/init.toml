@@ -32,6 +32,11 @@
     buffer_index_type = 4                 # Set SpaceVim buffer index type
     enable_tabline_filetype_icon = true   # Display file type icon on the tabline.
 
+    # tab
+    # https://spacevim.org/documentation/#code-indentation
+    default_indent = 2
+    expand_tab = true
+
 # Enable autocomplete layer
 [[layers]]
 name = 'autocomplete'
