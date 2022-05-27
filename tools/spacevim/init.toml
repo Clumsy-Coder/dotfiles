@@ -198,3 +198,9 @@
 [[custom_plugins]]
   repo = "lilydjwg/colorizer"
   merged = false
+
+# Colourize brackets, parenthis and curly brackets
+[[custom_plugins]]
+  repo = "frazrepo/vim-rainbow"
+  merged = false
+
