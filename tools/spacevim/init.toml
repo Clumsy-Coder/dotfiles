@@ -41,6 +41,11 @@
     # https://spacevim.org/documentation/#file-tree
     filetree_direction = "left"
 
+    # load vim config in ./autoload/myspacevim.vim file
+    # https://spacevim.org/documentation/#bootstrap-functions
+    bootstrap_after = "myspacevim#after"
+    bootstrap_before = "myspacevim#before"
+
     # disabled plugins
     # https://spacevim.org/documentation/#custom-configuration
     disabled_plugins = []
