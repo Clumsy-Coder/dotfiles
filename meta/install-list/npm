@@ -15,6 +15,7 @@ markdownlint-cli
 bash-language-server
 vscode-langservers-extracted
 dockerfile-language-server-nodejs
+javascript-typescript-langserver
 emmet-ls
 remark
 remark-language-server
