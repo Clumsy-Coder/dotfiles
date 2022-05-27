@@ -20,6 +20,7 @@ remark
 remark-language-server
 typescript-language-server
 vim-language-server
+vscode-html-languageserver-bin
 yaml-language-server
 
 typescript
