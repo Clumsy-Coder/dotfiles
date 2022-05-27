@@ -53,6 +53,14 @@
   auto_completion_tab_key_behavior = "smart"
 
 [[layers]]
-name = 'shell'
-default_position = 'top'
-default_height = 30
+
+####################################################################################################
+# Shell                                                                                            #
+####################################################################################################
+
+# This layer provides shell support in SpaceVim
+# https://spacevim.org/layers/shell/
+[[layers]]
+  name = "shell"
+  default_position = "top"     # top, bottom, left, right, float or full
+  default_height = 30
