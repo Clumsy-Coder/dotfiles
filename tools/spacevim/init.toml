@@ -41,6 +41,10 @@
     # https://spacevim.org/documentation/#file-tree
     filetree_direction = "left"
 
+    # disabled plugins
+    # https://spacevim.org/documentation/#custom-configuration
+    disabled_plugins = []
+
 ####################################################################################################
 # Autocomplete                                                                                     #
 ####################################################################################################
