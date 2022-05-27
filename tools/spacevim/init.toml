@@ -16,13 +16,21 @@
     colorscheme_bg = "dark"
     # Disable guicolors in basic mode, many terminal do not support 24bit true colors.
     enable_guicolors = true
-    # Disable statusline separator, if you want to use other value, please
-    # install nerd fonts
-    statusline_separator = "arrow"
-    statusline_iseparator = "arrow"
-    buffer_index_type = 4
-    enable_tabline_filetype_icon = true
-    enable_statusline_mode = false
+
+    # statusline
+    # default statusline config. Replaced with vim-airline/vim-airline
+    # https://spacevim.org/quick-start-guide/#configuration
+    # https://spacevim.org/documentation/#statusline
+    # 
+    # Disable statusline separator, if you want to use other value, please install nerd fonts.
+    statusline_separator = "slant"        # Set the statusline separators of statusline, default is "arrow"
+    statusline_iseparator = "bar"         # Set the statusline separators of inactive statusline
+    enable_statusline_mode = true         # Display current mode text on statusline
+
+    # bufferline
+    # https://spacevim.org/layers/core/statusline/#configuration
+    buffer_index_type = 4                 # Set SpaceVim buffer index type
+    enable_tabline_filetype_icon = true   # Display file type icon on the tabline.
 
 # Enable autocomplete layer
 [[layers]]
