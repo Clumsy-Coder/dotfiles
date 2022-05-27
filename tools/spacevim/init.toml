@@ -214,3 +214,8 @@
   repo = "vim-airline/vim-airline-themes"
   merged = false
 
+# show git status in NerdTree
+[[custom_plugins]]
+  repo = "xuyuanp/nerdtree-git-plugin"
+  merged = false
+
