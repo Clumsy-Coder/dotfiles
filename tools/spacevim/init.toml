@@ -37,6 +37,10 @@
     default_indent = 2
     expand_tab = true
 
+    # file explorer
+    # https://spacevim.org/documentation/#file-tree
+    filetree_direction = "left"
+
 # Enable autocomplete layer
 [[layers]]
 name = 'autocomplete'
