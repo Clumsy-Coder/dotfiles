@@ -132,3 +132,12 @@
 [[layers]]
   name = "treesitter"
 
+####################################################################################################
+# Language Server Protocol                                                                         #
+####################################################################################################
+
+# This layers provides language server protocol for vim and neovim
+# https://spacevim.org/layers/language-server-protocol/
+[[layers]]
+  name = "lsp"
+
