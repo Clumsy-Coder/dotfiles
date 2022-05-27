@@ -209,3 +209,8 @@
   repo = "vim-airline/vim-airline"
   merged = false
 
+# Vim statusline themes
+[[custom_plugins]]
+  repo = "vim-airline/vim-airline-themes"
+  merged = false
+
