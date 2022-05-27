@@ -229,3 +229,11 @@
   repo = "tiagofumo/vim-nerdtree-syntax-highlight"
   merged = false
 
+# Smooth scrolling
+# keybinding in NORMAL mode
+# Ctrl + d 
+# Ctrl + u
+[[custom_plugins]]
+  repo = "yuttie/comfortable-motion.vim"
+  merged = false
+
