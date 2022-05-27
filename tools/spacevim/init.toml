@@ -168,3 +168,8 @@
 [[layers]]
   name = "lang#lua"
 
+# This layer is for toml development, provides syntax checking, indentation, etc.
+# https://spacevim.org/layers/lang/toml/
+[[layers]]
+  name = "lang#toml"
+
