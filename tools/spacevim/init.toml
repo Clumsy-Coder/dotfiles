@@ -156,3 +156,9 @@
 [[layers]]
   name = "lang#html"
 
+# This layer provides JavaScript development support for SpaceVim, 
+#   including code completion, syntax highlighting and syntax checking
+# https://spacevim.org/layers/lang/javascript/
+[[layers]]
+  name = "lang#javascript"
+
