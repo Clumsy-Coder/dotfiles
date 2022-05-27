@@ -76,6 +76,16 @@
   enable = false              # replaced with vim-airline/vim-airline
 
 ####################################################################################################
+# Code linting                                                                                     #
+####################################################################################################
+
+# Syntax checking automatically within SpaceVim, display error on the sign column and statusline.
+# https://spacevim.org/layers/checkers/
+[[layers]]
+  name = "checkers"
+  lint_on_the_fly = true      # Syntax checking on the fly feature, disabled by default.
+
+####################################################################################################
 # Shell                                                                                            #
 ####################################################################################################
 
