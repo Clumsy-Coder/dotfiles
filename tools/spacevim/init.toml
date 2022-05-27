@@ -150,3 +150,9 @@
 [[layers]]
   name = "lang#dockerfile"
 
+# Edit html in SpaceVim, with this layer, 
+#   this layer provides code completion, syntax checking and code formatting for html.
+# https://spacevim.org/layers/lang/html/
+[[layers]]
+  name = "lang#html"
+
