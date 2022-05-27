@@ -122,3 +122,13 @@
   name = "shell"
   default_position = "top"     # top, bottom, left, right, float or full
   default_height = 30
+
+####################################################################################################
+# Treesitter                                                                                       #
+####################################################################################################
+
+# This layers adds extensive support for treesitter
+# https://spacevim.org/layers/treesitter/
+[[layers]]
+  name = "treesitter"
+
