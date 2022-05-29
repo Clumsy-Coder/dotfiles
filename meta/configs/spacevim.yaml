@@ -9,3 +9,4 @@
       description: Download SpaceVim configs and link to vim
 - link:
     ~/.SpaceVim.d/init.toml: tools/spacevim/init.toml
+    ~/.SpaceVim.d/autoload: tools/spacevim/autoload/
