@@ -42,6 +42,13 @@ export LESSHISTFILE="$XDG_CACHE_HOME/less/history"                  # less histo
 # Rust package manager
 export CARGO_HOME="$XDG_DATA_HOME/cargo"                            # Rust package manager
 
+# Ruby
+export GEM_HOME="$XDG_DATA_HOME/gem"                                # Ruby Gems
+export GEM_SPEC_CACHE="$XDG_CACHE_HOME/gem"                         # Ruby Gems
+export BUNDLE_USER_CONFIG="$XDG_CONFIG_HOME/bundle"                 # Ruby Bundler config
+export BUNDLE_USER_CACHE="$XDG_CACHE_HOME/bundle"                   # Ruby Bundler cache
+export BUNDLE_USER_PLUGIN="$XDG_DATA_HOME/bundle"                   # Ruby Bundler local/share
+
 # Golang package manager
 export GOPATH="$XDG_DATA_HOME/go"                                   # Golang package manager
 
