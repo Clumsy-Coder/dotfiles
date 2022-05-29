@@ -54,6 +54,9 @@ export GIT_CONFIG_PATH="$XDG_CONFIG_HOME/git/config"
 export GIT_IGNORE_GLOBAL_PATH="$XDG_CONFIG_HOME/git/.gitignore_global"
 export GIT_ATTRIBUTES_PATH="$XDG_CONFIG_HOME/git/.gitattributes"
 
+# vagrant
+export VAGRANT_HOME="$XDG_DATA_HOME/vagrant"                        # Vagrant
+
 # zsh antigen
 # export ZSH_ANTIGEN_CACHE_DIR_PATH="$XDG_DATA_HOME/antigen"          # antigen cache directory.
 export ADOTDIR="$XDG_DATA_HOME/antigen"                               # use new path for zsh antigen cache. https://github.com/zsh-users/antigen/issues/722#issuecomment-728113623
