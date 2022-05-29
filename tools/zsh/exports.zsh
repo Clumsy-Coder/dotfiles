@@ -39,7 +39,6 @@ if [[ $IS_MAC -eq 1 ]]; then
   export PATH=$PATH:$ANDROID_HOME/tools/bin
   export PATH=$PATH:$ANDROID_HOME/platform-tools
   export PATH="$HOME/.fastlane/bin:$PATH"
-  export GEM_HOME=~/.gems
   export PATH="$GEM_HOME/bin:$PATH"
 
   export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
