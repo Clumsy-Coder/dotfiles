@@ -44,6 +44,10 @@ export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"                      # Docker
 # less
 export LESSHISTFILE="$XDG_CACHE_HOME/less/history"                  # less history
 
+# ncurses
+export TERMINFO="$XDG_DATA_HOME/terminfo"                           # ncurses
+export TERMINFO_DIRS="$XDG_DATA_HOME/terminfo:/usr/share/terminfo"  # ncurses
+
 
 # git
 export GIT_CONFIG_PATH="$XDG_CONFIG_HOME/git/config"
