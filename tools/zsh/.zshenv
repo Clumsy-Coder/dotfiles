@@ -33,7 +33,6 @@ export ZLOGIN_PATH="$ZDOTDIR/.zlogin"
 export NPMRC_PATH="$HOME/.npmrc"
 export NVIMRC_PATH="$HOME/.config/nvim/init.lua"
 export NVIM_PACKER_DIR_PATH="$HOME/.local/share/nvim/site/pack"
-export TMUXRC_PATH="$HOME/.tmux.conf"
 
 # -------------------------------------------------------------------------------------------------#
 # XDG files and directories
@@ -48,6 +47,11 @@ export LESSHISTFILE="$XDG_CACHE_HOME/less/history"                  # less histo
 export TERMINFO="$XDG_DATA_HOME/terminfo"                           # ncurses
 export TERMINFO_DIRS="$XDG_DATA_HOME/terminfo:/usr/share/terminfo"  # ncurses
 
+# tmux
+export TMUX_CONFIG_PATH="$XDG_CONFIG_HOME/tmux/tmux.conf"           # tmux config path
+export TMUX_PLUGIN_CACHE_PATH="$XDG_DATA_HOME/tmux/plugins"         # tmux plugin cache directory
+export ZSH_TMUX_CONFIG="$TMUX_CONFIG_PATH"                          # tmux config file (loading ZSH antigen plugin)
+                                                                    # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/tmux#configuration-variables
 
 # git
 export GIT_CONFIG_PATH="$XDG_CONFIG_HOME/git/config"
