@@ -103,6 +103,8 @@ brew "trash"
 brew "tree"
 # Command-line unarchiving tools supporting multiple formats
 brew "unar"
+# Maintained ctags implementation
+brew "universal-ctags"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Internet file retriever
