@@ -18,11 +18,15 @@ dockerfile-language-server-nodejs
 javascript-typescript-langserver
 emmet-ls
 remark
+remark-cli
+remark-stringify
+remark-frontmatter
 remark-language-server
 typescript-language-server
 vim-language-server
 vscode-css-languageserver-bin
 vscode-html-languageserver-bin
+wcwidth
 yaml-language-server
 
 typescript
