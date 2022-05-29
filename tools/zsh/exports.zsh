@@ -16,7 +16,7 @@ export PYTHONIOENCODING='UTF-8';
 
 # node version manager (nvm)
 # check commit 2e545453b280d1a58e2b45282785b37819a4f623
-export NVM_DIR="$HOME/.nvm"
+# export NVM_DIR="$HOME/.nvm"   # set in .zshenv
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
   # export Rust to PATH
