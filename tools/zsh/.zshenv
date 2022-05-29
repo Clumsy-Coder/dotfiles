@@ -35,6 +35,11 @@ export NVIMRC_PATH="$HOME/.config/nvim/init.lua"
 export NVIM_PACKER_DIR_PATH="$HOME/.local/share/nvim/site/pack"
 export TMUXRC_PATH="$HOME/.tmux.conf"
 
+# -------------------------------------------------------------------------------------------------#
+# XDG files and directories
+
+# docker
+export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"                      # Docker
 
 
 # git
