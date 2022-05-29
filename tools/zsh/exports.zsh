@@ -23,9 +23,9 @@ export PYTHONIOENCODING='UTF-8';
   # Rust installed using dotbot script dotfiles/meta/configs/rust.yaml file
   export PATH="$CARGO_HOME/bin:$PATH"
 
-  # export golang to PATH
+  # export golang (set in .zshenv) to PATH
   # https://stackoverflow.com/a/13223578/3053548
-  export GOPATH=~/go
+  # export GOPATH=~/go            # set in .zshenv
   export PATH=$PATH:$GOPATH/bin
 
 # -------------------------------------------------------------------------------------------------#
