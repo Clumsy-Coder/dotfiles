@@ -8,47 +8,47 @@
 
 # All SpaceVim option below [option] section
 [options]
-    # colorscheme
-    # https://spacevim.org/layers/colorscheme/
-    # set spacevim theme. by default colorscheme layer is not loaded,
-    # if you want to use more colorscheme, please load the colorscheme layer.
-    colorscheme = "gruvbox"
-    colorscheme_bg = "dark"
-    # Disable guicolors in basic mode, many terminal do not support 24bit true colors.
-    enable_guicolors = true
+  # colorscheme
+  # https://spacevim.org/layers/colorscheme/
+  # set spacevim theme. by default colorscheme layer is not loaded,
+  # if you want to use more colorscheme, please load the colorscheme layer.
+  colorscheme = "gruvbox"
+  colorscheme_bg = "dark"
+  # Disable guicolors in basic mode, many terminal do not support 24bit true colors.
+  enable_guicolors = true
 
-    # statusline
-    # default statusline config. Replaced with vim-airline/vim-airline
-    # https://spacevim.org/quick-start-guide/#configuration
-    # https://spacevim.org/documentation/#statusline
-    # 
-    # Disable statusline separator, if you want to use other value, please install nerd fonts.
-    statusline_separator = "slant"        # Set the statusline separators of statusline, default is "arrow"
-    statusline_iseparator = "bar"         # Set the statusline separators of inactive statusline
-    enable_statusline_mode = true         # Display current mode text on statusline
+  # statusline
+  # default statusline config. Replaced with vim-airline/vim-airline
+  # https://spacevim.org/quick-start-guide/#configuration
+  # https://spacevim.org/documentation/#statusline
+  # 
+  # Disable statusline separator, if you want to use other value, please install nerd fonts.
+  statusline_separator = "slant"        # Set the statusline separators of statusline, default is "arrow"
+  statusline_iseparator = "bar"         # Set the statusline separators of inactive statusline
+  enable_statusline_mode = true         # Display current mode text on statusline
 
-    # bufferline
-    # https://spacevim.org/layers/core/statusline/#configuration
-    buffer_index_type = 4                 # Set SpaceVim buffer index type
-    enable_tabline_filetype_icon = true   # Display file type icon on the tabline.
+  # bufferline
+  # https://spacevim.org/layers/core/statusline/#configuration
+  buffer_index_type = 4                 # Set SpaceVim buffer index type
+  enable_tabline_filetype_icon = true   # Display file type icon on the tabline.
 
-    # tab
-    # https://spacevim.org/documentation/#code-indentation
-    default_indent = 2
-    expand_tab = true
+  # tab
+  # https://spacevim.org/documentation/#code-indentation
+  default_indent = 2
+  expand_tab = true
 
-    # file explorer
-    # https://spacevim.org/documentation/#file-tree
-    filetree_direction = "left"
+  # file explorer
+  # https://spacevim.org/documentation/#file-tree
+  filetree_direction = "left"
 
-    # load vim config in ./autoload/myspacevim.vim file
-    # https://spacevim.org/documentation/#bootstrap-functions
-    bootstrap_after = "myspacevim#after"
-    bootstrap_before = "myspacevim#before"
+  # load vim config in ./autoload/myspacevim.vim file
+  # https://spacevim.org/documentation/#bootstrap-functions
+  bootstrap_after = "myspacevim#after"
+  bootstrap_before = "myspacevim#before"
 
-    # disabled plugins
-    # https://spacevim.org/documentation/#custom-configuration
-    disabled_plugins = []
+  # disabled plugins
+  # https://spacevim.org/documentation/#custom-configuration
+  disabled_plugins = []
 
 ####################################################################################################
 # Autocomplete                                                                                     #
