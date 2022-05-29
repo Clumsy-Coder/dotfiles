@@ -9,7 +9,7 @@
 - shell:
     - command: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | PROFILE=/dev/null zsh
       description: Installing Node version manager
-    - command: source ~/dotfiles/tools/zsh/exports.zsh && nvm install node
+    - command: source $NVM_DIR/nvm.sh && nvm install node
       description: install latest version of NodeJS
     # - load exports from zsh/exports.zsh to be able access nvm
     # - get npm packages from meta/install-list/npm that are NOT commented out (commented with # )
@@ -19,6 +19,5 @@
     # obtained regex from
     #   https://unix.stackexchange.com/a/174720
     #   https://unix.stackexchange.com/a/60995
-    - command: source ~/dotfiles/tools/zsh/exports.zsh &&
-        grep -Ev '^#' meta/install-list/npm | xargs npm install -g
+    - command: source $NVM_DIR/nvm.sh && grep -Ev '^#' meta/install-list/npm | xargs npm install -g
       description: Installing NPM packages
