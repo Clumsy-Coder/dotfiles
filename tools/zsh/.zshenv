@@ -30,9 +30,6 @@ export ZSHENV_PATH="$ZDOTDIR/.zshenv"
 export ZLOGIN_PATH="$ZDOTDIR/.zlogin"
 # export ZLOGOUT_PATH="$ZDOTDIR/.zlogout"
 
-export NVIMRC_PATH="$HOME/.config/nvim/init.lua"
-export NVIM_PACKER_DIR_PATH="$HOME/.local/share/nvim/site/pack"
-
 # -------------------------------------------------------------------------------------------------#
 # XDG files and directories
 
@@ -50,6 +47,11 @@ export NPMRC_PATH="$NPM_CONFIG_USERCONFIG"
 # ncurses
 export TERMINFO="$XDG_DATA_HOME/terminfo"                           # ncurses
 export TERMINFO_DIRS="$XDG_DATA_HOME/terminfo:/usr/share/terminfo"  # ncurses
+
+# neovim
+export NVIMRC_PATH="$XDG_CONFIG_HOME/nvim/init.lua"                 # neovim config init file
+export NVIM_CONFIG_DIR_PATH="$XDG_CONFIG_HOME/nvim/lua"             # neovim config folder
+export NVIM_PACKER_DIR_PATH="$XDG_DATA_HOME/nvim/site/pack"         # neovim plugin installation folder
 
 # tmux
 export TMUX_CONFIG_PATH="$XDG_CONFIG_HOME/tmux/tmux.conf"           # tmux config path
