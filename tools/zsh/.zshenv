@@ -42,6 +42,9 @@ export LESSHISTFILE="$XDG_CACHE_HOME/less/history"                  # less histo
 # Rust package manager
 export CARGO_HOME="$XDG_DATA_HOME/cargo"                            # Rust package manager
 
+# Golang package manager
+export GOPATH="$XDG_DATA_HOME/go"                                   # Golang package manager
+
 # npm
 export NVM_DIR="$XDG_DATA_HOME/nvm"                                 # Node Version Manager
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"           # npm config
