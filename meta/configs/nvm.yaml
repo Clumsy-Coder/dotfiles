@@ -2,6 +2,10 @@
 #
 # usage:
 # ./install-standalone nvm
+- link:
+    $NPM_CONFIG_USERCONFIG: tools/npm/.npmrc
+- create:
+    - ~/.local/share/nvm
 - shell:
     - command: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | PROFILE=/dev/null zsh
       description: Installing Node version manager
