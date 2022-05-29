@@ -14,7 +14,7 @@
   conflictstyle = diff3
 [core]
   editor = nvim +23 -c 'startinsert'
-  excludesfile = ~/.gitignore_global
+  excludesfile = ~/.config/git/.gitignore_global # default git ignore file
   pager = less --tabs=4 -RFX
 [commit]
   template = ~/dotfiles/tools/git/git-commit-template-timmybytes.txt
