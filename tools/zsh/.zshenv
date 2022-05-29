@@ -36,6 +36,14 @@ export NVIM_PACKER_DIR_PATH="$HOME/.local/share/nvim/site/pack"
 export TMUXRC_PATH="$HOME/.tmux.conf"
 export GITCONFIGRC_PATH="$HOME/.gitconfig"
 
+# zsh antigen
+# export ZSH_ANTIGEN_CACHE_DIR_PATH="$XDG_DATA_HOME/antigen"          # antigen cache directory.
+export ADOTDIR="$XDG_DATA_HOME/antigen"                               # use new path for zsh antigen cache. https://github.com/zsh-users/antigen/issues/722#issuecomment-728113623
+export ANTIGEN_CACHE="$ADOTDIR/init.zsh"
+export ANTIGEN_COMPDUMP="$ADOTDIR/.zcompdump"
+
+# -------------------------------------------------------------------------------------------------#
+
 # Mac OS X uses path_helper and /etc/paths.d to preload PATH, clear it out first
 if [ -x /usr/libexec/path_helper ]; then
   PATH=''
