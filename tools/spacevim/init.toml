@@ -142,6 +142,20 @@
   name = "treesitter"
 
 ####################################################################################################
+# UI                                                                                               #
+####################################################################################################
+
+# https://spacevim.org/layers/ui/
+[[layers]]
+  name = "ui"
+  enable_indentline = true            # using yggdroot/indentline
+  indentline_char = "│"
+  conceallevel = 1
+  enable_cursorword = true
+  cursorword_exclude_filetype = []
+  indentline_exclude_filetyps = []
+
+####################################################################################################
 # Language Server Protocol                                                                         #
 ####################################################################################################
 
