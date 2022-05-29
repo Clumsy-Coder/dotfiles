@@ -3,5 +3,5 @@
 # usage:
 # ./install-standalone git
 - link:
-    ~/.gitconfig: tools/git/.gitconfig
-    ~/.gitignore_global: tools/git/.gitignore_global
+    $GIT_CONFIG_PATH: tools/git/.gitconfig
+    $GIT_IGNORE_GLOBAL_PATH: tools/git/.gitignore_global
