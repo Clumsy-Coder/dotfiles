@@ -21,11 +21,12 @@ export ZSCRIPTDIR="$DOTDIR/tools/zsh"
 export HISTFILE="$XDG_CACHE_HOME/zsh/history"                       # history
 
 # DOTFILES
-export ZSHENV_PATH="$ZSCRIPTDIR/.zshenv"
-export ZSHRC_PATH="$ZSCRIPTDIR/.zshrc"
-# export ZPROFILE_PATH="$ZSCRIPTDIR/.zprofile"
-# export ZLOGIN_PATH="$ZSCRIPTDIR/.zlogin"
-# export ZLOGOUT_PATH="$ZSCRIPTDIR/.zlogout"
+export ZSHRC_PATH="$ZDOTDIR/.zshrc"
+export ZSHENV_PATH="$ZDOTDIR/.zshenv"
+# export ZPROFILE_PATH="$ZDOTDIR/.zprofile"
+export ZLOGIN_PATH="$ZDOTDIR/.zlogin"
+# export ZLOGOUT_PATH="$ZDOTDIR/.zlogout"
+
 export NPMRC_PATH="$HOME/.npmrc"
 export NVIMRC_PATH="$HOME/.config/nvim/init.lua"
 export NVIM_PACKER_DIR_PATH="$HOME/.local/share/nvim/site/pack"
