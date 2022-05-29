@@ -30,7 +30,6 @@ export ZSHENV_PATH="$ZDOTDIR/.zshenv"
 export ZLOGIN_PATH="$ZDOTDIR/.zlogin"
 # export ZLOGOUT_PATH="$ZDOTDIR/.zlogout"
 
-export NPMRC_PATH="$HOME/.npmrc"
 export NVIMRC_PATH="$HOME/.config/nvim/init.lua"
 export NVIM_PACKER_DIR_PATH="$HOME/.local/share/nvim/site/pack"
 
@@ -42,6 +41,11 @@ export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"                      # Docker
 
 # less
 export LESSHISTFILE="$XDG_CACHE_HOME/less/history"                  # less history
+
+# npm
+export NVM_DIR="$XDG_DATA_HOME/nvm"                                 # Node Version Manager
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"           # npm config
+export NPMRC_PATH="$NPM_CONFIG_USERCONFIG"
 
 # ncurses
 export TERMINFO="$XDG_DATA_HOME/terminfo"                           # ncurses
