@@ -191,6 +191,12 @@
 [[layers]]
   name = "lang#lua"
 
+# Edit markdown within vim, autopreview markdown in the default browser, 
+#   with this layer you can also format markdown files.
+# https://spacevim.org/layers/lang/markdown/
+# [[layers]]
+#   name = "lang#markdown"
+
 # This layer is for toml development, provides syntax checking, indentation, etc.
 # https://spacevim.org/layers/lang/toml/
 [[layers]]
