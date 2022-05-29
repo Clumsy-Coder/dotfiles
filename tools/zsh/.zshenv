@@ -41,6 +41,9 @@ export TMUXRC_PATH="$HOME/.tmux.conf"
 # docker
 export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"                      # Docker
 
+# less
+export LESSHISTFILE="$XDG_CACHE_HOME/less/history"                  # less history
+
 
 # git
 export GIT_CONFIG_PATH="$XDG_CONFIG_HOME/git/config"
