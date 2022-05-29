@@ -3,11 +3,13 @@
 # usage:
 # ./install-standalone tmux
 - link:
-    ~/.tmux.conf: tools/tmux/tmux.conf
+    $TMUX_CONFIG_PATH: tools/tmux/tmux.conf
 - shell:
-    - command: tmux start-server
+    - command: rm -rf ~/.local/share/tmux/
+      description: Remove existing tmux plugins
+    - command: tmux -f $TMUX_CONFIG_PATH start-server
       description: Installing tmux plugins...
-    - tmux new-session -d
-    - sleep 1
-    - ~/.tmux/plugins/tpm/scripts/install_plugins.sh
-    - tmux kill-server
+    - tmux -f $TMUX_CONFIG_PATH new-session -d
+    # - sleep 1
+    # - $TMUX_PLUGIN_CACHE_PATH/tpm/scripts/install_plugins.sh
+    - tmux -f $TMUX_CONFIG_PATH kill-server
