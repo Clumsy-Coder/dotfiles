@@ -5,17 +5,19 @@
 # curl -L git.io/antigen > ~/antigen.zsh
 #
 # download antigen if it's NOT installed
-if [ ! -d ~/.antigen ] || [ ! -e ~/antigen.zsh ]; then
+if [ ! -d $ADOTDIR ] || [ ! -e $ADOTDIR/antigen.zsh ]; then
   echo "\nDownloading antigen plugin\n"
+  mkdir -p $ADOTDIR
   curl  -L \
         --max-time 10 \
         --retry 5 \
         --retry-delay 0 \
         --retry-max-time 40 \
-    git.io/antigen > ~/antigen.zsh
+    git.io/antigen > $ADOTDIR/antigen.zsh
+    # git.io/antigen > ~/antigen.zsh
 fi
 
-source ~/antigen.zsh
+source $ADOTDIR/antigen.zsh
 
 # -------------------------------------------------------------------------------------------------#
 # MacOS only ZSH plugins. $IS_MAC is set in zsh/checks.sh
