@@ -39,6 +39,9 @@ export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"                      # Docker
 # less
 export LESSHISTFILE="$XDG_CACHE_HOME/less/history"                  # less history
 
+# Rust package manager
+export CARGO_HOME="$XDG_DATA_HOME/cargo"                            # Rust package manager
+
 # npm
 export NVM_DIR="$XDG_DATA_HOME/nvm"                                 # Node Version Manager
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"           # npm config
