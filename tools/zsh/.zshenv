@@ -21,6 +21,15 @@ export ZSCRIPTDIR="$DOTDIR/tools/zsh"
 export HISTFILE="$XDG_CACHE_HOME/zsh/history"                       # history
 export OH_MY_ZSH_DIR_PATH="$XDG_DATA_HOME/oh-my-zsh"                # ohmyzsh dir path
 
+# dotfiles directories
+export DOTBOT_META_PATH="$HOME/dotfiles/meta"
+export DOTBOT_CONFIGS_PATH="$DOTBOT_META_PATH/configs"
+export DOTBOT_PROFILES_PATH="$DOTBOT_META_PATH/profiles"
+export DOTBOT_INSTALL_LIST_PATH="$DOTBOT_META_PATH/install-list"
+export DOTBOT_INSTALL_SCRIPT_PATH="$DOTBOT_META_PATH/install-script"
+
+export DOTFILES_TOOLS_PATH="$HOME/dotfiles/tools"
+
 # -------------------------------------------------------------------------------------------------#
 
 # DOTFILES
