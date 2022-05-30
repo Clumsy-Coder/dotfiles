@@ -1,5 +1,15 @@
 #!/usr/bin/env zsh
 
+# improve load times
+# https://carlosbecker.com/posts/speeding-up-zsh/
+zmodload zsh/complist
+autoload -Uz compinit
+if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' $ZDOTDIR/.zcompdump) ]; then
+  compinit
+else
+  compinit -C
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
