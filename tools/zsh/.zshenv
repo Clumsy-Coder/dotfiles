@@ -86,6 +86,9 @@ export ADOTDIR="$XDG_DATA_HOME/antigen"                               # use new 
 export ANTIGEN_CACHE="$ADOTDIR/init.zsh"
 export ANTIGEN_COMPDUMP="$ADOTDIR/.zcompdump"
 
+# alacritty
+export ALACRITTY_CONFIG_PATH="$XDG_CONFIG_HOME/alacritty/alacritty.yml"
+
 # -------------------------------------------------------------------------------------------------#
 
 # Mac OS X uses path_helper and /etc/paths.d to preload PATH, clear it out first
