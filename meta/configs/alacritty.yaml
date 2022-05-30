@@ -3,4 +3,4 @@
 # usage:
 # ./install-standalone alacritty
 - link:
-    ~/.config/alacritty/alacritty.yml: tools/alacritty/alacritty.yml
+    $ALACRITTY_CONFIG_PATH: tools/alacritty/alacritty.yml
