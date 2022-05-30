@@ -15,9 +15,9 @@ import:
   #       respective file.
   #       Just uncomment the theme config to set the theme.
   #       check https://github.com/alacritty/alacritty/wiki/Color-schemes#multiple-schemes
-  - ~/dotfiles/tools/alacritty/material-design.colorscheme.yml
-  # - ~/dotfiles/tools/alacritty/popos.colorscheme.yml
-  # - ~/dotfiles/tools/alacritty/ubuntu.colorscheme.yml
+  - ~/dotfiles/tools/alacritty/colorscheme/material-design.colorscheme.yml
+  # - ~/dotfiles/tools/alacritty/colorscheme/popos.colorscheme.yml
+  # - ~/dotfiles/tools/alacritty/colorscheme/ubuntu.colorscheme.yml
   # -----------------------------------------------------------------------------------------------#
 
 
