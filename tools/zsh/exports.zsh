@@ -19,14 +19,14 @@ export PYTHONIOENCODING='UTF-8';
 # export NVM_DIR="$HOME/.nvm"   # set in .zshenv
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-  # export Rust to PATH
-  # Rust installed using dotbot script dotfiles/meta/configs/rust.yaml file
-  export PATH="$CARGO_HOME/bin:$PATH"
+# export Rust to PATH
+# Rust installed using dotbot script dotfiles/meta/configs/rust.yaml file
+export PATH="$CARGO_HOME/bin:$PATH"
 
-  # export golang (set in .zshenv) to PATH
-  # https://stackoverflow.com/a/13223578/3053548
-  # export GOPATH=~/go            # set in .zshenv
-  export PATH=$PATH:$GOPATH/bin
+# export golang (set in .zshenv) to PATH
+# https://stackoverflow.com/a/13223578/3053548
+# export GOPATH=~/go            # set in .zshenv
+export PATH=$PATH:$GOPATH/bin
 
 # -------------------------------------------------------------------------------------------------#
 # MacOS only exports. $IS_MAC is set in zsh/checks.sh
