@@ -3,10 +3,7 @@
 # usage:
 # ./install-standalone astronvim
 - shell:
-    - command: test -d ~/.config/nvim/ && mv -i ~/.config/nvim ~/.config/nvimbackup || true
-      description: Backup old neovim configs
-      stdin: true
-    - command: rm -rf  ~/.local/share/nvim/site/pack
+    - command: rm -rf $NVIM_CONFIG_DIR_PATH $NVIM_PACKER_DIR_PATH
       description: Remove old Neovim installed plugins
     - command: git clone --depth 1 https://github.com/AstroNvim/AstroNvim $NVIM_CONFIG_DIR_PATH
       description: Get AstroNvim repo
