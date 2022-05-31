@@ -7,5 +7,5 @@
       description: Installing Homebrew
     # brewfile obtained with
     # brew bundle dump --describe --file=meta/install-list/Brewfile --force
-    - command: brew bundle --file meta/install-list/Brewfile --verbose --cleanup --no-lock
+    - command: brew bundle --file $BREWFILE_PATH --verbose --cleanup --no-lock
       description: Installing Homebrew packages
