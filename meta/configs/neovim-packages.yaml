@@ -3,8 +3,7 @@
 # usage:
 # ./install-standalone neovim-packages
 - link:
-    $NVIMRC_PATH: tools/neovim/init.lua
-    $NVIM_CONFIG_DIR_PATH: tools/neovim/lua/
+    $NVIM_CONFIG_DIR_PATH: tools/neovim
 - shell:
     - command: rm -rf $NVIM_PACKER_DIR_PATH
       description: Removing existing Neovim Packer installation directory
