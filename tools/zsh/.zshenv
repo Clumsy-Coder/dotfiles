@@ -19,6 +19,7 @@ export DOTDIR="$HOME/dotfiles"
 export ZDOTDIR="${ZDOTDIR:-"$XDG_CONFIG_HOME/zsh"}"
 export ZSCRIPTDIR="$DOTDIR/tools/zsh"
 export HISTFILE="$XDG_STATE_HOME/zsh/history"                       # history
+export ZCOMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
 export OH_MY_ZSH_DIR_PATH="$XDG_DATA_HOME/oh-my-zsh"                # ohmyzsh dir path
 
 # dotfiles directories
