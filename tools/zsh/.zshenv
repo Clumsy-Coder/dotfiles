@@ -16,7 +16,7 @@ export XDG_CACHE_HOME="$HOME/.cache"         # Where user-specific non-essential
 
 # DIRECTORIES
 export DOTDIR="$HOME/dotfiles"
-export ZDOTDIR="${ZDOTDIR:-"$XDG_CONFIG_HOME/zsh"}"
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export ZSCRIPTDIR="$DOTDIR/tools/zsh"
 export HISTFILE="$XDG_STATE_HOME/zsh/history"                       # history
 export ZCOMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
