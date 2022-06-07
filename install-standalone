@@ -58,7 +58,18 @@ for config in ${@}; do
   echo -e "\nConfigure $config\n"
 
   if [[ $config == *"sudo"* ]]; then
-      cmd=(sudo "${cmd[@]}")
+      # - pass tools/zsh/.zshenv file when running in sudo to load ENV
+      #   - Why?
+      #     - some of the dotbot configs are using using sudo and XDG envs defined in ./tools/zsh/.zshenv
+      # - set HOME to current home user path
+      #   - Why?
+      #     - when running in sudo, the XDG env tools/zsh/.zshenv are not not loaded
+      # 
+      # - passing ENV in sudo https://unix.stackexchange.com/a/396528
+      # - setting BASH_ENV https://unix.stackexchange.com/a/429235
+      # - setting env HOME : assuming dotfiles repo is in the Home folder
+      #   - requires full directory path
+      cmd=(sudo env HOME="$(echo $HOME)" BASH_ENV="./tools/zsh/.zshenv" "${cmd[@]}")
   fi
 
   "${cmd[@]}"
