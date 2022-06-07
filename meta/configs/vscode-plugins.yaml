@@ -11,7 +11,7 @@
     #   https://unix.stackexchange.com/a/174720
     #   https://unix.stackexchange.com/a/60995
     - command: |
-        for extension in $(grep -Ev '^#' meta/install-list/vscode)
+        for extension in $(grep -Ev '^#' $DOTBOT_INSTALL_LIST_PATH/vscode)
         do
           code --install-extension $extension
         done
