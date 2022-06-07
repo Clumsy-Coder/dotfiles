@@ -5,5 +5,5 @@
 - shell:
     - command: dnf update -y
       description: Updating dnf packages
-    - command: grep -Ev '^#' meta/install-list/dnf | xargs dnf install -y
+    - command: grep -Ev '^#' $DOTBOT_INSTALL_LIST_PATH/dnf | xargs dnf install -y
       description: Install dnf packages
