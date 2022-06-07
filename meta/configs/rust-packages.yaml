@@ -3,4 +3,4 @@
 # usage:
 # ./install-standalone rust-packages
 - shell:
-    - command: source tools/zsh/exports.zsh && grep -Ev '^#' meta/install-list/cargo | xargs cargo install
+    - command: source tools/zsh/exports.zsh && grep -Ev '^#' $DOTBOT_INSTALL_LIST_PATH/cargo | xargs cargo install
