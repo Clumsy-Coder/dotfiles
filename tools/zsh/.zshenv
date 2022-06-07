@@ -52,6 +52,7 @@ export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"                      # Docker
 export LESSHISTFILE="$XDG_CACHE_HOME/less/history"                  # less history
 
 # Rust package manager
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"                          # Rust install dir
 export CARGO_HOME="$XDG_DATA_HOME/cargo"                            # Rust package manager
 
 # Ruby
