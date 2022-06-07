@@ -7,7 +7,7 @@
       description: Update APT repository index
     - command: apt upgrade -y
       description: Upgrade installed packages
-    - command: grep -Ev '^#' meta/install-list/apt | xargs apt install -y
+    - command: grep -Ev '^#' $DOTBOT_INSTALL_LIST_PATH/apt | xargs apt install -y
       description: Installing APT packages
     - command: apt autoremove -y
       description: Remove unused packages
