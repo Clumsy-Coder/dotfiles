@@ -16,3 +16,4 @@
     - command: chsh -s $(which zsh)
       description: Change default shell to ZSH
       stdin: true
+    - command: touch $HISTFILE
