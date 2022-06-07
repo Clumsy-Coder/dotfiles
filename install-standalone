@@ -20,7 +20,7 @@
 # obtained from https://github.com/anishathalye/dotbot/wiki/Tips-and-Tricks#install-standalone
 # author ecarlson94
 
-set -e
+set -e    # exit on error
 
 BASE_CONFIG="base"
 CONFIG_SUFFIX=".yaml"
