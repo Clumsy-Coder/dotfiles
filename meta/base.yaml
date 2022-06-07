@@ -12,8 +12,8 @@
       stdout: true
       stderr: true
 
-- create:
-    - $HOME/.config
+# - create:
+#     - $HOME/.config
 
 - clean:
     $HOME:
