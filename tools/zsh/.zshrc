@@ -12,6 +12,16 @@ else
   compinit -C
 fi
 
+# required to use history file in ~/.local/state/zsh/history
+#   originally set in tools/zsh/.zshenv
+# required because zsh files loading order overrides HISTFILE location
+# check https://unix.stackexchange.com/a/654684
+# 
+# alternate solution:
+# run shell as:
+# zsh -d --login
+export HISTFILE="$XDG_STATE_HOME/zsh/history"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
