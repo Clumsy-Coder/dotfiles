@@ -7,7 +7,7 @@
     - command: |
         source tools/zsh/exports.zsh
 
-        for plugin in $(grep -Ev '^#' meta/install-list/go)
+        for plugin in $(grep -Ev '^#' $DOTBOT_INSTALL_LIST_PATH/go)
         do
           echo "\\033[33mInstalling golang plugin \\033[1;33m$plugin \\033[0m"
           go install $plugin
