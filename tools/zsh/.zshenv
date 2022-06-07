@@ -20,6 +20,7 @@ export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export ZSCRIPTDIR="$DOTDIR/tools/zsh"
 export HISTFILE="$XDG_STATE_HOME/zsh/history"                       # history
 export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"    # generate zsh completions. also oh-my-zsh uses it. https://github.com/ohmyzsh/ohmyzsh/blob/a26d72baa27a46cfd2f35afa789529dccf7fc212/oh-my-zsh.sh#L105-L108
+export ZSH_COMPCACHE="$XDG_CACHE_HOME/zsh/zcompcache"
 export OH_MY_ZSH_DIR_PATH="$XDG_DATA_HOME/oh-my-zsh"                # ohmyzsh dir path
 
 # dotfiles directories
