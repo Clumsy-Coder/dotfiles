@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+zstyle ':completion:*' cache-path $ZSH_COMPCACHE
+
 # improve load times
 # https://carlosbecker.com/posts/speeding-up-zsh/
 zmodload zsh/complist
