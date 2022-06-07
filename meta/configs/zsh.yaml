@@ -12,3 +12,7 @@
     $ZSHRC_PATH: tools/zsh/.zshrc
     $ZSHENV_PATH: tools/zsh/.zshenv
     $ZLOGIN_PATH: tools/zsh/.zlogin
+- shell:
+    - command: chsh -s $(which zsh)
+      description: Change default shell to ZSH
+      stdin: true
