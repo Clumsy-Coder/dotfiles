@@ -2,6 +2,9 @@
 #
 # usage:
 # ./install-standalone zsh
+- create:
+    - $XDG_STATE_HOME/zsh
+    - $XDG_CACHE_HOME/zsh
 - link:
     # ~/.zshrc: tools/zsh/.zshrc
     ~/.zshenv: tools/zsh/.zshenv
