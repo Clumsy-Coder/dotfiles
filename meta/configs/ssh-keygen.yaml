@@ -3,5 +3,5 @@
 # usage:
 # ./install-standalone ssh-keygen
 - shell:
-    - command: meta/install-script/ssh-keygen.sh
+    - command: $DOTBOT_INSTALL_SCRIPT_PATH/ssh-keygen.sh
       stdin: true
