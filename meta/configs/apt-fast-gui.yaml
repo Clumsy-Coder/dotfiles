@@ -5,6 +5,6 @@
 - shell:
     - command: apt-fast update
     - command: apt-fast upgrade -y
-    - command: grep -Ev '^#' meta/install-list/apt-gui | xargs apt-fast install -y
+    - command: grep -Ev '^#' $DOTBOT_INSTALL_LIST_PATH/apt-gui | xargs apt-fast install -y
       description: Install apt packages
     - command: apt-fast autoremove -y
