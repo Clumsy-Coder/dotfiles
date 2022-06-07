@@ -6,8 +6,8 @@ zstyle ':completion:*' cache-path $ZSH_COMPCACHE
 # https://carlosbecker.com/posts/speeding-up-zsh/
 zmodload zsh/complist
 autoload -Uz compinit
-if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' $ZDOTDIR/.zcompdump) ]; then
-  compinit
+if [[ -n $ZSH_COMPDUMP ]]; then
+  compinit -d $ZSH_COMPDUMP
 else
   compinit -C
 fi
