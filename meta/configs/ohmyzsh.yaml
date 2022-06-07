@@ -2,7 +2,8 @@
 #
 # usage:
 # ./install-standalone ohmyzsh
-
+- create:
+    - $ZSH_CACHE_DIR
 - shell:
     - command: rm -rf $OH_MY_ZSH_DIR_PATH
       # - command: chsh -s $(which zsh)
