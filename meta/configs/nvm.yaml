@@ -19,5 +19,5 @@
     # obtained regex from
     #   https://unix.stackexchange.com/a/174720
     #   https://unix.stackexchange.com/a/60995
-    - command: source $NVM_DIR/nvm.sh && grep -Ev '^#' meta/install-list/npm | xargs npm install -g
+    - command: source $NVM_DIR/nvm.sh && grep -Ev '^#' $DOTBOT_INSTALL_LIST_PATH/npm | xargs npm install -g
       description: Installing NPM packages
