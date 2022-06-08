@@ -1,0 +1,7 @@
+# set MacOS settings
+#
+# usage:
+# ./install-standalone macos-configs
+- shell:
+    - command: $DOTBOT_INSTALL_SCRIPT_PATH/macos-configs.sh
+      description: Set MacOS settings
