@@ -1,0 +1,16 @@
+# installing nala debian/ubuntu package manager
+# https://gitlab.com/volian/nala
+#
+# usage:
+# ./install-standalone nala-sudo
+- shell:
+    - command: |
+        grep -E "^(deb http://deb.volian.org/volian/ scar main)" /etc/apt/sources.list.d/volian-archive-scar-unstable.list || \\
+        echo "deb http://deb.volian.org/volian/ scar main" >> /etc/apt/sources.list.d/volian-archive-scar-unstable.list
+      description: Add nala APT source
+    - command: |
+        wget -qO - https://deb.volian.org/volian/scar.key | \\
+        sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg > /dev/null
+      description: Download nala GPG
+    - command: apt update
+    - command: apt install -y nala
