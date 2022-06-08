@@ -51,6 +51,8 @@ brew "iftop"
 brew "ipcalc"
 # Development kit for the Java programming language
 brew "java"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
 # Lazier way to manage everything docker
 brew "lazydocker"
 # Simple terminal UI for git commands
