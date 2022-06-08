@@ -1,5 +1,8 @@
 # install fedora packages
 #
+# NOTE: run dotbot config 'dnf-copr.yaml' before running this dotbot config.
+#   Some of the packages installed can only be found once dnf-copr repo is enabled.
+#
 # usage:
 # ./install-standalone dnf-sudo
 - link:
