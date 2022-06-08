@@ -1,3 +1,56 @@
+## [1.14.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.13.0...1.14.0) (2022-06-08)
+
+
+### :zap: Performance Improvements
+
+* **zsh:** compile zsh autocomplete to improve load times ([86faf3f](https://github.com/Clumsy-Coder/dotfiles/commit/86faf3f8bd3b63367c102852a575f21bf717a0a3))
+
+
+### :sparkles: Features
+
+* **dotbot:** add 'fix-locale-sudo' dotbot script ([be1f9c6](https://github.com/Clumsy-Coder/dotfiles/commit/be1f9c68466942234db79b6cfb9bb2d66461e114))
+* **dotbot:** add symbolic link for dotfiles/tools/npm/.npmrc ([226bbac](https://github.com/Clumsy-Coder/dotfiles/commit/226bbac7024a8f377a58af8aead5a18713862866))
+* **dotbot:** change default shell to zsh ([f828962](https://github.com/Clumsy-Coder/dotfiles/commit/f828962c3d663a3936a4eff6b0d8d2a6678ce825))
+* **dotbot:** create XDG cache folder for oh-my-zsh ([8d0d27f](https://github.com/Clumsy-Coder/dotfiles/commit/8d0d27f0889e769aa9569790b529f73b2a3167d9))
+* **dotbot:** create XDG folder for zsh ([8df4e05](https://github.com/Clumsy-Coder/dotfiles/commit/8df4e05508292c346301ed76a5355f70ba7bc9c6))
+* **dotbot:** create zsh history file using XDG env ([d22829f](https://github.com/Clumsy-Coder/dotfiles/commit/d22829ff77d781733906ee9b29363bf467012a6f))
+* **dotbot:** load tools/zsh/.zshenv before running dotbot ([75f3778](https://github.com/Clumsy-Coder/dotfiles/commit/75f37785d7698d2fe0b2d9b28b7baef46f4ef33b))
+* **npm:** add npmrc file ([fd0bf51](https://github.com/Clumsy-Coder/dotfiles/commit/fd0bf51ac6924f6b48f446584932bdfe7e111979))
+* **zsh:** add .zlogin file ([aab5667](https://github.com/Clumsy-Coder/dotfiles/commit/aab56675fd50d78d9f136f2f0dd620784b27a8aa))
+* **zsh:** add alias 'history' ([ba1c989](https://github.com/Clumsy-Coder/dotfiles/commit/ba1c98918df387fe1f54352f6f02438eb3217076))
+* **zsh:** add env for ohmyzsh path ([ad7a3f5](https://github.com/Clumsy-Coder/dotfiles/commit/ad7a3f58fd7ea186167239206e36a9df7e8dfff4))
+* **zsh:** add XDG env for 'alacritty' ([051138a](https://github.com/Clumsy-Coder/dotfiles/commit/051138ab06aaf89bc7b6d60e85760d769edce967))
+* **zsh:** add XDG env for 'cargo' ([b5991b7](https://github.com/Clumsy-Coder/dotfiles/commit/b5991b7bb4a6b09c48f9ace4d6a4d241cd420b73))
+* **zsh:** add XDG env for 'golang' ([8127a47](https://github.com/Clumsy-Coder/dotfiles/commit/8127a47a7c58ba1a5ec8d7f874cfd788ee4e05c6))
+* **zsh:** add XDG env for 'HISTFILE' is zshrc ([249810a](https://github.com/Clumsy-Coder/dotfiles/commit/249810afaa5e5055c61c4a7d9b3396bb4e52fc36))
+* **zsh:** add XDG env for 'homebrew brewfile' ([4faf6a1](https://github.com/Clumsy-Coder/dotfiles/commit/4faf6a174550832b7fa89132b9c5a4346d71cfb7))
+* **zsh:** add XDG env for 'less' ([ceb31b2](https://github.com/Clumsy-Coder/dotfiles/commit/ceb31b2493527577f1581e25001564461266ba16))
+* **zsh:** add XDG env for 'ncurses' ([42147c3](https://github.com/Clumsy-Coder/dotfiles/commit/42147c367ec54400835491bc49912dc29710d65e))
+* **zsh:** add XDG env for 'neovim' ([12d9549](https://github.com/Clumsy-Coder/dotfiles/commit/12d9549dd1c22f4f625985921026eb954db00375))
+* **zsh:** add XDG env for 'nvm' and 'npm' ([b76db43](https://github.com/Clumsy-Coder/dotfiles/commit/b76db4369b33eb13579ca4ff7fc09e28c2240cb6))
+* **zsh:** add XDG env for 'ruby gems' and 'ruby bundler' ([5f5ed8f](https://github.com/Clumsy-Coder/dotfiles/commit/5f5ed8fc7e5647eaa941c10e25e6672fd8023a58))
+* **zsh:** add XDG env for 'RUSTUP_HOME' ([bd87f38](https://github.com/Clumsy-Coder/dotfiles/commit/bd87f38dfa851362be7fdf0e012491696d999e3b))
+* **zsh:** add XDG env for 'tmux' ([9e83905](https://github.com/Clumsy-Coder/dotfiles/commit/9e83905eb60813fda702c95e1fcdbf7ad0985e69))
+* **zsh:** add XDG env for 'vagrant' ([fd35743](https://github.com/Clumsy-Coder/dotfiles/commit/fd357432eec22762d8bf7d33d6a5471d598c19aa))
+* **zsh:** add XDG env for 'ZCOMPDUMP' ([3c920cf](https://github.com/Clumsy-Coder/dotfiles/commit/3c920cfc07a9720b9dc1e8dd3880e8561d834867))
+* **zsh:** add XDG env for 'ZSH_CACHE_DIR' ([02c28e2](https://github.com/Clumsy-Coder/dotfiles/commit/02c28e26e998ece3ad4b0188e8ef5df450b111cc))
+* **zsh:** add XDG env for 'ZSH_COMPCACHE' ([9fdce1c](https://github.com/Clumsy-Coder/dotfiles/commit/9fdce1c10bbb3e3b5a938d085bba5d60e057addf))
+* **zsh:** add XDG env for docker ([ba2a5cd](https://github.com/Clumsy-Coder/dotfiles/commit/ba2a5cdcda232f200b92e03d7557a152bfcbcf5d))
+* **zsh:** add XDG env for dotfile file/folders ([69b447d](https://github.com/Clumsy-Coder/dotfiles/commit/69b447df44843a0da5b2c33c2f945e522f497016))
+* **zsh:** add XDG env for git ([42b38bb](https://github.com/Clumsy-Coder/dotfiles/commit/42b38bb584ffa808a7fe55cf9b2e3c3367956841))
+* **zsh:** add XDG env for zsh antigen ([be86f16](https://github.com/Clumsy-Coder/dotfiles/commit/be86f167bcd64cd68d6cddf6a37b7c53ab866169))
+* **zsh:** add zsh setopts 'append_history' ([7c71303](https://github.com/Clumsy-Coder/dotfiles/commit/7c713030c3eafbf58f22c969e8196b6db6a5149b))
+* **zsh:** add zsh setopts 'hist_find_no_dups' ([33fa150](https://github.com/Clumsy-Coder/dotfiles/commit/33fa150d8621ace51a170a1a9b29e8ee9cad1ff5))
+* **zsh:** add zsh setopts 'hist_ignore_dups' ([60bf7a5](https://github.com/Clumsy-Coder/dotfiles/commit/60bf7a53a2b9c830644c2cbda0c0b349707466ab))
+* **zsh:** generate zsh cache using $ZSH_COMPCACHE ([6227c76](https://github.com/Clumsy-Coder/dotfiles/commit/6227c76a8a98205a935e085c19df6912bd7f825c))
+* **zsh:** set filepath for zsh history file ([10f469b](https://github.com/Clumsy-Coder/dotfiles/commit/10f469b7e40795824f8930587849f1256a983297))
+* **zsh:** set XDG env variables ([8626caa](https://github.com/Clumsy-Coder/dotfiles/commit/8626caa001e0193ef14256ce1dc382458c0fe183))
+
+
+### :bug: Bug Fixes
+
+* **dotbot:** echo ANSI escape codes characters ([61d791b](https://github.com/Clumsy-Coder/dotfiles/commit/61d791b37d2cba82165a1bb6f1d1d741f11f88aa))
+
 ## [1.13.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.12.0...1.13.0) (2022-05-29)
 
 
