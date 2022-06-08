@@ -5,4 +5,4 @@
 - shell:
     - command: grep -Ev '^#' $DOTBOT_INSTALL_LIST_PATH/dnf-copr | xargs dnf copr enable -y
       description: Enable copr repos
-    - command: dnf update -f
+    - command: dnf update -y
