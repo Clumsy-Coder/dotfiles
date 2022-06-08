@@ -30,6 +30,10 @@ Main zsh source file.
 
 Load zsh ENV variables
 
+Also sets XDG env variables. These variables are used by software to store their data.
+
+Check https://wiki.archlinux.org/title/XDG_Base_Directory
+
 ### aliases.zsh
 
 Load zsh aliases
