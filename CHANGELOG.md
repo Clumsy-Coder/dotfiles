@@ -1,3 +1,15 @@
+## [1.15.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.14.0...1.15.0) (2022-06-08)
+
+
+### :sparkles: Features
+
+* **git:** add files to ignore by git ([fbee406](https://github.com/Clumsy-Coder/dotfiles/commit/fbee4063b1e8d124e90bd13d8383775eef722a04))
+* **git:** use git-delta for viewing file diffs ([746497a](https://github.com/Clumsy-Coder/dotfiles/commit/746497a4607b630e7b35422e80f2993c085d9485))
+* **install-list:** add 'git-delta' to brewfile ([620513f](https://github.com/Clumsy-Coder/dotfiles/commit/620513f2fa667a583c2b8cb2794deb46499544db))
+* **install-list:** add 'git-delta' to rust-packages install list ([9097050](https://github.com/Clumsy-Coder/dotfiles/commit/9097050095a22a96e100e17c3f6e4148364708e9))
+* **install-list:** add 'glow' to brewfile ([ba73961](https://github.com/Clumsy-Coder/dotfiles/commit/ba73961418bfec6e6c78ac8c831fa9ad0db1c8fe))
+* **install-list:** add 'jq' to brewfile ([8ea45f8](https://github.com/Clumsy-Coder/dotfiles/commit/8ea45f8904a96b4295e090999ed02789ce3b9fb9))
+
 ## [1.14.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.13.0...1.14.0) (2022-06-08)
 
 
