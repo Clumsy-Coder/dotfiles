@@ -2,6 +2,8 @@
 #
 # usage:
 # ./install-standalone dnf-sudo
+- link:
+    /etc/dnf/dnf.conf: tools/dnf/dnf.conf
 - shell:
     - command: dnf update -y
       description: Updating dnf packages
