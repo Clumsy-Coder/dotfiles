@@ -15,7 +15,11 @@
 [core]
   editor = nvim +23 -c 'startinsert'
   excludesfile = ~/.config/git/.gitignore_global # default git ignore file
-  pager = less --tabs=4 -RFX
+  pager = delta                           # tool used for displaying git diff
+
+[interactive]
+  diffFilter = delta --color-only         # shows coloured diff when using interactive command (ex: git add --patch)
+
 [commit]
   template = ~/dotfiles/tools/git/git-commit-template-timmybytes.txt
   # template = ~/dotfiles/tools/git/git-commit-template-joelparkerhenderson.txt
@@ -31,8 +35,21 @@
   old = red bold
   new = green bold
   whitespace = red reverse
-# [diff]
+
+[diff]
 #   tool = vscode
+  colorMoved = default                    # moved lines in a diff are colored differently
+
+# git-delta diff tool
+[delta]
+  # theme = "gruvbox-dark"
+  navigate = true                         # use n and N to move between diff sections
+  line-numbers = true                     # show line number
+  # dark = true                             # display diff in dark mode
+  # diff-so-fancy = true                    # use diff so fancy. https://github.com/so-fancy/diff-so-fancy
+  # diff-highlight = true                   # use diff-highlight
+  # side-by-side = true                     # show diff side by side
+
 # [difftool "vscode"]
 #   cmd = code --wait --diff $LOCAL $REMOTE
 #   prompt = true
