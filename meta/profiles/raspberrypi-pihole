@@ -1,6 +1,7 @@
 raspberrypi-configs-sudo
 debian-apt-sources-sudo
 apt-sudo
+raspberrypi-unattended-upgrades-sudo
 git
 neofetch
 tmux
