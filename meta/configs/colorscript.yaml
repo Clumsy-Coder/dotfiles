@@ -1,0 +1,16 @@
+# install colorscript from DistroTube
+# https://gitlab.com/dwt1/shell-color-scripts
+#
+# usage:
+# ./install-standalone colorscript-sudo
+- shell:
+    - command: git clone --depth 1 https://gitlab.com/dwt1/shell-color-scripts.git /tmp/colorscript
+      description: Clone colorscript repository
+    - command: command -v colorscript && cd /tmp/colorscript && make uninstall || true
+      description: Remove currently installed colorscript
+    - command: cd /tmp/colorscript && make install
+      description: Install colorscript
+    # - command: cp -f /tmp/colorscript/zsh_completion/_colorscript /usr/share/zsh/site-functions
+    #   description: Copy colorscript zsh completions
+    - command: rm -rf /tmp/colorscript
+      description: Remove colorscript repository
