@@ -1,0 +1,10 @@
+# link unattended upgrades config file for Raspberry pi OS
+#
+# usage:
+# ./install-standalone raspberrypi-unattended-upgrades-sudo
+- link:
+    /etc/apt/apt.conf.d/50unattended-upgrades: tools/unattended-upgrades/raspberry-config
+- shell:
+    - command: systemctl restart unattended-upgrades.service
+      description: Restart unattended upgrades
+    - command: systemctl status unattended-upgrades.service
