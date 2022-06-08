@@ -35,6 +35,8 @@ brew "fzf"
 brew "gh"
 # Distributed revision control system
 brew "git"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
 # Alternative to top/htop
 brew "glances"
 # Render markdown on the CLI
