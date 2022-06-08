@@ -1,19 +1,27 @@
+# git config
+# https://git-scm.com/docs/git-config
+
 [user]
   name = Clumsy-Coder
   email = 19594044+Clumsy-Coder@users.noreply.github.com
+
 [color]
   ui = true
-  status = true
-  branch = true
-  interactive = true
+  status = true                           # display git status in colour
+  branch = true                           # display branches in colour when using git branch -a
+  interactive = true                      # use colour when using git add/clean --interactive
+
 [pull]
-  rebase = true
+  rebase = true                           # rebase branches on top of the fetched branch when pulling from remote
+
 [push]
-  default = upstream
+  default = upstream                      # push the current branch back to the branch in remote
+
 [merge]
   conflictstyle = diff3
+
 [core]
-  editor = nvim +23 -c 'startinsert'
+  editor = nvim +23 -c 'startinsert'      # default editor
   excludesfile = ~/.config/git/.gitignore_global # default git ignore file
   pager = delta                           # tool used for displaying git diff
 
@@ -23,11 +31,13 @@
 [commit]
   template = ~/dotfiles/tools/git/git-commit-template-timmybytes.txt
   # template = ~/dotfiles/tools/git/git-commit-template-joelparkerhenderson.txt
+
 [color "diff-highlight"]
   oldNormal = red bold
   oldHighlight = red bold 52
   newNormal = green bold
   newHighlight = green bold 22
+
 [color "diff"]
   meta = yellow
   frag = magenta bold
@@ -53,10 +63,13 @@
 # [difftool "vscode"]
 #   cmd = code --wait --diff $LOCAL $REMOTE
 #   prompt = true
+
 # [merge]
 #   tool = vscode
+
 # [mergetool "vscode"]
 #   cmd = code --wait $MERGED
+
 [stash]
   showPatch = false
   showStat = true
