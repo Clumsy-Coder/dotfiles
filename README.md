@@ -176,6 +176,10 @@ Check [meta/configs/](./meta/configs/)
 
 Script obtained from: [dotbot-template/install-standalone](https://github.com/ecarlson94/dotbot-template/blob/main/install-standalone)
 
+It also loads XDG env set in [tools/zsh/.zshenv](./tools/zsh/.zshenv). These XDG env direct where to store application data on the users HOME directory.
+
+Check https://wiki.archlinux.org/title/XDG_Base_Directory
+
 ### install-profile
 
 dotbot script used for running a collection of dotbot configs.
