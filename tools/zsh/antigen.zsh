@@ -68,7 +68,7 @@ antigen bundle webyneter/docker-aliases             # aliases for Docker
 antigen bundle wfxr/forgit                          # cmd utility for Git using fzf
 
 # Load a theme
-antigen theme bhilburn/powerlevel9k                 # load powerlevel9k zsh theme
+antigen theme romkatv/powerlevel10k                 # load powerlevel10k zsh theme
 
 # apply the plugins
 antigen apply
