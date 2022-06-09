@@ -12,6 +12,7 @@
     $ZSHRC_PATH: tools/zsh/.zshrc
     $ZSHENV_PATH: tools/zsh/.zshenv
     $ZLOGIN_PATH: tools/zsh/.zlogin
+    $ZDOTDIR/.p10k.zsh: tools/zsh/theme/powerlevel10k/rainbow.zsh
 - shell:
     - command: chsh -s $(which zsh)
       description: Change default shell to ZSH
