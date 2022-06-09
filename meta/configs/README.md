@@ -83,6 +83,11 @@ Example:
 
 ## File/Directory structure
 
+<!--
+loaded tree structure with
+tree -a -H "." meta/configs -L 1
+-->
+
 <pre>
 <a href="../../../../">dotfiles/</a>meta/configs/
 ├── <a href="./alacritty.yaml">alacritty.yaml</a>                             link <a href="https://github.com/alacritty/alacritty">alacritty</a> config files
@@ -92,6 +97,7 @@ Example:
 ├── <a href="./apt-gui.yaml">apt-gui.yaml</a>                               install apt gui packages
 ├── <a href="./apt.yaml">apt.yaml</a>                                   install apt terminal packages
 ├── <a href="./astronvim.yaml">astronvim.yaml</a>                             install <a href="https://github.com/AstroNvim/AstroNvim">AstroNvim</a>
+├── <a href="./colorscript.yaml">colorscript.yaml</a>                           install <a href="https://gitlab.com/dwt1/shell-color-scripts">Colorscript</a>
 ├── <a href="./debian-apt-sources.yaml">debian-apt-sources.yaml</a>                    add apt sources in debian
 ├── <a href="./dnf-copr.yaml">dnf-copr.yaml</a>                              enable Fedora copr package repos
 ├── <a href="./dnf-gui.yaml">dnf-gui.yaml</a>                               install Fedora gui packages
@@ -103,6 +109,10 @@ Example:
 ├── <a href="./git.yaml">git.yaml</a>                                   link gitconfig files
 ├── <a href="./go-packages.yaml">go-packages.yaml</a>                           install <a href="https://go.dev/">golang</a> packages
 ├── <a href="./homebrew.yaml">homebrew.yaml</a>                              install <a href="https://brew.sh/">homebrew</a> and it's packages
+├── <a href="./macos-configs.yaml">macos-configs.yaml</a>                         set MacOS default settings
+├── <a href="./nala-gui.yaml">nala-gui.yaml</a>                              install terminal packages using <a href="https://gitlab.com/volian/nala">nala</a>
+├── <a href="./nala-terminal.yaml">nala-terminal.yaml</a>                         install gui packages using <a href="https://gitlab.com/volian/nala">nala</a>
+├── <a href="./nala.yaml">nala.yaml</a>                                  install <a href="https://gitlab.com/volian/nala">nala</a> debian/ubuntu package manager
 ├── <a href="./neofetch.yaml">neofetch.yaml</a>                              link <a href="https://github.com/dylanaraps/neofetch">neofetch</a> config file
 ├── <a href="./neovim-packages.yaml">neovim-packages.yaml</a>                       install <a href="https://github.com/neovim/neovim">Neovim</a> plugins using <a href="https://github.com/wbthomason/packer.nvim">Packer</a>
 ├── <a href="./neovim-precompiled.yaml">neovim-precompiled.yaml</a>                    install <strong>stable</strong> precompiled <a href="https://github.com/neovim/neovim/releases/tag/stable">Neovim</a>
@@ -113,6 +123,7 @@ Example:
 ├── <a href="./pihole-cron.yaml">pihole-cron.yaml</a>                           link <a href="https://pi-hole.net/">Pi-hole DNS</a> cron jobs
 ├── <a href="./pihole.yaml">pihole.yaml</a>                                install <a href="https://pi-hole.net/">Pi-hole DNS</a>
 ├── <a href="./raspberrypi-configs.yaml">raspberrypi-configs.yaml</a>                   set default configs for raspberry pi
+├── <a href="./raspberrypi-unattended-upgrades.yaml">raspberrypi-unattended-upgrades.yaml</a>       link unattended upgrades config file for Raspberry pi OS
 ├── <a href="./rust-packages.yaml">rust-packages.yaml</a>                         install <a href="https://www.rust-lang.org/">Rust</a> packages
 ├── <a href="./rust.yaml">rust.yaml</a>                                  install <a href="https://www.rust-lang.org/">Rust</a>
 ├── <a href="./spacevim.yaml">spacevim.yaml</a>                              install <a href="https://github.com/SpaceVim/SpaceVim">SpaceVim</a>
