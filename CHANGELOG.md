@@ -1,3 +1,15 @@
+## [1.17.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.16.0...1.17.0) (2022-06-09)
+
+
+### :sparkles: Features
+
+* **dotbot:** link powerlevel10k config to ~/.config/zsh/.p10k.zsh ([1355d34](https://github.com/Clumsy-Coder/dotfiles/commit/1355d34efbb6058555de9efb3116f0de33367db6))
+* **dotbot:** remove existing powerlevel10k config symlink ([0ea15c5](https://github.com/Clumsy-Coder/dotfiles/commit/0ea15c5e6a81cf4e6d667c2fe7f5a495d8c83a02))
+* **zsh:** add auto generated code by powerlevel10k ([f5d5841](https://github.com/Clumsy-Coder/dotfiles/commit/f5d584199428501121dbbb5d9c85d89a1dacf31e))
+* **zsh:** add ENV for setting ZSH theme ([e8c10c8](https://github.com/Clumsy-Coder/dotfiles/commit/e8c10c80af8675bef12960cf338a8c397556ef6c))
+* **zsh:** add powerlevel10k config ([ba012bb](https://github.com/Clumsy-Coder/dotfiles/commit/ba012bba8a81b2b2e9391b0923517dcc5db65594))
+* **zsh:** add powerlevel10k theme for classic ([7d33648](https://github.com/Clumsy-Coder/dotfiles/commit/7d3364857f638d298216d26724bcb8e2e2ba3ae9))
+
 ## [1.16.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.15.0...1.16.0) (2022-06-09)
 
 
