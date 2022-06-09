@@ -12,16 +12,17 @@ Used by [dotfiles/meta/configs/alacritty.yaml](https://github.com/Clumsy-Coder/d
 <a href="../../../../">dotfiles/</a>tools/alacritty/
 ├── <a href="./README.md">README.md</a>
 ├── <a href="./alacritty.yml">alacritty.yml</a>
-├── <a href="./material-design.colorscheme.yml">material-design.colorscheme.yml</a>
-├── <a href="./popos.colorscheme.yml">popos.colorscheme.yml</a>
-└── <a href="./ubuntu.colorscheme.yml">ubuntu.colorscheme.yml</a>
+└── <a href="./colorscheme/">colorscheme/</a>
+    ├── <a href="./colorscheme/material-design.colorscheme.yml">material-design.colorscheme.yml</a>
+    ├── <a href="./colorscheme/popos.colorscheme.yml">popos.colorscheme.yml</a>
+    └── <a href="./colorscheme/ubuntu.colorscheme.yml">ubuntu.colorscheme.yml</a>
 </pre>
 
 ### alacritty.yml
 
 Alacritty terminal main config file.
 
-### \*.colorscheme.yml
+### colorscheme/
 
 Alacritty terminal color schemes.
 
