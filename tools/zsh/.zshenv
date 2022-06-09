@@ -42,6 +42,21 @@ export ZSHENV_PATH="$ZDOTDIR/.zshenv"
 export ZLOGIN_PATH="$ZDOTDIR/.zlogin"
 # export ZLOGOUT_PATH="$ZDOTDIR/.zlogout"
 
+# zsh theme
+# env used by dotbot config 'zsh.yaml' and '.zshrc'
+# setting the theme in one place and reflecting the changes automatically
+#   - updating .zshrc to use the newly set zsh theme
+#   - applying the zsh theme by linking the zsh theme file in $ZDOTDIR/.p10k.zsh
+# 
+# usage:
+# - set ENV to zsh theme
+# - run dotbot config 'zsh.yaml'
+# - reload zsh with command 'omz reload'
+export ZSH_THEME_DIR_PATH="$ZSCRIPTDIR/theme"
+# export ZSH_THEME_DEFAULT="$ZSH_THEME_DIR_PATH/powerlevel10k/rainbow.zsh"
+export ZSH_THEME_DEFAULT="$ZSH_THEME_DIR_PATH/powerlevel10k/classic.zsh"
+# export ZSH_THEME_DEFAULT="$ZSH_THEME_DIR_PATH/powerlevel9k/powerlevel9k.zsh"
+
 # -------------------------------------------------------------------------------------------------#
 # XDG files and directories
 
