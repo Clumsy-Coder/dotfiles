@@ -5,6 +5,9 @@
 - create:
     - $XDG_STATE_HOME/zsh
     - $XDG_CACHE_HOME/zsh
+- shell:
+    - command: rm -f $ZDOTDIR/.p10k.zsh
+      description: Remove existing powerlevel10k config file
 - link:
     # ~/.zshrc: tools/zsh/.zshrc
     ~/.zshenv: tools/zsh/.zshenv
