@@ -147,5 +147,5 @@ source "$ZSCRIPTDIR/exports.zsh"
 source "$ZSCRIPTDIR/aliases.zsh"
 # source "$ZSCRIPTDIR/functions.zsh"
 # source "$ZSCRIPTDIR/history.zsh"
-source "$ZSCRIPTDIR/powerlevel9k.zsh"
+source "$ZSCRIPTDIR/theme/powerlevel10k/rainbow.zsh"    # To customize prompt, run `p10k configure` or edit tools/zsh/powerlevel10k.zsh
 source "$ZSCRIPTDIR/antigen.zsh"
