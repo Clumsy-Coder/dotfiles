@@ -8,7 +8,7 @@ These configs files are linked using dotbot. The configs used for linking the fi
 
 <!--
 loaded tree structure with
-tree -a -C -H "." tools/ -L 1
+tree -a -H "." tools/ -L 1
 -->
 
 <pre>
@@ -16,14 +16,17 @@ tree -a -C -H "." tools/ -L 1
 ├── <a href="./README.md">README.md</a>
 ├── <a href="./alacritty/">alacritty/</a>
 ├── <a href="./cron/">cron/</a>
+├── <a href="./dnf/">dnf/</a>
 ├── <a href="./fail2ban/">fail2ban/</a>
 ├── <a href="./git/">git/</a>
 ├── <a href="./iterm2/">iterm2/</a>
 ├── <a href="./neofetch/">neofetch/</a>
 ├── <a href="./neovim/">neovim/</a>
+├── <a href="./npm/">npm/</a>
 ├── <a href="./pihole/">pihole/</a>
 ├── <a href="./spacevim/">spacevim/</a>
 ├── <a href="./tmux/">tmux/</a>
+├── <a href="./unattended-upgrades/">unattended-upgrades/</a>
 ├── <a href="./unbound/">unbound/</a>
 └── <a href="./zsh/">zsh/</a>
 </pre>
