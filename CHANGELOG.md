@@ -1,3 +1,23 @@
+## [1.16.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.15.0...1.16.0) (2022-06-09)
+
+
+### :bug: Bug Fixes
+
+* **dotbot:** fix typo when updating dnf ([6f9b64c](https://github.com/Clumsy-Coder/dotfiles/commit/6f9b64c26b1209d9b9be3cb075e6ac210d9deb73))
+
+
+### :sparkles: Features
+
+* **dotbot:** add 'colorscript' dotbot install-script ([9bac679](https://github.com/Clumsy-Coder/dotfiles/commit/9bac67962b2aa10c93c663c1edbec1451b17606d))
+* **dotbot:** add 'dnf-copr' in 'fedora-terminal' dotbot profile ([b3391b1](https://github.com/Clumsy-Coder/dotfiles/commit/b3391b115e492f8493b9427e08ba15d42755353a))
+* **dotbot:** add 'macos-configs' dotbot config ([d25c7cd](https://github.com/Clumsy-Coder/dotfiles/commit/d25c7cd09aa732588b34c620ba5ffd4cc9d5504f))
+* **dotbot:** add 'nala-gui' dotbot config ([555d5da](https://github.com/Clumsy-Coder/dotfiles/commit/555d5dab41ad0084c39b8993f93770b19e593cd6))
+* **dotbot:** add 'nala-terminal' dotbot config ([3aa1c60](https://github.com/Clumsy-Coder/dotfiles/commit/3aa1c604ddc891e44d27880506ef7c7cc97259d8))
+* **dotbot:** add 'nala' dotbot configuration ([839655d](https://github.com/Clumsy-Coder/dotfiles/commit/839655d3ecd13382456925129acc5f674a213624))
+* **dotbot:** add 'raspberrypi-unattended-upgrades-sudo' to raspberrypi-pihole dotbot profile ([bcec99b](https://github.com/Clumsy-Coder/dotfiles/commit/bcec99b6cbf76f0d405f0c2daf4a6a3fbd439ba7))
+* **dotbot:** add 'raspberrypi-unattended-upgrades' dotbot script ([d1c27de](https://github.com/Clumsy-Coder/dotfiles/commit/d1c27dea37218204052a4148b99f59b74c548d04))
+* **dotbot:** link dnf config file in 'dnf' dotbot script ([796a982](https://github.com/Clumsy-Coder/dotfiles/commit/796a9824f2e31ec3ee60cb619c6f79f01572e45c))
+
 ## [1.15.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.14.0...1.15.0) (2022-06-08)
 
 
