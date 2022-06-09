@@ -12,7 +12,14 @@
     $ZSHRC_PATH: tools/zsh/.zshrc
     $ZSHENV_PATH: tools/zsh/.zshenv
     $ZLOGIN_PATH: tools/zsh/.zlogin
-    $ZDOTDIR/.p10k.zsh: tools/zsh/theme/powerlevel10k/rainbow.zsh
+    # only set when using powerlevel10k ZSH theme.
+    # why create symlink?
+    #   powerlevel10k creates a file to store it's configs.
+    #   the symlink is used to set different themes with ease.
+    #   any modifications made to the file by powerlevel10k is reflected to the original file
+    $ZDOTDIR/.p10k.zsh:
+      if: "[[ $ZSH_THEME_DEFAULT == *'powerlevel10k'* ]]"
+      path: $ZSH_THEME_DEFAULT # powerlevel10k theme only
 - shell:
     - command: chsh -s $(which zsh)
       description: Change default shell to ZSH
