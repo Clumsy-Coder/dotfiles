@@ -30,6 +30,14 @@ Simply, there are 4 tasks that can be performed:
 
 - shell: run shell commands
 
+### Using XDG ENV variables
+
+dotbot configs using ENV variables are loaded from [`dotfiles/tools/zsh/.zshenv`](../../tools/zsh/.zshenv)
+
+[`install-standalone`](../../install-standalone) will load the ENV before running dotbot configs
+
+Ex: [./apt.yaml](./apt.yaml) is using variable `$DOTBOT_INSTALL_LIST_PATH`. This is set in [`dotfiles/tools/zsh/.zshenv`](../../tools/zsh/.zshenv)
+
 ---
 
 ## Usage
