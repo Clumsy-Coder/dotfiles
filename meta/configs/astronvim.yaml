@@ -7,5 +7,8 @@
       description: Remove old Neovim installed plugins
     - command: git clone --depth 1 https://github.com/AstroNvim/AstroNvim $NVIM_CONFIG_DIR_PATH
       description: Get AstroNvim repo
+- link:
+    $ASTRO_NVIM_CONFIG_DIR_PATH: tools/astronvim
+- shell:
     - command: nvim --headless -c 'PackerSync' -c 'autocmd User PackerComplete quitall'
       description: Installing Neovim packages
