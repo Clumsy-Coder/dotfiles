@@ -15,6 +15,7 @@ local hl = coreStatus.hl
 local provider = coreStatus.provider
 local conditional = coreStatus.conditional
 local modes = coreStatus.modes
+local icons = require("user.icons")
 
 -- stylua: ignore
 feline.setup({
@@ -44,11 +45,11 @@ feline.setup({
         -- https://github.com/feline-nvim/feline.nvim/blob/master/USAGE.md#git
         -- https://github.com/feline-nvim/feline.nvim/blob/master/lua/feline/providers/git.lua
         { provider = provider.spacer(2) },
-        { provider = "git_branch", hl = hl.fg("Conditional", { fg = C.purple_1, style = "bold" }), icon = " " },
-        { provider = provider.spacer(1), enabled = conditional.git_available },
-        { provider = "git_diff_added", hl = hl.fg("GitSignsAdd", { fg = C.green }), icon = "  " },
-        { provider = "git_diff_changed", hl = hl.fg("GitSignsChange", { fg = C.orange_1 }), icon = "  " },
-        { provider = "git_diff_removed", hl = hl.fg("GitSignsDelete", { fg = C.red_1 }), icon = "  " },
+        { provider = "git_branch",        hl = hl.fg("Conditional",    { fg = C.purple_1, style = "bold" }), icon = icons.git.Branch },
+        { provider = provider.spacer(1),  enabled = conditional.git_available },
+        { provider = "git_diff_added",    hl = hl.fg("GitSignsAdd",    { fg = C.green }),                    icon = " " .. icons.git.Add },
+        { provider = "git_diff_changed",  hl = hl.fg("GitSignsChange", { fg = C.orange_1 }),                 icon = " " .. icons.git.Modify },
+        { provider = "git_diff_removed",  hl = hl.fg("GitSignsDelete", { fg = C.red_1 }),                    icon = " " .. icons.git.Remove },
       },
       -- ///////////////////////////////////////////////////////////////////////////////////////  --
       -- right
@@ -57,15 +58,15 @@ feline.setup({
         -- https://github.com/feline-nvim/feline.nvim/blob/master/USAGE.md#diagnostics
         -- https://github.com/feline-nvim/feline.nvim/blob/master/lua/feline/providers/lsp.lua
         -- { provider = provider.spacer(2), enabled = conditional.git_changed },
-        { provider = "diagnostic_errors", hl = hl.fg("DiagnosticError", { fg = C.red_1 }), icon = "  " },
-        { provider = "diagnostic_warnings", hl = hl.fg("DiagnosticWarn", { fg = C.orange_1 }), icon = "  " },
-        { provider = "diagnostic_info", hl = hl.fg("DiagnosticInfo", { fg = C.white_2 }), icon = "  " },
-        { provider = "diagnostic_hints", hl = hl.fg("DiagnosticHint", { fg = C.yellow_1 }), icon = "  " },
+        { provider = "diagnostic_errors",   hl = hl.fg("DiagnosticError", { fg = C.red_1 }),    icon = " " .. icons.diagnostics.Error },
+        { provider = "diagnostic_warnings", hl = hl.fg("DiagnosticWarn",  { fg = C.orange_1 }), icon = " " .. icons.diagnostics.Warning },
+        { provider = "diagnostic_info",     hl = hl.fg("DiagnosticInfo",  { fg = C.white_2 }),  icon = " " .. icons.diagnostics.Information },
+        { provider = "diagnostic_hints",    hl = hl.fg("DiagnosticHint",  { fg = C.yellow_1 }), icon = " " .. icons.diagnostics.Hint },
 
         -- lsp info
         { provider = provider.spacer() },
         { provider = provider.lsp_progress, enabled = conditional.bar_width() },
-        { provider = provider.lsp_client_names(true), short_provider = provider.lsp_client_names(), enabled = conditional.bar_width(), icon = "   " },
+        { provider = provider.lsp_client_names(true), short_provider = provider.lsp_client_names(), enabled = conditional.bar_width(), icon = " " .. icons.ui.Gear },
 
         -- treesitter
         { provider = provider.spacer(2), enabled = conditional.bar_width() },
