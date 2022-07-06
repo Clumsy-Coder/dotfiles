@@ -34,4 +34,13 @@ return {
       astronvim.add_user_cmp_source("nvim_lua")
     end
   },
+  [ "petertriho/cmp-git" ]    = {           -- git commit, pull request completion
+    after = "nvim-cmp",
+    ft = "gitcommit",
+    config = function()
+      astronvim.add_user_cmp_source("git")
+      require("user.plugins.cmp-git")
+    end
+  },
+
 }
