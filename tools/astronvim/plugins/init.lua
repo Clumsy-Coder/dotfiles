@@ -27,4 +27,11 @@ return {
       astronvim.add_user_cmp_source("cmdline")
     end
   },
+  [ "hrsh7th/cmp-nvim-lua" ]  = {           -- completion for nvim Lua API
+    after = "nvim-cmp",
+    ft = "lua",
+    config = function()
+      astronvim.add_user_cmp_source("nvim_lua")
+    end
+  },
 }
