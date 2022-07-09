@@ -40,6 +40,7 @@ if [[ $IS_MAC -eq 1 ]]; then
   export PATH=$PATH:$ANDROID_HOME/platform-tools
   export PATH="$HOME/.fastlane/bin:$PATH"
   export PATH="$GEM_HOME/bin:$PATH"
+  export PATH="/usr/local/opt/ruby/bin:$PATH"   # setting path for Ruby when installed through Homebrew
 
   export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
   export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
