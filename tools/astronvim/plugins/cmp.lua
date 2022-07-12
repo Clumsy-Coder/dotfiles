@@ -10,7 +10,7 @@
 -- load cmp to access it's internal functions
 local cmp = require "cmp"
 local user_source = astronvim.get_user_cmp_source
-local icons = require("user.icons")
+local icons = require("user.extras.icons")
 
 -- default astronvim cmp mappings
 -- check https://github.com/AstroNvim/AstroNvim/blob/0fee587489/lua/configs/cmp.lua
