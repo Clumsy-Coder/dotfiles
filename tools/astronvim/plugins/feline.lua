@@ -15,7 +15,7 @@ local hl = coreStatus.hl
 local provider = coreStatus.provider
 local conditional = coreStatus.conditional
 local modes = coreStatus.modes
-local icons = require("user.icons")
+local icons = require("user.extras.icons")
 
 -- stylua: ignore
 feline.setup({
