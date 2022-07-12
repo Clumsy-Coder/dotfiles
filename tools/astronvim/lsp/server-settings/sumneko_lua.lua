@@ -25,9 +25,13 @@ return {
           [vim.fn.expand "$VIMRUNTIME/lua"]   = true,
           [astronvim.install.home .. "/lua"]  = true,     -- AstroNvim repo and custom configs
                                                           -- NOTE: when loading files in $NVIM_CONFIG_DIR_PATH/lua/user/ folder,
-                                                          --       load with the prefix 'astronvim'
-                                                          --       Ex: require("astronvim.icons")
+                                                          --       load with the prefix 'user'
+                                                          --       Ex: require("user.icons")
                                                           --           This loads file $NVIM_CONFIG_DIR_PATH/lua/user/icons.lua
+                                                          --       NOTE: currently the LSP server doesn't provide details of an 
+                                                          --             imported file contents.
+                                                          --             This is due to symbolic linking dotfiles/tools/astronvim to ~/.config/nvim/lua/user/
+                                                          --             Check: https://github.com/AstroNvim/AstroNvim/issues/749
         },
       },
     },
