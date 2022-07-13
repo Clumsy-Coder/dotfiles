@@ -31,6 +31,7 @@ pkgconfig
 powerline
 powerline-fonts
 ripgrep
+ruby-devel
 tldr
 tmux
 trash-cli
