@@ -10,7 +10,7 @@ ohmyzsh
 spacevim
 nvm
 neovim-source-build-sudo
-neovim-packages
+astronvim
 pihole-sudo
 unbound-sudo
 ufw-pihole-sudo
