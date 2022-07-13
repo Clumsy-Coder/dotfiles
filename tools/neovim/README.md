@@ -1,3 +1,5 @@
+# Deprecated. Use [Astronvim configs](../astronvim/)
+
 # Neovim config
 
 My Neovim config.
