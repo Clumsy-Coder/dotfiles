@@ -80,4 +80,6 @@ if [[ $IS_LINUX -eq 1 ]]; then
   # check https://github.com/sharkdp/bat#using-a-different-pager
   export BAT_PAGER="less -RF"
 
+  export PATH="/usr/bin/ruby:$PATH"   # Ruby path obtained with 'which ruby'
+
 fi # END if [[ $IS_LINUX -eq 1 ]]; then
