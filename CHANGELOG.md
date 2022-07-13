@@ -1,3 +1,10 @@
+## [1.19.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.18.0...1.19.0) (2022-07-13)
+
+
+### :sparkles: Features
+
+* **dotbot:** ensure pihole-autoupdate cron job file is executable ([1d63eea](https://github.com/Clumsy-Coder/dotfiles/commit/1d63eeae6dd1eedb47439f97233042453cb67f32))
+
 ## [1.18.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.17.0...1.18.0) (2022-07-13)
 
 
