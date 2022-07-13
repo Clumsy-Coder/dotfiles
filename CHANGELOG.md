@@ -1,3 +1,33 @@
+## [1.18.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.17.0...1.18.0) (2022-07-13)
+
+
+### :sparkles: Features
+
+* **astronvim:** add icons.lua file ([47cd2ec](https://github.com/Clumsy-Coder/dotfiles/commit/47cd2ec09d46f5a15bdbd015a37cf6ede977536f))
+* **astronvim:** add lsp server config for jsonls ([38ab742](https://github.com/Clumsy-Coder/dotfiles/commit/38ab7422bc1c955a0265cf19543976e737afae1c))
+* **astronvim:** add lsp server config for sumneko_lua ([3af3383](https://github.com/Clumsy-Coder/dotfiles/commit/3af3383d4d2f95a40940741d7048e172df25e4a8))
+* **astronvim:** add lsp server config for yamlls ([9821d91](https://github.com/Clumsy-Coder/dotfiles/commit/9821d9182c003de85c9685477dfb5695fdd72aec))
+* **astronvim:** add lsp server list ([e6969be](https://github.com/Clumsy-Coder/dotfiles/commit/e6969be162f3de38c597f8bddbce86957f54a907))
+* **astronvim:** add plugin 'hrsh7th/cmp-cmdline' ([c5b10e2](https://github.com/Clumsy-Coder/dotfiles/commit/c5b10e2589d3c98a4847eefb7a52e62c6e3308ad))
+* **astronvim:** add plugin 'hrsh7th/cmp-nvim-lua' ([303fffc](https://github.com/Clumsy-Coder/dotfiles/commit/303fffc8c090a3b4cbe33541591f05cc62b7648b))
+* **astronvim:** add plugin 'petertriho/cmp-git' ([5ec06ea](https://github.com/Clumsy-Coder/dotfiles/commit/5ec06ead892d901859e07e55587dbb138e4faa31))
+* **astronvim:** add plugin config for 'feline' ([642e314](https://github.com/Clumsy-Coder/dotfiles/commit/642e314e4ff6a80ebb8f5be4429261587e02ac15))
+* **astronvim:** add plugin config for 'lukas-reineke/indent-blankline.nvim' ([b104dce](https://github.com/Clumsy-Coder/dotfiles/commit/b104dce0b07f76f5a04200d480396e6ed71d650b))
+* **astronvim:** add plugin config for 'nvim-cmp' ([db281b6](https://github.com/Clumsy-Coder/dotfiles/commit/db281b6fb8d1dd891a9c1d0075161b4db37651e3))
+* **astronvim:** add plugin config for 'nvim-neo-tree/neo-tree.nvim' ([baa4b6e](https://github.com/Clumsy-Coder/dotfiles/commit/baa4b6e3ba571d331f02eb51f7c911017f83c885))
+* **astronvim:** add plugin config for 'nvim-treesitter' ([80d992a](https://github.com/Clumsy-Coder/dotfiles/commit/80d992a54b2104d4921cc0bb218c5e0511f0544b))
+* **astronvim:** add plugin config for 'williamboman/nvim-lsp-installer' ([b036db2](https://github.com/Clumsy-Coder/dotfiles/commit/b036db2e5b448d4e568b46fe146aa963f514b2cd))
+* **astronvim:** add updater configs ([8ee6e88](https://github.com/Clumsy-Coder/dotfiles/commit/8ee6e88750ff6282f329de10b596241b8259ace4))
+* **astronvim:** auto-install treesitter language based on loaded file ([d2b65a0](https://github.com/Clumsy-Coder/dotfiles/commit/d2b65a01d1b0e6171478e6a9eeba4dd6ba0d93dc))
+* **astronvim:** load autocmds.lua in polish.lua ([71ab570](https://github.com/Clumsy-Coder/dotfiles/commit/71ab570b1bc1673c314e49bc90ded03784c77c97))
+* **astronvim:** load certain files with a filetype in AstroNvim ([79caddf](https://github.com/Clumsy-Coder/dotfiles/commit/79caddf053a7cb709932d9fe15f7bcf9de3e5e98))
+* **dotbot:** link astronvim config folder ([0baf157](https://github.com/Clumsy-Coder/dotfiles/commit/0baf157fd3a51aa63a9a6c9a02a4bd1e146404fb))
+* **install-list:** add ruby development package ([c887e0d](https://github.com/Clumsy-Coder/dotfiles/commit/c887e0d56876a5bd66284ba411300d4a502bd29c))
+* **zsh:** add ENV 'ASTRO_NVIM_CONFIG_DIR_PATH' to zshenv ([66a638e](https://github.com/Clumsy-Coder/dotfiles/commit/66a638ed90a05069bb60a94d893ab033073b9428))
+* **zsh:** add ruby binary to PATH ([cf31117](https://github.com/Clumsy-Coder/dotfiles/commit/cf31117b7ddea9e028cc2ba29f30c23ff4cba114))
+* **zsh:** add ruby binary to PATH for linux based OS ([2112d8c](https://github.com/Clumsy-Coder/dotfiles/commit/2112d8c6c90d7608473b48680b683c95de7f28ac))
+* **zsh:** add XDG env for 'SOLARGRAPH_CACHE' is zshenv ([124c2f3](https://github.com/Clumsy-Coder/dotfiles/commit/124c2f352fa96d5441a63e4fc6db9f9ee0cd7cf1))
+
 ## [1.17.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.16.0...1.17.0) (2022-06-09)
 
 
