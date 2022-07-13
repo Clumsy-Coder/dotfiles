@@ -3,4 +3,4 @@
 # usage:
 # ./install-standalone pihole-cron-sudo
 - link:
-    /etc/cron.weekly/pihole-autoupdate: tools/cron/pihole-autoupdate
+    /etc/cron.daily/pihole-autoupdate: tools/cron/pihole-autoupdate
