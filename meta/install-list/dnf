@@ -38,6 +38,7 @@ trash-cli
 tree
 ufw
 unzip
+util-linux-user
 vim
 wget
 zip
