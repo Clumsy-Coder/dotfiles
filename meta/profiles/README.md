@@ -36,7 +36,6 @@ git
 tmux
 alacritty
 spacevim
-
 ```
 
 #### Example: config with sudo
@@ -48,8 +47,22 @@ apt-sudo
 git
 neovim-precompiled-sudo
 neovim-packages
-
 ```
+
+### ignoring dotbot configs
+
+If you wish to ignore certain dotbot configs, add `#` at the beginning of the line you wish to ignore
+
+Ex:
+
+```bash
+apt-sudo
+# git
+neovim-precompiled-sudo
+# neovim-packages
+```
+
+This will only run `apt-sudo` and `neovim-precompiled-sudo`
 
 ---
 
@@ -62,7 +75,7 @@ If you wish to run a profile, then run the following command.
 - NOTE: run the script from repo home folder `dotfiles/`. **NOT** `dotfiles/meta/profiles/`
 
 ```bash
-./install-profile <profile>
+./install-profile <profile ...>
 ```
 
 Ex:
@@ -73,6 +86,10 @@ Ex:
 
 ```bash
 ./install-profile raspberrypi-pihole
+```
+
+```bash
+./install-profile debian-terminal debian-gui
 ```
 
 ---
