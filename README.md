@@ -15,8 +15,15 @@ Run a dotbot profile script from `dotfiles/meta/profiles/` folder
 [Available profiles](./meta/profiles)
 
 ```bash
-./install-profile <profile>
+./install-profile <profile ...>
 ```
+
+Ex:
+```bash
+./install-profile debian-terminal debian-gui # debian terminal and gui configs
+```
+
+---
 
 #### MacOS
 
