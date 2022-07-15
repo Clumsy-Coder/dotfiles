@@ -1,3 +1,14 @@
+## [1.20.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.19.0...1.20.0) (2022-07-15)
+
+
+### :sparkles: Features
+
+* **dotbot:** ignore commented lines in dotbot profiles ([82848fd](https://github.com/Clumsy-Coder/dotfiles/commit/82848fd4f216ca8b6afeab4baddc16a9afafb41b))
+* **dotbot:** run multiple dotbot profiles ([fcabe96](https://github.com/Clumsy-Coder/dotfiles/commit/fcabe9601de4335e8c3044c6c1fbe074ad220ab6))
+* **dotbot:** verify if dotbot configs exists before running ([56edd21](https://github.com/Clumsy-Coder/dotfiles/commit/56edd212f36b6ed5922f3e2fdbc2e53856803986))
+* **dotbot:** verify if dotbot profile exists before running ([241b493](https://github.com/Clumsy-Coder/dotfiles/commit/241b49316d20a6d38ac92b47c4e6201c1d9b6762))
+* **install-list:** add 'util-linux-user' package to fedora dnf list ([7a743f5](https://github.com/Clumsy-Coder/dotfiles/commit/7a743f5619f698c628386e3acafa052c97445b6a))
+
 ## [1.19.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.18.0...1.19.0) (2022-07-13)
 
 
