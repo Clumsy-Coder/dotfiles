@@ -1,0 +1,42 @@
+#!/bin/sh
+
+# used for pull latest updates on dotfiles master branch
+# repo URL: https://github.com/clumsy-coder/dotfiles
+# repo location: ~/dotfiles
+# main branch: master
+
+REPO_URL="https://github.com/clumsy-coder/dotfiles"
+REPO_DIR_PATH="/home/pi/dotfiles"
+REPO_MAIN_BRANCH="master"
+
+BOLD_BLUE="\033[1;34m"
+RESTORE="\033[0m"
+
+printMsg() {
+  echo "\n${BOLD_BLUE}$1${RESTORE}"
+}
+
+# get updates for remote branches
+printMsg "Fetching remote updates"
+git -C $REPO_DIR_PATH remote -v update
+
+# prune delete remote branches
+printMsg "Pruning dead branches"
+git -C $REPO_DIR_PATH remote prune origin
+
+# discard unstaged changes
+printMsg "Discard unstaged changes"
+git -C $REPO_DIR_PATH checkout .
+
+# remove files not tracked by git
+printMsg "Remove untracked files"
+git -C $REPO_DIR_PATH clean -f
+
+# Discard any uncommitted changes, staged or not
+printMsg "Removing uncommited, staged and unstaged files"
+git -C $REPO_DIR_PATH reset --hard
+
+# pull latest changes on dotfiles master branch
+printMsg "Pulling latest changes on master branch"
+git -C $REPO_DIR_PATH pull origin $REPO_MAIN_BRANCH
+
