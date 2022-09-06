@@ -28,6 +28,9 @@ export PATH="$CARGO_HOME/bin:$PATH"
 # export GOPATH=~/go            # set in .zshenv
 export PATH=$PATH:$GOPATH/bin
 
+# export npm global installed packages to PATH
+export PATH=$PATH:$NPM_BIN_PATH/bin
+
 # -------------------------------------------------------------------------------------------------#
 # MacOS only exports. $IS_MAC is set in zsh/checks.sh
 # -------------------------------------------------------------------------------------------------#
