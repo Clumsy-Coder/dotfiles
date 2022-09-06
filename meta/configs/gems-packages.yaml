@@ -1,0 +1,8 @@
+# install Ruby gems packages
+#
+# usage:
+# ./install-standalone gems-packages
+- shell:
+    # ascii colours obtained from https://stackoverflow.com/a/33206814/3053548
+    - command: grep -Ev '^#' $DOTBOT_INSTALL_LIST_PATH/gems | xargs gem install
+      description: Install Ruby gem packages
