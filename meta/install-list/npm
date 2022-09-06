@@ -48,3 +48,7 @@ prettier
 # source-map-explorer
 # standard-version
 # yarn
+@commitlint/cli
+@commitlint/config-conventional
+jsonlint
+@fsouza/prettierd
