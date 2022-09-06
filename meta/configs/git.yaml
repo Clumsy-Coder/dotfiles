@@ -5,3 +5,4 @@
 - link:
     $GIT_CONFIG_PATH: tools/git/.gitconfig
     $GIT_IGNORE_GLOBAL_PATH: tools/git/.gitignore_global
+    $LAZYGIT_CONFIG_PATH: tools/git/lazygit.yml
