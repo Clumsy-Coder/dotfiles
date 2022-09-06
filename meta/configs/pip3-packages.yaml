@@ -1,0 +1,7 @@
+# install python3 packages using pip3
+#
+# usage:
+# ./install-standalone pip3-packages
+- shell:
+  - command: grep -Ev '^#' $DOTBOT_INSTALL_LIST_PATH/pip3 | xargs pip3 install
+    description: Installing pip3 packages
