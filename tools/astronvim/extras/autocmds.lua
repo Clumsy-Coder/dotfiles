@@ -29,3 +29,15 @@ cmd("FileType", {
     end
   end,
 })
+
+-- highlight yanked text
+-- obtained from https://stackoverflow.com/a/73365602/3053548
+augroup('highlight_yank', { clear = false })
+cmd('TextYankPost', {
+  group = 'highlight_yank',
+  desc = 'Hightlight selection on yank',
+  pattern = '*',
+  callback = function()
+    vim.highlight.on_yank({ higroup = 'IncSearch', timeout = 500 })
+  end,
+})
