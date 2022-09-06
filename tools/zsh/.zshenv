@@ -105,6 +105,7 @@ export ZSH_TMUX_CONFIG="$TMUX_CONFIG_PATH"                          # tmux confi
 export GIT_CONFIG_PATH="$XDG_CONFIG_HOME/git/config"
 export GIT_IGNORE_GLOBAL_PATH="$XDG_CONFIG_HOME/git/.gitignore_global"
 export GIT_ATTRIBUTES_PATH="$XDG_CONFIG_HOME/git/.gitattributes"
+export LAZYGIT_CONFIG_PATH="$XDG_CONFIG_HOME/lazygit/config.yml"
 
 # vagrant
 export VAGRANT_HOME="$XDG_DATA_HOME/vagrant"                        # Vagrant
