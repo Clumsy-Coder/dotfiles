@@ -21,26 +21,35 @@ return {
   -- ["hrsh7th/nvim-cmp"] = { event = { nil } },
 
   -- cmp code completion
-  [ "hrsh7th/cmp-cmdline" ]   = {           -- cmdline completions
+
+  -- cmdline completions
+  ["hrsh7th/cmp-cmdline"] = {
     after = "nvim-cmp",
     config = function()
       astronvim.add_user_cmp_source("cmdline")
-    end
+    end,
   },
-  [ "hrsh7th/cmp-nvim-lua" ]  = {           -- completion for nvim Lua API
+  -- completion for nvim Lua API
+  ["hrsh7th/cmp-nvim-lua"] = {
     after = "nvim-cmp",
     ft = "lua",
     config = function()
       astronvim.add_user_cmp_source("nvim_lua")
-    end
+    end,
   },
-  [ "petertriho/cmp-git" ]    = {           -- git commit, pull request completion
+  -- git commit, pull request completion
+  ["petertriho/cmp-git"] = {
     after = "nvim-cmp",
     ft = "gitcommit",
     config = function()
       astronvim.add_user_cmp_source("git")
       require("user.plugins.cmp-git")
-    end
+    end,
   },
 
+  -- //////////////////////////////////////////////////////////////////////////////////////////// --
+  -- VISUAL PLUGINS
+
+  -- show context of currently visible buffer content
+  ["nvim-treesitter/nvim-treesitter-context"] = { after = "nvim-treesitter" },
 }
