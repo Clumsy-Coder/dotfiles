@@ -55,6 +55,7 @@ antigen bundle copybuffer         # https://github.com/ohmyzsh/ohmyzsh/tree/mast
 antigen bundle systemadmin        # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/systemadmin
 antigen bundle alias-finder       # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/alias-finder
 antigen bundle sudo               # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo
+antigen bundle heroku             # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/heroku
 
 # Custom bundles
 antigen bundle zsh-users/zsh-autosuggestions        # suggests commands as you type
