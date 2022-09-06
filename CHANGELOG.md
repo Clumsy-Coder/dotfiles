@@ -1,3 +1,20 @@
+## [1.21.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.20.0...1.21.0) (2022-09-06)
+
+
+### :sparkles: Features
+
+* add .editorconfig file ([402ccbc](https://github.com/Clumsy-Coder/dotfiles/commit/402ccbcba8b6a285d63a41473f4f0ead41d63024))
+* **astronvim:** add Null-LS configs ([e81edc1](https://github.com/Clumsy-Coder/dotfiles/commit/e81edc159f3fc9ef189e0300d280461e75732a4b))
+* **astronvim:** change cursor behaviour when going to INSERT mode ([ee7c3ec](https://github.com/Clumsy-Coder/dotfiles/commit/ee7c3ecdd5a2aef2277a043a8b25014bf05b488e))
+* **dotbot:** add 'dotfiles-cron' dotbot script ([9a7ab7c](https://github.com/Clumsy-Coder/dotfiles/commit/9a7ab7c3b40cff033b19a73a44ed523f52495495))
+* **dotbot:** add 'lazygit' configs when running dotbot config 'git' ([6de9081](https://github.com/Clumsy-Coder/dotfiles/commit/6de9081900b93a11ed4091f295af3a6d5f64aabc))
+* **dotbot:** add luarocks dotbot script ([b873d0d](https://github.com/Clumsy-Coder/dotfiles/commit/b873d0d15500dcb6530386dd8cb15e8a6a5c4aac))
+* **dotbot:** add pip3-packages dotbot script ([05ee006](https://github.com/Clumsy-Coder/dotfiles/commit/05ee0062c7946eb0a516ea26ea4e4078d7a9206d))
+* **dotbot:** add ruby gems dotbot script ([d5fc35f](https://github.com/Clumsy-Coder/dotfiles/commit/d5fc35f690bbf5da1b5eeccc461075d726df2369))
+* **git:** set the date and time format displayed in git log ([874d85d](https://github.com/Clumsy-Coder/dotfiles/commit/874d85d6c4737da30e84117d2d33f761132eb315))
+* **install-list:** add npm packages for Neovim Null-LS ([6d1ccdf](https://github.com/Clumsy-Coder/dotfiles/commit/6d1ccdfa31d608b765ff4466fe886b91970ca206))
+* **zsh:** add 'heroku' zsh plugin to antigen ([318d96b](https://github.com/Clumsy-Coder/dotfiles/commit/318d96be15549c2effc3e626a50e823839ac0963))
+
 ## [1.20.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.19.0...1.20.0) (2022-07-15)
 
 
