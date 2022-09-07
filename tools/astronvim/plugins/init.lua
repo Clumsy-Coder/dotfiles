@@ -58,4 +58,12 @@ return {
 
   -- show context of currently visible buffer content
   ["nvim-treesitter/nvim-treesitter-context"] = { after = "nvim-treesitter" },
+
+  -- Highlight, list and search todo comments in your projects.
+  ["folke/todo-comments.nvim"] = {
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup(require("user.plugins.todo-comments"))
+    end,
+  },
 }
