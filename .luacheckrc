@@ -8,9 +8,9 @@ globals = {
   "_HTOP_TOGGLE",
   "vim",
   "C",
+  "astronvim",
 }
 
 -- Rerun tests only if their modification time changed
 cache = true
 
--- hello
