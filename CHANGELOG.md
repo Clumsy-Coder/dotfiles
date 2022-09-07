@@ -1,3 +1,22 @@
+## [1.22.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.21.0...1.22.0) (2022-09-07)
+
+
+### :sparkles: Features
+
+* **astronvim:** add gitsigns configs ([101a4e5](https://github.com/Clumsy-Coder/dotfiles/commit/101a4e5ddc4e721b8b46ca8c581811b7c4934471))
+* **astronvim:** add icons for plugin 'todo-comment.nvim' ([18c1986](https://github.com/Clumsy-Coder/dotfiles/commit/18c1986a73586e7dbf33627c49dd35106b3f02ac))
+* **astronvim:** add indent-o-matic configs ([d98752a](https://github.com/Clumsy-Coder/dotfiles/commit/d98752ae9db997360c628bfff3c10ac972e08f74))
+* **astronvim:** add plugin 'akinsho/git-conflict.nvim' ([7e3ee55](https://github.com/Clumsy-Coder/dotfiles/commit/7e3ee55bbbc67f3a6b5a72c82281b2bf670aae55))
+* **astronvim:** add plugin 'folke/todo-comments.nvim' ([bda684e](https://github.com/Clumsy-Coder/dotfiles/commit/bda684e6e716a6ccc7b879d7dea83746df5ce865))
+* **astronvim:** add plugin config for 'rcarriga/nvim-notify' ([ff53068](https://github.com/Clumsy-Coder/dotfiles/commit/ff530681cf3f6eb301ab638d03a085dfc57b6726))
+* **astronvim:** add plugin config for 'Shatur/neovim-session-manager' ([34182c4](https://github.com/Clumsy-Coder/dotfiles/commit/34182c41032af58025ea33a0b5e6aa994e80f9a3))
+* **astronvim:** add plugin config for 'WhoIsSethDaniel/mason-tool-installer.nvim' ([6f3f2a8](https://github.com/Clumsy-Coder/dotfiles/commit/6f3f2a8b4bb8bd02b425659c38e6873fc10faa94))
+* **astronvim:** add plugin config for 'williamboman/mason-lspconfig.nvim' ([8da735b](https://github.com/Clumsy-Coder/dotfiles/commit/8da735b031337c43bbed837e9ea0d7ec092c8618))
+* **astronvim:** add which-key bindings for plugin 'akinsho/git-conflict.nvim' ([63c6041](https://github.com/Clumsy-Coder/dotfiles/commit/63c6041a8b0367fa17b5d2b40560a7f087aad5b9))
+* **astronvim:** add which-key bindings for plugin 'folke/todo-comments.nvim' ([1aecdd2](https://github.com/Clumsy-Coder/dotfiles/commit/1aecdd2d06b6ff4fff0711f110acb7c425f86979))
+* **astronvim:** display hidden files when using telescope ([3b3bf26](https://github.com/Clumsy-Coder/dotfiles/commit/3b3bf26798d9c1ea6568d631884aecaae3aa3de8))
+* **astronvim:** highlight copied text ([8b76f45](https://github.com/Clumsy-Coder/dotfiles/commit/8b76f4560b7807ed3e65ed8b35d5127a4810caa4))
+
 ## [1.21.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.20.0...1.21.0) (2022-09-06)
 
 
