@@ -117,4 +117,14 @@ return {
     Tag               = " ",
     Watch             = " ",
   },
+  todo = {
+    done              = " ",
+    fix               = " ",
+    hack              = " ",
+    note              = " ",
+    performance       = " ",
+    test              = "ﭧ ",
+    todo              = " ",
+    warn              = " ",
+  }
 }
