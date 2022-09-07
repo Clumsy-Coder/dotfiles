@@ -16,4 +16,9 @@ return {
     ["]"] = { "<Plug>(git-conflict-next-conflict)",  "Next conflict" },
     ["["] = { "<Plug>(git-conflict-prev-conflict)",  "Previous conflict" },
   },
+  ["<leader>"] = {
+    s = {
+      t = { "<cmd>TodoTelescope<cr>", "Search all TODOs"}
+    },
+  }
 }
