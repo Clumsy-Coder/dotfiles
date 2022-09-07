@@ -47,6 +47,12 @@ return {
     end,
   },
 
+  ["akinsho/git-conflict.nvim"] = {
+    config = function()
+      require("git-conflict").setup(require("user.plugins.git-conflict"))
+    end,
+  },
+
   -- //////////////////////////////////////////////////////////////////////////////////////////// --
   -- VISUAL PLUGINS
 
