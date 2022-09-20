@@ -11,5 +11,9 @@ return {
     guicursor = "n-v-c-i-sm:block,ci-ve:ver25,r-cr-o:hor20",
     cursorline = true,
     colorcolumn = { 100 },
+    -- code folding
+    -- conceallevel = 0, -- enable conceal
+    foldmethod = "expr",
+    foldexpr = "nvim_treesitter#foldexpr()", -- set Treesitter based folding
   },
 }
