@@ -1,3 +1,7 @@
+-- some configs obtained from:
+--    https://github.com/thieung/dotfiles/blob/dab0089ecf5c94692cfbcb85393055c8957727e7/config/nvim/options.lua
+--
+
 return {
   opt = {
     -- setting cursor style in different modes
@@ -15,5 +19,9 @@ return {
     -- conceallevel = 0, -- enable conceal
     foldmethod = "expr",
     foldexpr = "nvim_treesitter#foldexpr()", -- set Treesitter based folding
+    -- whitespace characters
+    list = true, -- show whitespace characters
+    listchars = { tab = "│→", extends = "⟩", precedes = "⟨", trail = "·", nbsp = "␣", eol = "↲" },
+    showbreak = "↪ ", -- string to put at the start of lines that have been wrapped
   },
 }
