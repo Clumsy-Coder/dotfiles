@@ -47,9 +47,18 @@ return {
     end,
   },
 
+  -- handle git conflicts
+  -- check which-key keybindings for usage
   ["akinsho/git-conflict.nvim"] = {
     config = function()
       require("git-conflict").setup(require("user.plugins.git-conflict"))
+    end,
+  },
+
+  ["williamboman/mason.nvim"] = {
+    config = function()
+      local config = require("user.plugins.mason")
+      require("mason").setup(config)
     end,
   },
 
