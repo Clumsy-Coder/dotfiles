@@ -39,7 +39,7 @@ feline.setup({
         -- https://github.com/feline-nvim/feline.nvim/blob/master/USAGE.md#file-info
         -- https://github.com/feline-nvim/feline.nvim/blob/master/lua/feline/providers/file.lua
         { provider = provider.spacer(2) },
-        { provider = "file_info"},
+        { provider = { name = "file_info", opts={ type="relative" }} },
 
         -- git
         -- https://github.com/feline-nvim/feline.nvim/blob/master/USAGE.md#git
