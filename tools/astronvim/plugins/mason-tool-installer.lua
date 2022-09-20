@@ -5,7 +5,8 @@
 --    https://code.mehalter.com/projects/68/files/master/plugins/mason-tool-installer.lua
 
 return {
-  auto_update = true,
+  auto_update = false, -- autoupdating will slow down Neovim startup
+  start_delay = 5000, -- set delay (in ms) before the installation starts.
   ensure_installed = {
     "actionlint",       -- Github actions linter
     "codespell",        -- spell check
