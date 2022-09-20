@@ -9,6 +9,7 @@ return {
     -- c = command
     -- n = normal
     guicursor = "n-v-c-i-sm:block,ci-ve:ver25,r-cr-o:hor20",
-    cursorline = true
-  }
+    cursorline = true,
+    colorcolumn = { 100 },
+  },
 }
