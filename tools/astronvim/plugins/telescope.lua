@@ -5,6 +5,12 @@
 --    https://github.com/nvim-treesitter/nvim-treesitter
 
 return {
+  defaults = {
+    file_ignore_patterns = {
+      "node_modules",
+      "meta/dotbot",
+    },
+  },
   pickers = {
     find_files = {
       hidden = true, -- show hidden files
