@@ -62,6 +62,15 @@ return {
     end,
   },
 
+  -- typescript LSP server
+  ["jose-elias-alvarez/typescript.nvim"] = {
+    after = "mason-lspconfig.nvim",
+    config = function()
+       local config = require("user.plugins.typescript")
+      require("typescript").setup(config)
+    end,
+  },
+
   -- //////////////////////////////////////////////////////////////////////////////////////////// --
   -- VISUAL PLUGINS
 
