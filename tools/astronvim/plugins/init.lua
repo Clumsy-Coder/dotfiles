@@ -82,6 +82,11 @@ return {
     end,
   },
 
+  -- wakatime. time tracking for programming
+  ["wakatime/vim-wakatime"] = {
+    event = "BufEnter",
+  },
+
   -- //////////////////////////////////////////////////////////////////////////////////////////// --
   -- VISUAL PLUGINS
 
