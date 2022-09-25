@@ -23,11 +23,13 @@ return {
     code_actions.gitsigns,            -- git action on a hunk
     code_actions.shellcheck,          -- shellcheck code suggestions
 
+    -- ########################################################################################## --
     -- completion
     -- https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#completion
     -- completion.luasnip, -- snippet engine for Neovim
     completion.spell,                 -- spell suggestions
 
+    -- ########################################################################################## --
     --diagnostics
     --https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#diagnostics
     diagnostics.actionlint,           -- Github actions
@@ -52,11 +54,12 @@ return {
     -- diagnostics.yamllint,            -- yaml linter
     diagnostics.zsh,                  -- zsh linter
 
+    -- ########################################################################################## --
     -- formatting
     -- https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#formatting
     -- formatting.beautysh,               -- shell code formatter
     formatting.codespell,             -- fix common spelling mistakes
-    formatting.eslint_d,              -- eslint formatter
+    -- formatting.eslint_d,              -- eslint formatter
     formatting.markdownlint,          -- markdown formatter
     -- formatting.markdown_toc,           -- markdown table of content generator
     -- formatting.nginx_beautifier,       -- nginx formatter
@@ -64,9 +67,12 @@ return {
     -- formatting.shfmt,                  -- bash
     formatting.stylua,                -- lua
 
+    -- ########################################################################################## --
     -- hover
     -- https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#hover
     hover.dictionary,                 -- dictionary
+
+    -- ########################################################################################## --
   },
 
   -- Auto format when saving
