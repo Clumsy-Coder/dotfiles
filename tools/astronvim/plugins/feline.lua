@@ -30,7 +30,7 @@ feline.setup({
         -- https://github.com/AstroNvim/AstroNvim/blob/0fee587489/lua/core/status.lua
         { provider = function()
             return string.format(" %s", modes[vim.fn.mode()][1])
-          end , hl = hl.mode()
+          end , hl = hl.mode({ style = "bold"})
         },
         -- { provider = { name = "vi_mode", opts = { show_mode_name = true, padding = true } }, hl = hl.mode() },
         { provider = provider.spacer(), hl = hl.mode() },
