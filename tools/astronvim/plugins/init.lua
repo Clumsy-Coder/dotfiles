@@ -104,6 +104,7 @@ return {
 
   -- Highlight, list and search todo comments in your projects.
   ["folke/todo-comments.nvim"] = {
+    event = "BufEnter",
     requires = "nvim-lua/plenary.nvim",
     config = function()
       require("todo-comments").setup(require("user.plugins.todo-comments"))
