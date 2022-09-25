@@ -29,5 +29,9 @@ return {
         t = { function() require("neogen").generate { type = "type" }  end, "Type" },
         F = { function() require("neogen").generate { type = "file" }  end, "File" },
     },
+    -- packer
+    p = {
+      t = {"<cmd>Telescope packer<cr>", "Telescope search"}
+    }
   }
 }

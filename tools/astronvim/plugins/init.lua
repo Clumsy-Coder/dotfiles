@@ -87,6 +87,15 @@ return {
     event = "BufEnter",
   },
 
+  -- search packer installed plugins using Telescope
+  ["nvim-telescope/telescope-packer.nvim"] = {
+    after = "telescope.nvim",
+    requires = { "nvim-telescope/telescope.nvim", "nvim-telescope/telescope-file-browser.nvim" },
+    config = function()
+      require("telescope").load_extension("packer")
+    end,
+  },
+
   -- //////////////////////////////////////////////////////////////////////////////////////////// --
   -- VISUAL PLUGINS
 
