@@ -118,4 +118,11 @@ return {
       require("todo-comments").setup(require("user.plugins.todo-comments"))
     end,
   },
+
+  ["EdenEast/nightfox.nvim"] = {
+    config = function()
+      local config = require("user.plugins.nightfox")
+      require("nightfox").setup(config)
+    end,
+  },
 }
