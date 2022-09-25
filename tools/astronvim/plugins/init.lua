@@ -71,6 +71,17 @@ return {
     end,
   },
 
+  -- better annotation(documentation) generator
+  ["danymat/neogen"] = {
+    module = "neogen",
+    cmd = "Neogen",
+    requires = "nvim-treesitter/nvim-treesitter",
+    config = function()
+      local config = require("user.plugins.neogen")
+      require("neogen").setup(config)
+    end,
+  },
+
   -- //////////////////////////////////////////////////////////////////////////////////////////// --
   -- VISUAL PLUGINS
 
