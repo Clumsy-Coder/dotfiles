@@ -17,6 +17,7 @@ return {
     colorcolumn = { 100 },
     -- code folding
     -- conceallevel = 0, -- enable conceal
+    foldenable = false, -- disable automatic code folding
     foldmethod = "expr",
     foldexpr = "nvim_treesitter#foldexpr()", -- set Treesitter based folding
     -- whitespace characters
