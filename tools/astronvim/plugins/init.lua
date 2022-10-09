@@ -141,4 +141,12 @@ return {
       require("glow").setup(config)
     end,
   },
+
+  -- smooth scrolling
+  ["declancm/cinnamon.nvim"] = {
+    event = { "BufRead", "BufNewFile" },
+    config = function()
+      require("cinnamon").setup()
+    end,
+  },
 }
