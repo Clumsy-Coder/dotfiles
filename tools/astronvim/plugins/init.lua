@@ -50,8 +50,10 @@ return {
   -- handle git conflicts
   -- check which-key keybindings for usage
   ["akinsho/git-conflict.nvim"] = {
+    tag = "*",
     config = function()
-      require("git-conflict").setup(require("user.plugins.git-conflict"))
+      local config = require("user.plugins.git-conflict")
+      require("git-conflict").setup(config)
     end,
   },
 
