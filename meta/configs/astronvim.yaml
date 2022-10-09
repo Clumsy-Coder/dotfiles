@@ -5,7 +5,7 @@
 - shell:
     - command: rm -rf $NVIM_CONFIG_DIR_PATH $NVIM_PACKER_DIR_PATH
       description: Remove old Neovim installed plugins
-    - command: git clone --depth 1 https://github.com/AstroNvim/AstroNvim $NVIM_CONFIG_DIR_PATH
+    - command: git clone https://github.com/AstroNvim/AstroNvim $NVIM_CONFIG_DIR_PATH
       description: Get AstroNvim repo
 - link:
     $ASTRO_NVIM_CONFIG_DIR_PATH: tools/astronvim
