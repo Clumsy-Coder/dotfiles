@@ -94,6 +94,7 @@ export TERMINFO_DIRS="$XDG_DATA_HOME/terminfo:/usr/share/terminfo"  # ncurses
 # neovim
 export NVIM_CONFIG_DIR_PATH="$XDG_CONFIG_HOME/nvim"                 # neovim config folder
 export NVIM_PACKER_DIR_PATH="$XDG_DATA_HOME/nvim/site/pack/packer/" # neovim plugin installation folder
+export NVIM_PACKER_COMPILED_PATH="$XDG_DATA_HOME/nvim/packer_compiled.lua" # packer compiled file
 export ASTRO_NVIM_CONFIG_DIR_PATH="$NVIM_CONFIG_DIR_PATH/lua/user"    # astronvim custom configs folder
 
 # tmux
