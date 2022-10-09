@@ -8,9 +8,7 @@
 --    https://code.mehalter.com/projects/68/files/master/plugins/treesitter.lua
 
 return {
-  -- ensure_installed = {
-  --   "bash", "comment", "css", "dockerfile", "help", "html", "http", "javascript", "jsdoc", "json", "json5", "jsonc", "lua", "markdown", "regex", "todotxt", "tsx", "typescript", "vim", "yaml"
-  -- },
+  ensure_installed = require("user.plugins.treesitter.languages"),
   sync_install = false,
   ignore_install = {},
   highlight = {               -- https://github.com/nvim-treesitter/nvim-treesitter#highlight

@@ -104,6 +104,13 @@ return {
     end,
   },
 
+  ["nvim-treesitter/nvim-treesitter"] = {
+    config = function()
+      local config = require("user.plugins.treesitter.config")
+      require("nvim-treesitter.configs").setup(config)
+    end,
+  },
+
   -- //////////////////////////////////////////////////////////////////////////////////////////// --
   -- VISUAL PLUGINS
 
