@@ -47,7 +47,7 @@ export ZLOGIN_PATH="$ZDOTDIR/.zlogin"
 # setting the theme in one place and reflecting the changes automatically
 #   - updating .zshrc to use the newly set zsh theme
 #   - applying the zsh theme by linking the zsh theme file in $ZDOTDIR/.p10k.zsh
-# 
+#
 # usage:
 # - set ENV to zsh theme
 # - run dotbot config 'zsh.yaml'
@@ -93,7 +93,7 @@ export TERMINFO_DIRS="$XDG_DATA_HOME/terminfo:/usr/share/terminfo"  # ncurses
 
 # neovim
 export NVIM_CONFIG_DIR_PATH="$XDG_CONFIG_HOME/nvim"                 # neovim config folder
-export NVIM_PACKER_DIR_PATH="$XDG_DATA_HOME/nvim"                   # neovim plugin installation folder
+export NVIM_PACKER_DIR_PATH="$XDG_DATA_HOME/nvim/site/pack/packer/" # neovim plugin installation folder
 export ASTRO_NVIM_CONFIG_DIR_PATH="$NVIM_CONFIG_DIR_PATH/lua/user"    # astronvim custom configs folder
 
 # tmux
