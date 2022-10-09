@@ -132,4 +132,13 @@ return {
       require("nightfox").setup(config)
     end,
   },
+
+  -- render Markdown file using glow
+  ["ellisonleao/glow.nvim"] = {
+    ft = { "markdown", "rmd" },
+    config = function()
+      local config = require("user.plugins.glow")
+      require("glow").setup(config)
+    end,
+  },
 }

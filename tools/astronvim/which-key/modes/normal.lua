@@ -32,6 +32,11 @@ return {
     -- packer
     p = {
       t = {"<cmd>Telescope packer<cr>", "Telescope search"}
+    },
+    -- markdown
+    m = {
+      name = "Markdown",
+      p = { "<cmd>Glow<cr>", "Preview Markdown" },
     }
   }
 }
