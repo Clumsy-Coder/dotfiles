@@ -11,7 +11,7 @@
 import:
   # -----------------------------------------------------------------------------------------------#
   # loading theme.
-  # NOTE: the theme config is loaded as a scheme, and then set to use the color scheme in their 
+  # NOTE: the theme config is loaded as a scheme, and then set to use the color scheme in their
   #       respective file.
   #       Just uncomment the theme config to set the theme.
   #       check https://github.com/alacritty/alacritty/wiki/Color-schemes#multiple-schemes
@@ -19,7 +19,6 @@ import:
   # - ~/dotfiles/tools/alacritty/colorscheme/popos.colorscheme.yml
   # - ~/dotfiles/tools/alacritty/colorscheme/ubuntu.colorscheme.yml
   # -----------------------------------------------------------------------------------------------#
-
 
 ####################################################################################################
 
@@ -130,7 +129,7 @@ font:
   # Normal (roman) font face
   normal:
     # Font family
-    
+
     # Default:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
@@ -928,3 +927,4 @@ shell:
   #highlight_damage: false
 
 ####################################################################################################
+
