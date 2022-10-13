@@ -1,4 +1,4 @@
 -- Astronvim config: colorscheme
 -- description: setting which colorscheme to use
 
-return "duskfox"
+return "default_theme"
