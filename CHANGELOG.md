@@ -1,3 +1,27 @@
+## [1.23.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.22.0...1.23.0) (2022-10-13)
+
+
+### :zap: Performance Improvements
+
+* **astronvim:mason:** disable auto-update when opening Neovim ([a18e868](https://github.com/Clumsy-Coder/dotfiles/commit/a18e8687d572b4517595c6aa957e78bc8155e91c))
+
+
+### :sparkles: Features
+
+* **astronvim:feline:** add 'bold' style to vim modes ([9089c33](https://github.com/Clumsy-Coder/dotfiles/commit/9089c33c0814923a17163cff41577837f0fe72cc))
+* **astronvim:feline:** display current buffer's relative filepath ([5ab519e](https://github.com/Clumsy-Coder/dotfiles/commit/5ab519e3430de30a297d76164585cfb7ef24ddf2))
+* **astronvim:lsp:** disable format on save ([27b2c22](https://github.com/Clumsy-Coder/dotfiles/commit/27b2c2215098cc264ee5be1f9f3aae52a573e466))
+* **astronvim:options:** disable auto code folding ([7f626e3](https://github.com/Clumsy-Coder/dotfiles/commit/7f626e30e8a15bf5d380131c89415ffa7401c1f2))
+* **astronvim:packer:** add config for 'williamboman/mason.nvim' ([fec7910](https://github.com/Clumsy-Coder/dotfiles/commit/fec791093959368a1ba79a0ec070c04f86fbef45))
+* **astronvim:packer:** add plugin 'danymat/neogen' ([d80a31b](https://github.com/Clumsy-Coder/dotfiles/commit/d80a31b439cbf74162fdf9d2436706186df80605))
+* **astronvim:packer:** add plugin 'echasnovski/mini.nvim' ([849a755](https://github.com/Clumsy-Coder/dotfiles/commit/849a755c6747c354236c1833a83fa4b23fde9a6a))
+* **astronvim:packer:** add plugin 'EdenEast/nightfox.nvim' ([7c7ad0b](https://github.com/Clumsy-Coder/dotfiles/commit/7c7ad0b4f01aa07d4bd2ff62b856784cb05771a3))
+* **astronvim:packer:** add plugin 'jose-elias-alvarez/typescript.nvim' ([081b336](https://github.com/Clumsy-Coder/dotfiles/commit/081b336a0333faf794ff346bdf44b7346060ccb5))
+* **astronvim:packer:** add plugin 'nvim-telescope/telescope-packer.nvim' ([1e34cfd](https://github.com/Clumsy-Coder/dotfiles/commit/1e34cfde3ab1fea2b937ffe4caee43e7f4e2d00e))
+* **astronvim:packer:** add plugin 'wakatime/vim-wakatime' ([87c91b3](https://github.com/Clumsy-Coder/dotfiles/commit/87c91b30a6d0e7c883f9e4a38c57789f9e104d0c))
+* **astronvim:packer:** add plugin `declancm/cinnamon.nvim` ([8664ed4](https://github.com/Clumsy-Coder/dotfiles/commit/8664ed4baf0d23a2f3ab0afbe993a175a64885fe))
+* **astronvim:packer:** add plugin `ellisonleao/glow.nvim` ([3bd38cb](https://github.com/Clumsy-Coder/dotfiles/commit/3bd38cbcd4dbb9784fa90566eafd99396cff6cc8))
+
 ## [1.22.0](https://github.com/Clumsy-Coder/dotfiles/compare/1.21.0...1.22.0) (2022-09-07)
 
 
