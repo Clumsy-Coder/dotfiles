@@ -1,8 +1,8 @@
--- Config: mason-tool-installer
--- WhoIsSethDaniel/mason-tool-installer.nvim
+-- Config: mason-null-ls
+-- jayp0521/mason-null-ls.nvim
 --
 -- obtained from
---    https://code.mehalter.com/projects/68/files/master/plugins/mason-tool-installer.lua
+--    https://code.mehalter.com/projects/68/files/master/plugins/mason-null-ls.lua
 
 return {
   auto_update = false, -- autoupdating will slow down Neovim startup
