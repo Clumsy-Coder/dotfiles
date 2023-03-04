@@ -69,6 +69,8 @@ if [[ $IS_MAC -eq 1 ]]; then
   export PATH="/usr/local/sbin:$PATH"
   export PATH="/usr/local/opt/node@10/bin:$PATH"
   export PATH="/usr/local/opt/node@10/bin:$PATH"
+  # use the openssl installed from homebrew
+  export PATH="/usr/local/opt/openssl@3/bin:$PATH"
 
 fi # END if [[ $IS_MAC -eq 1 ]]; then
 # -------------------------------------------------------------------------------------------------#
