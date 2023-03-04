@@ -52,3 +52,4 @@ prettier
 @commitlint/config-conventional
 jsonlint
 @fsouza/prettierd
+npkill
