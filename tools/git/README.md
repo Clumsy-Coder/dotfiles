@@ -36,3 +36,9 @@ Obtained from https://github.com/joelparkerhenderson/git-commit-template/blob/ma
 Git commit template
 
 Obtained from https://github.com/timmybytes/dotfiles/blob/main/git/commit-conventions.txt
+
+## Signing git commits 
+
+### Using SSH
+
+- https://calebhearth.com/sign-git-with-ssh
