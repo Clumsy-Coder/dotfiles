@@ -4,6 +4,7 @@
 [user]
   name = Clumsy-Coder
   email = 19594044+Clumsy-Coder@users.noreply.github.com
+  signingkey = /Users/umar/.ssh/github-ssh.pub
 
 [color]
   ui = true
@@ -30,6 +31,7 @@
 
 [commit]
   template = ~/dotfiles/tools/git/git-commit-template-timmybytes.txt
+  gpgsign = true
   # template = ~/dotfiles/tools/git/git-commit-template-joelparkerhenderson.txt
 
 [color "diff-highlight"]
@@ -78,3 +80,15 @@
 [log]
   date=format:"%a, %Y-%m-%d %H:%M:%S %z"
   ; date=rfc
+[gpg]
+  format = ssh
+[credential "https://github.com"]
+  helper = 
+  helper = !/usr/local/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+  helper = 
+  helper = !/usr/local/bin/gh auth git-credential
+[gpg "ssh"]
+  allowedSignersFile = /Users/umar/.ssh/allowed_signers
+[init]
+	defaultBranch = master
