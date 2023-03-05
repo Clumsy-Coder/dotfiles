@@ -23,12 +23,12 @@ return {
   -- cmp code completion
 
   -- cmdline completions
-  ["hrsh7th/cmp-cmdline"] = {
-    after = "nvim-cmp",
-    config = function()
-      astronvim.add_user_cmp_source("cmdline")
-    end,
-  },
+  -- ["hrsh7th/cmp-cmdline"] = {
+  --   after = "nvim-cmp",
+  --   config = function()
+  --     astronvim.add_user_cmp_source("cmdline")
+  --   end,
+  -- },
   -- completion for nvim Lua API
   ["hrsh7th/cmp-nvim-lua"] = {
     after = "nvim-cmp",
