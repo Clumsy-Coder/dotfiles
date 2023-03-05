@@ -19,3 +19,9 @@ astronvim
 vscode-plugins
 zsh
 ohmyzsh
+rust
+rust-packages
+luarocks-packages
+go-packages
+pip3-packages
+
