@@ -5,4 +5,5 @@
 - link:
     $GIT_CONFIG_PATH: tools/git/.gitconfig
     $GIT_IGNORE_GLOBAL_PATH: tools/git/.gitignore_global
+    $GIT_ALLOWED_SIGNERS: tools/git/allowed_signers
     $LAZYGIT_CONFIG_PATH: tools/git/lazygit.yml
