@@ -23,6 +23,7 @@ if [[ $IS_MAC -eq 1 ]]; then
 
   alias ls='gls --color'    # need 'coreutils' package. install with brew install coreutils
   alias l='ls -lah --group-directories-first'
+  alias svn="svn --config-dir $XDG_CONFIG_HOME/subversion" # recommendation from xdg-ninja
 
 fi # END if [[ $IS_MAC -eq 1 ]]; then
 # -------------------------------------------------------------------------------------------------#
