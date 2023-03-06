@@ -83,7 +83,8 @@ export GOPATH="$XDG_DATA_HOME/go"                                   # Golang pac
 
 # npm
 export NVM_DIR="$XDG_DATA_HOME/nvm"                                 # Node Version Manager
-export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"           # npm config
+export NPM_DIR="$XDG_CONFIG_HOME/npm"
+export NPM_CONFIG_USERCONFIG="$NPM_DIR/npmrc"                       # npm config
 export NPMRC_PATH="$NPM_CONFIG_USERCONFIG"
 export NPM_BIN_PATH="$XDG_DATA_HOME/npm"                            # global npm packages directory
 
