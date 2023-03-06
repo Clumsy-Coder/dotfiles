@@ -128,6 +128,9 @@ export BREWFILE_PATH="$HOME/dotfiles/meta/install-list/Brewfile"
 
 export NEOFETCH_CONFIG_PATH="$XDG_CONFIG_HOME/neofetch/config.conf"
 
+# gnupg
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+
 # -------------------------------------------------------------------------------------------------#
 
 # Mac OS X uses path_helper and /etc/paths.d to preload PATH, clear it out first
