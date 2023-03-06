@@ -126,6 +126,8 @@ export ALACRITTY_CONFIG_PATH="$XDG_CONFIG_HOME/alacritty/alacritty.yml"
 # brewfile
 export BREWFILE_PATH="$HOME/dotfiles/meta/install-list/Brewfile"
 
+export NEOFETCH_CONFIG_PATH="$XDG_CONFIG_HOME/neofetch/config.conf"
+
 # -------------------------------------------------------------------------------------------------#
 
 # Mac OS X uses path_helper and /etc/paths.d to preload PATH, clear it out first
