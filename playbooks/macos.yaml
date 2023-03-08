@@ -23,3 +23,5 @@
         - dock
         - gui
       ignore_errors: true
+
+    - role: alacritty

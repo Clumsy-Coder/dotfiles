@@ -1,0 +1,20 @@
+---
+
+# create directory for alacritty in ~/.config/
+- name: create directory for alacritty in ~/.config/alacritty
+  file:
+    path: "{{ ansible_env.ALACRITTY_CONFIG_DIR_PATH }}"
+    state: directory
+  tags:
+    - gui
+    - alacritty
+
+# link Alacritty config file
+- name: "link config file to {{ ansible_env.ALACRITTY_CONFIG_PATH }}"
+  file:
+    src: "{{ ansible_env.DOTDIR }}/tools/alacritty/alacritty.yml"
+    dest: "{{ ansible_env.ALACRITTY_CONFIG_PATH }}"
+    state: link
+  tags:
+    - gui
+    - alacritty
