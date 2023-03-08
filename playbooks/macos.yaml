@@ -1,0 +1,11 @@
+---
+- hosts: "local"
+  vars_files:
+    - "../vars/homebrew.yaml"
+  roles:
+    - role: geerlingguy.mac.homebrew
+      tags:
+        - brew
+        - gui
+      when: ansible_distribution == 'MacOSX'
+      ignore_errors: true
