@@ -1,0 +1,6 @@
+---
+
+# Mac App Store apps
+# used by ansible-galaxy geerlingguy.mac.mas
+mas_installed_apps:
+  - { id: 450545814, name: "Logitech Keyboard Solar" }
