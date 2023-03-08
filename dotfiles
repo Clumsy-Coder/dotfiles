@@ -1,0 +1,72 @@
+#!/usr/bin/env bash
+
+# obtained from
+#   https://github.com/frdmn/dotfiles/blob/3ecd59a400b1ce29aae67eb81899c844ac8abda9/dotfiles
+#
+# Usage:
+# to run a playbook
+#   dotfiles macos
+#
+# to run a playbook with all tags
+#   dotfiles macos
+#
+# to run a playbook with certain tags. Ex: run with tags `brew` and `gui`
+#   dotfiles macos --tags 'brew,gui'
+#
+# to list available tags for a playbook
+#   ansible-playbook ./playbooks/macos.yaml --list-tags
+#
+# ################################################################################################ #
+
+set -e  # exit if a command exits with a non-zero status
+# set -x  # show every command run in this file
+
+# Check if "ansible" binary is available in $PATH
+if ! [ -x "$(command -v ansible)" ]; then
+  echo "Ansible missing - please install manually:"
+  echo
+  echo "sudo pip3 install --upgrade pip"
+  echo "pip3 install ansible"
+  exit 1
+fi
+
+# check if the playbook is provided
+if [ -z "$1" ]; then
+  echo "Playbook not provided."
+  echo
+  echo "Please provide a playbook to use"
+  echo "Ex: dotfiles macos"
+  exit 1
+fi
+
+# check if the playbook file exists
+if [[ ! -e "./playbooks/$1.yaml" ]]; then
+  echo "playbook $1 doesn't exist in folder ./playbooks"
+  echo "Exiting"
+  exit 1
+fi
+
+tags="all"
+# check if --tags switch is supplied and the tags are provided as well, if so use the tags provided. otherwise use `all`
+if [ "${2}" == "--tags" ] && [ "$3" ]; then
+  tags="${3:all}"
+fi
+
+# ################################################################################################ #
+
+# load ENVs so ansible can use ENVs
+source ./tools/zsh/.zshenv
+
+# Get full directory path of this wrapper
+SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+# Install Ansible requirements like roles and collections
+ANSIBLE_CONFIG=${SCRIPTPATH}/ansible.cfg ansible-galaxy install -r "${SCRIPTPATH}/requirements.yaml" &>/dev/null
+# Execute the Ansible playbook
+ANSIBLE_CONFIG=${SCRIPTPATH}/ansible.cfg ansible-playbook "${SCRIPTPATH}/playbooks/${1}.yaml" --ask-become-pass --tags "${tags}"
+
+# Send notification in case "terminal-notifier" is installed
+if command -v terminal-notifier 1>/dev/null 2>&1; then
+  terminal-notifier -title "dotfiles: Bootstrap complete" -message "Successfully set up environment."
+fi
+
+# ################################################################################################ #
