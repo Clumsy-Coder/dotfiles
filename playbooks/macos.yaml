@@ -3,6 +3,7 @@
   vars_files:
     - "../vars/homebrew.yaml"
     - "../vars/mas.yaml"
+    - "../vars/macos-docks.yaml"
   roles:
     - role: geerlingguy.mac.homebrew
       tags:
@@ -14,5 +15,11 @@
     - role: geerlingguy.mac.mas
       tags:
         - mas
+        - gui
+      ignore_errors: true
+
+    - role: geerlingguy.mac.dock
+      tags:
+        - dock
         - gui
       ignore_errors: true
