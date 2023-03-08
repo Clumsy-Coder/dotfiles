@@ -1,0 +1,116 @@
+---
+
+# used by ansible-galaxy geerlingguy.mac.homebrew
+# homebrew taps
+homebrew_taps:
+  - buo/cask-upgrade
+  - cjbassi/gotop
+  - domt4/autoupdate
+  - homebrew/bundle
+  - homebrew/cask
+  - homebrew/cask-drivers
+  - homebrew/cask-fonts
+  - homebrew/cask-versions
+  - homebrew/core
+  - homebrew/services
+
+# homebrew formulas
+# used by ansible-galaxy geerlingguy.mac.homebrew
+homebrew_installed_packages:
+  - actionlint
+  - ansible
+  - bat
+  - brew-cask-completion
+  - coreutils
+  - dive
+  - exa
+  - fontconfig
+  - fzf
+  - gh
+  - git
+  - git-delta
+  - glances
+  - glow
+  - go
+  - gotop
+  - grep
+  - htop
+  - iftop
+  - ipcalc
+  - lazydocker
+  - lazygit
+  - lua
+  - luajit
+  - mas
+  - nano
+  - navi
+  - ncdu
+  - neofetch
+  - neovim
+  - netcat
+  - nmap
+  - openjdk
+  - python
+  - ripgrep
+  - ruby
+  - ruby-build
+  - rust
+  - slurm
+  - speedtest-cli
+  - thefuck
+  - tldr
+  - tmux
+  - trash-cli
+  - tree
+  - unar
+  - vim
+  - wget
+  - xdg-ninja
+  - youtube-dl
+  - zsh
+
+# homebrew cask packages
+homebrew_cask_apps:
+  # - applepi-baker
+  # - knockknock
+  # - mark-text
+  # - osxfuse
+  # - react-native-debugger
+  # - zenmap
+  - adoptopenjdk
+  - alacritty
+  - android-studio
+  - arduino
+  - balenaetcher
+  - calibre
+  - cyberduck
+  - docker
+  - firefox
+  - font-fira-code
+  - font-hack-nerd-font
+  - font-ibm-plex
+  - font-source-code-pro
+  - glance
+  - logitech-options
+  - logitech-unifying
+  - postman
+  - provisionql
+  - qbittorrent
+  - qlcolorcode
+  - qlmarkdown
+  - qlstephen
+  - quicklook-csv
+  - raspberry-pi-imager
+  - signal
+  - smcfancontrol
+  - spotify
+  - sublime-text
+  - suspicious-package
+  - the-unarchiver
+  - tor-browser
+  - vagrant
+  - virtualbox
+  - visual-studio-code
+  - vlc
+  - vnc-viewer
+  - wireshark
