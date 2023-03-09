@@ -105,11 +105,12 @@ export ZSH_TMUX_CONFIG="$TMUX_CONFIG_PATH"                          # tmux confi
                                                                     # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/tmux#configuration-variables
 
 # git
-export LAZYGIT_CONFIG_PATH="$XDG_CONFIG_HOME/lazygit/config.yml"
 export GIT_CONFIG_DIR_PATH="$XDG_CONFIG_HOME/git"
 export GIT_CONFIG_PATH="$GIT_CONFIG_DIR_PATH/config"
 export GIT_IGNORE_GLOBAL_PATH="$GIT_CONFIG_DIR_PATH/.gitignore_global"
 export GIT_ATTRIBUTES_PATH="$GIT_CONFIG_DIR_PATH/.gitattributes"
+export LAZYGIT_CONFIG_DIR_PATH="$XDG_CONFIG_HOME/lazygit"
+export LAZYGIT_CONFIG_PATH="$LAZYGIT_CONFIG_DIR_PATH/config.yml"
 # https://calebhearth.com/sign-git-with-ssh
 export GIT_ALLOWED_SIGNERS="~/.ssh/allowed_signers"
 
