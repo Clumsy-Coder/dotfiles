@@ -122,7 +122,8 @@ export ANTIGEN_CACHE="$ADOTDIR/init.zsh"
 export ANTIGEN_COMPDUMP="$ADOTDIR/.zcompdump"
 
 # alacritty
-export ALACRITTY_CONFIG_PATH="$XDG_CONFIG_HOME/alacritty/alacritty.yml"
+export ALACRITTY_CONFIG_DIR_PATH="$XDG_CONFIG_HOME/alacritty"
+export ALACRITTY_CONFIG_PATH="$ALACRITTY_CONFIG_DIR_PATH/alacritty.yml"
 
 # brewfile
 export BREWFILE_PATH="$HOME/dotfiles/meta/install-list/Brewfile"
