@@ -112,7 +112,7 @@ export GIT_ATTRIBUTES_PATH="$GIT_CONFIG_DIR_PATH/.gitattributes"
 export LAZYGIT_CONFIG_DIR_PATH="$XDG_CONFIG_HOME/lazygit"
 export LAZYGIT_CONFIG_PATH="$LAZYGIT_CONFIG_DIR_PATH/config.yml"
 # https://calebhearth.com/sign-git-with-ssh
-export GIT_ALLOWED_SIGNERS="~/.ssh/allowed_signers"
+export GIT_ALLOWED_SIGNERS="$HOME/.ssh/allowed_signers"
 
 # vagrant
 export VAGRANT_HOME="$XDG_DATA_HOME/vagrant"                        # Vagrant
