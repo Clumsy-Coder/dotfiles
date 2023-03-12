@@ -4,6 +4,7 @@
     - "../vars/homebrew.yaml"
     - "../vars/mas.yaml"
     - "../vars/macos-docks.yaml"
+    - "../vars/npm-packages.yaml"
   roles:
     - role: geerlingguy.mac.homebrew
       tags:
@@ -31,3 +32,5 @@
     - role: nerdfonts
 
     - role: nvm
+
+    - role: npm

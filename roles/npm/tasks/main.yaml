@@ -1,0 +1,22 @@
+---
+
+- name: "Store current nodejs version being used by nvm"
+  shell: "source {{ ansible_env.NVM_DIR}}/nvm.sh && nvm current"
+  register: node_version
+  changed_when: false
+  tags:
+    - npm
+    - terminal
+
+- name: "Install global npm packages"
+  npm:
+    name: "{{ item }}"
+    global: true
+    # executable: "{{ ansible_env.NVM_DIR}}/versions/node/{{ node_version.stdout }}/bin/npm"
+  loop: "{{ npm_packages }}"
+  environment:
+    # obtained from https://truongtx.me/2015/11/02/ansible-install-and-work-with-nodejs-using-nvm#install-npm-tools-with-node-in-nvm
+    PATH: "{{ ansible_env.NVM_DIR}}/versions/node/{{ node_version.stdout }}/bin:{{ ansible_env.PATH }}"
+  tags:
+    - npm
+    - terminal
