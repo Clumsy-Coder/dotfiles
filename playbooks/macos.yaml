@@ -27,3 +27,5 @@
     - role: alacritty
 
     - role: git
+
+    - role: nerdfonts
