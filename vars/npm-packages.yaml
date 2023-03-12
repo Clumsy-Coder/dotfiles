@@ -1,0 +1,36 @@
+---
+
+npm_packages:
+  # - "@commitlint/cli"
+  # - "@commitlint/config-conventional"
+  # - "@fsouza/prettierd"
+  # - bash-language-server
+  # - dockerfile-language-server-nodejs
+  # - git-stats
+  # - javascript-typescript-langserver
+  # - jsonlint
+  # - markdownlint
+  # - markdownlint-cli
+  # - remark
+  # - remark-cli
+  # - remark-frontmatter
+  # - remark-language-server
+  # - remark-stringify
+  # - typescript-language-server
+  # - vim-language-server
+  # - vscode-css-languageserver-bin
+  # - vscode-html-languageserver-bin
+  # - vscode-langservers-extracted
+  # - wcwidth
+  # - yaml-language-server
+  - commitizen
+  - cz-conventional-changelog
+  - cz-emoji
+  - emmet-ls
+  - eslint
+  - neovim
+  - npkill
+  - npm
+  - npm-check-updates
+  - prettier
+  - typescript

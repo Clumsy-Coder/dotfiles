@@ -1,0 +1,7 @@
+---
+
+# need to make sure nvm is installed before running npm
+# obtained from
+#   https://stackoverflow.com/a/63738234
+dependencies:
+  - role: nvm
