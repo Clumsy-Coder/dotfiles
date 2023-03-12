@@ -29,3 +29,5 @@
     - role: git
 
     - role: nerdfonts
+
+    - role: nvm
