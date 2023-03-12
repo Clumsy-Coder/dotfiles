@@ -1,0 +1,41 @@
+---
+
+# Install Node Version Manager
+
+- name: "Create directory for Node Version Manager on {{ ansible_env.NVM_DIR }}"
+  file:
+    path: "{{ ansible_env.NVM_DIR }}"
+    state: directory
+  tags:
+    - terminal
+    - nvm
+
+- name: "Create directory for NPM  on {{ ansible_env.NPM_DIR }}"
+  file:
+    path: "{{ ansible_env.NPM_DIR }}"
+    state: directory
+  tags:
+    - terminal
+    - nvm
+
+- name: "link NPM config file"
+  file:
+    src: "{{ ansible_env.DOTDIR}}/tools/npm/.npmrc"
+    dest: "{{ ansible_env.NPM_CONFIG_USERCONFIG }}"
+  tags:
+    - terminal
+    - nvm
+
+- name: "Install Node Version Manager"
+  shell:
+    cmd: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | PROFILE=/dev/null zsh
+  tags:
+    - terminal
+    - nvm
+
+- name: "Install latest NodeJS version"
+  shell:
+    cmd: "source {{ ansible_env.NVM_DIR }}/nvm.sh && nvm install node --default --latest-npm"
+  tags:
+    - terminal
+    - nvm
