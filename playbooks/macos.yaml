@@ -34,3 +34,5 @@
     - role: nvm
 
     - role: npm
+
+    - role: neofetch

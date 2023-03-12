@@ -1,0 +1,19 @@
+---
+
+- name: "Create directory for Neofetch on {{ ansible_env.NEOFETCH_CONFIG_DIR_PATH }}"
+  file:
+    path: "{{ ansible_env.NEOFETCH_CONFIG_DIR_PATH }}"
+    state: directory
+  tags:
+    - neofetch
+    - terminal
+
+# link Neofetch config file
+- name: "link Neofetch config file to {{ ansible_env.NEOFETCH_CONFIG_PATH }}"
+  file:
+    src: "{{ ansible_env.DOTDIR }}/tools/neofetch/config.conf"
+    dest: "{{ ansible_env.NEOFETCH_CONFIG_PATH }}"
+    state: link
+  tags:
+    - neofetch
+    - terminal
