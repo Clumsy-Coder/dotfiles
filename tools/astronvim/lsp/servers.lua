@@ -19,7 +19,7 @@ return {
   "jsonls",       -- json
   "prosemd_lsp",  -- markdown
   "solargraph",   -- Ruby
-  "sumneko_lua",  -- lua
+  "lua_ls",       -- lua
   "tsserver",     -- typscript/javascript
   "vimls",        -- vim
   "yamlls"        -- yaml
