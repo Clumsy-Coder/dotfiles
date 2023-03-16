@@ -9,6 +9,11 @@ local hideFileFolder = {
 
 return {
   enable_diagnostics = true,
+  default_component_configs = {
+    indent = {
+      indent_size = 2,
+    }
+  },
   filesystem = {
     filtered_items = {
       visible = true,                     -- when true, they will just be displayed differently than normal items
