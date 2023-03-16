@@ -12,7 +12,7 @@ return {
     javascriptreact = { template = { annotation_convention = "jsdoc" } },
     lua = { template = { annotation_convention = "ldoc" } },
     python = { template = { annotation_convention = "google_docstrings" } },
-    sh = { template = { annotation_convetion = "google_bash" } },
+    sh = { template = { annotation_convention = "google_bash" } },
     typescript = { template = { annotation_convention = "tsdoc" } },
     typescriptreact = { template = { annotation_convention = "tsdoc" } },
   },
