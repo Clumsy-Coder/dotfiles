@@ -3,6 +3,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     dependencies = {
       "nvim-treesitter/nvim-treesitter-context",
+      "mrjones2014/nvim-ts-rainbow",
     },
     opts = function(_, opts)
       local config = require("user.plugins.treesitter.config")
