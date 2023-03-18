@@ -20,6 +20,7 @@ return {
     "shellcheck",       -- shell linter
     "stylua",           -- lua code formatter
     "vint",             -- vimscript linter
-    "yamllint"          -- YAML linter
+    "yamllint",         -- YAML linter
+    "ansible-lint",     -- ansible
   },
 }
