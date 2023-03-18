@@ -22,5 +22,6 @@ return {
   "lua_ls",       -- lua
   "tsserver",     -- typscript/javascript
   "vimls",        -- vim
-  "yamlls"        -- yaml
+  "yamlls",       -- yaml
+  "ansiblels",    -- ansible
 }
