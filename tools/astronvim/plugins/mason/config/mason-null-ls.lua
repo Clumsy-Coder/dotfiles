@@ -6,21 +6,22 @@
 
 return {
   auto_update = false, -- autoupdating will slow down Neovim startup
-  start_delay = 5000, -- set delay (in ms) before the installation starts.
+  start_delay = 5000,  -- set delay (in ms) before the installation starts.
   ensure_installed = {
-    "actionlint",       -- Github actions linter
-    "codespell",        -- spell check
-    "eslint_d",         -- eslint but faster
-    "gitlint",          -- git commit message linter
-    "hadolint",         -- dockerfile linter
-    "luacheck",         -- lua linter
-    "markdownlint",     -- markdown linter
-    "misspell",         -- check commonly misspelled words
-    "prettierd",        -- prettier but faster
-    "shellcheck",       -- shell linter
-    "stylua",           -- lua code formatter
-    "vint",             -- vimscript linter
-    "yamllint",         -- YAML linter
-    "ansible-lint",     -- ansible
+    "actionlint",      -- LINTER:            Github actions linter
+    "ansible-lint",    -- LINTER:            ansible
+    "beautysh",        -- FORMATTER:         zsh
+    "codespell",       -- LINTER:            spell check
+    "eslint_d",        -- LINTER:            eslint but faster
+    "gitlint",         -- LINTER:            git commit message linter
+    "hadolint",        -- LINTER:            dockerfile linter
+    "luacheck",        -- LINTER:            lua linter
+    "markdownlint",    -- LINTER, FORMATTER: markdown linter
+    "misspell",        -- LINTER:            check commonly misspelled words
+    "prettierd",       -- FORMATTER:         prettier but faster
+    "shellcheck",      -- LINTER:            shell linter
+    "stylua",          -- FORMATTER:         lua code formatter
+    "vint",            -- LINTER:            vimscript linter
+    "yamllint",        -- LINTER:            YAML linter
   },
 }
