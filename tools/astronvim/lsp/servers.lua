@@ -11,17 +11,17 @@
 -- how to install language servers
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 return {
+  "ansiblels",    -- ansible
   "bashls",       -- bash
   "cssls",        -- css
   "dockerls",     -- docker
   "emmet_ls",     -- emmet
   "html",         -- html
   "jsonls",       -- json
+  "lua_ls",       -- lua
   "prosemd_lsp",  -- markdown
   "solargraph",   -- Ruby
-  "lua_ls",       -- lua
   "tsserver",     -- typscript/javascript
   "vimls",        -- vim
   "yamlls",       -- yaml
-  "ansiblels",    -- ansible
 }
