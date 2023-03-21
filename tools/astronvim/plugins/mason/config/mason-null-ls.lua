@@ -15,6 +15,7 @@ return {
     "eslint_d",        -- LINTER:            eslint but faster
     "gitlint",         -- LINTER:            git commit message linter
     "hadolint",        -- LINTER:            dockerfile linter
+    "jsonlint",        -- LINTER:            JSON linter
     "luacheck",        -- LINTER:            lua linter
     "markdownlint",    -- LINTER, FORMATTER: markdown linter
     "misspell",        -- LINTER:            check commonly misspelled words
