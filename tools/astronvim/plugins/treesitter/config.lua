@@ -8,6 +8,7 @@
 --    https://code.mehalter.com/projects/68/files/master/plugins/treesitter.lua
 
 return {
+  auto_install = vim.fn.executable("tree-sitter") == 1,
   ensure_installed = require("user.plugins.treesitter.languages"),
   sync_install = false,
   ignore_install = {},
