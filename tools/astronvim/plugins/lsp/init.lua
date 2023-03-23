@@ -10,6 +10,8 @@ return {
       "javascript",
       "javascriptreact",
     },
-    opts = require("user.plugins.lsp.config.tsserver")
+    opts = function()
+      return require("user.plugins.lsp.config.tsserver")
+    end,
   },
 }
