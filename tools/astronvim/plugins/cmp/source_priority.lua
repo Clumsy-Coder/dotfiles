@@ -5,11 +5,11 @@
 -- false == disabled
 -- true == 1000
 return {
-  nvim_lsp  = 1000,
-  nvim_lua  = 750,
-  luasnip   = 750,
-  buffer    = 500,
-  path      = 250,
-  cmdline   = 200,
-  git       = 100,
+  { name = "nvim_lsp"  , priority = 1000 },
+  { name = "nvim_lua"  , priority = 750  },
+  { name = "luasnip"   , priority = 750  },
+  { name = "buffer"    , priority = 500  },
+  { name = "path"      , priority = 250  },
+  { name = "cmdline"   , priority = 200  },
+  { name = "git"       , priority = 100  },
 }
