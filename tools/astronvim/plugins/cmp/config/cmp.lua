@@ -11,6 +11,7 @@
 local cmp = require "cmp"
 local user_source = astronvim.get_user_cmp_source
 local icons = require("user.extras.icons")
+local sources = require("user.plugins.cmp.source_priority")
 
 -- default astronvim cmp mappings
 -- check https://github.com/AstroNvim/AstroNvim/blob/0fee587489/lua/configs/cmp.lua
@@ -32,6 +33,8 @@ local prose_sources = {
   user_source("buffer"),      -- hrsh7th/cmp-buffer
 }
 return {
+  -- load which cmp sources to use
+  sources = cmp.config.sources(sources),
   formatting = {
     fields = { "kind", "abbr", "menu" },          -- icon, abbreviation, type(snippet, function)
     format = function(entry, vim_item)
