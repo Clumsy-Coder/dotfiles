@@ -9,8 +9,6 @@
 
 -- load cmp to access it's internal functions
 local cmp = require "cmp"
-local user_source = astronvim.get_user_cmp_source
-local icons = require("user.extras.icons")
 local sources = require("user.plugins.cmp.source_priority")
 local lspkind = require("lspkind")
 
@@ -28,11 +26,6 @@ local lspkind = require("lspkind")
 -- <Tab> : next item
 -- <S-Tab> : previous item
 
--- store a local variable with a source list to share between filetypes
-local prose_sources = {
-  user_source("luasnip"),     -- saadparwaiz1/cmp_luasnip
-  user_source("buffer"),      -- hrsh7th/cmp-buffer
-}
 return {
   -- load which cmp sources to use
   sources = cmp.config.sources(sources),
@@ -68,18 +61,6 @@ return {
   },
   -- configure cmp.setup.filetype(filetype, options)
   filetype = {
-    -- first key is the filetype that you are setting up
-    lua = { -- for lua only load lsp sources and buffer sources as a fallback
-      sources = cmp.config.sources(
-        { user_source("nvim_lsp") },    -- hrsh7th/cmp-nvim-lsp
-        { user_source("buffer")   },    -- hrsh7th/cmp-buffer
-        { user_source("nvim_lua") }     -- hrsh7th/cmp-nvim-lua
-      ),
-    },
-    -- markdown and latex share the same sources
-    markdown = { sources = prose_sources },
-    latex    = { sources = prose_sources },
-
     -- git
     gitcommit = {{ name = "git" }}     -- petertriho/cmp-git
   },
@@ -96,7 +77,6 @@ return {
     [":"] = {
       mapping = cmp.mapping.preset.cmdline(),
       sources = cmp.config.sources(
-        { user_source("path") },
         -- {{ name = "path", option = { trailing_slash = true }}},
         {{ name = "cmdline" }}        -- hrsh7th/cmp-cmdline
       ),
