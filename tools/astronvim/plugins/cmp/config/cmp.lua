@@ -35,6 +35,17 @@ local prose_sources = {
 return {
   -- load which cmp sources to use
   sources = cmp.config.sources(sources),
+  -- window styling
+  -- obtained from
+  --   https://code.mehalter.com/AstroNvim_user/~files/cd190d29c38cf935d8964f9d9fe1abe373d52e1f/plugins/cmp.lua?position=source-22.1-29.9-1
+  window = {
+    completion = {
+      winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:Visual,Search:None",
+      -- border = "none",
+      -- col_offset = -1,
+      side_padding = 1,
+    },
+  },
   formatting = {
     fields = { "kind", "abbr", "menu" },          -- icon, abbreviation, type(snippet, function)
     format = function(entry, vim_item)
