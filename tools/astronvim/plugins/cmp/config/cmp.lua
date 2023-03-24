@@ -12,6 +12,7 @@ local cmp = require "cmp"
 local user_source = astronvim.get_user_cmp_source
 local icons = require("user.extras.icons")
 local sources = require("user.plugins.cmp.source_priority")
+local lspkind = require("lspkind")
 
 -- default astronvim cmp mappings
 -- check https://github.com/AstroNvim/AstroNvim/blob/0fee587489/lua/configs/cmp.lua
@@ -46,29 +47,24 @@ return {
       side_padding = 1,
     },
   },
+  -- formatting cmp results
   formatting = {
     fields = { "kind", "abbr", "menu" },          -- icon, abbreviation, type(snippet, function)
-    format = function(entry, vim_item)
-      -- Kind icons
-      --
-      -- cmp render format
-      -- icon   abbreviation    menu
-      -- vim_item.kind = string.format("%s", icons.kind[vim_item.kind])    -- load custom icons
-      --
-      -- icon   kind    abbreviation    menu
-      vim_item.kind = string.format('%s %s', icons.kind[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
-
-      -- rendering menu items
-      vim_item.menu = ({
+    -- rendering using `lspkind.nvim`
+    -- check https://github.com/hrsh7th/nvim-cmp/wiki/Menu-Appearance#basic-customisations
+    format = lspkind.cmp_format({
+      mode = "symbol_text",
+      maxwidth = 80,
+      ellipsis_char = "...",
+      menu = {
         nvim_lsp = "[LSP]",       -- use nvim plugin hrsh7th/cmp-nvim-lsp
         nvim_lua = "[NVIM_LUA]",  -- use nvim plugin hrsh7th/cmp-nvim-lua
         luasnip  = "[Snippet]",   -- saadparwaiz1/cmp_luasnip
         buffer   = "[Buffer]",    -- hrsh7th/cmp-buffer
         path     = "[Path]",      -- hrsh7th/cmp-path
         git      = "[Git]"        -- petertriho/cmp-git
-      })[entry.source.name]
-      return vim_item
-    end,
+      },
+    }),
   },
   -- configure cmp.setup.filetype(filetype, options)
   filetype = {
