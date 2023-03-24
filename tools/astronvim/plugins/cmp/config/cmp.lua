@@ -8,7 +8,7 @@
 -- https://github.com/datamonsterr/astronvim_config/blob/main/plugins/cmp.lua
 
 -- load cmp to access it's internal functions
-local cmp = require "cmp"
+local cmp = require("cmp")
 local sources = require("user.plugins.cmp.source_priority")
 local lspkind = require("lspkind")
 
@@ -62,9 +62,8 @@ return {
   -- configure cmp.setup.filetype(filetype, options)
   filetype = {
     -- git
-    gitcommit = {{ name = "git" }}     -- petertriho/cmp-git
+    gitcommit = { { name = "git" } }, -- petertriho/cmp-git
   },
-
   -- configure cmp.setup.cmd(source, options)
   cmdline = {
     -- first key is the source that you are setting up
