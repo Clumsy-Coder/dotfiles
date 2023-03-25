@@ -6,4 +6,14 @@ return {
       return require("astronvim.utils").extend_tbl(opts, config)
     end,
   },
+  {
+    "petertriho/cmp-git",
+    dependencies = {
+      "hrsh7th/nvim-cmp",
+    },
+    ft = "gitcommit",
+    config = function()
+      require("cmp_git").setup()
+    end,
+  },
 }
