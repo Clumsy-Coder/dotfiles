@@ -25,7 +25,7 @@ return {
     -- neogen
     -- using neogen to generate annotations(code documentation)
     a = {
-        name = "Annotate",
+        name = "󰏫 Annotate",
         ["<cr>"] = { function() require("neogen").generate() end, "Current" },
         c = { function() require("neogen").generate { type = "class" } end, "Class" },
         f = { function() require("neogen").generate { type = "func" }  end, "Function" },
@@ -35,7 +35,7 @@ return {
     -- ########################################################################################## --
     -- markdown
     m = {
-      name = "Markdown",
+      name = " Markdown",
       p = { "<cmd>Glow<cr>", "Preview Markdown" },
     },
     -- ########################################################################################## --
