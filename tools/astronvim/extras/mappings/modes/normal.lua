@@ -36,11 +36,6 @@ return {
         F = { function() require("neogen").generate { type = "file" }  end, "File" },
     },
     -- ########################################################################################## --
-    -- packer
-    p = {
-      t = {"<cmd>Telescope packer<cr>", "Telescope search"}
-    },
-    -- ########################################################################################## --
     -- markdown
     m = {
       name = "Markdown",
