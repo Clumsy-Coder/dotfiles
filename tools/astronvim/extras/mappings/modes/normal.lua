@@ -5,6 +5,7 @@
 --    https://github.com/thieung/dotfiles/blob/main/config/nvim/which-key/mode/n.lua
 
 return {
+  -- git-conflict.nvim
   ["C"] = {
     name = "git-conflict",
     ["c"] = { "<Plug>(git-conflict-ours)", "Take Current" },
@@ -16,10 +17,15 @@ return {
     ["]"] = { "<Plug>(git-conflict-next-conflict)",  "Next conflict" },
     ["["] = { "<Plug>(git-conflict-prev-conflict)",  "Previous conflict" },
   },
+  -- ############################################################################################ --
+  -- ############################################################################################ --
+  -- ############################################################################################ --
   ["<leader>"] = {
     s = {
       t = { "<cmd>TodoTelescope<cr>", "Search all TODOs"}
     },
+    -- ########################################################################################## --
+    -- neogen
     -- using neogen to generate annotations(code documentation)
     a = {
         name = "Annotate",
@@ -29,14 +35,19 @@ return {
         t = { function() require("neogen").generate { type = "type" }  end, "Type" },
         F = { function() require("neogen").generate { type = "file" }  end, "File" },
     },
+    -- ########################################################################################## --
     -- packer
     p = {
       t = {"<cmd>Telescope packer<cr>", "Telescope search"}
     },
+    -- ########################################################################################## --
     -- markdown
     m = {
       name = "Markdown",
       p = { "<cmd>Glow<cr>", "Preview Markdown" },
     }
   }
+  -- ############################################################################################ --
+  -- ############################################################################################ --
+  -- ############################################################################################ --
 }
