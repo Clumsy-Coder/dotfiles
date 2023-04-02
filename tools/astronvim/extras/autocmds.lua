@@ -12,13 +12,16 @@ local create_command = vim.api.nvim_create_user_command
 
 -- ////////////////////////////////////////////////////////////////////////////////////////////// --
 -- highlight yanked text
--- obtained from https://stackoverflow.com/a/73365602/3053548
-create_augroup("highlight_yank", { clear = false })
+-- obtained from
+--   https://stackoverflow.com/a/73365602/3053548
+--   https://github.com/AstroNvim/AstroNvim/blob/c680ab35b88d4be41366a377a853eb2d36ca0eee/lua/astronvim/autocmds.lua#L94-L99
 create_autocmd("TextYankPost", {
-  group = "highlight_yank",
-  desc = "Highlight selection on yank",
+  desc = "Highlight yanked text",
+  group = create_augroup("highlightyank", { clear = false }),
   pattern = "*",
   callback = function()
     vim.highlight.on_yank({ higroup = "IncSearch", timeout = 500 })
   end,
 })
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////// --
