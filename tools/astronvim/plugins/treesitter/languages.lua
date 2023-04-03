@@ -7,7 +7,7 @@ return {
   "gitattributes",
   "gitcommit",
   "gitignore",
-  "help",
+  "vimdoc",
   "html",
   "http",
   "javascript",
