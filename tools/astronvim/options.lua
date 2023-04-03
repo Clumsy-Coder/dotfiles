@@ -25,5 +25,8 @@ return {
     listchars = { tab = "│→", extends = "⟩", precedes = "⟨", trail = "·", nbsp = "␣", eol = "↲" },
     showbreak = "↪ ", -- string to put at the start of lines that have been wrapped
     swapfile = false, -- disable swapfile so plugin `willothy/flatten.nvim` can work properly
+    spell = true,
+    spelllang = "en_ca",
+    spellfile = vim.fn.expand("~/.config/nvim/lua/user/spell/en.utf-8.add"),
   },
 }
