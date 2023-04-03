@@ -3,7 +3,12 @@
 # usage:
 # ./install-standalone astronvim
 - shell:
-    - command: rm -rf $NVIM_CONFIG_DIR_PATH $NVIM_PACKER_DIR_PATH $NVIM_PACKER_COMPILED_PATH
+    - command: |
+        rm -rfv \\
+        $NVIM_CONFIG_DIR_PATH \\
+        $HOME/.local/share/nvim/lazy \\
+        $HOME/.local/share/nvim/lazy-lock.json \\
+        $HOME/.cache/nvim
       description: Remove old Neovim installed plugins
     - command: git clone https://github.com/AstroNvim/AstroNvim $NVIM_CONFIG_DIR_PATH
       description: Get AstroNvim repo
