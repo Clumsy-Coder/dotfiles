@@ -15,7 +15,7 @@
 - link:
     $ASTRO_NVIM_CONFIG_DIR_PATH: tools/astronvim
 - shell:
-    - command: nvim --headless -c 'PackerSync' -c 'autocmd User PackerComplete quitall'
+    - command: nvim --headless -c 'autocmd User LazyDone quitall' -c 'sleep 40' -c 'quitall'
       description: Installing Neovim packages
-    - command: nvim --headless -c 'TSUpdateSync' -c 'sleep 30' -c 'qa'
-      description: Install Nvim-Treesitter language packs
+#     - command: nvim --headless -c 'TSUpdateSync' -c 'sleep 30' -c 'qa'
+#       description: Install Nvim-Treesitter language packs
