@@ -36,7 +36,10 @@ return {
     -- markdown
     m = {
       name = " Markdown",
-      p = { "<cmd>Glow<cr>", "Preview Markdown" },
+      p = { "<cmd>Glow<cr>", "Preview Markdown (using glow)" },
+      r = { "<cmd>MarkdownPreview<cr>", "Render Markdown in browser"},
+      s = { "<cmd>MarkdownPreviewStop<cr>", "Stop rendering Markdown in browser"},
+      t = { "<cmd>MarkdownPreviewToggle<cr>", "Toggle rendering Markdown in browser"},
     },
     -- ########################################################################################## --
     -- telescope
