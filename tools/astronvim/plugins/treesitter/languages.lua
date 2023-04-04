@@ -1,5 +1,6 @@
 return {
   "bash",
+  "c_sharp",
   "comment",
   "css",
   "dockerfile",
