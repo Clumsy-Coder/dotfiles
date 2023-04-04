@@ -2,11 +2,20 @@
 
 AstorNvim custom configs
 
-This folder is intended to be symlinked to `$XDG_CONFIG_HOME/astronvim/lua/user`
+This folder is intended to be symlinked to `$XDG_CONFIG_HOME/astronvim/lua/user/`
 
 ## dotbot config
 
 Used by [dotfiles/meta/configs/astronvim.yaml](../../meta/configs/astronvim.yaml)
+
+## screenshot
+
+![astronvim v3 dashboard](../../docs/images/astronvim/v3/dashboard.png "dashboard")
+![telescope](../../docs/images/astronvim/v3/telescope.png "telescope")
+![heirline config](../../docs/images/astronvim/v3/heirline-config.png "heirline config")
+![lazy nvim](../../docs/images/astronvim/v3/lazy-nvim.png "lazy.nvim")
+![mason](../../docs/images/astronvim/v3/mason.png "mason")
+![astronvim update logs](../../docs/images/astronvim/v3/astronvim-logs.png "Astronvim-update-logs")
 
 ## File/Directory structure
 
@@ -17,40 +26,58 @@ tree -a -H "." tools/astronvim -L 1
 
 <pre>
 <a href="../../../../">dotfiles/</a>tools/vim/astronvim/
+├── <a href="./extras/">extras/</a>                  extra configs related to astronvim
+├── <a href="./heirline/">heirline/</a>                heirline statusline
+├── <a href="./highlights/">highlights/</a>              telescope theme customization
+├── <a href="./lsp/">lsp/</a>                     lsp config. Used by `mason-lspconfig.nvim`
+├── <a href="./plugins/">plugins/</a>                 nvim plugins. Installed using `Lazy.nvim`
+├── <a href="./spell/">spell/</a>                   neovim spellcheck file
+├── <a href="./.luacheckrc">.luacheckrc</a>
+├── <a href="./.luarc.json">.luarc.json</a>
 ├── <a href="./README.md">README.md</a>
-├── <a href="./cmp/">cmp/</a>             hrsh7th/nvim-cmp configs
-├── <a href="./extras/">extras/</a>          utility files used in other places. Ex: extras/icons.lua is used in plugins/feline.lua
-├── <a href="./lsp/">lsp/</a>             neovim/nvim-lspconfig configs
-├── <a href="./plugins/">plugins/</a>         plugin configs and managing plugins (add, remove, disable, enable)
-├── <a href="./polish.lua">polish.lua</a>       Commands to run after loading AstroNvim. Ex: Load extras/autocmds.lua
-└── <a href="./updater.lua">updater.lua</a>      Configs on updating AstroNvim. https://astronvim.github.io/configuration/updater
+├── <a href="./colorscheme.lua">colorscheme.lua</a>          neovim colourscheme
+├── <a href="./mappings.lua">mappings.lua</a>             which-key mappings. Uses ./extras/mappings/
+├── <a href="./options.lua">options.lua</a>              neovim system configs
+├── <a href="./polish.lua">polish.lua</a>               to run last after initializing neovim
+├── <a href="./stylua.toml">stylua.toml</a>
+└── <a href="./updater.lua">updater.lua</a>              config on how to update Astronvim
 </pre>
 
-### cmp/
+### extras/
 
-Contains configs for [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+Extra config files that don't fit in other folder.
+Ex: which-key mappings
+Ex: file to run in `polish.lua`
 
-Also check [plugins/cmp.lua](./plugins/cmp.lua)
+### heirline/
+
+[Heirline](https://github.com/rebelot/heirline.nvim) statusbar attribute config
+
+### highlights/
+
+Custom theme for [telescope](https://github.com/nvim-telescope/telescope.nvim)
 
 ### lsp/
 
-Contains configs for [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+Contains configs for [williamboman/mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
 
-Language Servers are installed with [williamboman/nvim-lsp-installer](https://github.com/williamboman/nvim-lsp-installer)
+Language Servers are installed with [williamboman/mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
 
 ### plugins/
 
-Contains plugin configs
+Contains plugin configs. To be used by `Lazy.nvim`
 
-#### init.lua
+### spell/
 
-Where you manage neovim plugins.
+Neovim spellcheck file
 
-Examples:
-- https://github.com/AstroNvim/AstroNvim/blob/65c6e6c431/lua/core/plugins.lua
-- https://code.mehalter.com/projects/68/files/master/plugins/init.lua
-- https://github.com/datamonsterr/astronvim_config/blob/main/plugins/init.lua
-- https://github.com/hunger/AstroVim/blob/my_config/lua/core/plugins.lua
+### colorscheme.lua
+
+Neovim color scheme to use
+
+### mappings.lua
+
+which-key mappings. Uses [`./extras/mappings/`](./extras/mappings)
 
 ### polish.lua
 
@@ -62,7 +89,7 @@ Good place to configuring augroups/autocommands and custom filetypes
 
 Used by AstroNvim when updating
 
-https://astronvim.github.io/configuration/updater
+https://astronvim.com/Configuration/updater
 
 ## Inspired by
 
