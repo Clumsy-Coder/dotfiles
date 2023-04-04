@@ -7,7 +7,6 @@ return {
   "gitattributes",
   "gitcommit",
   "gitignore",
-  "vimdoc",
   "html",
   "http",
   "javascript",
@@ -22,5 +21,6 @@ return {
   "tsx",
   "typescript",
   "vim",
+  "vimdoc",
   "yaml",
 }
