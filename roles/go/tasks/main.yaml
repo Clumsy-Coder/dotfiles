@@ -1,0 +1,12 @@
+---
+
+# - include_vars: "go-packages.yaml"
+
+# install golang packages
+- name: Install Golang packages
+  shell:
+    cmd: "go install {{ item }}"
+  loop: "{{ go_packages }}"
+  tags:
+    - go
+    - terminal
