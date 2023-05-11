@@ -36,3 +36,5 @@
     - role: npm
 
     - role: neofetch
+
+    - role: vimv
