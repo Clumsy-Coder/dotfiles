@@ -2,3 +2,4 @@ github.com/rhysd/actionlint/cmd/actionlint@latest
 github.com/jesseduffield/lazygit@latest
 github.com/client9/misspell/cmd/misspell@latest
 github.com/editorconfig-checker/editorconfig-checker/cmd/editorconfig-checker@latest
+github.com/dundee/gdu/v5/cmd/gdu@latest
