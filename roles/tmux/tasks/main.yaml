@@ -1,0 +1,28 @@
+---
+
+# link tmux config file
+- name: "link Tmux config file"
+  file:
+    src: "{{ ansible_env.DOTDIR }}/tools/tmux/tmux.conf"
+    dest: "{{ ansible_env.TMUX_CONFIG_PATH }}"
+    state: link
+  tags:
+    - tmux
+    - terminal
+
+# remove existing tmux cache files
+- name: "remove existing tmux plugins"
+  file:
+    path: "{{ ansible_env.TMUX_PLUGIN_CACHE_PATH }}"
+    state: absent
+  tags:
+    - tmux
+    - terminal
+
+# install tmux plugins
+- name: "install tmux plugins"
+  shell:
+    cmd: "tmux -f {{ ansible_env.TMUX_CONFIG_PATH }} start-server"
+  tags:
+    - tmux
+    - terminal
