@@ -1,6 +1,7 @@
 ---
 - hosts: "local"
   vars_files:
+    - "../vars/global-vars.yaml"
     - "../vars/homebrew.yaml"
     - "../vars/mas.yaml"
     - "../vars/macos-docks.yaml"
@@ -45,3 +46,5 @@
     - role: go
 
     - role: tmux
+
+    - role: astronvim
