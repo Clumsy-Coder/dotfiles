@@ -26,6 +26,8 @@
         - gui
       ignore_errors: true
 
+    - role: code-directory
+
     - role: alacritty
 
     - role: git
