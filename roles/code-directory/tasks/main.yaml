@@ -1,0 +1,38 @@
+---
+
+# create directories to store code
+# link directories to the home folder
+
+- name: "Create directory for 'code'"
+  file:
+    dest: "~/Documents/code"
+    state: directory
+  tags:
+    - code-directory
+    - terminal
+
+- name: "Create directory for 'temp-git-clone'"
+  file:
+    dest: "~/Documents/temp-git-clone"
+    state: directory
+  tags:
+    - code-directory
+    - terminal
+
+- name: "Link directory for 'code' to the home folder"
+  file:
+    src: "~/Documents/code/"
+    dest: "~/code"
+    state: link
+  tags:
+    - code-directory
+    - terminal
+
+- name: "Link directory for 'temp-git-clone' to the home folder"
+  file:
+    src: "~/Documents/temp-git-clone/"
+    dest: "~/temp-git-clone"
+    state: "link"
+  tags:
+    - code-directory
+    - terminal
