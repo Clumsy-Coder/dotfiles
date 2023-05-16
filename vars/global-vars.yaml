@@ -1,0 +1,8 @@
+---
+
+# global variables to be used throughout ansible
+
+# number of seconds to wait for installing astronvim plugins
+# check:
+#   - ansible role `astronvim`
+astronvim_install_wait_seconds: 40
