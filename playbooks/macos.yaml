@@ -48,3 +48,5 @@
     - role: tmux
 
     - role: astronvim
+
+    - role: zsh

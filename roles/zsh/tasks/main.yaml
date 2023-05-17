@@ -1,0 +1,61 @@
+---
+
+# link zshrc file
+- name: "link zshrc to {{ ansible_env.ZSHRC_PATH }}"
+  file:
+    src: "{{ ansible_env.DOTDIR }}/tools/zsh/.zshrc"
+    dest: "{{ ansible_env.ZSHRC_PATH }}"
+    state: link
+    force: true
+  tags:
+    - zsh
+    - terminal
+
+# link zshenv file
+- name: "link zshenv to {{ ansible_env.ZSHENV_PATH }}"
+  file:
+    src: "{{ ansible_env.DOTDIR }}/tools/zsh/.zshenv"
+    dest: "{{ ansible_env.ZSHENV_PATH }}"
+    state: link
+  tags:
+    - zsh
+    - terminal
+
+# link zshenv file to $HOME
+- name: "link zshenv to {{ ansible_env.HOME }}"
+  file:
+    src: "{{ ansible_env.DOTDIR }}/tools/zsh/.zshenv"
+    dest: "{{ ansible_env.HOME }}/.zshenv"
+    state: link
+  tags:
+    - zsh
+    - terminal
+
+# link zlogin file
+- name: "link zlogin to {{ ansible_env.ZLOGIN_PATH }}"
+  file:
+    src: "{{ ansible_env.DOTDIR }}/tools/zsh/.zlogin"
+    dest: "{{ ansible_env.ZLOGIN_PATH }}"
+    state: link
+  tags:
+    - zsh
+    - terminal
+
+- name: "link powerlevel10k config to {{ ansible_env.ZDOTDIR }}/.p10k.zsh"
+  file:
+    src: "{{ ansible_env.ZSH_THEME_DEFAULT }}"
+    dest: "{{ ansible_env.ZDOTDIR }}/.p10k.zsh"
+    state: link
+  when: "'powerlevel10k' in lookup('env', 'ZSH_THEME_DEFAULT')"
+  tags:
+    - zsh
+    - terminal
+
+# change default shell to ZSH
+- name: "change default shell to ZSH"
+  shell:
+    cmd: chsh -s /bin/zsh {{ ansible_env.USER }}
+  become: true
+  tags:
+    - zsh
+    - terminal
