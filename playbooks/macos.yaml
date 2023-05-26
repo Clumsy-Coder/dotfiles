@@ -50,3 +50,5 @@
     - role: astronvim
 
     - role: zsh
+
+    - role: ohmyzsh
