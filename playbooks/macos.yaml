@@ -7,6 +7,7 @@
     - "../vars/macos-docks.yaml"
     - "../vars/npm-packages.yaml"
     - "../vars/go-packages.yaml"
+    - "../vars/pip3-packages.yaml"
   roles:
     - role: geerlingguy.mac.homebrew
       tags:
@@ -52,3 +53,5 @@
     - role: zsh
 
     - role: ohmyzsh
+
+    - role: pip3
