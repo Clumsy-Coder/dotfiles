@@ -1,0 +1,10 @@
+---
+
+# install pip3 packages
+- name: "install pip3 packages"
+  pip:
+    name: "{{ item }}"
+  loop: "{{ pip3_packages }}"
+  tags:
+    - pip3
+    - terminal
