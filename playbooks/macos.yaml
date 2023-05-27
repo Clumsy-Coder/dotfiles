@@ -8,6 +8,7 @@
     - "../vars/npm-packages.yaml"
     - "../vars/go-packages.yaml"
     - "../vars/pip3-packages.yaml"
+    - "../vars/luarocks-packages.yaml"
   roles:
     - role: geerlingguy.mac.homebrew
       tags:
@@ -55,3 +56,5 @@
     - role: ohmyzsh
 
     - role: pip3
+
+    - role: luarocks
