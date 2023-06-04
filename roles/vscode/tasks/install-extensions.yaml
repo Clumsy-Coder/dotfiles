@@ -1,0 +1,10 @@
+---
+
+- name: install VScode extensions
+  shell:
+    cmd: code --install-extension {{ item }} --force
+  loop: "{{ vscode_extensions }}"
+  ignore_errors: true
+  tags:
+    - vscode-extensions
+    - gui
