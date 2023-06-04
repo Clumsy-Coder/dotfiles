@@ -9,6 +9,7 @@
     - "../vars/go-packages.yaml"
     - "../vars/pip3-packages.yaml"
     - "../vars/luarocks-packages.yaml"
+    - "../vars/vscode-extensions.yaml"
   roles:
     - role: geerlingguy.mac.homebrew
       tags:
@@ -58,3 +59,9 @@
     - role: pip3
 
     - role: luarocks
+
+  tasks:
+    - include_tasks: "{{ ansible_env.DOTDIR }}/roles/vscode/tasks/install-extensions.yaml"
+      tags:
+        - vscode-extensions
+        - gui
