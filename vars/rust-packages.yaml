@@ -1,0 +1,5 @@
+---
+
+rust_packages:
+  - stylua
+  - git-delta
