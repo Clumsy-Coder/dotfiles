@@ -1,5 +1,10 @@
 ---
 
+- include_vars: "{{ ansible_env.DOTDIR }}/vars/luarocks-packages.yaml"
+  tags:
+    - luarocks
+    - terminal
+
 - name: "install luarocks packages"
   shell:
     cmd: "luarocks install {{ item }}"
