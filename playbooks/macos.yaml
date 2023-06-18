@@ -5,7 +5,6 @@
     - "../vars/homebrew.yaml"
     - "../vars/mas.yaml"
     - "../vars/macos-docks.yaml"
-    - "../vars/npm-packages.yaml"
     - "../vars/go-packages.yaml"
     - "../vars/pip3-packages.yaml"
     - "../vars/luarocks-packages.yaml"
