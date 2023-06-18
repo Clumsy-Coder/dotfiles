@@ -1,0 +1,7 @@
+---
+
+# number of seconds to wait for installing astronvim plugins
+# mainly used for waiting to install TreeSitter language packs before quitting
+# check:
+#   - ansible role `astronvim`
+astronvim_install_wait_seconds: 40
