@@ -1,5 +1,10 @@
 ---
+- include_vars: "{{ ansible_env.DOTDIR }}/vars/npm-packages.yaml"
+  tags:
+    - npm
+    - terminal
 
+# used for finding the npm executable installed by nvm
 - name: "Store current nodejs version being used by nvm"
   shell: "source {{ ansible_env.NVM_DIR}}/nvm.sh && nvm current"
   register: node_version
