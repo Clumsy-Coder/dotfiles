@@ -1,9 +1,15 @@
 ---
 
+- include_vars: "{{ ansible_env.DOTDIR }}/vars/pip3-packages.yaml"
+  tags:
+    - pip3
+    - terminal
+
 # install pip3 packages
 - name: "install pip3 packages"
   pip:
     name: "{{ item }}"
+    executable: pip3
   loop: "{{ pip3_packages }}"
   tags:
     - pip3
