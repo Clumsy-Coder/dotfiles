@@ -65,3 +65,8 @@
       tags:
         - vscode-extensions
         - gui
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/roles/rust/tasks/crates.yaml"
+      tags:
+        - cargo-packages
+        - terminal
