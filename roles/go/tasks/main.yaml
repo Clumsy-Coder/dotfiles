@@ -1,6 +1,10 @@
 ---
 
-# - include_vars: "go-packages.yaml"
+# load var file `./vars/go-packages.yaml`
+- include_vars: "{{ ansible_env.DOTDIR }}/vars/go-packages.yaml"
+  tags:
+    - go
+    - terminal
 
 # install golang packages
 - name: Install Golang packages
