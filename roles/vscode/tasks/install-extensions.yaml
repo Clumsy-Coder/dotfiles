@@ -1,5 +1,10 @@
 ---
 
+- include_vars: "{{ ansible_env.DOTDIR }}/vars/vscode-extensions.yaml"
+  tags:
+    - vscode-extensions
+    - gui
+
 - name: install VScode extensions
   shell:
     cmd: code --install-extension {{ item }} --force
