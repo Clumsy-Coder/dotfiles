@@ -1,5 +1,10 @@
 ---
 
+- include_vars: "{{ ansible_env.DOTDIR }}/vars/astronvim.yaml"
+  tags:
+    - astronvim
+    - terminal
+
 # remove old Neovim installed plugins
 - name: "remove old Neovim plugins"
   file:
