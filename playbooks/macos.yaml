@@ -5,7 +5,6 @@
     - "../vars/homebrew.yaml"
     - "../vars/mas.yaml"
     - "../vars/macos-docks.yaml"
-    - "../vars/pip3-packages.yaml"
     - "../vars/luarocks-packages.yaml"
     - "../vars/vscode-extensions.yaml"
   roles:
