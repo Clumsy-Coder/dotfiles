@@ -1,5 +1,6 @@
 return {
   "folke/noice.nvim",
+  enabled = false,
   -- event = "User AstroFile",
   event = "VeryLazy",
   opts = function(_, opts)
