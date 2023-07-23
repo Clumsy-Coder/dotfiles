@@ -43,7 +43,7 @@ return {
     diagnostics.jsonlint,             -- json linter
     diagnostics.luacheck,             -- lua linter
     diagnostics.markdownlint,         -- markdown linter
-    diagnostics.misspell,             -- checks commonly misspelled words in code
+    -- diagnostics.misspell,             -- checks commonly misspelled words in code
     -- diagnostics.selene,
     diagnostics.shellcheck,           -- shell linter
     -- diagnostics.spectral,            -- json/yaml linter

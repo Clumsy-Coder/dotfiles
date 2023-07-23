@@ -18,7 +18,7 @@ return {
     "jsonlint",        -- LINTER:            JSON linter
     "luacheck",        -- LINTER:            lua linter
     "markdownlint",    -- LINTER, FORMATTER: markdown linter
-    "misspell",        -- LINTER:            check commonly misspelled words
+    -- "misspell",        -- LINTER:            check commonly misspelled words
     "prettierd",       -- FORMATTER:         prettier but faster
     "shellcheck",      -- LINTER:            shell linter
     "stylua",          -- FORMATTER:         lua code formatter
