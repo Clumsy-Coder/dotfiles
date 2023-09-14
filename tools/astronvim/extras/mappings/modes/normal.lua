@@ -47,6 +47,16 @@ return {
       e = { "<cmd>Telescope file_browser<cr>", "File explorer" },
       t = { "<cmd>TodoTelescope<cr>", "Find all TODOs"}
     },
+    -- ########################################################################################## --
+    -- git
+    g = {
+      w = {
+        name = "worktrees",
+        a = { function() require('telescope').extensions.git_worktree.create_git_worktree() end, "Add worktree", silent = true},
+        s = { function() require('telescope').extensions.git_worktree.git_worktrees() end, "Switch worktree"},
+        -- r = { function() require("git-worktree").delete_worktree() end, "Remove worktree"},
+      }
+    }
   }
   -- ############################################################################################ --
   -- ############################################################################################ --
