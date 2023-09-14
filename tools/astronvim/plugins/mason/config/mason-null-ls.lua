@@ -12,7 +12,7 @@ return {
     "ansible-lint",    -- LINTER:            ansible
     "beautysh",        -- FORMATTER:         zsh
     "codespell",       -- LINTER:            spell check
-    "eslint_d",        -- LINTER:            eslint but faster
+    "eslint-lsp",      -- LSP                eslint lsp
     "gitlint",         -- LINTER:            git commit message linter
     "hadolint",        -- LINTER:            dockerfile linter
     "jsonlint",        -- LINTER:            JSON linter
