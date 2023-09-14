@@ -92,3 +92,5 @@
   allowedSignersFile = /Users/umar/.ssh/allowed_signers
 [init]
 	defaultBranch = master
+[diff "exif"]
+	textconv = exiftool
