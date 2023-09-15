@@ -33,8 +33,4 @@ return {
     enable = true,
     enable_autocmd = false,
   },
-  rainbow = {                 -- needs plugin https://github.com/p00f/nvim-ts-rainbow
-    enable = true,
-    extended_mode = true,     -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
-  },
 }

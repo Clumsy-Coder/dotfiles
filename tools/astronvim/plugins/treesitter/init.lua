@@ -3,7 +3,25 @@ return {
     "nvim-treesitter/nvim-treesitter",
     dependencies = {
       "nvim-treesitter/nvim-treesitter-context",
-      "mrjones2014/nvim-ts-rainbow",
+      {
+        -- obtained from https://code.mehalter.com/AstroNvim_user/~files/91d8255ef1d901067621420b0e90e92f4ba8b0ee/plugins/treesitter.lua?position=source-6.1-19.7-1
+        "HiPhish/rainbow-delimiters.nvim",
+        opts = function()
+          return {
+            strategy = {
+              [""] = function()
+                -- load if the buffer is NOT large
+                if not vim.b.large_buf then
+                  return require("rainbow-delimiters").strategy.global
+                end
+              end,
+            },
+          }
+        end,
+        config = function(_, opts)
+          require("rainbow-delimiters.setup")(opts)
+        end,
+      },
     },
     opts = function(_, opts)
       local config = require("user.plugins.treesitter.config")
