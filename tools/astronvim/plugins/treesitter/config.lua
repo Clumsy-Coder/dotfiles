@@ -33,4 +33,7 @@ return {
     enable = true,
     enable_autocmd = false,
   },
+  matchup = {                 -- needs plugin https://github.com/andymass/vim-matchup
+    enable = true
+  },
 }
