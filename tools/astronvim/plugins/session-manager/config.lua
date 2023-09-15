@@ -11,5 +11,6 @@ return {
   },
   autosave_ignore_filetypes = { -- All buffers of these file types will be closed before the session is saved.
     'gitcommit',
+    'gitrebase'
   },
 }
