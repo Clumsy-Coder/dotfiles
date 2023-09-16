@@ -21,6 +21,7 @@ return {
     -- "misspell",        -- LINTER:            check commonly misspelled words
     "prettierd",       -- FORMATTER:         prettier but faster
     "shellcheck",      -- LINTER:            shell linter
+    "shfmt",           -- FORMATTER:         shell formatter
     "stylua",          -- FORMATTER:         lua code formatter
     "vint",            -- LINTER:            vimscript linter
     "yamllint",        -- LINTER:            YAML linter
