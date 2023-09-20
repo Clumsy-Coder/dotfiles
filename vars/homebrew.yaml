@@ -28,6 +28,7 @@ homebrew_installed_packages:
   - exiftool
   - fontconfig
   - fzf
+  - gdu
   - gh
   - git
   - git-delta
@@ -46,7 +47,6 @@ homebrew_installed_packages:
   - mas
   - nano
   - navi
-  - ncdu
   - neofetch
   - neovim
   - netcat
