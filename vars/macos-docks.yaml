@@ -76,3 +76,6 @@ dockitems_persist:
   - name: VirtualBox
     path: '/Applications/VirtualBox.app/'
     pos: 17
+  - name: PrusaSlicer
+    path: '/Applications/PrusaSlicer.app/'
+    pos: 18
