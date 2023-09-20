@@ -25,6 +25,7 @@ homebrew_installed_packages:
   - coreutils
   - dive
   - exa
+  - exiftool
   - fontconfig
   - fzf
   - gh
