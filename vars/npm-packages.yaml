@@ -32,5 +32,6 @@ npm_packages:
   - npkill
   - npm
   - npm-check-updates
+  - npm-run-all
   - prettier
   - typescript
