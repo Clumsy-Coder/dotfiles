@@ -17,6 +17,7 @@ homebrew_taps:
 # homebrew formulas
 # used by ansible-galaxy geerlingguy.mac.homebrew
 homebrew_installed_packages:
+  - act
   - actionlint
   - ansible
   - bat
