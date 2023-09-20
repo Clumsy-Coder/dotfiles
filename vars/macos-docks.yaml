@@ -28,54 +28,57 @@ dockitems_remove:
 
 # add items to the dock
 dockitems_persist:
+  - name: Launchpad
+    path: '/Applications/Launchpad.app'
+    pos: 2
   - name: Firefox
     path: '/Applications/Firefox.app'
-    pos: 2
+    pos: 3
   - name: VLC
     path: '/Applications/VLC.app'
-    pos: 3
+    pos: 4
   - name: Music
     path: '/Applications/Music.app'
-    pos: 4
+    pos: 5
   - name: Spotify
     path: '/Applications/Spotify.app/'
-    pos: 5
+    pos: 6
   - name: Discord
     path: '/Applications/Discord.app/'
-    pos: 6
+    pos: 7
   - name: 'App Store'
     path: '/Applications/App Store.app'
-    pos: 7
+    pos: 8
   - name: 'Activity Monitor'
     path: '/Applications/Utilities/Activity Monitor.app'
-    pos: 8
+    pos: 9
   - name: Wireshark
     path: '/Applications/Wireshark.app/'
-    pos: 9
+    pos: 10
   - name: Alacritty
     path: '/Applications/Alacritty.app/'
-    pos: 10
+    pos: 11
   - name: Kitty
     path: '/Applications/Kitty.app/'
-    pos: 11
+    pos: 12
   - name: Terminal
     path: '/Applications/Utilities/Terminal.app/'
-    pos: 12
+    pos: 13
   - name: 'Visual Studio Code'
     path: '/Applications/Visual Studio Code.app/'
-    pos: 13
+    pos: 14
   - name: VSCodium
     path: '/Applications/VSCodium.app/'
-    pos: 14
+    pos: 15
   - name: 'System Preferences'
     path: '/Applications/System Preferences.app'
-    pos: 15
+    pos: 16
   - name: balenaEtcher
     path: '/Applications/balenaEtcher.app/'
-    pos: 16
+    pos: 17
   - name: VirtualBox
     path: '/Applications/VirtualBox.app/'
-    pos: 17
+    pos: 18
   - name: PrusaSlicer
     path: '/Applications/PrusaSlicer.app/'
-    pos: 18
+    pos: 19
