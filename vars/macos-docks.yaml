@@ -55,21 +55,24 @@ dockitems_persist:
   - name: Alacritty
     path: '/Applications/Alacritty.app/'
     pos: 10
+  - name: Kitty
+    path: '/Applications/Kitty.app/'
+    pos: 11
   - name: Terminal
     path: '/Applications/Utilities/Terminal.app/'
-    pos: 11
+    pos: 12
   - name: 'Visual Studio Code'
     path: '/Applications/Visual Studio Code.app/'
-    pos: 12
+    pos: 13
   - name: VSCodium
     path: '/Applications/VSCodium.app/'
-    pos: 13
+    pos: 14
   - name: 'System Preferences'
     path: '/Applications/System Preferences.app'
-    pos: 14
+    pos: 15
   - name: balenaEtcher
     path: '/Applications/balenaEtcher.app/'
-    pos: 15
+    pos: 16
   - name: VirtualBox
     path: '/Applications/VirtualBox.app/'
-    pos: 16
+    pos: 17
