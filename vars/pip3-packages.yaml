@@ -6,3 +6,4 @@ pip3_packages:
   - libtmux
   - gitlint
   - vim-vint
+  - dooit
