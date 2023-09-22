@@ -21,6 +21,16 @@
 set -e  # exit if a command exits with a non-zero status
 # set -x  # show every command run in this file
 
+# ################################################################################################ #
+# variables
+BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# ################################################################################################ #
+# pull all git submodules
+cd "${BASE_DIR}"
+git submodule update --init --recursive
+
+# ################################################################################################ #
 # Check if "ansible" binary is available in $PATH
 if ! [ -x "$(command -v ansible)" ]; then
   echo "Ansible missing - please install manually:"
