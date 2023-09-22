@@ -1,3 +1,5 @@
+# :warning: `Dotbot` is no longer being used. Replaced with ansible. check [README.md](../../README.md) :warning:
+
 # meta/install-list
 
 Files that contains plugin, extensions, etc to be installed using configs from `dotfiles/meta/configs/`

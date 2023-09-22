@@ -1,4 +1,6 @@
-# dotfiles
+# :warning: `Dotbot` is no longer being used. Replaced with ansible. check [README.md](./README.md) :warning:
+
+# dotfiles using `dotbot`
 
 my configs, settings, installation scripts, etc
 
