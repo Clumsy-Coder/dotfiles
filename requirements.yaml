@@ -2,3 +2,6 @@
 collections:
   - name: geerlingguy.mac
   - name: community.general
+
+roles:
+  - name: elliotweiser.osx-command-line-tools

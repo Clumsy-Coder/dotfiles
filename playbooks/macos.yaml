@@ -6,6 +6,8 @@
     - "../vars/mas.yaml"
     - "../vars/macos-docks.yaml"
   roles:
+    - role: elliotweiser.osx-command-line-tools
+
     - role: geerlingguy.mac.homebrew
       tags:
         - brew
