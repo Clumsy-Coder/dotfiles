@@ -1,3 +1,5 @@
+# :warning: `Dotbot` is no longer being used. Replaced with ansible. check [README.md](../../README.md) :warning:
+
 # meta/profiles
 
 running a collection of dotbot configs as a profile.

@@ -1,3 +1,5 @@
+# :warning: `Dotbot` is no longer being used. Replaced with ansible. check [README.md](../../README.md) :warning:
+
 # meta/install-script
 
 Scripts that are run from a config file in `dotfiles/meta/configs/` folder.
