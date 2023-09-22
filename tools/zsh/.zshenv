@@ -140,6 +140,11 @@ export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 # kitty terminal
 export KITTY_CONFIG_DIRECTORY="$XDG_CONFIG_HOME/kitty"
 
+# ansible
+export ANSIBLE_HOME="${XDG_CONFIG_HOME}/ansible"
+export ANSIBLE_CONFIG="${XDG_CONFIG_HOME}/ansible.cfg"
+export ANSIBLE_GALAXY_CACHE_DIR="${XDG_CACHE_HOME}/ansible/galaxy_cache"
+
 # -------------------------------------------------------------------------------------------------#
 
 # Mac OS X uses path_helper and /etc/paths.d to preload PATH, clear it out first
