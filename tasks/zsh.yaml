@@ -1,7 +1,7 @@
 ---
 
 # link zshrc file
-- name: "link zshrc to {{ ansible_env.ZSHRC_PATH }}"
+- name: "zsh: link zshrc to {{ ansible_env.ZSHRC_PATH }}"
   file:
     src: "{{ ansible_env.DOTDIR }}/tools/zsh/.zshrc"
     dest: "{{ ansible_env.ZSHRC_PATH }}"
@@ -12,7 +12,7 @@
     - terminal
 
 # link zshenv file
-- name: "link zshenv to {{ ansible_env.ZSHENV_PATH }}"
+- name: "zsh: link zshenv to {{ ansible_env.ZSHENV_PATH }}"
   file:
     src: "{{ ansible_env.DOTDIR }}/tools/zsh/.zshenv"
     dest: "{{ ansible_env.ZSHENV_PATH }}"
@@ -22,7 +22,7 @@
     - terminal
 
 # link zshenv file to $HOME
-- name: "link zshenv to {{ ansible_env.HOME }}"
+- name: "zsh: link zshenv to {{ ansible_env.HOME }}"
   file:
     src: "{{ ansible_env.DOTDIR }}/tools/zsh/.zshenv"
     dest: "{{ ansible_env.HOME }}/.zshenv"
@@ -32,7 +32,7 @@
     - terminal
 
 # link zlogin file
-- name: "link zlogin to {{ ansible_env.ZLOGIN_PATH }}"
+- name: "zsh: link zlogin to {{ ansible_env.ZLOGIN_PATH }}"
   file:
     src: "{{ ansible_env.DOTDIR }}/tools/zsh/.zlogin"
     dest: "{{ ansible_env.ZLOGIN_PATH }}"
@@ -41,7 +41,7 @@
     - zsh
     - terminal
 
-- name: "link powerlevel10k config to {{ ansible_env.ZDOTDIR }}/.p10k.zsh"
+- name: "zsh: link powerlevel10k config to {{ ansible_env.ZDOTDIR }}/.p10k.zsh"
   file:
     src: "{{ ansible_env.ZSH_THEME_DEFAULT }}"
     dest: "{{ ansible_env.ZDOTDIR }}/.p10k.zsh"
@@ -52,7 +52,7 @@
     - terminal
 
 # change default shell to ZSH
-- name: "change default shell to ZSH"
+- name: "zsh: change default shell to ZSH"
   shell:
     cmd: chsh -s /bin/zsh {{ ansible_env.USER }}
   become: true
