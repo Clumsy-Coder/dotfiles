@@ -1,6 +1,6 @@
 ---
 
-- name: "Create directory for ZSH cache"
+- name: "ohmyzsh: Create directory for ZSH cache"
   file:
     path: "{{ ansible_env.ZSH_CACHE_DIR }}"
     state: directory
@@ -8,7 +8,7 @@
     - ohmyzsh
     - terminal
 
-- name: "Remove existing Oh-my-zsh directory"
+- name: "ohmyzsh: Remove existing Oh-my-zsh directory"
   file:
     path: "{{ ansible_env.OH_MY_ZSH_DIR_PATH }}"
     state: absent
@@ -17,7 +17,7 @@
     - terminal
 
 # install Oh-my-zsh
-- name: "Install Oh-my-zsh"
+- name: "ohmyzsh: Install Oh-my-zsh"
   shell:
     cmd: sh -c "$(curl -o- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   environment:
