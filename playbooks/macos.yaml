@@ -27,8 +27,6 @@
         - gui
       ignore_errors: true
 
-    - role: astronvim
-
     - role: zsh
 
     - role: ohmyzsh
@@ -96,6 +94,11 @@
     - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/tmux.yaml"
       tags:
         - tmux
+        - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/astronvim.yaml"
+      tags:
+        - astronvim
         - terminal
 
     - include_tasks: "{{ ansible_env.DOTDIR }}/roles/vscode/tasks/install-extensions.yaml"

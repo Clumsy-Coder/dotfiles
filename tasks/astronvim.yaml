@@ -6,7 +6,7 @@
     - terminal
 
 # remove old Neovim installed plugins
-- name: "remove old Neovim plugins"
+- name: "astronvim: remove old Neovim plugins"
   file:
     path: "{{ item }}"
     state: absent
@@ -22,7 +22,7 @@
     - terminal
 
 # download latest Astronvim git repo
-- name: "git clone Astronvim repo"
+- name: "astronvim: git clone Astronvim repo"
   git:
     repo: "https://github.com/AstroNvim/AstroNvim"
     dest: "{{ ansible_env.NVIM_CONFIG_DIR_PATH }}"
@@ -31,7 +31,7 @@
     - terminal
 
 # link astronvim config files
-- name: "link config file to astronvim"
+- name: "astronvim: link config file to astronvim"
   file:
     src: "{{ ansible_env.DOTDIR }}/tools/astronvim"
     dest: "{{ ansible_env.ASTRO_NVIM_CONFIG_DIR_PATH }}"
@@ -43,7 +43,7 @@
 # install astronvim plugins
 # install TreeSitter language packs after installing plugins
 #   running in async. Requires main thread to be blocked temporarily
-- name: "install astronvim plugins. Please wait {{ astronvim_install_wait_seconds }} seconds"
+- name: "astronvim: install astronvim plugins. Please wait {{ astronvim_install_wait_seconds }} seconds"
   shell:
     cmd: nvim --headless -c 'autocmd User LazyDone quitall' -c 'sleep {{ astronvim_install_wait_seconds }}' -c 'quitall'
   tags:
