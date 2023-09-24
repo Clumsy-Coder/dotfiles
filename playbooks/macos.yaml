@@ -27,8 +27,6 @@
         - gui
       ignore_errors: true
 
-    - role: alacritty
-
     - role: kitty
 
     - role: git
@@ -58,6 +56,11 @@
       tags:
         - code-directory
         - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/alacritty.yaml"
+      tags:
+        - alacritty
+        - gui
 
     - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/nvm.yaml"
       tags:
