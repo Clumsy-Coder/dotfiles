@@ -1,7 +1,7 @@
 ---
 
 # link Kitty config folder
-- name: "link folder to {{ ansible_env.KITTY_CONFIG_DIRECTORY }}"
+- name: "kitty: link folder to {{ ansible_env.KITTY_CONFIG_DIRECTORY }}"
   file:
     src: "{{ ansible_env.DOTDIR }}/tools/kitty/"
     dest: "{{ ansible_env.KITTY_CONFIG_DIRECTORY }}"
