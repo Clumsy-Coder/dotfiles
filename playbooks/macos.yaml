@@ -68,6 +68,11 @@
         - git
         - terminal
 
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/lazygit.yaml"
+      tags:
+        - lazygit
+        - terminal
+
     - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/nvm.yaml"
       tags:
         - nvm
