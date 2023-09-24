@@ -5,7 +5,7 @@
     - cargo-packages
     - terminal
 
-- name: "install Rust Cargo packages"
+- name: "cargo-packages: install Rust Cargo packages"
   # shell:
   #   cmd: "cargo install {{ item }}"
   community.general.cargo:
