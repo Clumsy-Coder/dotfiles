@@ -5,7 +5,7 @@
     - terminal
 
 # used for finding the npm executable installed by nvm
-- name: "Store current nodejs version being used by nvm"
+- name: "npm: Store current nodejs version being used by nvm"
   shell: "source {{ ansible_env.NVM_DIR}}/nvm.sh && nvm current"
   register: node_version
   changed_when: false
@@ -13,7 +13,7 @@
     - npm
     - terminal
 
-- name: "Install global npm packages"
+- name: "npm: Install global npm packages"
   npm:
     name: "{{ item }}"
     global: true
