@@ -6,7 +6,7 @@
     - terminal
 
 # install pip3 packages
-- name: "install pip3 packages"
+- name: "pip3: install pip3 packages"
   pip:
     name: "{{ item }}"
     executable: pip3

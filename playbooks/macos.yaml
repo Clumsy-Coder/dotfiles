@@ -27,8 +27,6 @@
         - gui
       ignore_errors: true
 
-    - role: pip3
-
     - role: luarocks
 
   tasks:
@@ -105,6 +103,11 @@
     - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/ohmyzsh.yaml"
       tags:
         - ohmyzsh
+        - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/pip3.yaml"
+      tags:
+        - pip3
         - terminal
 
     - include_tasks: "{{ ansible_env.DOTDIR }}/roles/vscode/tasks/install-extensions.yaml"
