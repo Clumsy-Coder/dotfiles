@@ -1,7 +1,7 @@
 ---
 
 # git clone nerdfounts repo
-- name: "git clone Nerdfonts repo to /tmp/nerdfonts . NOTE: this will take a while"
+- name: "nerdfonts: git clone Nerdfonts repo to /tmp/nerdfonts . NOTE: this will take a while"
   git:
     repo: https://github.com/ryanoasis/nerd-fonts.git
     dest: /tmp/nerdfonts
@@ -10,14 +10,14 @@
     - gui
     - nerdfonts
 
-- name: "install Nerdfonts"
+- name: "nerdfonts: install Nerdfonts"
   shell:
     cmd: "/tmp/nerdfonts/install.sh"
   tags:
     - gui
     - nerdfonts
 
-- name: "remove Nerdfonts repo"
+- name: "nerdfonts: remove Nerdfonts repo"
   file:
     path: "/tmp/nerdfonts/"
     state: absent

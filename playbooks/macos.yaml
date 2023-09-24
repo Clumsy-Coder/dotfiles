@@ -27,8 +27,6 @@
         - gui
       ignore_errors: true
 
-    - role: nerdfonts
-
     - role: neofetch
 
     - role: vimv
@@ -72,6 +70,11 @@
       tags:
         - lazygit
         - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/nerdfonts.yaml"
+      tags:
+        - nerdfonts
+        - gui
 
     - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/nvm.yaml"
       tags:
