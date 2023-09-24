@@ -27,8 +27,6 @@
         - gui
       ignore_errors: true
 
-    - role: go
-
     - role: tmux
 
     - role: astronvim
@@ -90,6 +88,11 @@
     - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/vimv.yaml"
       tags:
         - vimv
+        - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/go-packages.yaml"
+      tags:
+        - go-packages
         - terminal
 
     - include_tasks: "{{ ansible_env.DOTDIR }}/roles/vscode/tasks/install-extensions.yaml"
