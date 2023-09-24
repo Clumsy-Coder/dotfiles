@@ -37,8 +37,6 @@
 
     - role: nerdfonts
 
-    - role: nvm
-
     - role: npm
 
     - role: neofetch
@@ -60,6 +58,11 @@
     - role: luarocks
 
   tasks:
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/nvm.yaml"
+      tags:
+        - nvm
+        - terminal
+
     - include_tasks: "{{ ansible_env.DOTDIR }}/roles/vscode/tasks/install-extensions.yaml"
       tags:
         - vscode-extensions
