@@ -113,7 +113,7 @@
         - luarocks
         - terminal
 
-    - include_tasks: "{{ ansible_env.DOTDIR }}/roles/vscode/tasks/install-extensions.yaml"
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/vscode-extensions.yaml"
       tags:
         - vscode-extensions
         - gui
