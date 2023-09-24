@@ -100,7 +100,7 @@ export ASTRO_NVIM_CONFIG_DIR_PATH="$NVIM_CONFIG_DIR_PATH/lua/user"    # astronvi
 
 # tmux
 export TMUX_CONFIG_DIR_PATH="$XDG_CONFIG_HOME/tmux"                 # tmux config dir path
-export TMUX_CONFIG_PATH="$XDG_CONFIG_HOME/tmux/tmux.conf"           # tmux config path
+export TMUX_CONFIG_PATH="$TMUX_CONFIG_DIR_PATH/tmux.conf"           # tmux config path
 export TMUX_PLUGIN_CACHE_PATH="$XDG_DATA_HOME/tmux/plugins"         # tmux plugin cache directory
 export ZSH_TMUX_CONFIG="$TMUX_CONFIG_PATH"                          # tmux config file (loading ZSH antigen plugin)
                                                                     # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/tmux#configuration-variables
