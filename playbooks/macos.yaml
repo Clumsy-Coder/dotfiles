@@ -27,8 +27,6 @@
         - gui
       ignore_errors: true
 
-    - role: neofetch
-
     - role: vimv
 
     - role: go
@@ -84,6 +82,11 @@
     - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/npm.yaml"
       tags:
         - npm
+        - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/neofetch.yaml"
+      tags:
+        - neofetch
         - terminal
 
     - include_tasks: "{{ ansible_env.DOTDIR }}/roles/vscode/tasks/install-extensions.yaml"
