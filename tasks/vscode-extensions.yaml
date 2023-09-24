@@ -5,7 +5,7 @@
     - vscode-extensions
     - gui
 
-- name: install VScode extensions
+- name: "vscode-extensions: install VScode extensions"
   shell:
     cmd: code --install-extension {{ item }} --force
   loop: "{{ vscode_extensions }}"
