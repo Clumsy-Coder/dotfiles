@@ -27,8 +27,6 @@
         - gui
       ignore_errors: true
 
-    - role: code-directory
-
     - role: alacritty
 
     - role: kitty
@@ -56,6 +54,11 @@
     - role: luarocks
 
   tasks:
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/code-directory.yaml"
+      tags:
+        - code-directory
+        - terminal
+
     - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/nvm.yaml"
       tags:
         - nvm
