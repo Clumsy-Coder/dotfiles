@@ -27,8 +27,6 @@
         - gui
       ignore_errors: true
 
-    - role: kitty
-
     - role: git
 
     - role: nerdfonts
@@ -60,6 +58,11 @@
     - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/alacritty.yaml"
       tags:
         - alacritty
+        - gui
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/kitty.yaml"
+      tags:
+        - kitty
         - gui
 
     - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/nvm.yaml"
