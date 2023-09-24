@@ -1,6 +1,6 @@
 ---
 
-- name: "Create git directory in {{ ansible_env.GIT_CONFIG_DIR_PATH }}"
+- name: "git: Create git directory in {{ ansible_env.GIT_CONFIG_DIR_PATH }}"
   file:
     path: "{{ ansible_env.GIT_CONFIG_DIR_PATH }}"
     state: directory
@@ -8,7 +8,7 @@
     - git
     - terminal
 
-- name: "Add gitconfig file to {{ ansible_env.GIT_CONFIG_PATH }}"
+- name: "git: Add gitconfig file to {{ ansible_env.GIT_CONFIG_PATH }}"
   file:
     src: "{{ ansible_env.DOTDIR }}/tools/git/.gitconfig"
     dest: "{{ ansible_env.GIT_CONFIG_PATH }}"
@@ -17,7 +17,7 @@
     - git
     - terminal
 
-- name: "Add gitignore file to {{ ansible_env.GIT_IGNORE_GLOBAL_PATH }}"
+- name: "git: Add gitignore file to {{ ansible_env.GIT_IGNORE_GLOBAL_PATH }}"
   file:
     src: "{{ ansible_env.DOTDIR }}/tools/git/.gitignore_global"
     dest: "{{ ansible_env.GIT_IGNORE_GLOBAL_PATH }}"
@@ -26,7 +26,7 @@
     - git
     - terminal
 
-- name: "Add git allowed signers to {{ ansible_env.GIT_ALLOWED_SIGNERS }}"
+- name: "git: Add git allowed signers to {{ ansible_env.GIT_ALLOWED_SIGNERS }}"
   file:
     src: "{{ ansible_env.DOTDIR }}/tools/git/allowed_signers"
     dest: "{{ ansible_env.GIT_ALLOWED_SIGNERS }}"
@@ -37,7 +37,7 @@
 
 ####################################################################################################
 
-- name: "Create lazygit directory in {{ ansible_env.LAZYGIT_CONFIG_DIR_PATH }}"
+- name: "git: Create lazygit directory in {{ ansible_env.LAZYGIT_CONFIG_DIR_PATH }}"
   file:
     path: "{{ ansible_env.LAZYGIT_CONFIG_DIR_PATH }}"
     state: directory
@@ -46,7 +46,7 @@
     - terminal
     - lazygit
 
-- name: "Add LazyGit config to {{ ansible_env.LAZYGIT_CONFIG_PATH }}"
+- name: "git: Add LazyGit config to {{ ansible_env.LAZYGIT_CONFIG_PATH }}"
   file:
     src: "{{ ansible_env.DOTDIR }}/tools/git/lazygit.yml"
     dest: "{{ ansible_env.LAZYGIT_CONFIG_PATH }}"

@@ -27,8 +27,6 @@
         - gui
       ignore_errors: true
 
-    - role: git
-
     - role: nerdfonts
 
     - role: neofetch
@@ -64,6 +62,11 @@
       tags:
         - kitty
         - gui
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/git.yaml"
+      tags:
+        - git
+        - terminal
 
     - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/nvm.yaml"
       tags:
