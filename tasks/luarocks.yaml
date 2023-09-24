@@ -5,7 +5,7 @@
     - luarocks
     - terminal
 
-- name: "install luarocks packages"
+- name: "luarocks: install luarocks packages"
   shell:
     cmd: "luarocks install {{ item }}"
   loop: "{{ luarocks_packages }}"

@@ -27,8 +27,6 @@
         - gui
       ignore_errors: true
 
-    - role: luarocks
-
   tasks:
     - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/code-directory.yaml"
       tags:
@@ -108,6 +106,11 @@
     - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/pip3.yaml"
       tags:
         - pip3
+        - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/luarocks.yaml"
+      tags:
+        - luarocks
         - terminal
 
     - include_tasks: "{{ ansible_env.DOTDIR }}/roles/vscode/tasks/install-extensions.yaml"
