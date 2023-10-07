@@ -53,6 +53,7 @@ if [[ $IS_MAC -eq 1 ]]; then
   export PYTHON2_PATH=$(which python)
   export PATH=$PATH:$PYTHON3_PATH
   export PATH=$PATH:$PYTHON2_PATH
+  export PATH="$HOME/Library/Python/3.8/bin:$PATH"
 
   # setting up homebrew autoupdate
   # using https://github.com/DomT4/homebrew-autoupdate
@@ -86,5 +87,7 @@ if [[ $IS_LINUX -eq 1 ]]; then
   export BAT_PAGER="less -RF"
 
   export PATH="/usr/bin/ruby:$PATH"   # Ruby path obtained with 'which ruby'
+
+  export PATH="$HOME/.local/bin:$PATH"
 
 fi # END if [[ $IS_LINUX -eq 1 ]]; then
