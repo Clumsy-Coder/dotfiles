@@ -4,3 +4,9 @@
   #   - "../vars/global-vars.yaml"
 
   # roles:
+
+  tasks:
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/raspberry-pi-configs.yaml"
+      tags:
+        - raspberry-pi-configs
+        - terminal
