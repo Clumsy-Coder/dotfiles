@@ -149,6 +149,9 @@ export ANSIBLE_HOME="${XDG_CONFIG_HOME}/ansible"
 export ANSIBLE_CONFIG="${XDG_CONFIG_HOME}/ansible.cfg"
 export ANSIBLE_GALAXY_CACHE_DIR="${XDG_CACHE_HOME}/ansible/galaxy_cache"
 
+# pyenv
+export PYENV_DIR_PATH="$XDG_DATA_HOME/pyenv"
+export PYENV_ROOT="$PYENV_DIR_PATH"
 # -------------------------------------------------------------------------------------------------#
 
 # Mac OS X uses path_helper and /etc/paths.d to preload PATH, clear it out first
