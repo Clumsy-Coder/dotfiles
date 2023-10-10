@@ -46,6 +46,7 @@ alias mkcd='function _mkcd(){ mkdir $1; cd $1;};_mkcd'    # make a directory and
 # alias startMamp='/Applications/MAMP/bin/start.sh'
 # alias stopMamp='/Applications/MAMP/bin/stop.sh'
 alias history='omz_history -i'
+alias echoPath='echo -e ${PATH//:/\\n}'  # print PATH entries line by line
 
 # -------------------------------------------------------------------------------------------------#
 # directory movement
