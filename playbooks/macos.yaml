@@ -103,6 +103,11 @@
         - ohmyzsh
         - terminal
 
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/pyenv.yaml"
+      tags:
+        - pyenv
+        - terminal
+
     - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/pip3.yaml"
       tags:
         - pip3
