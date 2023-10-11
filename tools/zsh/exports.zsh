@@ -31,6 +31,25 @@ export PATH=$PATH:$GOPATH/bin
 # export npm global installed packages to PATH
 export PATH=$PATH:$NPM_BIN_PATH/bin
 
+# load pyenv
+if [ -d "$PYENV_DIR_PATH" ]; then
+  command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init -)"
+
+  # if [[ $IS_MAC -eq 1 ]]; then
+  #   pythonVersion=$(pyenv versions | /usr/local/opt/grep/libexec/gnubin/grep -P --only-matching  "^(\*\s+)(\K\S+)")
+  # fi
+  # if [[ $IS_LINUX -eq 1 ]]; then
+  #   pythonVersion=$(pyenv versions | grep --perl-regexp --only-matching  "^(\*\s+)(\K\S+)")
+  # fi
+  #
+  # echo "python version: $pythonVersion"
+  # if [[ $pythonVersion != "system" ]]; then
+  #   pythonBin="$PYENV_DIR_PATH/versions/$pythonVersion/bin"
+  #   export PATH="$pythonBin:$PATH"
+  # fi
+fi
+
 # -------------------------------------------------------------------------------------------------#
 # MacOS only exports. $IS_MAC is set in zsh/checks.sh
 # -------------------------------------------------------------------------------------------------#
