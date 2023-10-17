@@ -1,0 +1,67 @@
+---
+
+# set firewall rules for pihole
+
+- name: "pihole-ufw: disable ufw"
+  ufw:
+    state: disabled
+  tags:
+    - pihole-ufw
+    - terminal
+  become: true
+
+- name: "pihole-ufw: allow outgoing traffic as default"
+  ufw:
+    direction: outgoing
+    policy: allow
+  tags:
+    - pihole-ufw
+    - terminal
+  become: true
+
+- name: "pihole-ufw: deny incoming traffic as default"
+  ufw:
+    direction: incoming
+    policy: deny
+  tags:
+    - pihole-ufw
+    - terminal
+  become: true
+
+- name: "pihole-ufw: allow SSH on port 22"
+  ufw:
+    rule: limit
+    port: 22
+    comment: SSH
+  tags:
+    - pihole-ufw
+    - terminal
+  become: true
+
+- name: "pihole-ufw: allow Pi-Hole WebPortal on port 80"
+  ufw:
+    rule: allow
+    port: 80
+    comment: Pi-Hole Admin WebPortal
+  tags:
+    - pihole-ufw
+    - terminal
+  become: true
+
+- name: "pihole-ufw: allow Pi-Hole DNS on port 53"
+  ufw:
+    rule: allow
+    port: 53
+    comment: Pi-Hole DNS
+  tags:
+    - pihole-ufw
+    - terminal
+  become: true
+
+- name: "pihole-ufw: enable ufw"
+  ufw:
+    state: enabled
+  tags:
+    - pihole-ufw
+    - terminal
+  become: true
