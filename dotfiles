@@ -33,11 +33,41 @@ git submodule update --init --recursive
 # ################################################################################################ #
 # Check if "ansible" binary is available in $PATH
 if ! [ -x "$(command -v ansible)" ]; then
-  echo "Ansible missing - please install manually:"
-  echo
-  echo "sudo pip3 install --upgrade pip"
-  echo "pip3 install ansible"
-  exit 1
+  # echo "Ansible missing - please install manually:"
+  # echo
+  # echo "sudo pip3 install --upgrade pip"
+  # echo "pip3 install ansible"
+  # exit 1
+
+  echo -e "\e[31m> ansible \e[1mnot\e[22m found. Installation required \e[0m"
+  echo -e "\e[34m> installing ansible via \e[1mpyenv\e[22m \e[0m"
+
+  # install pyenv if it's not installed
+  if [ ! -d "$PYENV_DIR_PATH" ]; then
+    echo -e "\e[31m> \e[1mpyenv\e[22m not found \e[0m"
+    echo -e "\e[34m> Installing pyenv \e[0m"
+    curl https://pyenv.run | bash
+
+    command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH" ;
+    eval "$(pyenv init -)" ;
+
+    # get the latest python version
+    pythonVersion=$(pyenv install --list | grep --extended-regexp "^\s*[0-9][0-9.]*[0-9]\s*$" | tail -1)
+    echo -e "\e[34m> installing python version \e[1m$pythonVersion \e[0m"
+    pyenv install --skip-existing $pythonVersion
+
+    # install latest python version
+    echo -e "\e[34m> setting python version \e[1m$pythonVersion\e[22m as default \e[0m"
+    pyenv global $pythonVersion
+  fi
+
+  command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH" ;
+  eval "$(pyenv init -)" ;
+
+  # install ansible
+  echo -e "\e[34m> installing ansible \e[0m"
+  pip3 install ansible
+
 fi
 
 # check if the playbook is provided
