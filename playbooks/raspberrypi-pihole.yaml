@@ -21,3 +21,8 @@
       tags:
         - raspberry-pi-apt
         - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/raspberry-pi-unattended-upgrades.yaml"
+      tags:
+        - raspberry-pi-unattended-upgrades
+        - terminal
