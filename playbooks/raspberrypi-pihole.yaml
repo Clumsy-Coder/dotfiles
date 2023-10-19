@@ -1,7 +1,8 @@
 ---
 - hosts: "local"
-  # vars_files:
-  #   - "../vars/global-vars.yaml"
+  vars_files:
+    - "../vars/global-vars.yaml"
+    - "{{ ansible_env.DOTDIR }}/vars/raspberry-pi.yaml"
 
   # roles:
 
@@ -9,4 +10,9 @@
     - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/raspberry-pi-configs.yaml"
       tags:
         - raspberry-pi-configs
+        - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/raspberry-pi-apt-sources.yaml"
+      tags:
+        - raspberry-pi-apt-sources
         - terminal
