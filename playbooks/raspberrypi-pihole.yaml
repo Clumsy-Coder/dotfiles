@@ -16,3 +16,8 @@
       tags:
         - raspberry-pi-apt-sources
         - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/raspberry-pi-apt.yaml"
+      tags:
+        - raspberry-pi-apt
+        - terminal
