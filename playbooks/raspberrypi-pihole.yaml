@@ -41,3 +41,8 @@
       tags:
         - zsh
         - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/ohmyzsh.yaml"
+      tags:
+        - ohmyzsh
+        - terminal
