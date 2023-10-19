@@ -31,3 +31,8 @@
       tags:
         - git
         - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/neofetch.yaml"
+      tags:
+        - neofetch
+        - terminal
