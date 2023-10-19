@@ -1,0 +1,29 @@
+---
+
+# install apt packages
+# this task will install the apt packages using a loop
+# it will use variable `apt_packages`
+# make sure to import the var file in the playbook before running this task
+
+- name: "apt: update apt package repository"
+  apt:
+    update_cache: true
+  become: true
+
+- name: "apt: upgrade installed packages"
+  apt:
+    upgrade: "yes"
+  become: true
+
+- name: "apt: install apt packages"
+  apt:
+    name: "{{ item }}"
+    state: present
+    default_release: "{{ apt_install_target }}"
+  loop: "{{ apt_packages }}"
+  become: true
+
+- name: "apt: autoremove apt packages"
+  apt:
+    autoremove: true
+  become: true
