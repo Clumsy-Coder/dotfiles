@@ -26,3 +26,8 @@
       tags:
         - raspberry-pi-unattended-upgrades
         - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/git.yaml"
+      tags:
+        - git
+        - terminal
