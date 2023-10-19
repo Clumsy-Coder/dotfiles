@@ -7,3 +7,43 @@ add_apt_sources:
   # - deb http://deb.debian.org/debian testing main contrib non-free
 
 # remove_apt_sources:
+
+apt_install_target: "bullseye-backports"
+
+apt_packages:
+  # - autoconf
+  # - automake
+  # - cmake
+  # - figlet
+  # - fonts-powerline
+  # - g++
+  # - gettext
+  # - powerline
+  - bat
+  - build-essential
+  - curl
+  - exa
+  - fail2ban
+  - fzf
+  - git
+  - golang
+  - htop
+  - lshw
+  - most
+  - nano
+  - ncdu
+  - neofetch
+  - nmap
+  - python3
+  - ripgrep
+  - tldr
+  - tmux
+  - trash-cli
+  - tree
+  - ufw
+  - unattended-upgrades
+  - unzip
+  - vim
+  - wget
+  - zip
+  - zsh
