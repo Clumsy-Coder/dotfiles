@@ -1,0 +1,16 @@
+---
+
+# add unattended upgrades config file for Raspberry Pi OS
+
+- name: "raspberry-pi-unattended-upgrades: link unattended-upgrades config file"
+  file:
+    src: "{{ ansible_env.DOTDIR }}/tools/unattended-upgrades/raspberry-config"
+    dest: /etc/apt/apt.conf.d/50unattended-upgrades
+    state: link
+  become: true
+
+- name: "raspberry-pi-unattended-upgrades: restart unattended-upgrades"
+  service:
+    name: unattended-upgrades
+    state: restarted
+  become: true
