@@ -46,3 +46,8 @@
       tags:
         - ohmyzsh
         - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/nvm.yaml"
+      tags:
+        - nvm
+        - terminal
