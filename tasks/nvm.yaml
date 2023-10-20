@@ -36,6 +36,7 @@
 - name: "nvm: Install latest NodeJS version"
   shell:
     cmd: "source {{ ansible_env.NVM_DIR }}/nvm.sh && nvm install node --default --latest-npm"
+    executable: /bin/bash
   tags:
     - terminal
     - nvm
