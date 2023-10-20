@@ -152,6 +152,10 @@ export ANSIBLE_GALAXY_CACHE_DIR="${XDG_CACHE_HOME}/ansible/galaxy_cache"
 # pyenv
 export PYENV_DIR_PATH="$XDG_DATA_HOME/pyenv"
 export PYENV_ROOT="$PYENV_DIR_PATH"
+
+# spacevim
+export SPACEVIMDIR="$XDG_CONFIG_HOME/SpaceVim.d"
+
 # -------------------------------------------------------------------------------------------------#
 
 # Mac OS X uses path_helper and /etc/paths.d to preload PATH, clear it out first
