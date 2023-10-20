@@ -6,7 +6,9 @@
 
 # used for finding the npm executable installed by nvm
 - name: "npm: Store current nodejs version being used by nvm"
-  shell: "source {{ ansible_env.NVM_DIR}}/nvm.sh && nvm current"
+  shell:
+    cmd: "source {{ ansible_env.NVM_DIR}}/nvm.sh && nvm current"
+    executable: /bin/bash
   register: node_version
   changed_when: false
   tags:
