@@ -1,0 +1,44 @@
+---
+
+# install spacevim
+
+- name: "spacevim: remove existing vim and SpaceVim directories"
+  file:
+    path: "{{ item }}"
+    state: absent
+  with_items:
+    - "{{ ansible_env.HOME }}/.vim"
+    - "{{ ansible_env.HOME }}/.SpaceVim"
+    - "{{ ansible_env.HOME }}/.SpaceVim.d"
+    - "{{ ansible_env.XDG_CONFIG_HOME }}/vim"
+    - "{{ ansible_env.XDG_CONFIG_HOME }}/nvim"
+    - "{{ ansible_env.XDG_DATA_HOME }}/nvim"
+    - "{{ ansible_env.XDG_STATE_HOME }}/nvim"
+    - "{{ ansible_env.XDG_CACHE_HOME }}/nvim"
+    - "{{ ansible_env.SPACEVIMDIR }}"
+    # - "{{ ansible_env.XDG_CONFIG_HOME }}/SpaceVim"
+  tags:
+    - spacevim
+    - terminal
+
+- name: "spacevim: install SpaceVim for vim"
+  shell: curl -sLf https://spacevim.org/install.sh | bash -s -- --install vim
+  tags:
+    - spacevim
+    - terminal
+
+- name: "spacevim: install SpaceVim for neovim"
+  shell: curl -sLf https://spacevim.org/install.sh | bash -s -- --install neovim
+  tags:
+    - spacevim
+    - terminal
+
+- name: "spacevim: link config file to ~/.SpaceVim.d/"
+  file:
+    src: "{{ ansible_env.DOTDIR }}/tools/spacevim"
+    # dest: "{{ ansible_env.HOME }}/.SpaceVim.d"
+    dest: "{{ ansible_env.SPACEVIMDIR }}"
+    state: link
+  tags:
+    - spacevim
+    - terminal
