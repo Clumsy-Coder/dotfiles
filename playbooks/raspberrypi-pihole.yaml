@@ -51,3 +51,8 @@
       tags:
         - nvm
         - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/npm.yaml"
+      tags:
+        - npm
+        - terminal
