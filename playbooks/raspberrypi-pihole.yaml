@@ -56,3 +56,8 @@
       tags:
         - npm
         - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/spacevim.yaml"
+      tags:
+        - spacevim
+        - terminal
