@@ -17,6 +17,7 @@ return {
   "jsonc",
   "lua",
   "markdown",
+  "org",
   "regex",
   "todotxt",
   "tsx",
