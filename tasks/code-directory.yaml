@@ -36,3 +36,28 @@
   tags:
     - code-directory
     - terminal
+
+- name: "code-directory: create orgfiles directory in ~/Documents/ directory"
+  file:
+    dest: "~/Documents/orgfiles"
+    state: directory
+  tags:
+    - code-directory
+    - terminal
+
+- name: "code-directory: create refile for orgmode"
+  file:
+    dest: "~/Documents/orgfiles/refile.org"
+    state: touch
+  tags:
+    - code-directory
+    - terminal
+
+- name: "code-directory: link ~/Document/orgfiles to ~/orgfiles/"
+  file:
+    src: "~/Documents/orgfiles/"
+    dest: "~/orgfiles"
+    state: link
+  tags:
+    - code-directory
+    - terminal
