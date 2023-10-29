@@ -1669,3 +1669,7 @@ typeset -g POWERLEVEL9K_CONFIG_FILE=${${(%):-%x}:a}
 
 (( ${#p10k_config_opts} )) && setopt ${p10k_config_opts[@]}
 'builtin' 'unset' 'p10k_config_opts'
+
+# disable gitstatusd
+# obtained from https://github.com/romkatv/powerlevel10k/issues/246#issuecomment-538896199
+POWERLEVEL9K_DISABLE_GITSTATUS=true
