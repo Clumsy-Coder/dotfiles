@@ -48,8 +48,8 @@
     # Advanced config
     - command: raspi-config nonint do_expand_rootfs
       description: Ensures that all of the SD card is available
-    - command: raspi-config nonint do_net_names 1
-      description: Disable predictable network names
+    # - command: raspi-config nonint do_net_names 1
+    #   description: Disable predictable network names
 
     # disable ipv6
     # obtained from https://gist.github.com/andreibosco/3badaac477446587bcd6751e186df446
