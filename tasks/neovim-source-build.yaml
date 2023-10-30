@@ -1,0 +1,102 @@
+---
+
+# build and install neovim
+# obtained from
+# building and installing:
+# https://github.com/neovim/neovim/wiki/Installing-Neovim#install-from-source
+# https://github.com/neovim/neovim/wiki/Building-Neovim#quick-start
+#
+# uninstalling:
+# https://github.com/neovim/neovim/wiki/Installing-Neovim#uninstall
+
+# obtained from
+# https://github.com/neovim/neovim/wiki/Building-Neovim#ubuntu--debian
+- name: "neovim-source-build: install build dependencies for debian/ubuntu"
+  apt:
+    update_cache: true
+    name: "{{ state }}"
+    state: present
+  loop:
+    - ninja-build
+    - gettext
+    - cmake
+    - unzip
+    - curl
+  when:
+    ansible_os_family == "Debian"
+  become: true
+  tags:
+    - neovim-source-build
+    - terminal
+
+# obtained from
+# https://github.com/neovim/neovim/wiki/Building-Neovim#macos
+- name: "neovim-source-build: install build dependencies for macOS"
+  homebrew:
+    name: "{{ state }}"
+    state: present
+  loop:
+    - ninja
+    - gettext
+    - cmake
+    - curl
+  when:
+    ansible_os_family == "Darwin"
+  become: true
+  tags:
+    - neovim-source-build
+    - terminal
+
+- name: "neovim-source-build: Remove currently installed Neovim (built from source)"
+  file:
+    path: "{{ item }}"
+    state: absent
+    with_items:
+      - /usr/local/bin/nvim
+      - /usr/local/share/nvim
+  become: true
+  tags:
+    - neovim-source-build
+    - terminal
+
+- name: "neovim-source-build: Clone Neovim repo on the stable branch"
+  # shell: git clone --depth 1 --branch stable https://github.com/neovim/neovim /tmp/neovim
+  git:
+    repo: https://github.com/neovim/neovim
+    dest: /tmp/neovim
+    depth: 1
+    version: stable
+  tags:
+    - neovim-source-build
+    - terminal
+
+- name: "neovim-source-build: build neovim release"
+  shell:
+    cmd: make CMAKE_BUILD_TYPE=Release
+    chdir: /tmp/neovim
+  tags:
+    - neovim-source-build
+    - terminal
+
+- name: "neovim-source-build: make install neovim"
+  shell:
+    cmd: make install
+    chdir: /tmp/neovim
+  become: true
+  tags:
+    - neovim-source-build
+    - terminal
+
+- name: "neovim-source-build: Removing neovim repo"
+  file:
+    path: "/tmp/neovim"
+    state: absent
+  tags:
+    - neovim-source-build
+    - terminal
+
+# - name: remove init.vim file. Replaced with init.lua
+  # shell: rm -rfv ~/.config/nvim/init.vim
+  # tags:
+  #   - neovim-source-build
+  #   - terminal
