@@ -66,3 +66,8 @@
       tags:
         - neovim-source-build
         - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/pihole.yaml"
+      tags:
+        - pihole
+        - terminal
