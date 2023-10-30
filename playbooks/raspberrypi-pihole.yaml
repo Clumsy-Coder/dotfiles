@@ -61,3 +61,8 @@
       tags:
         - spacevim
         - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/neovim-source-build.yaml"
+      tags:
+        - neovim-source-build
+        - terminal
