@@ -156,6 +156,9 @@ export PYENV_ROOT="$PYENV_DIR_PATH"
 # spacevim
 export SPACEVIMDIR="$XDG_CONFIG_HOME/SpaceVim.d"
 
+# node repl
+export NODE_REPL_HISTORY="$XDG_DATA_HOME/node-repl/node_repl_history"
+
 # nuget
 export NUGET_PACKAGES="$XDG_CACHE_HOME/NuGetPackages"
 # -------------------------------------------------------------------------------------------------#
