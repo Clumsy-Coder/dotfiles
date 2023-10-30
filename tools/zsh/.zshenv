@@ -156,6 +156,8 @@ export PYENV_ROOT="$PYENV_DIR_PATH"
 # spacevim
 export SPACEVIMDIR="$XDG_CONFIG_HOME/SpaceVim.d"
 
+# nuget
+export NUGET_PACKAGES="$XDG_CACHE_HOME/NuGetPackages"
 # -------------------------------------------------------------------------------------------------#
 
 # Mac OS X uses path_helper and /etc/paths.d to preload PATH, clear it out first
