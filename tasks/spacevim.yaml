@@ -27,11 +27,11 @@
     - spacevim
     - terminal
 
-- name: "spacevim: install SpaceVim for neovim"
-  shell: curl -sLf https://spacevim.org/install.sh | bash -s -- --install neovim
-  tags:
-    - spacevim
-    - terminal
+# - name: "spacevim: install SpaceVim for neovim"
+#   shell: curl -sLf https://spacevim.org/install.sh | bash -s -- --install neovim
+#   tags:
+#     - spacevim
+#     - terminal
 
 - name: "spacevim: link config file to ~/.SpaceVim.d/"
   file:
