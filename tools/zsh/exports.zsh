@@ -68,11 +68,13 @@ if [[ $IS_MAC -eq 1 ]]; then
   export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
   # export python (installed from homebrew)path
-  export PYTHON3_PATH=$(which python3)
-  export PYTHON2_PATH=$(which python)
-  export PATH=$PATH:$PYTHON3_PATH
-  export PATH=$PATH:$PYTHON2_PATH
-  export PATH="$HOME/Library/Python/3.8/bin:$PATH"
+  if [ ! -d "$PYENV_DIR_PATH" ]; then
+    export PYTHON3_PATH=$(which python3)
+    export PYTHON2_PATH=$(which python)
+    export PATH=$PATH:$PYTHON3_PATH
+    export PATH=$PATH:$PYTHON2_PATH
+    export PATH="$HOME/Library/Python/3.8/bin:$PATH"
+  fi
 
   # setting up homebrew autoupdate
   # using https://github.com/DomT4/homebrew-autoupdate
