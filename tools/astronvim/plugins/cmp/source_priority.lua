@@ -9,6 +9,7 @@ return {
   { name = "nvim_lua"  , priority = 750  },
   { name = "luasnip"   , priority = 750  },
   { name = "buffer"    , priority = 500  },
+  { name = "neorg"     , priority = 400  },
   { name = "path"      , priority = 250  },
   { name = "cmdline"   , priority = 200  },
   { name = "git"       , priority = 100  },
