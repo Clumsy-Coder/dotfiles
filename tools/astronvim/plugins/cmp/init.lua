@@ -16,4 +16,8 @@ return {
       require("cmp_git").setup()
     end,
   },
+  {
+    "rcarriga/cmp-dap",
+    enabled = false
+  }
 }
