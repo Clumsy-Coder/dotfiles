@@ -76,3 +76,8 @@
       tags:
         - unbound
         - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/raspberry-pi-ufw-pihole.yaml"
+      tags:
+        - pihole-ufw
+        - terminal
