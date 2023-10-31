@@ -2,6 +2,17 @@
 
 # set firewall rules for pihole
 
+- name: "pihole-ufw: install ufw via apt"
+  apt:
+    update_cache: true
+    name: "ufw"
+    state: present
+  when:
+    ansible_os_family == "Debian"
+  tags:
+    - pihole-ufw
+    - terminal
+
 - name: "pihole-ufw: disable ufw"
   ufw:
     state: disabled
