@@ -81,3 +81,8 @@
       tags:
         - pihole-ufw
         - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/pihole-cron.yaml"
+      tags:
+        - pihole-cron
+        - terminal
