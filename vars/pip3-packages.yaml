@@ -7,3 +7,4 @@ pip3_packages:
   - gitlint
   - vim-vint
   - dooit
+  - ansible
