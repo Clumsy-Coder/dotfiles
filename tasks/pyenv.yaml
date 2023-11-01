@@ -28,6 +28,24 @@
     - pyenv
     - terminal
 
+# install dependencies in macOS
+# obtained from https://github.com/pyenv/pyenv/wiki#suggested-build-environment
+- name: "pyenv: install dependencies via homebrew"
+  homebrew:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - openssl
+    - readline
+    - sqlite3
+    - tcl-tk
+    - xz
+    - zlib
+  when: ansible_os_family == "Darwin"
+  tags:
+    - pyenv
+    - terminal
+
 # obtained from https://stackoverflow.com/a/35021607/3053548
 - name: "pyenv: check if {{ ansible_env.PYENV_DIR_PATH }} exists"
   stat:
