@@ -24,6 +24,10 @@ set -e  # exit if a command exits with a non-zero status
 # load ENVs so ansible can use ENVs
 source ./tools/zsh/.zshenv
 
+# load zsh exports
+# mainly for loading pyenv
+source ./tools/zsh/exports.zsh
+
 # ################################################################################################ #
 # variables
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
