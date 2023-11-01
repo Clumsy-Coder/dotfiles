@@ -8,3 +8,4 @@ pip3_packages:
   - vim-vint
   - dooit
   - ansible
+  - ranger
