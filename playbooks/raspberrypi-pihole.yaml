@@ -86,3 +86,8 @@
       tags:
         - pihole-cron
         - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/fail2ban.yaml"
+      tags:
+        - fail2ban
+        - terminal
