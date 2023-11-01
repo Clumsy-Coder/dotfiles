@@ -21,6 +21,9 @@
 set -e  # exit if a command exits with a non-zero status
 # set -x  # show every command run in this file
 
+# load ENVs so ansible can use ENVs
+source ./tools/zsh/.zshenv
+
 # ################################################################################################ #
 # variables
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -93,9 +96,6 @@ if [ "${2}" == "--tags" ] && [ "$3" ]; then
 fi
 
 # ################################################################################################ #
-
-# load ENVs so ansible can use ENVs
-source ./tools/zsh/.zshenv
 
 # Get full directory path of this wrapper
 SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
