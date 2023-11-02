@@ -24,6 +24,7 @@ homebrew_installed_packages:
   - brew-cask-completion
   - coreutils
   - dive
+  - dog                     # alternative to command `dig`. used for checking DNS servers
   - exa
   - exiftool
   - fontconfig
