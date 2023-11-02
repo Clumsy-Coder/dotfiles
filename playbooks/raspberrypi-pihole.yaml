@@ -91,3 +91,8 @@
       tags:
         - fail2ban
         - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/sshd.yaml"
+      tags:
+        - sshd
+        - terminal
