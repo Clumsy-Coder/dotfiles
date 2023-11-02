@@ -23,15 +23,15 @@ npm_packages:
   # - vscode-langservers-extracted
   # - wcwidth
   # - yaml-language-server
-  - commitizen
-  - cz-conventional-changelog
-  - cz-emoji
-  - emmet-ls
-  - eslint
+  # - commitizen
+  # - cz-conventional-changelog
+  # - cz-emoji
+  # - emmet-ls
+  # - eslint
   - neovim
   - npkill
   - npm
   - npm-check-updates
   - npm-run-all
-  - prettier
+  # - prettier
   - typescript
