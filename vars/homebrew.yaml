@@ -25,6 +25,7 @@ homebrew_installed_packages:
   - coreutils
   - dive
   - dog                     # alternative to command `dig`. used for checking DNS servers
+  - duf                     # alternative to `du` (disk usage)
   - exa
   - exiftool
   - fontconfig
