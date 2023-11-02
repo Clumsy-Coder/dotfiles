@@ -1,0 +1,31 @@
+---
+
+# setting best practice for sshd
+# obtained from
+# - https://github.com/shaderecker/ansible-pihole/blob/master/roles/sshd/tasks/main.yaml
+# - https://linuxhandbook.com/ssh-hardening-tips/
+
+- name: "sshd: add sshd configs for security"
+  blockinfile:
+    path: /etc/ssh/sshd_config
+    validate: /usr/sbin/sshd -T -f %s
+    block: |
+      MaxAuthTries 3
+      MaxSessions 5
+      PasswordAuthentication no
+      PermitEmptyPasswords no
+      PermitRootLogin no
+      X11Forwarding no
+  become: true
+  tags:
+    - sshd
+    - terminal
+
+- name: "sshd: restart ssh service"
+  service:
+    name: ssh
+    state: restarted
+  become: true
+  tags:
+    - sshd
+    - terminal
