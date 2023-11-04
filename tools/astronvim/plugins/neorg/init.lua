@@ -3,10 +3,10 @@
 return {
   "nvim-neorg/neorg",
   event = "VeryLazy",
-  -- ft = {
-  --   "norg",
-  --   -- "org",
-  -- },
+  ft = {
+    "norg",
+    -- "org",
+  },
   build = ":Neorg sync-parsers",
   dependencies = { "nvim-lua/plenary.nvim" },
   config = function()
