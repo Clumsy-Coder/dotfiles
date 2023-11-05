@@ -67,6 +67,7 @@ homebrew_installed_packages:
   - trash-cli
   - tree
   - unar
+  - urlview
   - vim
   - wget
   - xdg-ninja
