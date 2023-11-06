@@ -21,6 +21,7 @@ return {
   "lua_ls",       -- lua
   "prosemd_lsp",  -- markdown
   "solargraph",   -- Ruby
+  "tailwindcss",  -- tailwind css
   "tsserver",     -- typscript/javascript
   "vimls",        -- vim
   "yamlls",       -- yaml
