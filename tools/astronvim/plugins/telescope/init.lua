@@ -19,4 +19,14 @@ return {
       telescope.load_extension("file_browser")
     end,
   },
+  {
+    "benfowler/telescope-luasnip.nvim",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+    },
+    config = function()
+      local telescope = require("telescope")
+      telescope.load_extension("luasnip")
+    end,
+  }
 }

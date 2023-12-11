@@ -45,7 +45,8 @@ return {
     -- telescope
     f = {
       e = { "<cmd>Telescope file_browser<cr>", "File explorer" },
-      t = { "<cmd>TodoTelescope<cr>", "Find all TODOs"}
+      t = { "<cmd>TodoTelescope<cr>", "Find all TODOs"},
+      s = { "<cmd>Telescope luasnip<cr>", "Find Snippets" }
     },
     -- ########################################################################################## --
     -- git
