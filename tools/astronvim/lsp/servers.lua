@@ -19,6 +19,7 @@ return {
   "html",         -- html
   "jsonls",       -- json
   "lua_ls",       -- lua
+  "prismals",     -- prisma
   "prosemd_lsp",  -- markdown
   "solargraph",   -- Ruby
   "tailwindcss",  -- tailwind css
