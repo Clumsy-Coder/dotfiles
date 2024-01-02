@@ -20,6 +20,7 @@ homebrew_installed_packages:
   - act
   - actionlint
   - ansible
+  - asimov
   - bat
   - brew-cask-completion
   - coreutils
