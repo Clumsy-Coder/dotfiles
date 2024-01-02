@@ -21,6 +21,7 @@ vim.filetype.add({
   },
   pattern = {
     [".*%.tmux.conf"] = "tmux",       -- files in dotfiles/tools/tmux/ folder
+    [".env.*"] = "conf"
   },
   -- extension = {
   --   -- conf = "config",
