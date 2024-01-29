@@ -1,0 +1,63 @@
+---
+- hosts: "local"
+  vars_files:
+    - "../vars/global-vars.yaml"
+    - "{{ ansible_env.DOTDIR }}/vars/wsl-ubuntu.yaml"
+
+  # roles:
+
+  tasks:
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/code-directory.yaml"
+      tags:
+        - code-directory
+        - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/apt.yaml"
+      tags:
+        - apt
+        - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/git.yaml"
+      tags:
+        - git
+        - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/lazygit.yaml"
+      tags:
+        - lazygit
+        - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/neofetch.yaml"
+      tags:
+        - neofetch
+        - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/zsh.yaml"
+      tags:
+        - zsh
+        - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/ohmyzsh.yaml"
+      tags:
+        - ohmyzsh
+        - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/nvm.yaml"
+      tags:
+        - nvm
+        - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/npm.yaml"
+      tags:
+        - npm
+        - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/neovim-source-build.yaml"
+      tags:
+        - neovim-source-build
+        - terminal
+
+    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/astronvim.yaml"
+      tags:
+        - astronvim
+        - terminal
