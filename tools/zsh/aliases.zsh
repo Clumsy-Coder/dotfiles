@@ -79,7 +79,7 @@ alias ls-all-dir='ls -la | grep "^d"'                       # list all folders, 
 alias ls-dir='ls -l | grep "^d"'                            # list all folders
 alias ls='lse'
 alias l='ls'
-alias lse='exa -lahFHmguU --git --group-directories-first'  # use 'exa' to view directory contents
+alias lse='exa -lahFHmguU --group-directories-first'  # use 'exa' to view directory contents
 alias cntFiles='ls -F | grep -v / | wc -l'                  # count number of folders in directory
 alias nnn='nnn -diHUD'
 
