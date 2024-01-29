@@ -91,6 +91,6 @@
 [gpg "ssh"]
   allowedSignersFile = /Users/umar/.ssh/allowed_signers
 [init]
-	defaultBranch = master
+	defaultBranch = main
 [diff "exif"]
 	textconv = exiftool
