@@ -1,0 +1,222 @@
+---
+
+# run setting up dotfiles using ansible in a CI server.
+# This is to check if the dotfiles are being setup properly without issues.
+#
+# Obtained from https://github.com/geerlingguy/mac-dev-playbook/blob/master/.github/workflows/ci.yml
+
+name: CI
+'on':
+  pull_request:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: "0 5 * * 4"
+
+env:
+  FORCE_COLOR: true     # display terminal colors
+  ANSIBLE_FORCE_COLOR: '1'
+
+jobs:
+
+  integration:
+    name: Integration
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: macos-latest
+            playbook: macos
+          # - os: macos-12
+          #   playbook: macos
+          # - os: ubuntu-latest
+          #   playbook: wsl-ubuntu
+          - os: ubuntu-22.04
+            playbook: wsl-ubuntu
+
+    steps:
+      - name: Check out the codebase.
+        uses: actions/checkout@v4
+
+      # - name: Uninstall GitHub Actions' built-in Homebrew.
+      #   if: startsWith(matrix.os, 'macos')
+      #   run: |
+      #     # Download and run the uninstall script.
+      #     curl -sLO https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh ;
+      #     chmod +x ./uninstall.sh ;
+      #     sudo ./uninstall.sh --force ;
+      #     # Clean up Homebrew directories.
+      #     sudo rm -rf /usr/local/Homebrew ;
+      #     sudo rm -rf /usr/local/Caskroom ;
+      #     sudo rm -rf /usr/local/bin/brew ;
+      #
+      # - name: Uninstall GitHub Actions' built-in browser installs.
+      #   if: startsWith(matrix.os, 'macos')
+      #   run: |
+      #     sudo rm -rf /Applications/Firefox.app
+      #     sudo rm -rf /Applications/Google\ Chrome.app
+      #     sudo rm -rf /usr/local/bin/firefox
+
+      # - name: Setup locales
+      #   if: startsWith(matrix.os, 'ubuntu')
+      #   run: |
+      #     export LANG=en_CA.UTF-8
+      #     export LC_ALL=en_CA.UTF-8
+      #     sudo locale-gen "en_CA.UTF-8"
+      #     sudo dpkg-reconfigure locales
+      #
+      # - name: Install python build tools
+      #   if: startsWith(matrix.os, 'ubuntu')
+      #   shell: bash
+      #   # Ref: https://github.com/pyenv/pyenv/wiki#suggested-build-environment
+      #   run: |
+      #     sudo apt-get update -qq -y ;
+      #     sudo apt-get install -qq -y make build-essential libssl-dev zlib1g-dev \
+      #     libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
+      #     libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev ffmpeg
+      #
+      # - name: Setup pyenv ENV variables
+      #   shell: bash
+      #   run: |
+      #     PYENV_ROOT="$HOME/.pyenv" ;
+      #     PYENV_BIN="$PYENV_ROOT/bin" ;
+      #     PYENV_SHIMS="$PYENV_ROOT/shims" ;
+      #     echo "$PYENV_BIN" >> "$GITHUB_PATH" ;
+      #     echo "$PYENV_SHIMS" >> "$GITHUB_PATH" ;
+      #     echo "PYENV_ROOT=$PYENV_ROOT" >> "$GITHUB_ENV" ;
+      #     # env ;
+
+      - name: Install pyenv via action .github/actions/setup-pyenv
+        uses: ./.github/actions/setup-pyenv
+
+      - name: Install latest python version
+        shell: bash
+        run: |
+          # trim whitespace. https://unix.stackexchange.com/a/205854
+          pythonVersion=$(pyenv install --list | grep --extended-regexp "^\s*[0-9][0-9.]*[0-9]\s*$" | tail -1 | awk '{$1=$1;print}')
+          pyenv install --skip-existing "$pythonVersion"
+          pyenv global "$pythonVersion"
+          python --version
+
+      - name: Install ansible
+        shell: bash
+        run: |
+          pip3 install ansible
+          pyenv rehash
+
+      - name: which ansible
+        shell: bash
+        run: |
+          which ansible ;
+          which ansible-galaxy ;
+          which ansible-playbook ;
+          ansible --version
+
+      - name: Install ansible-galaxy requirements
+        shell: bash
+        run: ansible-galaxy install -r requirements.yaml
+
+      - name: print env
+        shell: bash
+        run: env
+
+      - name: print pyenv shims
+        run: |
+          pyenv doctor
+          pyenv shims
+
+      # - name: remove last 6 lines in zshenv
+      #   if: startsWith(matrix.os, 'macos')
+      #   shell: bash
+      #   # obtained from https://www.baeldung.com/linux/remove-last-n-lines-of-file#bd-using-the-awk-command
+      #   run: awk -v n=6 'NR==FNR{total=NR;next} FNR==total-n+1{exit} 1' tools/zsh/.zshenv tools/zsh/.zshenv > tools/zsh/.zshenv
+
+      - name: cat tools/zsh/.zshenv
+        run: cat tools/zsh/.zshenv
+
+      # - name: add tools/zsh/.zshenv to bashrc
+      #   run: |
+      #     echo -e "\n source $(pwd)/tools/zsh/.zshenv" >> ~/.bashrc
+      #     echo "echo 'loaded zshenv'" >> tools/zsh/.zshenv
+
+      - name: ls HOME directory
+        run: |
+          ls -lah ~
+
+      - name: cat bashrc
+        run: cat ~/.bashrc
+
+      - name: cat bash_profile
+        run: cat ~/.bash_profile
+
+      - name: pwd current directory
+        run: pwd
+
+      - name: ls working directory
+        run: ls -lah
+
+      - name: sourcing tools/zsh/.zshenv
+        # if: startsWith(matrix.os, 'macos')
+        shell: bash
+        run: |
+          which ansible ;
+          which ansible-galaxy
+          which ansible-playbook ;
+          echo "PATH: $PATH"
+          # source tools/zsh/.zshenv
+          # source tools/zsh/exports.zsh
+          env
+          # add pyenv env into PATH again
+          # the PATH is reset when loading zshenv. Check last line in tools/zsh/.zshenv
+          PYENV_ROOT="$HOME/.pyenv"
+          PYENV_BIN="$PYENV_ROOT/bin"
+          PYENV_SHIMS="$PYENV_ROOT/shims" ;
+          echo "$PYENV_BIN" >> "$GITHUB_PATH" ;
+          echo "$PYENV_SHIMS" >> "$GITHUB_PATH" ;
+          echo "PYENV_ROOT=$PYENV_ROOT" >> "$GITHUB_ENV"
+          # print pyenv env
+          echo "PYENV_ROOT: $PYENV_ROOT"
+          echo "PYENV_BIN: $PYENV_BIN"
+          echo "PYENV_SHIMS: $PYENV_SHIMS"
+          echo "GITHUB_ENV: $GITHUB_ENV"
+          echo "GITHUB_PATH: $GITHUB_PATH"
+          echo "PATH: $PATH"
+          # source "$HOME/.bashrc"
+          # which ansible ;
+          # which ansible-galaxy
+          # which ansible-playbook ;
+          echo "XDG_CONFIG_HOME=$HOME/config" >> "$GITHUB_ENV" ;
+          echo "$XDG_CONFIG_HOME" ;
+          DOTDIR="$(pwd)" ;
+          echo "DOTDIR=$DOTDIR" >> "$GITHUB_ENV" ;
+
+      - name: create temp directory
+        shell: bash
+        run: |
+          echo "$XDG_CONFIG_HOME"
+          mkdir -p "$XDG_CONFIG_HOME/ansible/tmp"
+
+      - name: Run playbook '${{ matrix.playbook }}'
+        shell: bash
+        run: |
+          # which ansible ;
+          # which ansible-playbook ;
+          # source tools/zsh/.zshenv ;
+          # source tools/zsh/exports.zsh
+          # source tools/zsh/exports.zsh ;
+          PYENV_ROOT="$HOME/.pyenv"
+          PYENV_BIN="$PYENV_ROOT/bin"
+          PYENV_SHIMS="$PYENV_ROOT/shims" ;
+          # DOTDIR="$(pwd)" ;
+          echo "$PYENV_BIN" >> "$GITHUB_PATH" ;
+          echo "$PYENV_SHIMS" >> "$GITHUB_PATH" ;
+          echo "PYENV_ROOT=$PYENV_ROOT" >> "$GITHUB_ENV"
+          # echo "DOTDIR=$DOTDIR" >> "$GITHUB_ENV"
+          unset ANSIBLE_HOME ;
+          unset ANSIBLE_CONFIG ;
+          unset ANSIBLE_GALAXY_CACHE_DIR ;
+          echo "DOTDIR: $DOTDIR"
+          env
+          ANSIBLE_CONFIG=./ansible.cfg ansible-playbook playbooks/${{ matrix.playbook }}.yaml --skip-tags "brew, mas, dock"
