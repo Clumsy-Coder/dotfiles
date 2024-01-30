@@ -7,6 +7,10 @@
   # roles:
 
   tasks:
+    - name: "print env"
+      debug:
+        msg: "{{ ansible_env }}"
+
     - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/code-directory.yaml"
       tags:
         - code-directory
