@@ -1,0 +1,38 @@
+---
+
+# this taskfile will look for var `apt_packages` to install apt packages.
+#   make sure to load it in the playbook
+
+- name: "apt: update apt package repository"
+  apt:
+    update_cache: true
+  become: true
+  tags:
+    - apt
+    - terminal
+
+- name: "apt: upgrade installed packages"
+  apt:
+    upgrade: "yes"
+  become: true
+  tags:
+    - apt
+    - terminal
+
+- name: "apt: install apt packages"
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ apt_packages }}"
+  become: true
+  tags:
+    - apt
+    - terminal
+
+- name: "apt: autoremove apt packages"
+  apt:
+    autoremove: true
+  become: true
+  tags:
+    - apt
+    - terminal
