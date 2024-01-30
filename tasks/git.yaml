@@ -26,6 +26,14 @@
     - git
     - terminal
 
+- name: "git: create ~/.ssh directory"
+  file:
+    path: "{{ ansible_env.HOME }}/.ssh"
+    state: directory
+  tags:
+    - git
+    - terminal
+
 - name: "git: Add git allowed signers to {{ ansible_env.GIT_ALLOWED_SIGNERS }}"
   file:
     src: "{{ ansible_env.DOTDIR }}/tools/git/allowed_signers"
