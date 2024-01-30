@@ -1,5 +1,13 @@
 ---
 
+- name: "git: create {{ ansible_env.XDG_CONFIG_HOME }}/zsh directory"
+  file:
+    path: "{{ ansible_env.XDG_CONFIG_HOME }}/zsh"
+    state: directory
+  tags:
+    - zsh
+    - terminal
+
 # link zshrc file
 - name: "zsh: link zshrc to {{ ansible_env.ZSHRC_PATH }}"
   file:
