@@ -64,6 +64,10 @@
   shell:
     cmd: chsh -s /bin/zsh {{ ansible_env.USER }}
   become: true
+  ignore_errors: true
+  when:
+    - ansible_env.SHELL != '/bin/zsh'
+    - lookup('ansible.builtin.env', 'USER')
   tags:
     - zsh
     - terminal
