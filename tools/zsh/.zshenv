@@ -15,7 +15,7 @@ export XDG_CACHE_HOME="$HOME/.cache"         # Where user-specific non-essential
 # -------------------------------------------------------------------------------------------------#
 
 # DIRECTORIES
-export DOTDIR=$(git rev-parse --show-toplevel)                      # used by zshenv and ansible (to link files, etc)
+export DOTDIR=$(git rev-parse --show-toplevel 2> /dev/null || echo "$HOME/dotfiles")  # used by zshenv and ansible (to link files, etc)
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export ZSCRIPTDIR="$DOTDIR/tools/zsh"
 export HISTFILE="$XDG_STATE_HOME/zsh/history"                       # history
