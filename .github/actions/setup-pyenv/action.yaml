@@ -1,0 +1,47 @@
+---
+
+# obtained from
+# https://github.com/mlflow/mlflow/blob/master/.github/actions/setup-pyenv/action.yml
+
+name: "setup-pyenv"
+description: "Setup pyenv"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Setup locales
+      shell: bash
+      if: runner.os == 'Linux'
+      run: |
+        export LANG=en_CA.UTF-8
+        export LC_ALL=en_CA.UTF-8
+        sudo locale-gen "en_CA.UTF-8"
+        sudo dpkg-reconfigure locales
+
+    - name: Install python build tools
+      shell: bash
+      if: runner.os == 'Linux'
+      # Ref: https://github.com/pyenv/pyenv/wiki#suggested-build-environment
+      run: |
+        sudo apt-get update -y
+        sudo apt-get install -y make build-essential libssl-dev zlib1g-dev \
+        libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
+        libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev ffmpeg
+
+    - name: Setup pyenv ENV variables
+      shell: bash
+      run: |
+        PYENV_ROOT="$HOME/.pyenv" ;
+        PYENV_BIN="$PYENV_ROOT/bin" ;
+        PYENV_SHIMS="$PYENV_ROOT/shims" ;
+        echo "$PYENV_BIN" >> "$GITHUB_PATH" ;
+        echo "$PYENV_SHIMS" >> "$GITHUB_PATH" ;
+        echo "PYENV_ROOT=$PYENV_ROOT" >> "$GITHUB_ENV" ;
+
+    - name: Install pyenv
+      shell: bash
+      run: curl https://pyenv.run | bash
+
+    - name: Check pyenv version
+      shell: bash
+      run: pyenv --version
