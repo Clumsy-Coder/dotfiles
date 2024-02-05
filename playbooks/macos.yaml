@@ -5,6 +5,7 @@
     - "../vars/homebrew.yaml"
     - "../vars/mas.yaml"
     - "../vars/macos-docks.yaml"
+
   roles:
     - role: elliotweiser.osx-command-line-tools
 
@@ -28,6 +29,26 @@
       ignore_errors: true
 
   tasks:
+    # run zshenv and print out all env in the shell
+    # store the output to a register
+    # this will be used in tasks when using the env. no need to run zshenv before running ansible-playbook
+    #
+    # obtained from
+    # https://stackoverflow.com/a/74932715/3053548
+    - name: source zshenv
+      shell:
+        cmd: source ../tools/zsh/.zshenv; env
+      register: out
+      changed_when: false
+      tags: always
+
+    # extract the envs and store them as a dictionary
+    - name: store zshenv as fact
+      set_fact:
+        zshenv: "{{ dict( out.stdout.splitlines() | map('split', '=', 1) ) }}"
+        changed_when: false
+      tags: always
+
     - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/code-directory.yaml"
       tags:
         - code-directory
