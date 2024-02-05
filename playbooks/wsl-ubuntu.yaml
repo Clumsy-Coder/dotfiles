@@ -33,57 +33,57 @@
       debug:
         msg: "{{ zshenv }}"
 
-    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/code-directory.yaml"
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/code-directory.yaml"
       tags:
         - code-directory
         - terminal
 
-    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/apt.yaml"
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/apt.yaml"
       tags:
         - apt
         - terminal
 
-    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/git.yaml"
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/git.yaml"
       tags:
         - git
         - terminal
 
-    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/lazygit.yaml"
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/lazygit.yaml"
       tags:
         - lazygit
         - terminal
 
-    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/neofetch.yaml"
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/neofetch.yaml"
       tags:
         - neofetch
         - terminal
 
-    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/zsh.yaml"
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/zsh.yaml"
       tags:
         - zsh
         - terminal
 
-    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/ohmyzsh.yaml"
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/ohmyzsh.yaml"
       tags:
         - ohmyzsh
         - terminal
 
-    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/nvm.yaml"
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/nvm.yaml"
       tags:
         - nvm
         - terminal
 
-    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/npm.yaml"
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/npm.yaml"
       tags:
         - npm
         - terminal
 
-    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/neovim-source-build.yaml"
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/neovim-source-build.yaml"
       tags:
         - neovim-source-build
         - terminal
 
-    - include_tasks: "{{ ansible_env.DOTDIR }}/tasks/astronvim.yaml"
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/astronvim.yaml"
       tags:
         - astronvim
         - terminal
