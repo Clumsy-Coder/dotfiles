@@ -1,5 +1,5 @@
 ---
-- include_vars: "{{ ansible_env.DOTDIR }}/vars/npm-packages.yaml"
+- include_vars: "{{ zshenv.DOTDIR }}/vars/npm-packages.yaml"
   tags:
     - npm
     - terminal
@@ -7,7 +7,7 @@
 # used for finding the npm executable installed by nvm
 - name: "npm: Store current nodejs version being used by nvm"
   shell:
-    cmd: "source {{ ansible_env.NVM_DIR}}/nvm.sh && nvm current"
+    cmd: "source {{ zshenv.NVM_DIR}}/nvm.sh && nvm current"
     executable: /bin/bash
   register: node_version
   changed_when: false
@@ -19,11 +19,11 @@
   npm:
     name: "{{ item }}"
     global: true
-    # executable: "{{ ansible_env.NVM_DIR}}/versions/node/{{ node_version.stdout }}/bin/npm"
+    # executable: "{{ zshenv.NVM_DIR}}/versions/node/{{ node_version.stdout }}/bin/npm"
   loop: "{{ npm_packages }}"
   environment:
     # obtained from https://truongtx.me/2015/11/02/ansible-install-and-work-with-nodejs-using-nvm#install-npm-tools-with-node-in-nvm
-    PATH: "{{ ansible_env.NVM_DIR}}/versions/node/{{ node_version.stdout }}/bin:{{ ansible_env.PATH }}"
+    PATH: "{{ zshenv.NVM_DIR}}/versions/node/{{ node_version.stdout }}/bin:{{ ansible_env.PATH }}"
   tags:
     - npm
     - terminal

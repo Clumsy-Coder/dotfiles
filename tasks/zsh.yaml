@@ -1,18 +1,18 @@
 ---
 
-- name: "git: create {{ ansible_env.XDG_CONFIG_HOME }}/zsh directory"
+- name: "git: create {{ zshenv.XDG_CONFIG_HOME }}/zsh directory"
   file:
-    path: "{{ ansible_env.XDG_CONFIG_HOME }}/zsh"
+    path: "{{ zshenv.XDG_CONFIG_HOME }}/zsh"
     state: directory
   tags:
     - zsh
     - terminal
 
 # link zshrc file
-- name: "zsh: link zshrc to {{ ansible_env.ZSHRC_PATH }}"
+- name: "zsh: link zshrc to {{ zshenv.ZSHRC_PATH }}"
   file:
-    src: "{{ ansible_env.DOTDIR }}/tools/zsh/.zshrc"
-    dest: "{{ ansible_env.ZSHRC_PATH }}"
+    src: "{{ zshenv.DOTDIR }}/tools/zsh/.zshrc"
+    dest: "{{ zshenv.ZSHRC_PATH }}"
     state: link
     force: true
   tags:
@@ -20,39 +20,39 @@
     - terminal
 
 # link zshenv file
-- name: "zsh: link zshenv to {{ ansible_env.ZSHENV_PATH }}"
+- name: "zsh: link zshenv to {{ zshenv.ZSHENV_PATH }}"
   file:
-    src: "{{ ansible_env.DOTDIR }}/tools/zsh/.zshenv"
-    dest: "{{ ansible_env.ZSHENV_PATH }}"
+    src: "{{ zshenv.DOTDIR }}/tools/zsh/.zshenv"
+    dest: "{{ zshenv.ZSHENV_PATH }}"
     state: link
   tags:
     - zsh
     - terminal
 
 # link zshenv file to $HOME
-- name: "zsh: link zshenv to {{ ansible_env.HOME }}"
+- name: "zsh: link zshenv to {{ zshenv.HOME }}"
   file:
-    src: "{{ ansible_env.DOTDIR }}/tools/zsh/.zshenv"
-    dest: "{{ ansible_env.HOME }}/.zshenv"
+    src: "{{ zshenv.DOTDIR }}/tools/zsh/.zshenv"
+    dest: "{{ zshenv.HOME }}/.zshenv"
     state: link
   tags:
     - zsh
     - terminal
 
 # link zlogin file
-- name: "zsh: link zlogin to {{ ansible_env.ZLOGIN_PATH }}"
+- name: "zsh: link zlogin to {{ zshenv.ZLOGIN_PATH }}"
   file:
-    src: "{{ ansible_env.DOTDIR }}/tools/zsh/.zlogin"
-    dest: "{{ ansible_env.ZLOGIN_PATH }}"
+    src: "{{ zshenv.DOTDIR }}/tools/zsh/.zlogin"
+    dest: "{{ zshenv.ZLOGIN_PATH }}"
     state: link
   tags:
     - zsh
     - terminal
 
-- name: "zsh: link powerlevel10k config to {{ ansible_env.ZDOTDIR }}/.p10k.zsh"
+- name: "zsh: link powerlevel10k config to {{ zshenv.ZDOTDIR }}/.p10k.zsh"
   file:
-    src: "{{ ansible_env.ZSH_THEME_DEFAULT }}"
-    dest: "{{ ansible_env.ZDOTDIR }}/.p10k.zsh"
+    src: "{{ zshenv.ZSH_THEME_DEFAULT }}"
+    dest: "{{ zshenv.ZDOTDIR }}/.p10k.zsh"
     state: link
   when: "'powerlevel10k' in lookup('env', 'ZSH_THEME_DEFAULT')"
   tags:
@@ -62,11 +62,11 @@
 # change default shell to ZSH
 - name: "zsh: change default shell to ZSH"
   shell:
-    cmd: chsh -s /bin/zsh {{ ansible_env.USER }}
+    cmd: chsh -s /bin/zsh {{ zshenv.USER }}
   become: true
   ignore_errors: true
   when:
-    - ansible_env.SHELL != '/bin/zsh'
+    - zshenv.SHELL != '/bin/zsh'
     - lookup('ansible.builtin.env', 'USER')
   tags:
     - zsh

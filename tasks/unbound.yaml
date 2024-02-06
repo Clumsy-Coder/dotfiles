@@ -4,7 +4,7 @@
 
 - name: "unbound: link unbound config file"
   file:
-    src: "{{ ansible_env.DOTDIR }}/tools/unbound/pi-hole.conf"
+    src: "{{ zshenv.DOTDIR }}/tools/unbound/pi-hole.conf"
     dest: "/etc/unbound/unbound.conf.d/pi-hole.conf"
   become: true
   tags:

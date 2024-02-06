@@ -1,6 +1,6 @@
 ---
 
-- include_vars: "{{ ansible_env.DOTDIR }}/vars/pip3-packages.yaml"
+- include_vars: "{{ zshenv.DOTDIR }}/vars/pip3-packages.yaml"
   tags:
     - pip3
     - terminal

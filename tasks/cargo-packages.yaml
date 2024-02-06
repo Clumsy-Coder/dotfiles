@@ -1,6 +1,6 @@
 ---
 
-- include_vars: "{{ ansible_env.DOTDIR }}/vars/rust-packages.yaml"
+- include_vars: "{{ zshenv.DOTDIR }}/vars/rust-packages.yaml"
   tags:
     - cargo-packages
     - terminal

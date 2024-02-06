@@ -1,6 +1,6 @@
 ---
 
-- include_vars: "{{ ansible_env.DOTDIR }}/vars/vscode-extensions.yaml"
+- include_vars: "{{ zshenv.DOTDIR }}/vars/vscode-extensions.yaml"
   tags:
     - vscode-extensions
     - gui

@@ -2,17 +2,17 @@
 
 # Install Node Version Manager
 
-- name: "nvm: Create directory for Node Version Manager on {{ ansible_env.NVM_DIR }}"
+- name: "nvm: Create directory for Node Version Manager on {{ zshenv.NVM_DIR }}"
   file:
-    path: "{{ ansible_env.NVM_DIR }}"
+    path: "{{ zshenv.NVM_DIR }}"
     state: directory
   tags:
     - terminal
     - nvm
 
-- name: "nvm: Create directory for NPM  on {{ ansible_env.NPM_DIR }}"
+- name: "nvm: Create directory for NPM  on {{ zshenv.NPM_DIR }}"
   file:
-    path: "{{ ansible_env.NPM_DIR }}"
+    path: "{{ zshenv.NPM_DIR }}"
     state: directory
   tags:
     - terminal
@@ -20,8 +20,8 @@
 
 - name: "nvm: link NPM config file"
   file:
-    src: "{{ ansible_env.DOTDIR}}/tools/npm/.npmrc"
-    dest: "{{ ansible_env.NPM_CONFIG_USERCONFIG }}"
+    src: "{{ zshenv.DOTDIR}}/tools/npm/.npmrc"
+    dest: "{{ zshenv.NPM_CONFIG_USERCONFIG }}"
     state: link
   tags:
     - terminal
@@ -36,7 +36,7 @@
 
 - name: "nvm: Install latest NodeJS version"
   shell:
-    cmd: "source {{ ansible_env.NVM_DIR }}/nvm.sh && nvm install node --default --latest-npm"
+    cmd: "source {{ zshenv.NVM_DIR }}/nvm.sh && nvm install node --default --latest-npm"
     executable: /bin/bash
   tags:
     - terminal

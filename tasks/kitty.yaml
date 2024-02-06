@@ -1,10 +1,10 @@
 ---
 
 # link Kitty config folder
-- name: "kitty: link folder to {{ ansible_env.KITTY_CONFIG_DIRECTORY }}"
+- name: "kitty: link folder to {{ zshenv.KITTY_CONFIG_DIRECTORY }}"
   file:
-    src: "{{ ansible_env.DOTDIR }}/tools/kitty/"
-    dest: "{{ ansible_env.KITTY_CONFIG_DIRECTORY }}"
+    src: "{{ zshenv.DOTDIR }}/tools/kitty/"
+    dest: "{{ zshenv.KITTY_CONFIG_DIRECTORY }}"
     state: link
   tags:
     - gui

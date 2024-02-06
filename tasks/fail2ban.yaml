@@ -16,8 +16,8 @@
 
 - name: "fail2ban: link config file to /etc/fail2ban/jail.local"
   file:
-    src: "{{ ansible_env.DOTDIR }}/tools/fail2ban/jail.local"
-    dest: "{{ ansible_env.FAIL2BAN_JAIL_FILE_PATH }}"
+    src: "{{ zshenv.DOTDIR }}/tools/fail2ban/jail.local"
+    dest: "{{ zshenv.FAIL2BAN_JAIL_FILE_PATH }}"
     state: link
   become: true
   tags:

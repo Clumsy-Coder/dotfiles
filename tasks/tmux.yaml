@@ -6,46 +6,46 @@
     path: "{{ item }}"
     state: absent
   with_items:
-    - "{{ ansible_env.TMUX_CONFIG_DIR_PATH }}"
-    - "{{ ansible_env.TMUX_PLUGIN_CACHE_PATH }}"
-    - "{{ ansible_env.OH_MY_TMUX_DIR_PATH }}"
+    - "{{ zshenv.TMUX_CONFIG_DIR_PATH }}"
+    - "{{ zshenv.TMUX_PLUGIN_CACHE_PATH }}"
+    - "{{ zshenv.OH_MY_TMUX_DIR_PATH }}"
   tags:
     - tmux
     - terminal
 
 # clone oh-my-tmux to ~/.config/oh-my-tmux/
-- name: "tmux: git clone oh-my-tmux repo to {{ ansible_env.OH_MY_TMUX_DIR_PATH }}"
+- name: "tmux: git clone oh-my-tmux repo to {{ zshenv.OH_MY_TMUX_DIR_PATH }}"
   git:
     repo: "https://github.com/gpakosz/.tmux.git"
-    dest: "{{ ansible_env.OH_MY_TMUX_DIR_PATH }}"
+    dest: "{{ zshenv.OH_MY_TMUX_DIR_PATH }}"
   tags:
     - tmux
     - terminal
 
 # create tmux directory on ~/.config/
-- name: "tmux: create tmux directory in {{ ansible_env.TMUX_CONFIG_DIR_PATH }}"
+- name: "tmux: create tmux directory in {{ zshenv.TMUX_CONFIG_DIR_PATH }}"
   file:
-    path: "{{ ansible_env.TMUX_CONFIG_DIR_PATH }}"
+    path: "{{ zshenv.TMUX_CONFIG_DIR_PATH }}"
     state: directory
   tags:
     - tmux
     - terminal
 
 # link oh-my-tmux config file
-- name: "tmux: link oh-my-tmux config file {{ ansible_env.OH_MY_TMUX_CONFIG_PATH }} to {{ ansible_env.TMUX_CONFIG_PATH }}"
+- name: "tmux: link oh-my-tmux config file {{ zshenv.OH_MY_TMUX_CONFIG_PATH }} to {{ ansible_env.TMUX_CONFIG_PATH }}"
   file:
-    src: "{{ ansible_env.OH_MY_TMUX_CONFIG_PATH }}"
-    dest: "{{ ansible_env.TMUX_CONFIG_PATH }}"
+    src: "{{ zshenv.OH_MY_TMUX_CONFIG_PATH }}"
+    dest: "{{ zshenv.TMUX_CONFIG_PATH }}"
     state: link
   tags:
     - tmux
     - terminal
 
 # link local tmux config file
-- name: "tmux: link local tmux config file {{ ansible_env.DOTDIR }}/tools/tmux.conf to {{ ansible_env.TMUX_CONFIG_LOCAL_PATH }}"
+- name: "tmux: link local tmux config file {{ zshenv.DOTDIR }}/tools/tmux.conf to {{ ansible_env.TMUX_CONFIG_LOCAL_PATH }}"
   file:
-    src: "{{ ansible_env.DOTDIR }}/tools/tmux/tmux.conf"
-    dest: "{{ ansible_env.TMUX_CONFIG_LOCAL_PATH }}"
+    src: "{{ zshenv.DOTDIR }}/tools/tmux/tmux.conf"
+    dest: "{{ zshenv.TMUX_CONFIG_LOCAL_PATH }}"
     state: link
   tags:
     - tmux

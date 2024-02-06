@@ -1,6 +1,6 @@
 ---
 
-- include_vars: "{{ ansible_env.DOTDIR }}/vars/astronvim.yaml"
+- include_vars: "{{ zshenv.DOTDIR }}/vars/astronvim.yaml"
   tags:
     - astronvim
     - terminal
@@ -11,12 +11,12 @@
     path: "{{ item }}"
     state: absent
   with_items:
-    - "{{ ansible_env.NVIM_CONFIG_DIR_PATH }}"
-    - "{{ ansible_env.NVIM_PACKER_DIR_PATH }}"
-    - "{{ ansible_env.NVIM_PACKER_COMPILED_PATH }}"
-    - "{{ ansible_env.XDG_DATA_HOME }}/nvim/lazy"
-    - "{{ ansible_env.XDG_DATA_HOME }}/nvim/lazy-lock.json"
-    - "{{ ansible_env.XDG_CACHE_HOME }}/nvim"
+    - "{{ zshenv.NVIM_CONFIG_DIR_PATH }}"
+    - "{{ zshenv.NVIM_PACKER_DIR_PATH }}"
+    - "{{ zshenv.NVIM_PACKER_COMPILED_PATH }}"
+    - "{{ zshenv.XDG_DATA_HOME }}/nvim/lazy"
+    - "{{ zshenv.XDG_DATA_HOME }}/nvim/lazy-lock.json"
+    - "{{ zshenv.XDG_CACHE_HOME }}/nvim"
   tags:
     - astronvim
     - terminal
@@ -25,7 +25,7 @@
 - name: "astronvim: git clone Astronvim repo"
   git:
     repo: "https://github.com/AstroNvim/AstroNvim"
-    dest: "{{ ansible_env.NVIM_CONFIG_DIR_PATH }}"
+    dest: "{{ zshenv.NVIM_CONFIG_DIR_PATH }}"
   tags:
     - astronvim
     - terminal
@@ -33,8 +33,8 @@
 # link astronvim config files
 - name: "astronvim: link config file to astronvim"
   file:
-    src: "{{ ansible_env.DOTDIR }}/tools/astronvim"
-    dest: "{{ ansible_env.ASTRO_NVIM_CONFIG_DIR_PATH }}"
+    src: "{{ zshenv.DOTDIR }}/tools/astronvim"
+    dest: "{{ zshenv.ASTRO_NVIM_CONFIG_DIR_PATH }}"
     state: link
   tags:
     - astronvim

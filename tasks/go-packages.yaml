@@ -1,7 +1,7 @@
 ---
 
 # load var file `./vars/go-packages.yaml`
-- include_vars: "{{ ansible_env.DOTDIR }}/vars/go-packages.yaml"
+- include_vars: "{{ zshenv.DOTDIR }}/vars/go-packages.yaml"
   tags:
     - go-packages
     - terminal

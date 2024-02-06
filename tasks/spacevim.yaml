@@ -7,16 +7,16 @@
     path: "{{ item }}"
     state: absent
   with_items:
-    - "{{ ansible_env.HOME }}/.vim"
-    - "{{ ansible_env.HOME }}/.SpaceVim"
-    - "{{ ansible_env.HOME }}/.SpaceVim.d"
-    - "{{ ansible_env.XDG_CONFIG_HOME }}/vim"
-    - "{{ ansible_env.XDG_CONFIG_HOME }}/nvim"
-    - "{{ ansible_env.XDG_DATA_HOME }}/nvim"
-    - "{{ ansible_env.XDG_STATE_HOME }}/nvim"
-    - "{{ ansible_env.XDG_CACHE_HOME }}/nvim"
-    - "{{ ansible_env.SPACEVIMDIR }}"
-    # - "{{ ansible_env.XDG_CONFIG_HOME }}/SpaceVim"
+    - "{{ zshenv.HOME }}/.vim"
+    - "{{ zshenv.HOME }}/.SpaceVim"
+    - "{{ zshenv.HOME }}/.SpaceVim.d"
+    - "{{ zshenv.XDG_CONFIG_HOME }}/vim"
+    - "{{ zshenv.XDG_CONFIG_HOME }}/nvim"
+    - "{{ zshenv.XDG_DATA_HOME }}/nvim"
+    - "{{ zshenv.XDG_STATE_HOME }}/nvim"
+    - "{{ zshenv.XDG_CACHE_HOME }}/nvim"
+    - "{{ zshenv.SPACEVIMDIR }}"
+    # - "{{ zshenv.XDG_CONFIG_HOME }}/SpaceVim"
   tags:
     - spacevim
     - terminal
@@ -35,9 +35,9 @@
 
 - name: "spacevim: link config file to ~/.SpaceVim.d/"
   file:
-    src: "{{ ansible_env.DOTDIR }}/tools/spacevim"
-    # dest: "{{ ansible_env.HOME }}/.SpaceVim.d"
-    dest: "{{ ansible_env.SPACEVIMDIR }}"
+    src: "{{ zshenv.DOTDIR }}/tools/spacevim"
+    # dest: "{{ zshenv.HOME }}/.SpaceVim.d"
+    dest: "{{ zshenv.SPACEVIMDIR }}"
     state: link
   tags:
     - spacevim

@@ -1,17 +1,17 @@
 ---
 
-- name: "lazygit: Create lazygit directory in {{ ansible_env.LAZYGIT_CONFIG_DIR_PATH }}"
+- name: "lazygit: Create lazygit directory in {{ zshenv.LAZYGIT_CONFIG_DIR_PATH }}"
   file:
-    path: "{{ ansible_env.LAZYGIT_CONFIG_DIR_PATH }}"
+    path: "{{ zshenv.LAZYGIT_CONFIG_DIR_PATH }}"
     state: directory
   tags:
     - terminal
     - lazygit
 
-- name: "lazygit: Add LazyGit config to {{ ansible_env.LAZYGIT_CONFIG_PATH }}"
+- name: "lazygit: Add LazyGit config to {{ zshenv.LAZYGIT_CONFIG_PATH }}"
   file:
-    src: "{{ ansible_env.DOTDIR }}/tools/git/lazygit.yml"
-    dest: "{{ ansible_env.LAZYGIT_CONFIG_PATH }}"
+    src: "{{ zshenv.DOTDIR }}/tools/git/lazygit.yml"
+    dest: "{{ zshenv.LAZYGIT_CONFIG_PATH }}"
     state: link
   tags:
     - terminal

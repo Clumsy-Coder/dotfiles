@@ -2,7 +2,7 @@
 
 - name: "pihole-cron: link pihole cron file"
   file:
-    src: "{{ ansible_env.DOTDIR }}/tools/cron/pihole-autoupdate"
+    src: "{{ zshenv.DOTDIR }}/tools/cron/pihole-autoupdate"
     dest: "/etc/cron.daily/pihole-autoupdate"
   become: true
   tags:

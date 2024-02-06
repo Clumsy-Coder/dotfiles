@@ -1,26 +1,26 @@
 ---
 
-- name: "git: Create git directory in {{ ansible_env.GIT_CONFIG_DIR_PATH }}"
+- name: "git: Create git directory in {{ zshenv.GIT_CONFIG_DIR_PATH }}"
   file:
-    path: "{{ ansible_env.GIT_CONFIG_DIR_PATH }}"
+    path: "{{ zshenv.GIT_CONFIG_DIR_PATH }}"
     state: directory
   tags:
     - git
     - terminal
 
-- name: "git: Add gitconfig file to {{ ansible_env.GIT_CONFIG_PATH }}"
+- name: "git: Add gitconfig file to {{ zshenv.GIT_CONFIG_PATH }}"
   file:
-    src: "{{ ansible_env.DOTDIR }}/tools/git/.gitconfig"
-    dest: "{{ ansible_env.GIT_CONFIG_PATH }}"
+    src: "{{ zshenv.DOTDIR }}/tools/git/.gitconfig"
+    dest: "{{ zshenv.GIT_CONFIG_PATH }}"
     state: link
   tags:
     - git
     - terminal
 
-- name: "git: Add gitignore file to {{ ansible_env.GIT_IGNORE_GLOBAL_PATH }}"
+- name: "git: Add gitignore file to {{ zshenv.GIT_IGNORE_GLOBAL_PATH }}"
   file:
-    src: "{{ ansible_env.DOTDIR }}/tools/git/.gitignore_global"
-    dest: "{{ ansible_env.GIT_IGNORE_GLOBAL_PATH }}"
+    src: "{{ zshenv.DOTDIR }}/tools/git/.gitignore_global"
+    dest: "{{ zshenv.GIT_IGNORE_GLOBAL_PATH }}"
     state: link
   tags:
     - git
@@ -28,16 +28,16 @@
 
 - name: "git: create ~/.ssh directory"
   file:
-    path: "{{ ansible_env.HOME }}/.ssh"
+    path: "{{ zshenv.HOME }}/.ssh"
     state: directory
   tags:
     - git
     - terminal
 
-- name: "git: Add git allowed signers to {{ ansible_env.GIT_ALLOWED_SIGNERS }}"
+- name: "git: Add git allowed signers to {{ zshenv.GIT_ALLOWED_SIGNERS }}"
   file:
-    src: "{{ ansible_env.DOTDIR }}/tools/git/allowed_signers"
-    dest: "{{ ansible_env.GIT_ALLOWED_SIGNERS }}"
+    src: "{{ zshenv.DOTDIR }}/tools/git/allowed_signers"
+    dest: "{{ zshenv.GIT_ALLOWED_SIGNERS }}"
     state: link
   tags:
     - git

@@ -47,9 +47,9 @@
     - terminal
 
 # obtained from https://stackoverflow.com/a/35021607/3053548
-- name: "pyenv: check if {{ ansible_env.PYENV_DIR_PATH }} exists"
+- name: "pyenv: check if {{ zshenv.PYENV_DIR_PATH }} exists"
   stat:
-    path: "{{ ansible_env.PYENV_DIR_PATH }}"
+    path: "{{ zshenv.PYENV_DIR_PATH }}"
   changed_when: false
   register: pyenv_dir_stats
   tags:
