@@ -1672,4 +1672,10 @@ typeset -g POWERLEVEL9K_CONFIG_FILE=${${(%):-%x}:a}
 
 # disable gitstatusd
 # obtained from https://github.com/romkatv/powerlevel10k/issues/246#issuecomment-538896199
-POWERLEVEL9K_DISABLE_GITSTATUS=true
+if [[ -e "/proc/device-tree/model" ]]; then
+  # disable gitstatusd if running on Raspberry pi
+  if grep -qi "raspberry" "/proc/device-tree/model" ; then
+    POWERLEVEL9K_DISABLE_GITSTATUS=true
+  fi
+fi
+
