@@ -1,0 +1,27 @@
+---
+
+# vars for setting up dotfiles in windows
+
+choco_packages:
+  - 7zip.install
+  - adobereader
+  - adobereader
+  - autodesk-fusion360
+  - discord
+  - docker-desktop
+  - firefox
+  - git
+  - googlechrome
+  - itunes
+  - logioptionsplus
+  - notepadplusplus.install
+  - obsidian
+  - postman
+  - prusaslicer
+  - qbittorrent
+  - rpi-imager
+  - spotify
+  - virtualbox
+  - vlc
+  - vscode
+  - wireshark
