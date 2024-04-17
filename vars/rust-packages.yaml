@@ -2,6 +2,6 @@
 
 rust_packages:
   # - stylua
-  - git-delta
-  - bottom
   - bob
+  - bottom
+  - git-delta
