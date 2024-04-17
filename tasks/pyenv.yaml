@@ -25,6 +25,7 @@
     - xz-utils
     - zlib1g-dev
   when: ansible_os_family == "Debian"
+  become: true
   tags:
     - pyenv
     - terminal
@@ -43,6 +44,7 @@
     - xz
     - zlib
   when: ansible_os_family == "Darwin"
+  become: true
   tags:
     - pyenv
     - terminal
