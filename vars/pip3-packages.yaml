@@ -1,11 +1,11 @@
 ---
 
 pip3_packages:
-  - codespell
-  - yamllint
+  # - codespell
+  # - yamllint
+  # - vim-vint
+  # - gitlint
   - libtmux
-  - gitlint
-  - vim-vint
   - dooit
   - ansible
   - ranger
