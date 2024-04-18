@@ -87,3 +87,8 @@
       tags:
         - astronvim
         - terminal
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/tmux.yaml"
+      tags:
+        - tmux
+        - terminal
