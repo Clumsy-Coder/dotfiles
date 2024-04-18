@@ -102,3 +102,8 @@
       tags:
         - pyenv
         - terminal
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/rust.yaml"
+      tags:
+        - rust
+        - terminal
