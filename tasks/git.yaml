@@ -42,3 +42,26 @@
   tags:
     - git
     - terminal
+
+# ----------------------------------------------------------------------------------------------- #
+
+# symlink `/usr/local/bin/gh` to `/usr/bin/gh`
+- name: "git: check `gh` location"
+  stat:
+    path: "/usr/local/bin/gh"
+  changed_when: false
+  register: gh_stats
+  tags:
+    - git
+    - terminal
+
+- name: "git: add symlink of `gh` to /use/local/bin"
+  file:
+    src: "/usr/bin/gh"
+    dest: "/usr/local/bin/gh"
+    state: link
+  become: true
+  tags:
+    - git
+    - terminal
+  when: not gh_stats.stat.exists
