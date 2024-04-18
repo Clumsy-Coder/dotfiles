@@ -17,11 +17,13 @@ apt_packages:
   - git
   - golang
   - htop
+  - luarocks
   - most
   - nano
   - ncdu
   - neofetch
   - ripgrep
+  - ruby-dev
   - tldr
   - tmux
   - trash-cli
