@@ -112,3 +112,8 @@
       tags:
         - cargo-packages
         - terminal
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/pip3.yaml"
+      tags:
+        - pip3
+        - terminal
