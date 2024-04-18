@@ -107,3 +107,8 @@
       tags:
         - rust
         - terminal
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/cargo-packages.yaml"
+      tags:
+        - cargo-packages
+        - terminal
