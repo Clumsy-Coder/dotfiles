@@ -92,3 +92,8 @@
       tags:
         - tmux
         - terminal
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/go-packages.yaml"
+      tags:
+        - go-packages
+        - terminal
