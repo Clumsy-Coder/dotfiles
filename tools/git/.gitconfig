@@ -4,7 +4,7 @@
 [user]
   name = Clumsy-Coder
   email = 19594044+Clumsy-Coder@users.noreply.github.com
-  signingkey = /Users/umar/.ssh/github-ssh.pub
+  signingkey = ~/.ssh/github-ssh.pub
 
 [color]
   ui = true
