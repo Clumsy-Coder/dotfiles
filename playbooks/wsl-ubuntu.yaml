@@ -117,3 +117,8 @@
       tags:
         - pip3
         - terminal
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/vimv.yaml"
+      tags:
+        - vimv
+        - terminal
