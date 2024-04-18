@@ -97,3 +97,8 @@
       tags:
         - go-packages
         - terminal
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/pyenv.yaml"
+      tags:
+        - pyenv
+        - terminal
