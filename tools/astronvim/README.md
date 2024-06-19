@@ -1,3 +1,5 @@
+# Deprecated. Use [Astronvim v4 configs](https://github.com/Clumsy-Coder/astronvim-config-v4)
+
 # astronvim/
 
 AstorNvim custom configs
