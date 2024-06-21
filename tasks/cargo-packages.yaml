@@ -11,6 +11,7 @@
   community.general.cargo:
     name: "{{ item }}"
   loop: "{{ rust_packages }}"
+  ignore_errors: true
   tags:
     - cargo-packages
     - terminal
