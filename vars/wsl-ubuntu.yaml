@@ -14,6 +14,7 @@ apt_packages:
   - curl
   - exa
   - fzf
+  - gh
   - git
   - golang
   - htop
