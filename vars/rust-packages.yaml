@@ -2,6 +2,6 @@
 
 rust_packages:
   # - stylua
-  - bob
+  - bob-nvim
   - bottom
   - git-delta
