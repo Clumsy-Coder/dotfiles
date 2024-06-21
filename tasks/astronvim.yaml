@@ -25,6 +25,7 @@
 - name: "astronvim: git clone Astronvim repo"
   git:
     repo: "https://github.com/AstroNvim/AstroNvim"
+    version: v3.45.3
     dest: "{{ zshenv.NVIM_CONFIG_DIR_PATH }}"
   tags:
     - astronvim
