@@ -19,6 +19,15 @@
     - code-directory
     - terminal
 
+# create directory in order to use gpg for encrypting and decrypting
+- name: "code-directory: Create directory for 'gnupg'"
+  file:
+    dest: "~/.local/share/gnupg"
+    state: directory
+  tags:
+    - code-directory
+    - terminal
+
 - name: "code-directory: Link directory for 'code' to the home folder"
   file:
     src: "~/Documents/code/"
