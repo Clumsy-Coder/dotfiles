@@ -24,6 +24,7 @@
     name: "{{ item }}"
     state: present
   loop: "{{ apt_packages }}"
+  ignore_errors: true
   become: true
   tags:
     - apt
