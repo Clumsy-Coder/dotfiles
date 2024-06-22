@@ -1,6 +1,6 @@
 ---
 
-- name: "git: create {{ zshenv.XDG_CONFIG_HOME }}/zsh directory"
+- name: "zsh: create {{ zshenv.XDG_CONFIG_HOME }}/zsh directory"
   file:
     path: "{{ zshenv.XDG_CONFIG_HOME }}/zsh"
     state: directory
