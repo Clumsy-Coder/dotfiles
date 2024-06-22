@@ -8,6 +8,14 @@
     - zsh
     - terminal
 
+- name: "zsh: create {{ zshenv.HISTFILE_DIR_PATH }} directory"
+  file:
+    path: "{{ zshenv.HISTFILE_DIR_PATH }}"
+    state: directory
+  tags:
+    - zsh
+    - terminal
+
 # link zshrc file
 - name: "zsh: link zshrc to {{ zshenv.ZSHRC_PATH }}"
   file:
