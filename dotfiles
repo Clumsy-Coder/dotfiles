@@ -51,6 +51,11 @@ if ! [ -x "$(command -v ansible)" ]; then
 
   # install pyenv if it's not installed
   if [ ! -d "$PYENV_DIR_PATH" ]; then
+    # install prerequisite packages before installing pyenv
+    # obtained from
+    #   https://github.com/pyenv/pyenv/wiki
+    # sudo apt install build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl git libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+
     echo -e "\e[31m> \e[1mpyenv\e[22m not found \e[0m"
     echo -e "\e[34m> Installing pyenv \e[0m"
     curl https://pyenv.run | bash
