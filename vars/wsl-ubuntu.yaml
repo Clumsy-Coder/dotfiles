@@ -30,6 +30,7 @@ apt_packages:
   - trash-cli
   - tree
   - unzip
+  - urlview
   - vim
   - wget
   - zip
