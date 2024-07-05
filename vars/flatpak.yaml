@@ -1,0 +1,29 @@
+---
+
+# flatpak remotes
+# using ansible nested vars
+# obtained from
+# - https://stackoverflow.com/a/37397314
+flatpak_remotes:
+  - name: flathub
+    url: https://dl.flathub.org/repo/flathub.flatpakrepo
+
+flatpak_packages:
+  - com.discordapp.Discord          # discord             https://flathub.org/apps/com.discordapp.Discord
+  - com.getpostman.Postman          # postman             https://flathub.org/apps/com.getpostman.Postman
+  - com.github.tchx84.Flatseal      # flatseal            https://flathub.org/apps/com.github.tchx84.Flatseal
+  - com.google.AndroidStudio        # Android studio      https://flathub.org/apps/com.google.AndroidStudio
+  - com.prusa3d.PrusaSlicer         # prusa slicer        https://flathub.org/apps/com.prusa3d.PrusaSlicer
+  - com.spotify.Client              # spotify             https://flathub.org/apps/com.spotify.Client
+  - com.sublimetext.three           # sublime text        https://flathub.org/apps/com.sublimetext.three
+  - com.visualstudio.code           # VScode              https://flathub.org/apps/com.visualstudio.code
+  - com.vscodium.codium             # VScodium            https://flathub.org/apps/com.vscodium.codium
+  - io.github.flattool.Warehouse    # warehouse           https://flathub.org/apps/io.github.flattool.Warehouse
+  - io.missioncenter.MissionCenter  # mission center      https://flathub.org/apps/io.missioncenter.MissionCenter
+  - md.obsidian.Obsidian            # obsidian            https://flathub.org/apps/md.obsidian.Obsidian
+  - org.localsend.localsend_app     # localsend           https://flathub.org/apps/org.localsend.localsend_app
+  - org.qbittorrent.qBittorrent     # qbittorrent         https://flathub.org/apps/org.qbittorrent.qBittorrent
+  - org.raspberrypi.rpi-imager      # raspberrypi imager  https://flathub.org/apps/org.raspberrypi.rpi-imager
+  - org.signal.Signal               # signal              https://flathub.org/apps/org.signal.Signal
+  - org.videolan.VLC                # VLC                 https://flathub.org/apps/org.videolan.VLC
+  - org.wireshark.Wireshark         # wireshark           https://flathub.org/apps/org.wireshark.Wireshark
