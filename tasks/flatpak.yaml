@@ -1,0 +1,39 @@
+---
+# install flatpak packages
+# this task will look for var `flatpak_packages` in order to install flatpak packages.
+# make sure to load the var in the playbook
+
+- name: "FLATPAK: add remotes"
+  flatpak_remote:
+    name: "{{ item.name }}"
+    flatpakrepo_url: "{{ item.url }}"
+    state: present
+    method: user
+  loop: "{{ flatpak_remotes }}"
+  become: true
+  tags:
+    - flatpak
+    - gui
+
+# update installed flatpak packages
+# obtained from
+# - https://www.reddit.com/r/ansible/comments/fk4qqc/comment/jlonhmf/
+- name: "FLATPAK: upgrade all flatpaks 📅"
+  command:
+    cmd: flatpak update --noninteractive
+  register: flatpak_update_output
+  changed_when: "'app/' in flatpak_update_output.stdout"
+  become: true
+  tags:
+    - flatpak
+    - gui
+
+- name: "FLATPAK: install flatpak packages. This will take a while"
+  flatpak:
+    name: "{{ item }}"
+    state: latest
+    method: user
+  loop: "{{ flatpak_packages }}"
+  tags:
+    - flatpak
+    - gui
