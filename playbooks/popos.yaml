@@ -25,7 +25,7 @@
     - name: "STORE ZSHENV AS FACT"
       set_fact:
         zshenv: "{{ dict(out.stdout.splitlines() | map('split', '=', 1)) }}"
-        changed_when: false
+      changed_when: false
       tags: always
 
     - name: "PRINT ENV"
