@@ -1,0 +1,146 @@
+---
+- hosts: "local"
+  vars_files:
+    - "../vars/global-vars.yaml"
+    - "../vars/wsl-ubuntu.yaml"
+    - "../vars/flatpak.yaml"
+
+  # roles:
+
+  tasks:
+    # run zshenv and print out all env in the shell
+    # store the output to a register
+    # this will be used in tasks when using the env. no need to run zshenv before running ansible-playbook
+    #
+    # obtained from
+    # https://stackoverflow.com/a/74932715/3053548
+    - name: "SOURCE ZSHENV"
+      shell:
+        cmd: source ../tools/zsh/.zshenv; env
+      register: out
+      changed_when: false
+      tags: always
+
+    # extract the envs and store them as a dictionary
+    - name: "STORE ZSHENV AS FACT"
+      set_fact:
+        zshenv: "{{ dict( out.stdout.splitlines() | map('split', '=', 1) ) }}"
+        changed_when: false
+      tags: always
+
+    - name: "PRINT ENV"
+      debug:
+        msg: "{{ zshenv }}"
+      tags:
+        - always
+
+    # ------------------------------------------------------------------------------------------- #
+    # terminal config
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/code-directory.yaml"
+      tags:
+        - code-directory
+        - terminal
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/apt.yaml"
+      tags:
+        - apt
+        - terminal
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/git.yaml"
+      tags:
+        - git
+        - terminal
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/lazygit.yaml"
+      tags:
+        - lazygit
+        - terminal
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/neofetch.yaml"
+      tags:
+        - neofetch
+        - terminal
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/neovim-source-build.yaml"
+      tags:
+        - neovim-source-build
+        - terminal
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/astronvim.yaml"
+      tags:
+        - astronvim
+        - terminal
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/tmux.yaml"
+      tags:
+        - tmux
+        - terminal
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/nvm.yaml"
+      tags:
+        - nvm
+        - terminal
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/npm.yaml"
+      tags:
+        - npm
+        - terminal
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/go-packages.yaml"
+      tags:
+        - go-packages
+        - terminal
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/pyenv.yaml"
+      tags:
+        - pyenv
+        - terminal
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/rust.yaml"
+      tags:
+        - rust
+        - terminal
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/cargo-packages.yaml"
+      tags:
+        - cargo-packages
+        - terminal
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/pip3.yaml"
+      tags:
+        - pip3
+        - terminal
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/vimv.yaml"
+      tags:
+        - vimv
+        - terminal
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/zsh.yaml"
+      tags:
+        - zsh
+        - terminal
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/ohmyzsh.yaml"
+      tags:
+        - ohmyzsh
+        - terminal
+
+    # ------------------------------------------------------------------------------------------- #
+    # gui configs
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/alacritty.yaml"
+      tags:
+        - alacritty
+        - gui
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/kitty.yaml"
+      tags:
+        - kitty
+        - gui
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/nerdfonts.yaml"
+      tags:
+        - nerdfonts
+        - gui
