@@ -144,3 +144,8 @@
       tags:
         - nerdfonts
         - gui
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/flatpak.yaml"
+      tags:
+        - flatpak
+        - gui
