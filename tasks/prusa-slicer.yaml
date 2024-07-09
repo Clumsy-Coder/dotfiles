@@ -14,6 +14,7 @@
 # check
 # - https://www.greghilston.com/post/how-to-add-application-to-pop-os-gnome-launcher/
 # - https://askubuntu.com/a/162656/1112801
+# - https://gist.github.com/steinwaywhw/a4cd19cda655b8249d908261a62687f8
 
 
 - name: "PRUSA: create a temp folder in /tmp"
@@ -27,28 +28,42 @@
     - prusa
     - gui
 
-# - name: "PRUSA: download image icon for `Prusa slicer`"
-#   get_url:
-#     url: https://api.github.com/repos/prusa3d/prusaslicer/releases/latest
-#     dest: /tmp/prusa-slicer/prusa-release.json
-#     mode: '0644'
-#     force: 'yes'
-#   when:
-#     ansible_os_family == "Debian"
-#   tags:
-#     - prusa
-#     - gui
+- name: "PRUSA: download github release manifest"
+  get_url:
+    url: https://api.github.com/repos/prusa3d/prusaslicer/releases/latest
+    dest: /tmp/prusa-slicer/prusa-release.json
+    mode: '0644'
+    force: 'yes'
+  when:
+    ansible_os_family == "Debian"
+  tags:
+    - prusa
+    - gui
 
-- name: "PRUSA: download the latest Prusa Slicer AppImage"
+- name: "PRUSA: get latest AppImage download URL"
   shell:
     cmd: >
-      curl -s https://api.github.com/repos/prusa3d/prusaslicer/releases/latest
+      set -o pipefail &&
+      cat /tmp/prusa-slicer/prusa-release.json| jq '.'
       | grep "browser_download_url.*AppImage" -m 1
       | cut -d : -f 2,3
       | tr -d \"
-      | wget -O Prusa-Slicer.AppImage -qi -
+    executable: /bin/bash
   args:
     chdir: '/tmp/prusa-slicer'
+  register: download_url
+  when:
+    ansible_os_family == "Debian"
+  tags:
+    - prusa
+    - gui
+
+- name: "PRUSA: download the latest Prusa Slicer AppImage"
+  get_url:
+    url: "{{ download_url.stdout }}"
+    dest: /tmp/prusa-slicer/Prusa-Slicer.AppImage
+    mode: '0644'
+    force: 'yes'
   when:
     ansible_os_family == "Debian"
   tags:
