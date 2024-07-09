@@ -1,0 +1,170 @@
+---
+
+# install prusa slicer on linux
+# - create temp dir /tmp/prusa-slicer
+# - download file
+# - copy to /usr/local/bin/ folder
+# - download app icon for prusa slicer
+# - download app icon for prusa slicer G-coder viewer
+# - add .desktop file for running prusa slicer
+# - add .desktop file for running prusa slicer G-code viewer
+# - add symbolic `PrusaSlicer` to /usr/local/bin/Prusa-Slicer.AppImage
+# - remove temp dir /tmp/prusa-slicer
+
+# check
+# - https://www.greghilston.com/post/how-to-add-application-to-pop-os-gnome-launcher/
+# - https://askubuntu.com/a/162656/1112801
+
+
+- name: "PRUSA: create a temp folder in /tmp"
+  ansible.builtin.file:
+    path: /tmp/prusa-slicer
+    state: directory
+    mode: '0755'
+  when:
+    ansible_os_family == "Debian"
+  tags:
+    - prusa
+    - gui
+
+# - name: "PRUSA: download image icon for `Prusa slicer`"
+#   get_url:
+#     url: https://api.github.com/repos/prusa3d/prusaslicer/releases/latest
+#     dest: /tmp/prusa-slicer/prusa-release.json
+#     mode: '0644'
+#     force: 'yes'
+#   when:
+#     ansible_os_family == "Debian"
+#   tags:
+#     - prusa
+#     - gui
+
+- name: "PRUSA: download the latest Prusa Slicer AppImage"
+  shell:
+    cmd: >
+      curl -s https://api.github.com/repos/prusa3d/prusaslicer/releases/latest
+      | grep "browser_download_url.*AppImage" -m 1
+      | cut -d : -f 2,3
+      | tr -d \"
+      | wget -O Prusa-Slicer.AppImage -qi -
+  args:
+    chdir: '/tmp/prusa-slicer'
+  when:
+    ansible_os_family == "Debian"
+  tags:
+    - prusa
+    - gui
+
+- name: "PRUSA: copy AppImage to /usr/local/bin"
+  copy:
+    src: /tmp/prusa-slicer/Prusa-Slicer.AppImage
+    dest: /usr/local/bin/
+  when:
+    ansible_os_family == "Debian"
+  become: true
+  tags:
+    - prusa
+    - gui
+
+- name: "PRUSA: add execute file permission"
+  file:
+    path: /usr/local/bin/Prusa-Slicer.AppImage
+    mode: "0755"
+  when:
+    ansible_os_family == "Debian"
+  become: true
+  tags:
+    - prusa
+    - gui
+
+- name: "PRUSA: download image icon for `Prusa slicer`"
+  get_url:
+    url: https://github.com/prusa3d/PrusaSlicer/raw/8adcd8f/resources/icons/PrusaSlicer_192px.png
+    dest: /home/umar/.local/share/icons/prusa-slicer.png
+    mode: '0644'
+    force: 'yes'
+  when:
+    ansible_os_family == "Debian"
+  tags:
+    - prusa
+    - gui
+
+- name: "PRUSA: download image icon for `Prusa slicer G-code viewer`"
+  get_url:
+    url: https://github.com/prusa3d/PrusaSlicer/raw/e6ddcba/resources/icons/PrusaSlicer-gcodeviewer_192px.png
+    dest: /home/umar/.local/share/icons/prusa-slicer-gcode-viewer.png
+    mode: '0644'
+    force: 'yes'
+  when:
+    ansible_os_family == "Debian"
+  tags:
+    - prusa
+    - gui
+
+- name: "PRUSA: add .desktop file for `Prusa Slicer`"
+  blockinfile:
+    path: /usr/share/applications/prusa-slicer.desktop
+    block: |
+      # check
+      # - https://www.greghilston.com/post/how-to-add-application-to-pop-os-gnome-launcher/
+      # - https://askubuntu.com/a/162656/1112801
+      [Desktop Entry]
+      Name=Prusa Slicer
+      Comment=G-code generator for 3D printer
+      Exec=/usr/local/bin/Prusa-Slicer.AppImage %F
+      Type=Application
+      Terminal=false
+      Icon=/home/umar/.local/share/icons/prusa-slicer.png
+      NoDisplay=false
+    create: true
+  when:
+    ansible_os_family == "Debian"
+  become: true
+  tags:
+    - prusa
+    - gui
+
+- name: "PRUSA: add .desktop file for `Prusa Slicer: G-code Viewer`"
+  blockinfile:
+    path: /usr/share/applications/prusa-slicer-gcode-viewer.desktop
+    block: |
+      # check
+      # - https://www.greghilston.com/post/how-to-add-application-to-pop-os-gnome-launcher/
+      # - https://askubuntu.com/a/162656/1112801
+      [Desktop Entry]
+      Name=Prusa Slicer G-code viewer
+      Comment=G-code viewer
+      Exec=sh -c "/usr/local/bin/Prusa-Slicer.AppImage --gcodeviewer %F"
+      Type=Application
+      Terminal=false
+      Icon=/home/umar/.local/share/icons/prusa-slicer-gcode-viewer.png
+      NoDisplay=false
+    create: true
+  when:
+    ansible_os_family == "Debian"
+  become: true
+  tags:
+    - prusa
+    - gui
+
+- name: "PRUSA: add symbolic for `PrusaSlicer` to /usr/local/bin/Prusa-Slicer.AppImage"
+  file:
+    src: /usr/local/bin/Prusa-Slicer.AppImage
+    dest: /usr/local/bin/PrusaSlicer
+    state: link
+  when:
+    ansible_os_family == "Debian"
+  become: true
+  tags:
+    - prusa
+    - gui
+
+- name: "PRUSA: remove folder /tmp/prusa-slicer"
+  file:
+    path: /tmp/prusa-slicer/
+    state: absent
+  when:
+    ansible_os_family == "Debian"
+  tags:
+    - prusa
+    - gui
