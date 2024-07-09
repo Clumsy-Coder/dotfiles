@@ -33,5 +33,6 @@ apt_packages:
   - urlview
   - vim
   - wget
+  - xsel
   - zip
   - zsh
