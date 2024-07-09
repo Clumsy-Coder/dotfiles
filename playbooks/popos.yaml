@@ -149,3 +149,8 @@
       tags:
         - flatpak
         - gui
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/prusa-slicer.yaml"
+      tags:
+        - prusa
+        - gui
