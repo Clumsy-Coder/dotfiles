@@ -31,6 +31,12 @@ fi # END if [[ $IS_MAC -eq 1 ]]; then
 # -------------------------------------------------------------------------------------------------#
 if [[ $IS_LINUX -eq 1 ]]; then
   alias man='man --pager=most'                     # using 'most' as pager. Check debian-exports.sh
+
+  # Linux version of OSX pbcopy and pbpaste.
+  # obtained from
+  # - https://medium.com/@codenameyau/how-to-copy-and-paste-in-terminal-c88098b5840d
+  alias c='xsel --clipboard --input'
+  alias v='xsel --clipboard --output'
 fi # END if [[ $IS_LINUX -eq 1 ]]; then
 
 # -------------------------------------------------------------------------------------------------#
