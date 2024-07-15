@@ -1,0 +1,39 @@
+---
+
+apt_packages:
+  # - autoconf
+  # - automake
+  # - cmake
+  # - figlet
+  # - fonts-powerline
+  # - g++
+  # - gettext
+  # - powerline
+  - bat
+  - bsdgames
+  - build-essential
+  - curl
+  - exa
+  - fzf
+  - gh
+  - git
+  - golang
+  - htop
+  - luarocks
+  - most
+  - nano
+  - ncdu
+  - neofetch
+  - ripgrep
+  - ruby-dev
+  - tldr
+  - tmux
+  - trash-cli
+  - tree
+  - unzip
+  - urlview
+  - vim
+  - wget
+  - xsel
+  - zip
+  - zsh
