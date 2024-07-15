@@ -1,0 +1,62 @@
+---
+
+# set firewall rules using 'ufw'
+
+- name: "UFW: install ufw via apt"
+  apt:
+    update_cache: true
+    name: "ufw"
+    state: present
+  when:
+    ansible_os_family == "Debian"
+  become: true
+  tags:
+    - ufw
+    - terminal
+
+- name: "UFW: disable ufw"
+  ufw:
+    state: disabled
+  tags:
+    - ufw
+    - terminal
+  become: true
+
+- name: "UFW: allow outgoing traffic as default"
+  ufw:
+    direction: outgoing
+    policy: allow
+  tags:
+    - ufw
+    - terminal
+  become: true
+
+- name: "UFW: deny incoming traffic as default"
+  ufw:
+    direction: incoming
+    policy: deny
+  tags:
+    - ufw
+    - terminal
+  become: true
+
+- name: "UFW: allow port number"
+  ufw:
+    rule: limit
+    port: "{{ item.port_number }}"
+    comment: "{{ item.comment }}"
+  loop: "{{ ufw }}"
+  # loop_control:
+  #   label: "Allow '{{ item.comment }}' on port {{ item.port_number }}"
+  tags:
+    - ufw
+    - terminal
+  become: true
+
+- name: "UFW: enable ufw"
+  ufw:
+    state: enabled
+  tags:
+    - ufw
+    - terminal
+  become: true
