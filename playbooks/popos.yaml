@@ -127,6 +127,11 @@
         - ohmyzsh
         - terminal
 
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/ufw.yaml"
+      tags:
+        - ufw
+        - terminal
+
     # ------------------------------------------------------------------------------------------- #
     # gui configs
 
