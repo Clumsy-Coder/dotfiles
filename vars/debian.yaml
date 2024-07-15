@@ -37,3 +37,12 @@ apt_packages:
   - xsel
   - zip
   - zsh
+
+# allow ports in 'ufw'
+ufw:
+  - port_number: 2200
+    comment: "SSH"
+  - port_number: 80
+    comment: "HTTP"
+  - port_number: 3000
+    comment: "HTTP dev"
