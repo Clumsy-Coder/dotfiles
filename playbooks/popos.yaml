@@ -2,7 +2,7 @@
 - hosts: "local"
   vars_files:
     - "../vars/global-vars.yaml"
-    - "../vars/wsl-ubuntu.yaml"
+    - "../vars/debian.yaml"
     - "../vars/flatpak.yaml"
 
   # roles:
