@@ -83,10 +83,8 @@
 [gpg]
   format = ssh
 [credential "https://github.com"]
-  helper = 
   helper = !/usr/local/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-  helper = 
   helper = !/usr/local/bin/gh auth git-credential
 [gpg "ssh"]
   allowedSignersFile = /Users/umar/.ssh/allowed_signers
