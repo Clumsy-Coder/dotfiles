@@ -92,3 +92,10 @@
   defaultBranch = main
 [diff "exif"]
   textconv = exiftool
+
+# setting the remote paths
+# mainly used in `bare` repo clones (to be able to use worktree)
+# check
+# - https://github.com/ThePrimeagen/git-worktree.nvim#debugging
+[remote "origin"]
+  fetch = "+refs/heads/*:refs/remotes/origin/*"
