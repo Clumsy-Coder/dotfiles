@@ -111,4 +111,9 @@ if [[ $IS_LINUX -eq 1 ]]; then
 
   export PATH="$HOME/.local/bin:$PATH"
 
+  # set the copy command for `forgit`
+  # check
+  # - https://github.com/wfxr/forgit#-keybindings
+  export FORGIT_COPY_CMD='xsel --clipboard --input'
+
 fi # END if [[ $IS_LINUX -eq 1 ]]; then
