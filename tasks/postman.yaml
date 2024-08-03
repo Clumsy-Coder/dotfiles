@@ -4,36 +4,39 @@
 # obtained from
 # - https://gist.github.com/pmkay/75faa1b926ba06416d0e44a29a584940
 
-- name: "POSTMAN: download postman"
-  get_url:
-    url: https://dl.pstmn.io/download/latest/linux_64
-    dest: /tmp/postman.tar.gz
-  when:
-    ansible_os_family == "Debian"
-  tags:
-    - postman
-    - gui
+# - name: "POSTMAN: download postman"
+#   get_url:
+#     url: https://dl.pstmn.io/download/latest/linux_64
+#     dest: /tmp/postman.tar.gz
+#   when:
+#     ansible_os_family == "Debian"
+#   tags:
+#     - postman
+#     - gui
 
-- name: "POSTMAN: create directory /opt/Postman/"
-  file:
-    path: "/opt/Postman"
-    state: directory
-    mode: "0700"
-    # owner: root
-    # group: root
-  become: true
-  when:
-    ansible_os_family == "Debian"
-  tags:
-    - postman
-    - gui
+# - name: "POSTMAN: create directory /opt/Postman/"
+#   file:
+#     path: "/opt/Postman"
+#     state: directory
+#     # mode: "0700"
+#     # owner: root
+#     # group: root
+#   become: true
+#   when:
+#     ansible_os_family == "Debian"
+#   tags:
+#     - postman
+#     - gui
 
-- name: "POSTMAN: extract postman tarball into /opt/Postman/"
-  ansible.builtin.unarchive:
-    src: /tmp/postman.tar.gz
+- name: "POSTMAN: download postman tarball and extract postman tarball into /opt/Postman/"
+  unarchive:
+    # src: /tmp/postman.tar.gz
+    src: https://dl.pstmn.io/download/latest/linux_64
     dest: /opt/
+    remote_src: true
     owner: root
     group: root
+    mode: "0755"
   become: true
   when:
     ansible_os_family == "Debian"
@@ -55,7 +58,7 @@
     - gui
 
 - name: "POSTMAN: create desktop file"
-  ansible.builtin.blockinfile:
+  blockinfile:
     path: "{{ zshenv.XDG_DATA_HOME }}/applications/postman.desktop"
     block: |
       [Desktop Entry]
