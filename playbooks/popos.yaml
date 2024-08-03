@@ -159,3 +159,8 @@
       tags:
         - prusa
         - gui
+
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/postman.yaml"
+      tags:
+        - postman
+        - gui
