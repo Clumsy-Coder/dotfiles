@@ -1,0 +1,76 @@
+---
+
+# download and install Postman
+# obtained from
+# - https://gist.github.com/pmkay/75faa1b926ba06416d0e44a29a584940
+
+- name: "POSTMAN: download postman"
+  get_url:
+    url: https://dl.pstmn.io/download/latest/linux_64
+    dest: /tmp/postman.tar.gz
+  when:
+    ansible_os_family == "Debian"
+  tags:
+    - postman
+    - gui
+
+- name: "POSTMAN: create directory /opt/Postman/"
+  file:
+    path: "/opt/Postman"
+    state: directory
+    mode: "0700"
+    # owner: root
+    # group: root
+  become: true
+  when:
+    ansible_os_family == "Debian"
+  tags:
+    - postman
+    - gui
+
+- name: "POSTMAN: extract postman tarball into /opt/Postman/"
+  ansible.builtin.unarchive:
+    src: /tmp/postman.tar.gz
+    dest: /opt/
+    owner: root
+    group: root
+  become: true
+  when:
+    ansible_os_family == "Debian"
+  tags:
+    - postman
+    - gui
+
+- name: "POSTMAN: create symlink from /opt/Postman/Postman to /usr/local/bin/postman"
+  file:
+    src: "/opt/Postman/Postman"
+    dest: "/usr/local/bin/postman"
+    state: link
+    force: true
+  become: true
+  when:
+    ansible_os_family == "Debian"
+  tags:
+    - postman
+    - gui
+
+- name: "POSTMAN: create desktop file"
+  ansible.builtin.blockinfile:
+    path: "{{ zshenv.XDG_DATA_HOME }}/applications/postman.desktop"
+    block: |
+      [Desktop Entry]
+      Encoding=UTF-8
+      Name=Postman
+      Exec=postman
+      # Before v6.1.2
+      # Icon=/opt/Postman/resources/app/assets/icon.png
+      Icon=/opt/Postman/app/resources/app/assets/icon.png
+      Terminal=false
+      Type=Application
+      Categories=Development;
+    create: true
+  when:
+    ansible_os_family == "Debian"
+  tags:
+    - postman
+    - gui
