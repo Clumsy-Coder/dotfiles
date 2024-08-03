@@ -116,4 +116,10 @@ if [[ $IS_LINUX -eq 1 ]]; then
   # - https://github.com/wfxr/forgit#-keybindings
   export FORGIT_COPY_CMD='xsel --clipboard --input'
 
+  # set default browser
+  # setting default browser so a url can be opened from the terminal using urlview
+  # check
+  # - https://askubuntu.com/a/16626
+  export BROWSER=/usr/bin/firefox
+
 fi # END if [[ $IS_LINUX -eq 1 ]]; then
