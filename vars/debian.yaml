@@ -48,3 +48,5 @@ ufw:
     comment: "HTTP"
   - port_number: 3000
     comment: "HTTP dev"
+  - port_number: 53317
+    comment: "LocalSend"
