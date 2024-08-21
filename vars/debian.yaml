@@ -18,6 +18,7 @@ apt_packages:
   - fzf
   - gh
   - git
+  - gnome-sushi
   - golang
   - htop
   - libmagickwand-dev
