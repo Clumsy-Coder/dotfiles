@@ -12,6 +12,7 @@ export XDG_CONFIG_HOME="$HOME/.config"       # Where user-specific configuration
 export XDG_CACHE_HOME="$HOME/.cache"         # Where user-specific non-essential (cached) data should be written (analogous to /var/cache).
 # export XDG_RUNTIME_DIR="/run/user/$UID"       # Used for non-essential, user-specific data files such as sockets, named pipes, etc.
 export XDG_DATA_SRC="$HOME/.local/src"       # Where user-specific source files are placed. check https://unix.stackexchange.com/a/36874/644926
+export XDG_DATA_BIN="$HOME/.local/bin"       # Where user-specific binary files are placed. check https://unix.stackexchange.com/a/36874/644926
 
 # -------------------------------------------------------------------------------------------------#
 
