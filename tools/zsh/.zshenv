@@ -165,6 +165,9 @@ export NODE_REPL_HISTORY="$XDG_DATA_HOME/node-repl/node_repl_history"
 
 # nuget
 export NUGET_PACKAGES="$XDG_CACHE_HOME/NuGetPackages"
+
+# obsidian. where to place obsidian vault
+export OBSIDIAN_DIR_PATH="$XDG_DATA_HOME/obsidian"
 # -------------------------------------------------------------------------------------------------#
 
 # Mac OS X uses path_helper and /etc/paths.d to preload PATH, clear it out first
