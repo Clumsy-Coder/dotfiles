@@ -174,6 +174,9 @@ export OBSIDIAN_DIR_PATH="$XDG_DATA_HOME/obsidian"
 # microsoft c# dotnet framework
 export DOTNET_CLI_HOME="$XDG_DATA_HOME/dotnet"
 
+# w3m (text based web browser)
+export W3M_DIR="$XDG_DATA_HOME/w3m"
+
 # -------------------------------------------------------------------------------------------------#
 
 # Mac OS X uses path_helper and /etc/paths.d to preload PATH, clear it out first
