@@ -170,6 +170,10 @@ export NUGET_PACKAGES="$XDG_CACHE_HOME/NuGetPackages"
 
 # obsidian. where to place obsidian vault
 export OBSIDIAN_DIR_PATH="$XDG_DATA_HOME/obsidian"
+
+# microsoft c# dotnet framework
+export DOTNET_CLI_HOME="$XDG_DATA_HOME/dotnet"
+
 # -------------------------------------------------------------------------------------------------#
 
 # Mac OS X uses path_helper and /etc/paths.d to preload PATH, clear it out first
