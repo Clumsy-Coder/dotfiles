@@ -132,6 +132,11 @@
         - ufw
         - terminal
 
+    - include_tasks: "{{ zshenv.DOTDIR }}/tasks/xdg-ninja.yaml"
+      tags:
+        - xdg-ninja
+        - terminal
+
     # ------------------------------------------------------------------------------------------- #
     # gui configs
 
