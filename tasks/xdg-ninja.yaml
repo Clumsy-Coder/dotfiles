@@ -1,0 +1,38 @@
+---
+
+# install xdg-ninja
+# check
+# - https://github.com/b3nj5m1n/xdg-ninja
+
+- name: "XDG-NINJA: create directory {{ zshenv.XDG_DATA_SRC }}"
+  file:
+    path: "{{ zshenv.XDG_DATA_SRC }}"
+    state: directory
+  tags:
+    - xdg-ninja
+    - terminal
+
+- name: "XDG-NINJA: Clone xdg-ninja git repo to {{ zshenv.XDG_DATA_SRC }}/xdg-ninja/"
+  git:
+    repo: https://github.com/b3nj5m1n/xdg-ninja
+    dest: "{{ zshenv.XDG_DATA_SRC }}/xdg-ninja"
+  tags:
+    - xdg-ninja
+    - terminal
+
+- name: "XDG-NINJA: create directory {{ zshenv.XDG_DATA_BIN }}"
+  file:
+    path: "{{ zshenv.XDG_DATA_BIN }}"
+    state: directory
+  tags:
+    - xdg-ninja
+    - terminal
+
+- name: "XDG-NINJA: create symbolic link to the binary"
+  file:
+    src: "{{ zshenv.XDG_DATA_SRC }}/xdg-ninja/xdg-ninja.sh"
+    dest: "{{ zshenv.XDG_DATA_BIN }}/xdg-ninja"
+    state: link
+  tags:
+    - xdg-ninja
+    - terminal
