@@ -186,6 +186,10 @@ export DOTNET_CLI_HOME="$XDG_DATA_HOME/dotnet"
 # w3m (text based web browser)
 export W3M_DIR="$XDG_DATA_HOME/w3m"
 
+# wakatime. make sure the directory exists
+export WAKATIME_HOME="$XDG_CONFIG_HOME/wakatime"
+# mkdir $WAKATIME_HOME > /dev/null 2>&1             # obtained from https://www.cyberciti.biz/faq/how-to-redirect-output-and-errors-to-devnull/
+
 # -------------------------------------------------------------------------------------------------#
 
 # Mac OS X uses path_helper and /etc/paths.d to preload PATH, clear it out first
