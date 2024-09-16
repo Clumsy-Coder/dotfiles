@@ -70,3 +70,11 @@
   tags:
     - code-directory
     - terminal
+
+- name: "CODE-DIRECTORY: create ~/.config/wakatime directory"
+  file:
+    dest: "~/.config/wakatime"
+    state: directory
+  tags:
+    - code-directory
+    - terminal
