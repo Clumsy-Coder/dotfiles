@@ -110,3 +110,15 @@ alias grep='grep --color'
 # alias npmin='function _npmin(){ npm install -g $1;};_npmin'     # install node package as a global package
 # alias npmun='function _npmun(){ npm uninstall -g $1;};_npmun'   # uninstall node package from global packages
 # alias ncu='ncu -g'                                              # checks updates for npm. Checks global packages
+#
+# -------------------------------------------------------------------------------------------------#
+# Obsidian
+# obtained from
+# - https://github.com/agalea91/dotfiles/blob/52b72715536b1938a97e81466a558d3bc9d7618d/.zshrc#L60-L63
+# - https://youtu.be/1Lmyh0YRH-w
+alias oo='cd $OBSIDIAN_DIR_PATH/mimir/' # navigate to my obsidian vault
+# open all obsidian notes in `inbox` folder using neovim. use command whether to keep the notes or delete them
+# check
+# - https://youtu.be/1Lmyh0YRH-w?t=795
+# alias or='nvim $OBSIDIAN_DIR_PATH/mimir/inbox/*.md' # obsidian review
+# -------------------------------------------------------------------------------------------------#
