@@ -121,4 +121,14 @@ alias oo='cd $OBSIDIAN_DIR_PATH/mimir/' # navigate to my obsidian vault
 # check
 # - https://youtu.be/1Lmyh0YRH-w?t=795
 # alias or='nvim $OBSIDIAN_DIR_PATH/mimir/inbox/*.md' # obsidian review
+
+# fuzzy search obsidian vault files and open on pressing <enter>
+# uses
+# - find : list all the files in obsidian vault
+# - fzf : to fuzzy find the files (by filename) and show a preview
+#
+# obtained from
+# - https://stackoverflow.com/a/10589822/3053548
+# - https://chatgpt.com/c/66ec4e75-e294-8011-94af-28a39183e93d
+alias os="find $OBSIDIAN_DIR_PATH/mimir -name '.git*' -prune -o -type f -print | fzf --preview 'bat --style=numbers --color=always --line-range=:500 {}' --bind 'enter:execute(nvim {})+abort'"
 # -------------------------------------------------------------------------------------------------#
