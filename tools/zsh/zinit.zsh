@@ -24,6 +24,7 @@ zinit light zsh-users/zsh-syntax-highlighting         # highlights commands as y
 zinit light zsh-users/zsh-autosuggestions             # suggests commands as you type
 zinit light zsh-users/zsh-completions                 # additional completions for ZSH
 zinit light djui/alias-tips                           # display aliases based on the previous command executed
+zinit light webyneter/docker-aliases                  # aliases for Docker
 zinit light wfxr/forgit                               # cmd utility for Git using fzf
 
 # load zsh-completions
