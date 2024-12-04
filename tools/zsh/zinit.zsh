@@ -20,12 +20,12 @@ source "$ZINIT_HOME/zinit.zsh"
 
 zinit ice depth=1; zinit light romkatv/powerlevel10k  # theme
 
-zinit light zsh-users/zsh-syntax-highlighting         # highlights commands as you type
-zinit light zsh-users/zsh-autosuggestions             # suggests commands as you type
-zinit light zsh-users/zsh-completions                 # additional completions for ZSH
 zinit light djui/alias-tips                           # display aliases based on the previous command executed
 zinit light webyneter/docker-aliases                  # aliases for Docker
 zinit light wfxr/forgit                               # cmd utility for Git using fzf
+zinit light zsh-users/zsh-autosuggestions             # suggests commands as you type
+zinit light zsh-users/zsh-completions                 # additional completions for ZSH
+zinit light zsh-users/zsh-syntax-highlighting         # highlights commands as you type
 
 # load zsh-completions
 autoload -Uz compinit && compinit
