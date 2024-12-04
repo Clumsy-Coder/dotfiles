@@ -20,6 +20,31 @@ source "$ZINIT_HOME/zinit.zsh"
 
 zinit ice depth=1; zinit light romkatv/powerlevel10k  # theme
 
+# oh-my-zsh plugins
+# found in https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins
+#
+# zinit snippet OMZP::alias-finder       # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/alias-finder
+# zinit snippet OMZP::heroku             # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/heroku
+# zinit snippet OMZP::node               # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/node
+# zinit snippet OMZP::tmuxinator         # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/tmuxinator
+# zinit snippet OMZP::yarn               # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/yarn
+zinit snippet OMZP::command-not-found  # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/command-not-found
+zinit snippet OMZP::common-aliases     # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/common-aliases
+zinit snippet OMZP::copybuffer         # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/copybuffer
+zinit snippet OMZP::copyfile           # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/copyfile
+zinit snippet OMZP::extract            # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/extract
+zinit snippet OMZP::git                # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
+zinit snippet OMZP::history            # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/history
+zinit snippet OMZP::nmap               # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/nmap
+zinit snippet OMZP::npm                # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/npm
+zinit snippet OMZP::nvm                # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/nvm
+zinit snippet OMZP::sudo               # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo
+zinit snippet OMZP::systemadmin        # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/systemadmin
+zinit snippet OMZP::tmux               # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/tmux
+zinit snippet OMZP::web-search         # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search
+
+# -------------------------------------------------------------------------------------------------#
+
 zinit light djui/alias-tips                           # display aliases based on the previous command executed
 zinit light webyneter/docker-aliases                  # aliases for Docker
 zinit light wfxr/forgit                               # cmd utility for Git using fzf
