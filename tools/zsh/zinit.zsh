@@ -15,3 +15,8 @@ fi
 
 source "$ZINIT_HOME/zinit.zsh"
 
+# -------------------------------------------------------------------------------------------------#
+# load plugins
+
+zinit ice depth=1; zinit light romkatv/powerlevel10k  # theme
+
