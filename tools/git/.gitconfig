@@ -97,5 +97,5 @@
 # mainly used in `bare` repo clones (to be able to use worktree)
 # check
 # - https://github.com/ThePrimeagen/git-worktree.nvim#debugging
-[remote "origin"]
-  fetch = "+refs/heads/*:refs/remotes/origin/*"
+# [remote "origin"]
+#   fetch = "+refs/heads/*:refs/remotes/origin/*"
