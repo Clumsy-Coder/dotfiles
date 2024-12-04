@@ -30,3 +30,18 @@ zinit light zsh-users/zsh-syntax-highlighting         # highlights commands as y
 # load zsh-completions
 autoload -Uz compinit && compinit
 
+# -------------------------------------------------------------------------------------------------#
+# MacOS only ZSH plugins. $IS_MAC is set in zsh/checks.sh
+# -------------------------------------------------------------------------------------------------#
+if [[ $IS_MAC -eq 1 ]]; then
+  zinit snippet OMZP::brew               # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/brew
+  zinit snippet OMZP::macos              # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/macos
+
+fi # END if [[ $IS_MAC -eq 1 ]]; then
+# -------------------------------------------------------------------------------------------------#
+# Linux only ZSH plugins. $IS_LINUX is set in zsh/checks.sh
+# -------------------------------------------------------------------------------------------------#
+if [[ $IS_LINUX -eq 1 ]]; then
+  zinit snippet OMZP::systemd            # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/systemd
+
+fi # END if [[ $IS_LINUX -eq 1 ]]; then
