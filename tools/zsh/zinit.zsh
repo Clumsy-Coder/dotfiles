@@ -21,3 +21,8 @@ source "$ZINIT_HOME/zinit.zsh"
 zinit ice depth=1; zinit light romkatv/powerlevel10k  # theme
 
 zinit light zsh-users/zsh-syntax-highlighting         # highlights commands as you type
+zinit light zsh-users/zsh-completions                 # additional completions for ZSH
+
+# load zsh-completions
+autoload -Uz compinit && compinit
+
