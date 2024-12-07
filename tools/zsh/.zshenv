@@ -29,12 +29,17 @@ export XDG_VIDEOS_DIR="$HOME/Videos"
 export DOTDIR="$HOME/dotfiles"                                      # used by zshenv and ansible (to link files, etc)
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export ZSCRIPTDIR="$DOTDIR/tools/zsh"
-export HISTFILE_DIR_PATH="$XDG_STATE_HOME/zsh"                      # history dir path
-export HISTFILE="$HISTFILE_DIR_PATH/history"                        # history
 export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"    # generate zsh completions. also oh-my-zsh uses it. https://github.com/ohmyzsh/ohmyzsh/blob/a26d72baa27a46cfd2f35afa789529dccf7fc212/oh-my-zsh.sh#L105-L108
 export ZSH_COMPCACHE="$XDG_CACHE_HOME/zsh/zcompcache"
 export ZSH_CACHE_DIR="$XDG_CACHE_HOME/oh-my-zsh"                    # oh-my-zsh cache dir. https://github.com/ohmyzsh/ohmyzsh/blob/a26d72baa27a46cfd2f35afa789529dccf7fc212/oh-my-zsh.sh#L44-L48
 export OH_MY_ZSH_DIR_PATH="$XDG_DATA_HOME/oh-my-zsh"                # ohmyzsh dir path
+
+# history
+export HISTFILE_DIR_PATH="$XDG_STATE_HOME/zsh"                      # history dir path
+export HISTFILE="$HISTFILE_DIR_PATH/history"                        # history
+export HISTSIZE=50000
+export HISTDUP=erase                                                # erase duplicates in history file
+export SAVEHIST="$HISTSIZE"
 
 # dotfiles directories
 export DOTBOT_META_PATH="$DOTDIR/meta"
