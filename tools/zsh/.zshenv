@@ -139,6 +139,9 @@ export ADOTDIR="$XDG_DATA_HOME/antigen"                               # use new 
 export ANTIGEN_CACHE="$ADOTDIR/init.zsh"
 export ANTIGEN_COMPDUMP="$ADOTDIR/.zcompdump"
 
+# zsh zinit
+export ZINIT_HOME="$XDG_DATA_HOME/zinit"
+
 # alacritty
 export ALACRITTY_CONFIG_DIR_PATH="$XDG_CONFIG_HOME/alacritty"
 export ALACRITTY_CONFIG_PATH="$ALACRITTY_CONFIG_DIR_PATH/alacritty.toml"
