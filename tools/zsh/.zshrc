@@ -23,7 +23,7 @@ fi
 #   originally set in tools/zsh/.zshenv
 # required because zsh files loading order overrides HISTFILE location
 # check https://unix.stackexchange.com/a/654684
-# 
+#
 # alternate solution:
 # run shell as:
 # zsh -d --login
@@ -148,4 +148,4 @@ source "$ZSCRIPTDIR/aliases.zsh"
 source "$ZSCRIPTDIR/functions.zsh"
 # source "$ZSCRIPTDIR/history.zsh"
 source $ZSH_THEME_DEFAULT    # To customize prompt, run `p10k configure` or edit $ZSH_THEME_DEFAULT
-source "$ZSCRIPTDIR/antigen.zsh"
+source "$ZSCRIPTDIR/zinit.zsh"
