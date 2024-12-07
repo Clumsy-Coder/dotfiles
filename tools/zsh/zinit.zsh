@@ -3,6 +3,7 @@
 # zinit plugin manager
 # config obtained from
 # - https://www.youtube.com/watch?v=ud7YxC33Z3w
+# - https://github.com/dreamsofautonomy/dotfiles/blob/main/.zshrc
 
 ZINIT_REPO="https://github.com/zdharma-continuum/zinit.git"
 
@@ -18,6 +19,7 @@ source "$ZINIT_HOME/zinit.zsh"
 # -------------------------------------------------------------------------------------------------#
 # load plugins
 
+# zinit light ohmyzsh/ohmyzsh
 zinit ice depth=1; zinit light romkatv/powerlevel10k  # theme
 
 # oh-my-zsh plugins
