@@ -30,8 +30,6 @@ fi # END if [[ $IS_MAC -eq 1 ]]; then
 # Linux only aliases. $IS_LINUX is set in zsh/checks.sh
 # -------------------------------------------------------------------------------------------------#
 if [[ $IS_LINUX -eq 1 ]]; then
-  alias man='man --pager=most'                     # using 'most' as pager. Check debian-exports.sh
-
   # Linux version of OSX pbcopy and pbpaste.
   # obtained from
   # - https://medium.com/@codenameyau/how-to-copy-and-paste-in-terminal-c88098b5840d
