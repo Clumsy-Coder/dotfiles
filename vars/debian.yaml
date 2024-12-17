@@ -23,7 +23,6 @@ apt_packages:
   - htop
   - libmagickwand-dev
   - luarocks
-  - most
   - nano
   - ncdu
   - neofetch
