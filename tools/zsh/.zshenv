@@ -190,6 +190,11 @@ export W3M_DIR="$XDG_DATA_HOME/w3m"
 export WAKATIME_HOME="$XDG_CONFIG_HOME/wakatime"
 # mkdir $WAKATIME_HOME > /dev/null 2>&1             # obtained from https://www.cyberciti.biz/faq/how-to-redirect-output-and-errors-to-devnull/
 
+# use neovim to view man pages
+# obtained from
+# - https://www.youtube.com/watch?v=Dg2Lek-xN70&t=159s
+export MANPAGER='nvim +Man!'
+
 # -------------------------------------------------------------------------------------------------#
 
 # Mac OS X uses path_helper and /etc/paths.d to preload PATH, clear it out first
