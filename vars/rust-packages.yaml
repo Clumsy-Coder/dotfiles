@@ -5,3 +5,4 @@ rust_packages:
   - bob-nvim
   - bottom
   - git-delta
+  - tealdeer        # rust based tldr
