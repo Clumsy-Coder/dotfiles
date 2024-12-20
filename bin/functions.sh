@@ -8,11 +8,11 @@
 function __task {
   # if _task is called while a task was set, complete the previous
   if [[ $TASK != "" ]]; then
-    printf "${OVERWRITE}${LGREEN} [✓]  ${LGREEN}${TASK}${NC}\n"
+    printf "%b%b [✓]  %b%b%b\n" "${OVERWRITE}" "${LGREEN}" "${LGREEN}" "${TASK}" "${NC}"
   fi
   # set new task title and print
   TASK=$1
-  printf "${LBLACK} [ ]  ${TASK} \n${LRED}${NC}"
+  printf "%b [ ]  %b \n%b%b" "${LBLACK}" "${TASK}" "${LRED}" "${NC}"
 }
 
 # ----------------------------------------------------------------------------------------------- #
@@ -21,22 +21,22 @@ function __task {
 function _cmd {
   #create log if it doesn't exist
   if ! [[ -f $DOTFILES_LOG ]]; then
-    touch $DOTFILES_LOG
+    touch "$DOTFILES_LOG"
   fi
   # empty conduro.log
-  > $DOTFILES_LOG
+  echo > "$DOTFILES_LOG"
   # hide stdout, on error we print and exit
-  if eval "$1" 1> /dev/null 2> $DOTFILES_LOG; then
+  if eval "$1" 1> /dev/null 2> "$DOTFILES_LOG"; then
     return 0 # success
   fi
   # read error from log and add spacing
-  printf "${OVERWRITE}${LRED} [X]  ${TASK}${LRED}${NC}\n"
-  while read line; do
-    printf "      ${line}${NC}\n"
-  done < $DOTFILES_LOG
-  printf "${NC}\n"
+  printf "%b%b [X]  %b%b%b\n" "${OVERWRITE}" "${LRED}" "${TASK}" "${LRED}" "${NC}"
+  while read -r line; do
+    printf "      ${line}%b\n" "${NC}"
+  done < "$DOTFILES_LOG"
+  printf "%b\n" "${NC}"
   # remove log file
-  rm $DOTFILES_LOG
+  rm "$DOTFILES_LOG"
   # exit installation
   exit 1
 }
@@ -50,12 +50,12 @@ function _clear_task {
 # ----------------------------------------------------------------------------------------------- #
 
 function _task_done {
-  printf "${OVERWRITE}${LGREEN} [✓]  ${LGREEN}${TASK}${NC}\n"
+  printf "%b%b [✓]  %b%b%b\n" "${OVERWRITE}" "${LGREEN}" "${LGREEN}" "${TASK}" "${NC}"
   _clear_task
 }
 
 function _task_failed {
-  printf "${OVERWRITE}${LRED} [X]  ${TASK}${LRED}${NC}\n"
+  printf "%b%b [X]  %b%b%b\n" "${OVERWRITE}" "${LRED}" "${TASK}" "${LRED}" "${NC}"
   _clear_task
 }
 
@@ -77,8 +77,8 @@ function ubuntu_setup() {
     _cmd "sudo apt-get install -y python3"
   fi
 
-  local UBUNTU_MAJOR_VERSION=$(echo $VERSION_ID | cut -d. -f1)
-  if [ $UBUNTU_MAJOR_VERSION -le 22 ]; then
+  local UBUNTU_MAJOR_VERSION=$(echo "$VERSION_ID" | cut -d. -f1)
+  if [ "$UBUNTU_MAJOR_VERSION" -le 22 ]; then
     if ! dpkg -s python3-pip >/dev/null 2>&1; then
       __task "Installing Python3 Pip"
       _cmd "sudo apt-get install -y python3-pip"
@@ -185,15 +185,15 @@ update_ansible_galaxy() {
 function confirmVaultAccess() {
   __task "Checking for 1Password CLI"
   if ! command -v op >/dev/null 2>&1; then
-    printf "${OVERWRITE} ${RED}[X]  Checking for 1Password CLI${NC}\n"
-    printf " ${WARNING}${RED}   1Password CLI is not installed.${NC}\n"
+    printf "%b %b[X]  Checking for 1Password CLI%b\n" "${OVERWRITE}" "${RED}" "${NC}"
+    printf " %b%b   1Password CLI is not installed.%b\n" "${WARNING}" "${RED}" "${NC}"
     exit 1
   fi
   local op_version
   op_version=$(op --version)
   __task "1Password CLI found: [$op_version] -- Authenticating..."
   if ! _cmd "op --account my.1password.com vault list"; then exit 1; fi
-  _task_done && printf "${GREEN} [✓] Successfully authenticated with 1Password CLI! ☕${NC}\n"
+  _task_done && printf "%b [✓] Successfully authenticated with 1Password CLI! ☕%b\n" "${GREEN}" "${NC}"
   return
 }
 
