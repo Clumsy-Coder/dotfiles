@@ -21,6 +21,92 @@
 set -e  # exit if a command exits with a non-zero status
 # set -x  # show every command run in this file
 
+# ################################################################################################ #
+# variables
+DOTFILES_DIR="$HOME/dotfiles"
+DOTFILES_LOG="$HOME/.dotfiles.log"
+
+# ################################################################################################ #
+# load shell files
+
+source "$DOTFILES_DIR/bin/colours.sh"
+source "$DOTFILES_DIR/bin/functions.sh"
+#
+# load ENVs so ansible can use ENVs
+source "$DOTFILES_DIR/tools/zsh/.zshenv"
+# load zsh exports
+# mainly for loading pyenv
+source "$DOTFILES_DIR/tools/zsh/exports.zsh"
+
+# ################################################################################################ #
+# install ansible
+
+dotfiles_os=$(detect_os)
+__task "Loading Setup for detected OS: $dotfiles_os"
+case $dotfiles_os in
+  ubuntu)
+    ubuntu_setup
+    ;;
+  pop)
+    popos_setup
+    ;;
+  # arch)
+  #   arch_setup
+  #   ;;
+  # darwin)
+  #   macos_setup
+  #   ;;
+  *)
+    __task "Unsupported OS"
+    _cmd "echo 'Unsupported OS'"
+    ;;
+esac
+
+__task "Update git submodules"
+_cmd "cd $DOTFILES_DIR && git submodule update --init --recursive"
+# _task_done
+
+# ################################################################################################ #
+# install requirements using ansible-galaxy
+
+__task "Install/Update Ansible requirements"
+_cmd "ANSIBLE_CONFIG=${DOTFILES_DIR}/ansible.cfg ansible-galaxy install -r \"${DOTFILES_DIR}/requirements.yaml\" "
+_task_done
+
+# ################################################################################################ #
+# run ansible playbook
+
+# check if the playbook is provided
+__task "Checking if playbook is provided"
+if [ -z "$1" ]; then
+  _task_failed
+  echo "Playbook not provided."
+  echo
+  echo "Please provide a playbook to use"
+  echo "Ex: dotfiles macos"
+  exit 1
+fi
+
+# check if the playbook file exists
+__task "Checking if playbook $1 exists"
+if [[ ! -e "$DOTFILES_DIR/playbooks/$1.yaml" ]]; then
+  _task_failed
+  echo "playbook $1 doesn't exist in folder $DOTFILES_DIR/playbooks"
+  echo "Exiting"
+  exit 1
+fi
+
+__task "Running Ansible playbook $1"
+PLAYBOOK=$1
+# use `shift` to 'eat' the argument $1.
+# this is used because after providing the playbook, the rest of arguments are passed to ansible
+# obtained from
+# - https://stackoverflow.com/a/1537687/3053548
+shift
+ANSIBLE_CONFIG=${DOTFILES_DIR}/ansible.cfg ansible-playbook "${DOTFILES_DIR}/playbooks/${PLAYBOOK}.yaml" "$@"
+
+# ################################################################################################ #
+
 # load ENVs so ansible can use ENVs
 source ./tools/zsh/.zshenv
 
