@@ -1,0 +1,53 @@
+---
+
+# create directories to store code
+# link directories to the home folder
+
+- name: "Create directory for 'code'"
+  file:
+    dest: "~/Documents/code"
+    state: directory
+
+- name: "Create directory for 'temp-git-clone'"
+  file:
+    dest: "~/Documents/temp-git-clone"
+    state: directory
+
+# create directory in order to use gpg for encrypting and decrypting
+- name: "Create directory for 'gnupg'"
+  file:
+    dest: "~/.local/share/gnupg"
+    state: directory
+
+- name: "Link directory for 'code' to the home folder"
+  file:
+    src: "~/Documents/code/"
+    dest: "~/code"
+    state: link
+
+- name: "Link directory for 'temp-git-clone' to the home folder"
+  file:
+    src: "~/Documents/temp-git-clone/"
+    dest: "~/temp-git-clone"
+    state: "link"
+
+- name: "Create orgfiles directory in ~/Documents/ directory"
+  file:
+    dest: "~/Documents/orgfiles"
+    state: directory
+
+- name: "Create refile for orgmode"
+  file:
+    dest: "~/Documents/orgfiles/refile.org"
+    state: touch
+
+- name: "Link ~/Document/orgfiles to ~/orgfiles/"
+  file:
+    src: "~/Documents/orgfiles/"
+    dest: "~/orgfiles"
+    state: link
+
+- name: "Create ~/.config/wakatime directory"
+  file:
+    dest: "~/.config/wakatime"
+    state: directory
