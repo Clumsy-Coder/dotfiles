@@ -7,34 +7,14 @@
 
   # roles:
 
-  tasks:
-    # run zshenv and print out all env in the shell
-    # store the output to a register
-    # this will be used in tasks when using the env. no need to run zshenv before running ansible-playbook
-    #
-    # obtained from
-    # https://stackoverflow.com/a/74932715/3053548
-    - name: "SOURCE ZSHENV"
-      shell:
-        cmd: source ../tools/zsh/.zshenv; env
-      register: out
-      changed_when: false
-      tags: always
-
-    # extract the envs and store them as a dictionary
-    - name: "STORE ZSHENV AS FACT"
-      set_fact:
-        zshenv: "{{ dict(out.stdout.splitlines() | map('split', '=', 1)) }}"
-      changed_when: false
-      tags: always
-
-    - name: "PRINT ENV"
-      debug:
-        msg: "{{ zshenv }}"
+  pre_tasks:
+    - name: Load envs
+      ansible.builtin.import_tasks:
+        ../pre_tasks/load-envs.yaml
       tags:
         - always
 
-    # ------------------------------------------------------------------------------------------- #
+  tasks:
     # terminal config
 
     - include_tasks: "{{ zshenv.DOTDIR }}/tasks/code-directory.yaml"
