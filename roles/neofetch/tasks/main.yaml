@@ -1,0 +1,13 @@
+---
+
+- name: "Create directory for Neofetch on {{ zshenv.NEOFETCH_CONFIG_DIR_PATH }}"
+  file:
+    path: "{{ zshenv.NEOFETCH_CONFIG_DIR_PATH }}"
+    state: directory
+
+# link Neofetch config file
+- name: "Link Neofetch config file to {{ zshenv.NEOFETCH_CONFIG_PATH }}"
+  file:
+    src: "{{ zshenv.DOTDIR }}/tools/neofetch/config.conf"
+    dest: "{{ zshenv.NEOFETCH_CONFIG_PATH }}"
+    state: link
