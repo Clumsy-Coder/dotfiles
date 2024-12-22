@@ -1,17 +1,11 @@
 ---
 
 - include_vars: "{{ zshenv.DOTDIR }}/vars/rust-packages.yaml"
-  tags:
-    - cargo-packages
-    - terminal
 
-- name: "cargo-packages: install Rust Cargo packages"
+- name: "Install Rust Cargo packages"
   # shell:
   #   cmd: "cargo install {{ item }}"
   community.general.cargo:
     name: "{{ item }}"
   loop: "{{ rust_packages }}"
   ignore_errors: true
-  tags:
-    - cargo-packages
-    - terminal
