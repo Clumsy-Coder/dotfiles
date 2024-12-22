@@ -1,67 +1,46 @@
 ---
 
-- name: "git: Create git directory in {{ zshenv.GIT_CONFIG_DIR_PATH }}"
+- name: "Create git directory in {{ zshenv.GIT_CONFIG_DIR_PATH }}"
   file:
     path: "{{ zshenv.GIT_CONFIG_DIR_PATH }}"
     state: directory
-  tags:
-    - git
-    - terminal
 
-- name: "git: Add gitconfig file to {{ zshenv.GIT_CONFIG_PATH }}"
+- name: "Add gitconfig file to {{ zshenv.GIT_CONFIG_PATH }}"
   file:
     src: "{{ zshenv.DOTDIR }}/tools/git/.gitconfig"
     dest: "{{ zshenv.GIT_CONFIG_PATH }}"
     state: link
-  tags:
-    - git
-    - terminal
 
-- name: "git: Add gitignore file to {{ zshenv.GIT_IGNORE_GLOBAL_PATH }}"
+- name: "Add gitignore file to {{ zshenv.GIT_IGNORE_GLOBAL_PATH }}"
   file:
     src: "{{ zshenv.DOTDIR }}/tools/git/.gitignore_global"
     dest: "{{ zshenv.GIT_IGNORE_GLOBAL_PATH }}"
     state: link
-  tags:
-    - git
-    - terminal
 
-- name: "git: create ~/.ssh directory"
+- name: "Create ~/.ssh directory"
   file:
     path: "{{ zshenv.HOME }}/.ssh"
     state: directory
-  tags:
-    - git
-    - terminal
 
-- name: "git: Add git allowed signers to {{ zshenv.GIT_ALLOWED_SIGNERS }}"
+- name: "Add git allowed signers to {{ zshenv.GIT_ALLOWED_SIGNERS }}"
   file:
     src: "{{ zshenv.DOTDIR }}/tools/git/allowed_signers"
     dest: "{{ zshenv.GIT_ALLOWED_SIGNERS }}"
     state: link
-  tags:
-    - git
-    - terminal
 
 # ----------------------------------------------------------------------------------------------- #
 
 # symlink `/usr/local/bin/gh` to `/usr/bin/gh`
-- name: "git: check `gh` location"
+- name: "Check `gh` location"
   stat:
     path: "/usr/local/bin/gh"
   changed_when: false
   register: gh_stats
-  tags:
-    - git
-    - terminal
 
-- name: "git: add symlink of `gh` to /use/local/bin"
+- name: "Add symlink of `gh` to /use/local/bin"
   file:
     src: "/usr/bin/gh"
     dest: "/usr/local/bin/gh"
     state: link
   become: true
-  tags:
-    - git
-    - terminal
   when: not gh_stats.stat.exists
