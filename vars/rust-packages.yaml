@@ -2,7 +2,7 @@
 
 rust_packages:
   # - stylua
-  - bob-nvim
+  # - bob-nvim        # version manager for neovim
   - bottom
   - git-delta
   - tealdeer        # rust based tldr
