@@ -4,3 +4,42 @@ default_roles:
   - code-directory
   - apt
   - alacritty
+
+apt_packages:
+  # - autoconf
+  # - automake
+  # - cmake
+  # - figlet
+  # - fonts-powerline
+  # - g++
+  # - gettext
+  # - golang
+  # - powerline
+  - bat
+  - bsdgames
+  - build-essential
+  - curl
+  - exa
+  - exiftool
+  - fzf
+  - gh
+  - git
+  - gnome-sushi
+  - htop
+  - libmagickwand-dev
+  - luarocks
+  - nano
+  - ncdu
+  - neofetch
+  - ripgrep
+  - ruby-dev
+  - tmux
+  - trash-cli
+  - tree
+  - unzip
+  - urlview
+  - vim
+  - wget
+  - xsel
+  - zip
+  - zsh
