@@ -2,3 +2,4 @@
 
 default_roles:
   - code-directory
+  - alacritty
