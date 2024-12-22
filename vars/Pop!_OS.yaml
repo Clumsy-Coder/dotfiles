@@ -10,6 +10,7 @@ default_roles:
   - astronvim-v4
   - tmux
   - nvm
+  - npm
   - alacritty
 
 apt_packages:
