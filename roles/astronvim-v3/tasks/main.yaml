@@ -6,7 +6,7 @@
     - terminal
 
 # remove old Neovim installed plugins
-- name: "astronvim: remove old Neovim plugins"
+- name: "Remove old Neovim plugins"
   file:
     path: "{{ item }}"
     state: absent
@@ -17,36 +17,24 @@
     - "{{ zshenv.XDG_DATA_HOME }}/nvim/lazy"
     - "{{ zshenv.XDG_DATA_HOME }}/nvim/lazy-lock.json"
     - "{{ zshenv.XDG_CACHE_HOME }}/nvim"
-  tags:
-    - astronvim
-    - terminal
 
 # download latest Astronvim git repo
-- name: "astronvim: git clone Astronvim repo"
+- name: "Git clone Astronvim repo"
   git:
     repo: "https://github.com/AstroNvim/AstroNvim"
     version: v3.45.3
     dest: "{{ zshenv.NVIM_CONFIG_DIR_PATH }}"
-  tags:
-    - astronvim
-    - terminal
 
 # link astronvim config files
-- name: "astronvim: link config file to astronvim"
+- name: "Link config file to astronvim"
   file:
     src: "{{ zshenv.DOTDIR }}/tools/astronvim"
     dest: "{{ zshenv.ASTRO_NVIM_CONFIG_DIR_PATH }}"
     state: link
-  tags:
-    - astronvim
-    - terminal
 
 # install astronvim plugins
 # install TreeSitter language packs after installing plugins
 #   running in async. Requires main thread to be blocked temporarily
-- name: "astronvim: install astronvim plugins. Please wait {{ astronvim_install_wait_seconds }} seconds"
-  shell:
+- name: "Install astronvim plugins. Please wait {{ astronvim_install_wait_seconds }} seconds"
+  command:
     cmd: nvim --headless -c 'autocmd User LazyDone quitall' -c 'sleep {{ astronvim_install_wait_seconds }}' -c 'quitall'
-  tags:
-    - astronvim
-    - terminal
