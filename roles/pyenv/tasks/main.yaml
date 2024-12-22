@@ -4,7 +4,7 @@
 
 # install dependencies in debian
 # obtained from https://github.com/pyenv/pyenv/wiki#suggested-build-environment
-- name: "pyenv: install dependencies via apt"
+- name: "Install dependencies via apt"
   apt:
     update_cache: true
     name: "{{ item }}"
@@ -26,13 +26,10 @@
     - zlib1g-dev
   when: ansible_os_family == "Debian"
   become: true
-  tags:
-    - pyenv
-    - terminal
 
 # install dependencies in macOS
 # obtained from https://github.com/pyenv/pyenv/wiki#suggested-build-environment
-- name: "pyenv: install dependencies via homebrew"
+- name: "Install dependencies via homebrew"
   homebrew:
     name: "{{ item }}"
     state: present
@@ -45,63 +42,42 @@
     - zlib
   when: ansible_os_family == "Darwin"
   become: true
-  tags:
-    - pyenv
-    - terminal
 
 # obtained from https://stackoverflow.com/a/35021607/3053548
-- name: "pyenv: check if {{ zshenv.PYENV_DIR_PATH }} exists"
+- name: "Check if {{ zshenv.PYENV_DIR_PATH }} exists"
   stat:
     path: "{{ zshenv.PYENV_DIR_PATH }}"
   changed_when: false
   register: pyenv_dir_stats
-  tags:
-    - pyenv
-    - terminal
 
-- name: "pyenv: install pyenv"
+- name: "Install pyenv"
   shell: curl https://pyenv.run | bash
   when: not pyenv_dir_stats.stat.exists
-  tags:
-    - pyenv
-    - terminal
 
-- name: "pyenv: update pyenv"
+- name: "Update pyenv"
   shell: |
     command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH" ;
     eval "$(pyenv init -)" ;
     pyenv update
   when: pyenv_dir_stats.stat.exists
-  tags:
-    - pyenv
-    - terminal
 
 # obtained from https://stackoverflow.com/a/65943431/3053548
-- name: "pyenv: get latest python version"
+- name: "Get latest python version"
   shell: |
     command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH" ;
     eval "$(pyenv init -)" ;
     pyenv install --list | grep --extended-regexp "^\s*[0-9][0-9.]*[0-9]\s*$" | tail -1
   changed_when: false
   register: python_latest_version
-  tags:
-    - pyenv
-    - terminal
 
-- name: "pyenv: install python version {{ python_latest_version.stdout }}"
+- name: "Install python version {{ python_latest_version.stdout }}"
   shell: |
     command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH" ;
     eval "$(pyenv init -)" ;
     pyenv install --skip-existing {{ python_latest_version.stdout }}
-  tags:
-    - pyenv
-    - terminal
 
-- name: "pyenv: use latest python version"
+- name: "Use latest python version"
   shell: |
     command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH" ;
     eval "$(pyenv init -)" ;
     pyenv global {{ python_latest_version.stdout }}
-  tags:
-    - pyenv
-    - terminal
