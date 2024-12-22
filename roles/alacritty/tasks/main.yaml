@@ -1,20 +1,14 @@
 ---
 
 # create directory for alacritty in ~/.config/
-- name: "alacritty: create directory for alacritty in {{ zshenv.ALACRITTY_CONFIG_DIR_PATH }}"
+- name: "Create directory for alacritty in {{ zshenv.ALACRITTY_CONFIG_DIR_PATH }}"
   file:
     path: "{{ zshenv.ALACRITTY_CONFIG_DIR_PATH }}"
     state: directory
-  tags:
-    - gui
-    - alacritty
 
 # link Alacritty config file
-- name: "alacritty: link config file to {{ zshenv.ALACRITTY_CONFIG_PATH }}"
+- name: "Link config file to {{ zshenv.ALACRITTY_CONFIG_PATH }}"
   file:
     src: "{{ zshenv.DOTDIR }}/tools/alacritty/alacritty.yml"
     dest: "{{ zshenv.ALACRITTY_CONFIG_PATH }}"
     state: link
-  tags:
-    - gui
-    - alacritty
