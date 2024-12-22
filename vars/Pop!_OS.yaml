@@ -8,6 +8,7 @@ default_roles:
   - neofetch
   - neovim
   - astronvim-v4
+  - tmux
   - alacritty
 
 apt_packages:
