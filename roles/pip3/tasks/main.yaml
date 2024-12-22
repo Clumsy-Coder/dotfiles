@@ -1,16 +1,10 @@
 ---
 
 - include_vars: "{{ zshenv.DOTDIR }}/vars/pip3-packages.yaml"
-  tags:
-    - pip3
-    - terminal
 
 # install pip3 packages
-- name: "pip3: install pip3 packages"
+- name: "Install pip3 packages"
   pip:
     name: "{{ item }}"
     executable: pip3
   loop: "{{ pip3_packages }}"
-  tags:
-    - pip3
-    - terminal
