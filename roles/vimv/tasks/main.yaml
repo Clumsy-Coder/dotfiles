@@ -3,12 +3,9 @@
 # install vimv (batch file rename tool)
 # check https://github.com/thameera/vimv
 
-- name: "vimv: Download vimv binary to /usr/local/bin/ folder"
+- name: "Download vimv binary to /usr/local/bin/ folder"
   get_url:
     url: https://raw.githubusercontent.com/thameera/vimv/master/vimv
     dest: /usr/local/bin/vimv
     mode: '1700'
   become: true
-  tags:
-    - vimv
-    - terminal
