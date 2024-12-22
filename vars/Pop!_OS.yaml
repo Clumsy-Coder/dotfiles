@@ -2,4 +2,5 @@
 
 default_roles:
   - code-directory
+  - apt
   - alacritty
