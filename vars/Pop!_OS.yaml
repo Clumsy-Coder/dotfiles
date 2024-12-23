@@ -20,7 +20,9 @@ default_roles:
   - ohmyzsh
   - ufw
   - xdg-ninja
+  # gui roles
   - alacritty
+  - kitty
 
 apt_packages:
   # - autoconf
