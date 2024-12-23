@@ -26,6 +26,7 @@ default_roles:
   - nerdfonts
   - flatpak
   - prusa-slicer
+  - postman
 
 apt_packages:
   # - autoconf
