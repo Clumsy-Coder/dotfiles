@@ -1,0 +1,13 @@
+---
+
+# load var file `./vars/go-packages.yaml`
+- include_vars: "{{ zshenv.DOTDIR }}/vars/go-packages.yaml"
+
+- name: "Install GoLang Packages"
+  ansible.builtin.command:
+    cmd: "go install {{ item }}"
+    creates: "~/go/bin/{{ item }}"
+  loop: "{{ go_packages }}"
+  register: go_install
+  when: go_packages is defined
+  changed_when: go_install.rc != 0
