@@ -25,6 +25,7 @@ default_roles:
   - kitty
   - nerdfonts
   - flatpak
+  - prusa-slicer
 
 apt_packages:
   # - autoconf
