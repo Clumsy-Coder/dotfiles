@@ -3,7 +3,7 @@
 # this task will look for var `flatpak_packages` in order to install flatpak packages.
 # make sure to load the var in the playbook
 
-- include_vars: "{{ zshenv.DOTDIR }}/vars/flatpak.yaml"
+- include_vars: "flatpak.yaml"
 
 - name: "Add remotes"
   flatpak_remote:
