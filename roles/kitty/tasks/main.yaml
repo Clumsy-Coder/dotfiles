@@ -1,12 +1,9 @@
 ---
 
 # link Kitty config folder
-- name: "kitty: link folder to {{ zshenv.KITTY_CONFIG_DIRECTORY }}"
+- name: "Link folder to {{ zshenv.KITTY_CONFIG_DIRECTORY }}"
   file:
     src: "{{ zshenv.DOTDIR }}/tools/kitty/"
     dest: "{{ zshenv.KITTY_CONFIG_DIRECTORY }}"
     state: link
     force: true
-  tags:
-    - gui
-    - kitty
