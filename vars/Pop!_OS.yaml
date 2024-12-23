@@ -59,3 +59,17 @@ apt_packages:
   - xsel
   - zip
   - zsh
+
+# ufw firewall rules
+# allow ports in 'ufw'
+#
+# used in role `ufw`
+ufw:
+  - port_number: 2200
+    comment: "SSH"
+  - port_number: 80
+    comment: "HTTP"
+  - port_number: 3000
+    comment: "HTTP dev"
+  - port_number: 53317
+    comment: "LocalSend"
