@@ -1,7 +1,7 @@
 ---
 
 # load var file `./vars/go-packages.yaml`
-- include_vars: "{{ zshenv.DOTDIR }}/vars/go-packages.yaml"
+- include_vars: "go-packages.yaml"
 
 - name: "Install GoLang Packages"
   ansible.builtin.command:
