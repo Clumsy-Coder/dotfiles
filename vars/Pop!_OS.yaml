@@ -15,6 +15,7 @@ default_roles:
   - pip3
   - rust
   - cargo
+  - go
   - vimv
   - zsh
   - ohmyzsh
