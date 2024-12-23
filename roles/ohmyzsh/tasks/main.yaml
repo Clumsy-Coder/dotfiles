@@ -1,28 +1,19 @@
 ---
 
-- name: "ohmyzsh: Create directory for ZSH cache"
+- name: "Create directory for ZSH cache"
   file:
     path: "{{ zshenv.ZSH_CACHE_DIR }}"
     state: directory
-  tags:
-    - ohmyzsh
-    - terminal
 
-- name: "ohmyzsh: Remove existing Oh-my-zsh directory"
+- name: "Remove existing Oh-my-zsh directory"
   file:
     path: "{{ zshenv.OH_MY_ZSH_DIR_PATH }}"
     state: absent
-  tags:
-    - ohmyzsh
-    - terminal
 
 # install Oh-my-zsh
-- name: "ohmyzsh: Install Oh-my-zsh"
+- name: "Install Oh-my-zsh"
   shell:
     cmd: sh -c "$(curl -o- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   environment:
     ZSH: "{{ zshenv.OH_MY_ZSH_DIR_PATH }}"
     KEEP_ZSHRC: "yes"
-  tags:
-    - ohmyzsh
-    - terminal
