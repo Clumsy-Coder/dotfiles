@@ -1,6 +1,6 @@
 ---
 
-- include_vars: "{{ zshenv.DOTDIR }}/vars/luarocks-packages.yaml"
+- include_vars: "luarocks-packages.yaml"
 
 - name: "luarocks: install luarocks packages"
   shell:
