@@ -1,6 +1,6 @@
 ---
 
-- include_vars: "{{ zshenv.DOTDIR }}/vars/pip3-packages.yaml"
+- include_vars: "pip3-packages.yaml"
 
 # install pip3 packages
 - name: "Install pip3 packages"
