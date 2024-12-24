@@ -1,9 +1,6 @@
 ---
 
-- include_vars: "{{ zshenv.DOTDIR }}/vars/astronvim.yaml"
-  tags:
-    - astronvim
-    - terminal
+- include_vars: "astronvim.yaml"
 
 # remove old Neovim installed plugins
 - name: "Remove old Neovim plugins"
