@@ -1,5 +1,5 @@
 ---
-- include_vars: "{{ zshenv.DOTDIR }}/vars/npm-packages.yaml"
+- include_vars: "npm-packages.yaml"
 
 # used for finding the npm executable installed by nvm
 - name: "Store current nodejs version being used by nvm"
