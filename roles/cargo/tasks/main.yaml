@@ -1,6 +1,6 @@
 ---
 
-- include_vars: "{{ zshenv.DOTDIR }}/vars/rust-packages.yaml"
+- include_vars: "cargo-packages.yaml"
 
 - name: "Install Rust Cargo packages"
   # shell:
