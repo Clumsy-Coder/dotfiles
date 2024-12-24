@@ -1,14 +1,9 @@
 ---
 
 - include_vars: "{{ zshenv.DOTDIR }}/vars/luarocks-packages.yaml"
-  tags:
-    - luarocks
-    - terminal
 
 - name: "luarocks: install luarocks packages"
   shell:
     cmd: "luarocks install {{ item }}"
   loop: "{{ luarocks_packages }}"
-  tags:
-    - luarocks
-    - terminal
+  # become: true
