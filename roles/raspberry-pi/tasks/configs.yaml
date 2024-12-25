@@ -9,29 +9,29 @@
 
 # ############################################################################################### #
 # Localization config
-- name: "raspberrypi-configs: Set language to Canadian English"
+- name: "Set language to Canadian English"
   shell: raspi-config nonint do_change_locale en_CA.UTF-8
   become: true
 
-- name: "raspberrypi-configs: Specify US keyboard"
+- name: "Specify US keyboard"
   shell: raspi-config nonint do_configure_keyboard us
   become: true
 
-- name: "raspberrypi-configs: Set WiFi country as Canada"
+- name: "Set WiFi country as Canada"
   shell: raspi-config nonint do_wifi_country CA
   become: true
 
 # ############################################################################################### #
 # System config
-- name: "raspberrypi-configs: Boot to CLI & require login"
+- name: "Boot to CLI & require login"
   shell: raspi-config nonint do_boot_behaviour B1
   become: true
 
-- name: "raspberrypi-configs: Turn off waiting for network before booting"
+- name: "Turn off waiting for network before booting"
   shell: raspi-config nonint do_boot_wait 0
   become: true
 
-# - name: "raspberrypi-configs: Disable splash screen"
+# - name: "Disable splash screen"
 #   shell: raspi-config nonint do_boot_splash 1
 
 # ############################################################################################### #
@@ -39,31 +39,31 @@
 
 # ############################################################################################### #
 # Interface config
-- name: "raspberrypi-configs: Disable the camera"
+- name: "Disable the camera"
   shell: raspi-config nonint do_camera 1
   become: true
 
-- name: "raspberrypi-configs: Disable VNC"
+- name: "Disable VNC"
   shell: raspi-config nonint do_vnc 1
   become: true
 
-- name: "raspberrypi-configs: Disable spi bus"
+- name: "Disable spi bus"
   shell: raspi-config nonint do_spi 1
   become: true
 
-- name: "raspberrypi-configs: Disable the i2c bus"
+- name: "Disable the i2c bus"
   shell: raspi-config nonint do_i2c 1
   become: true
 
-- name: "raspberrypi-configs: Disable the RS232 serial bus"
+- name: "Disable the RS232 serial bus"
   shell: raspi-config nonint do_serial 1
   become: true
 
-- name: "raspberrypi-configs: Disable onewire on GPIO4"
+- name: "Disable onewire on GPIO4"
   shell: raspi-config nonint do_onewire 1
   become: true
 
-- name: "raspberrypi-configs: Disable GPIO server"
+- name: "Disable GPIO server"
   shell: raspi-config nonint do_rgpio 1
   become: true
 
@@ -74,17 +74,17 @@
 # ############################################################################################### #
 # Advanced config
 
-- name: "raspberrypi-configs: Ensures that all of the SD card is available"
+- name: "Ensures that all of the SD card is available"
   shell: raspi-config nonint do_expand_rootfs
   become: true
 
-# - name: "raspberrypi-configs: Disable predictable network names"
+# - name: "Disable predictable network names"
 #   shell: raspi-config nonint do_net_names 1
 #   become: true
 
 # ############################################################################################### #
 # disable ipv6
-- name: "raspberrypi-configs: Disable IPv6"
+- name: "Disable IPv6"
   blockinfile:
     path: /etc/sysctl.conf
     block: |
@@ -94,7 +94,7 @@
   register: disable_ipv6
   become: true
 
-- name: "raspberrypi-configs: Apply changes for disabling IPv6"
+- name: "Apply changes for disabling IPv6"
   shell: sysctl -p
   when: disable_ipv6.changed
   become: true
