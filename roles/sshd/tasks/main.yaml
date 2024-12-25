@@ -5,7 +5,16 @@
 # - https://github.com/shaderecker/ansible-pihole/blob/master/roles/sshd/tasks/main.yaml
 # - https://linuxhandbook.com/ssh-hardening-tips/
 
-- name: "sshd: add sshd configs for security"
+- name: "Install OpenSSH-server via apt"
+  apt:
+    update_cache: true
+    name: "openssh-server"
+    state: present
+  when:
+    ansible_os_family == "Debian"
+  become: true
+
+- name: "Add sshd configs for security"
   blockinfile:
     path: /etc/ssh/sshd_config
     validate: /usr/sbin/sshd -T -f %s
@@ -17,15 +26,9 @@
       PermitRootLogin no
       X11Forwarding no
   become: true
-  tags:
-    - sshd
-    - terminal
 
-- name: "sshd: restart ssh service"
+- name: "Restart ssh service"
   service:
     name: ssh
     state: restarted
   become: true
-  tags:
-    - sshd
-    - terminal
