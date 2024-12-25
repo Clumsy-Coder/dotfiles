@@ -13,3 +13,6 @@
 - name: "Run Role: UFW"
   ansible.builtin.include_role:
     name: ufw
+
+- name: "Run Tasks: unattended-upgrades.yaml"
+  ansible.builtin.include_tasks: "unattended-upgrades.yaml"
