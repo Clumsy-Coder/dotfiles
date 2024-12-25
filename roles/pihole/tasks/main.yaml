@@ -3,6 +3,9 @@
 - name: "Run Task: pihole.yaml"
   ansible.builtin.include_tasks: "pihole.yaml"
 
+- name: "Run Tasks: unbound.yaml"
+  ansible.builtin.include_tasks: "unbound.yaml"
+
 - name: "Run Task: cron.yaml"
   ansible.builtin.include_tasks: "cron.yaml"
 
