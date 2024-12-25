@@ -2,3 +2,15 @@
 
 - name: "Run Tasks: configs.yaml"
   ansible.builtin.include_tasks: "pihole.yml"
+
+- name: "Set var for UFW"
+  ansible.builtin.set_fact:
+    ufw:
+      - port_number: 80
+        comment: "Pi-Hole Admin WebPortal"
+      - port_number: 53
+        comment: "Pi-Hole DNS"
+
+- name: "Run Role: UFW"
+  ansible.builtin.include_role:
+    name: ufw
