@@ -1,10 +1,7 @@
 ---
 
-- name: "pihole-cron: link pihole cron file"
+- name: "Link pihole cron file"
   file:
     src: "{{ zshenv.DOTDIR }}/tools/cron/pihole-autoupdate"
     dest: "/etc/cron.daily/pihole-autoupdate"
   become: true
-  tags:
-    - pihole-cron
-    - terminal
