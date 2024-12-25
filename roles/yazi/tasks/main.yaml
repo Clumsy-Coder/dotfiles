@@ -1,0 +1,10 @@
+---
+
+# terminal file manager written in rust
+# https://github.com/sxyazi/yazi
+
+- name: "Link yazi config folder to ~/.config/yazi"
+  file:
+    src: "{{ zshenv.DOTDIR }}/tools/yazi"
+    dest: "{{ zshenv.XDG_CONFIG_HOME }}/yazi"
+    state: link
