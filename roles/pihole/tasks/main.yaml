@@ -20,3 +20,7 @@
 - name: "Run Role: UFW"
   ansible.builtin.include_role:
     name: ufw
+
+- name: "Run Role: fail2ban"
+  ansible.builtin.include_role:
+    name: fail2ban
