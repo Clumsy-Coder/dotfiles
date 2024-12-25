@@ -2,3 +2,14 @@
 
 - name: "Run Tasks: configs.yaml"
   ansible.builtin.include_tasks: "configs.yml"
+
+
+- name: "Set var for UFW"
+  ansible.builtin.set_fact:
+    ufw:
+      - port_number: 22
+        comment: "SSH"
+
+- name: "Run Role: UFW"
+  ansible.builtin.include_role:
+    name: ufw
