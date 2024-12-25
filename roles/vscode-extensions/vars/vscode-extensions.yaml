@@ -1,21 +1,16 @@
 ---
 
 vscode_extensions:
-  # - VladimirMikulic.shell-banner-comments
-  # - cssho.vscode-svgviewer
-  - DavidAnson.vscode-markdownlint
-  - EQuimper.react-native-react-redux
-  - EditorConfig.EditorConfig
-  - Orta.vscode-jest
-  - PKief.material-icon-theme
   - christian-kohler.npm-intellisense
   - christian-kohler.path-intellisense
+  - davidanson.vscode-markdownlint
   - dbaeumer.vscode-eslint
   - deerawan.vscode-faker
   - dsznajder.es7-react-js-snippets
   - dunstontc.viml
-  - dzannotti.vscode-babel-coloring
   - eamodio.gitlens
+  - editorconfig.editorconfig
+  - equimper.react-native-react-redux
   - ericadamski.carbon-now-sh
   - esbenp.prettier-vscode
   - gamunu.vscode-yarn
@@ -30,13 +25,19 @@ vscode_extensions:
   - mikestead.dotenv
   - mrmlnc.vscode-json5
   - ms-azuretools.vscode-docker
+  - ms-python.debugpy
+  - ms-python.python
+  - ms-python.vscode-pylance
+  - ms-vscode-remote.remote-containers
   - msjsdiag.vscode-react-native
   - naco-siren.gradle-language
   - naumovs.color-highlight
   - oderwat.indent-rainbow
+  - orta.vscode-jest
   - piotrpalarz.vscode-gitignore-generator
-  - rebornix.ruby
+  - pkief.material-icon-theme
   - redhat.vscode-yaml
+  - shopify.ruby-lsp
   - softwaredotcom.swdc-vscode
   - spywhere.guides
   - streetsidesoftware.code-spell-checker
@@ -44,6 +45,5 @@ vscode_extensions:
   - waderyan.gitblame
   - wayou.vscode-todo-highlight
   - william-voyek.vscode-nginx
-  - wingrunr21.vscode-ruby
   - wix.vscode-import-cost
   - yzhang.markdown-all-in-one
