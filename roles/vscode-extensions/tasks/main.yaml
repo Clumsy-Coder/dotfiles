@@ -1,5 +1,5 @@
 ---
-- include_vars: "{{ zshenv.DOTDIR }}/vars/vscode-extensions.yaml"
+- include_vars: "vscode-extensions.yaml"
 
 - name: "List and store existing vscode extensions"
   block:
