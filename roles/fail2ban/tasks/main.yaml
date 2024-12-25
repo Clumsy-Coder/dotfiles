@@ -2,7 +2,7 @@
 
 # setup fail2ban using config file
 
-- name: "fail2ban: install fail2ban via apt"
+- name: "Install fail2ban via apt"
   apt:
     update_cache: true
     name: "fail2ban"
@@ -10,25 +10,16 @@
   when:
     ansible_os_family == "Debian"
   become: true
-  tags:
-    - fail2ban
-    - terminal
 
-- name: "fail2ban: link config file to /etc/fail2ban/jail.local"
+- name: "Link config file to /etc/fail2ban/jail.local"
   file:
     src: "{{ zshenv.DOTDIR }}/tools/fail2ban/jail.local"
     dest: "{{ zshenv.FAIL2BAN_JAIL_FILE_PATH }}"
     state: link
   become: true
-  tags:
-    - fail2ban
-    - terminal
 
-- name: "fail2ban: restart fail2ban service"
+- name: "Restart fail2ban service"
   service:
     name: fail2ban
     state: restarted
   become: true
-  tags:
-    - fail2ban
-    - terminal
