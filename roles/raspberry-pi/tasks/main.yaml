@@ -1,0 +1,4 @@
+---
+
+- name: "Run Tasks: configs.yaml"
+  ansible.builtin.include_tasks: "configs.yml"
