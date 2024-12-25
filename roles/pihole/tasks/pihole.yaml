@@ -2,40 +2,31 @@
 
 # install pihole
 
-- name: "pihole: Create directory /etc/pihole"
+- name: "Create directory /etc/pihole"
   file:
     dest: "/etc/pihole"
     state: directory
     owner: pihole
     group: pihole
-  tags:
-    - pihole
-    - terminal
   become: true
 
-- name: "pihole: link pihole setupVars to /etc/pihole/setupVars.conf"
+- name: "Link pihole setupVars to /etc/pihole/setupVars.conf"
   copy:
     src: "{{ zshenv.DOTDIR }}/tools/pihole/setupVars.conf"
     dest: "/etc/pihole/setupVars.conf"
     owner: pihole
     group: pihole
   become: true
-  tags:
-    - pihole
-    - terminal
 
-- name: "pihole: link pihole adlists to /etc/pihole/adlists.conf"
+- name: "Link pihole adlists to /etc/pihole/adlists.conf"
   copy:
     src: "{{ zshenv.DOTDIR }}/tools/pihole/adlists.conf"
     dest: "/etc/pihole/adlists.conf"
     owner: pihole
     group: pihole
   become: true
-  tags:
-    - pihole
-    - terminal
 
-- name: "pihole: install pihole"
+- name: "Install pihole"
   shell: |
     curl  -sSL \
           --max-time 10 \
@@ -44,6 +35,3 @@
           --retry-max-time 40 \
           https://install.pi-hole.net | bash /dev/stdin --unattended
   become: true
-  tags:
-    - pihole
-    - terminal
