@@ -3,6 +3,13 @@
 # this taskfile will look for var `apt_packages` to install apt packages.
 #   make sure to load it in the playbook
 
+- name: "Add APT source"
+  apt_repository:
+    repo: "{{ item }}"
+    state: present
+  loop: "{{ add_apt_sources }}"
+  when: add_apt_sources is defined
+
 - name: "Update apt package repository"
   apt:
     update_cache: true
