@@ -1,10 +1,10 @@
 ---
 
-- name: "Run Tasks: configs.yaml"
-  ansible.builtin.include_tasks: "pihole.yml"
+- name: "Run Task: pihole.yaml"
+  ansible.builtin.include_tasks: "pihole.yaml"
 
-- name: "Run Tasks: cron.yaml"
-  ansible.builtin.include_tasks: "cron.yml"
+- name: "Run Task: cron.yaml"
+  ansible.builtin.include_tasks: "cron.yaml"
 
 - name: "Set var for UFW"
   ansible.builtin.set_fact:
