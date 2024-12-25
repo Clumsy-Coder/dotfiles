@@ -1,0 +1,21 @@
+---
+- include_vars: "{{ zshenv.DOTDIR }}/vars/vscode-extensions.yaml"
+
+- name: "List and store existing vscode extensions"
+  block:
+    - name: "List currently installed extensions"
+      command:
+        cmd: code --list-extensions
+      register: existing_vscode_extensions
+      changed_when: false
+
+    - name: "Store list as fact"
+      ansible.builtin.set_fact:
+        extensions: "{{ existing_vscode_extensions.stdout_lines }}"
+
+- name: "Install VScode extensions"
+  shell:
+    cmd: code --install-extension {{ item }}
+  loop: "{{ vscode_extensions }}"
+  changed_when: item not in extensions
+  ignore_errors: true
