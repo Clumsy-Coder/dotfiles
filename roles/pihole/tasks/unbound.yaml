@@ -2,16 +2,13 @@
 
 # install unbound
 
-- name: "unbound: link unbound config file"
+- name: "Link unbound config file"
   file:
     src: "{{ zshenv.DOTDIR }}/tools/unbound/pi-hole.conf"
     dest: "/etc/unbound/unbound.conf.d/pi-hole.conf"
   become: true
-  tags:
-    - unbound
-    - terminal
 
-- name: "unbound: install 'unbound' and 'dns-root-data' via apt"
+- name: "Install 'unbound' and 'dns-root-data' via apt"
   apt:
     update_cache: true
     name: "{{ state }}"
@@ -22,15 +19,9 @@
   become: true
   when:
     ansible_os_family == "Debian"
-  tags:
-    - unbound
-    - terminal
 
-- name: "unbound: restart unbound DNS"
+- name: "Restart unbound DNS"
   service:
     name: unbound
     state: restarted
   become: true
-  tags:
-    - unbound
-    - terminal
