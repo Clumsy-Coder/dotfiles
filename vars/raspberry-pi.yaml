@@ -47,3 +47,15 @@ apt_packages:
   - wget
   - zip
   - zsh
+
+# ufw firewall rules
+# allow ports in 'ufw'
+#
+# used in role `ufw`
+ufw:
+  - port_number: 22
+    comment: "SSH"
+  - port_number: 80
+    comment: "Pi-Hole Admin WebPortal"
+  - port_number: 53
+    comment: "Pi-Hole DNS"
