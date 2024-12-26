@@ -12,11 +12,12 @@
       tags:
         - always
 
-    - name: "Import var file {{ ansible_distribution }}.yaml"
+    - name: "Import var file {{ playbook_name }}"
       ansible.builtin.include_vars:
-        file: "vars/{{ ansible_distribution }}.yaml"
+        file: "vars/{{ playbook_name }}.yaml"
       tags:
         - always
+      when: playbook_name is defined
 
   tasks:
     # - name: Print all available facts
@@ -25,9 +26,17 @@
     #   tags:
     #     - always
 
+    - name: Print fact playbook
+      ansible.builtin.debug:
+        var: playbook_name
+      when: playbook_name is defined
+      tags:
+        - always
+
     - name: Print default_roles
       ansible.builtin.debug:
         var: default_roles
+      when: playbook_name is defined
       tags:
         - always
 
