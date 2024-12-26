@@ -103,7 +103,7 @@ PLAYBOOK=$1
 # obtained from
 # - https://stackoverflow.com/a/1537687/3053548
 shift
-ANSIBLE_CONFIG=${DOTFILES_DIR}/ansible.cfg ansible-playbook "${DOTFILES_DIR}/playbooks/${PLAYBOOK}.yaml" "$@"
+ANSIBLE_CONFIG=${DOTFILES_DIR}/ansible.cfg ansible-playbook "${DOTFILES_DIR}/main.yaml" "$@"
 
 # ################################################################################################ #
 
