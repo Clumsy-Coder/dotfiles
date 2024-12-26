@@ -91,8 +91,10 @@ fi
 __task "Checking if playbook $1 exists"
 if [[ ! -e "$DOTFILES_DIR/vars/$1.yaml" ]]; then
   _task_failed
-  echo "playbook $1 doesn't exist in folder $DOTFILES_DIR/playbooks"
-  echo "Exiting"
+  echo "playbook $1 doesn't exist"
+  echo -e "You can use the following playbooks \n"
+  \ls -1 vars | sed -e 's/\..*$//'
+  echo -e "\nExiting"
   exit 1
 fi
 
