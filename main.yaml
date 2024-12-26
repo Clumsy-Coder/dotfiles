@@ -25,11 +25,11 @@
     #   tags:
     #     - always
 
-    # - name: Print default_roles
-    #   ansible.builtin.debug:
-    #     var: default_roles
-    #   tags:
-    #     - always
+    - name: Print default_roles
+      ansible.builtin.debug:
+        var: default_roles
+      tags:
+        - always
 
     - name: Set roles
       ansible.builtin.set_fact:
