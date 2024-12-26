@@ -39,7 +39,6 @@ apt_packages:
   - fail2ban
   - fzf
   - git
-  - golang
   - htop
   - lshw
   - most
