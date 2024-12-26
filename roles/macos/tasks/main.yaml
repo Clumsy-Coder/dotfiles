@@ -1,0 +1,20 @@
+---
+
+# setup macos tools
+# obtained from
+# - https://www.youtube.com/watch?v=1VhPVu5EK5o&t=185s
+
+- name: "Load vars"
+  include_vars: "{{ item }}"
+  loop:
+    - "mas.yaml"
+    - "macos-docks.yaml"
+
+- name: "Run role elliotweiser.osx-command-line-tools"
+  include_role: elliotweiser.osx-command-line-tools
+
+- name: "Run role geerlingguy.mac.mas"
+  include_role: geerlingguy.mac.mas
+
+- name: "Run role geerlingguy.mac.dock"
+  include_role: geerlingguy.mac.dock
