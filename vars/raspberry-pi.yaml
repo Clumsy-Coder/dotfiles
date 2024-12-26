@@ -1,5 +1,18 @@
 ---
 
+default_roles:
+  - raspberry-pi
+  - apt
+  - git
+  - neofetch
+  - zsh
+  - ohmyzsh
+  - nvm
+  - npm
+  - neovim
+  - astronvim-v4
+  - sshd
+
 # apt sources
 add_apt_sources:
   - deb http://deb.debian.org/debian bullseye-backports main
