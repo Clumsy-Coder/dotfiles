@@ -1,0 +1,26 @@
+---
+
+default_roles:
+  - macos
+  - code-directory
+  - git
+  - lazygit
+  - neofetch
+  - astronvim-v4
+  - tmux
+  - nvm
+  - npm
+  - pyenv
+  - pip3
+  - cargo
+  - go-packages
+  - vimv
+  - zsh
+  - ohmyzsh
+  - xdg-ninja
+  - yazi
+  # gui roles
+  - alacritty
+  - kitty
+  - nerdfonts
+  - vscode-extensions
