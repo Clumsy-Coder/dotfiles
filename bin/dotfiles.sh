@@ -89,7 +89,7 @@ fi
 
 # check if the playbook file exists
 __task "Checking if playbook $1 exists"
-if [[ ! -e "$DOTFILES_DIR/playbooks/$1.yaml" ]]; then
+if [[ ! -e "$DOTFILES_DIR/vars/$1.yaml" ]]; then
   _task_failed
   echo "playbook $1 doesn't exist in folder $DOTFILES_DIR/playbooks"
   echo "Exiting"
@@ -103,7 +103,7 @@ PLAYBOOK=$1
 # obtained from
 # - https://stackoverflow.com/a/1537687/3053548
 shift
-ANSIBLE_CONFIG=${DOTFILES_DIR}/ansible.cfg ansible-playbook "${DOTFILES_DIR}/main.yaml" "$@"
+ANSIBLE_CONFIG=${DOTFILES_DIR}/ansible.cfg ansible-playbook "${DOTFILES_DIR}/main.yaml" --extra-vars "playbook_name='$PLAYBOOK'" "$@"
 
 # ################################################################################################ #
 
