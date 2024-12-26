@@ -1,5 +1,27 @@
 ---
 
+default_roles:
+  - code-directory
+  - apt
+  - git
+  - lazygit
+  - neofetch
+  - neovim
+  - astronvim-v4
+  - tmux
+  - nvm
+  - npm
+  - pyenv
+  - pip3
+  - rust
+  - cargo
+  - go
+  - go-packages
+  - vimv
+  - zsh
+  - ohmyzsh
+  - xdg-ninja
+
 apt_packages:
   # - autoconf
   # - automake
