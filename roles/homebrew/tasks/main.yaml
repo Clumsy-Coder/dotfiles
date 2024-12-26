@@ -1,0 +1,7 @@
+---
+
+- name: "Load var homebrew.yaml"
+  include_vars: homebrew.yaml
+
+- name: "Run role geerlingguy.mac.homebrew"
+  include_role: geerlingguy.mac.homebrew
