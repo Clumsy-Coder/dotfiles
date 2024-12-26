@@ -13,6 +13,9 @@
 - name: "Run role elliotweiser.osx-command-line-tools"
   include_role: elliotweiser.osx-command-line-tools
 
+- name: "Run role homebrew"
+  include_role: homebrew
+
 - name: "Run role geerlingguy.mac.mas"
   include_role: geerlingguy.mac.mas
 
