@@ -35,7 +35,6 @@ apt_packages:
   - bat
   - build-essential
   - curl
-  - exa
   - fail2ban
   - fzf
   - git

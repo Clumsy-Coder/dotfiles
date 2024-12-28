@@ -44,7 +44,6 @@ apt_packages:
   - bsdgames
   - build-essential
   - curl
-  - exa
   - exiftool
   - fzf
   - gh

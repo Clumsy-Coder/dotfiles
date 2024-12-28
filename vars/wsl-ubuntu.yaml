@@ -34,7 +34,6 @@ apt_packages:
   - bat
   - build-essential
   - curl
-  - exa
   - fzf
   - gh
   - git
