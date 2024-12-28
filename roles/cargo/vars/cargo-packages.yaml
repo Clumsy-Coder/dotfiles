@@ -1,6 +1,6 @@
 ---
 
-rust_packages:
+cargo_packages:
   # - stylua
   # - bob-nvim        # version manager for neovim
   - bottom

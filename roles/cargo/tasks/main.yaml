@@ -7,5 +7,5 @@
   #   cmd: "cargo install {{ item }}"
   community.general.cargo:
     name: "{{ item }}"
-  loop: "{{ rust_packages }}"
+  loop: "{{ cargo_packages }}"
   ignore_errors: true
