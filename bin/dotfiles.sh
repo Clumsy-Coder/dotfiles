@@ -98,22 +98,22 @@ usage() {
   echo "$message"
 }
 
-# check if the playbook is provided
-__task "Checking if playbook is provided"
+# check if the var file is provided
+__task "Checking if var file is provided"
 if [ -z "$1" ]; then
   _task_failed
-  echo "Playbook not provided."
+  echo -e "Var file not provided.\n"
   usage
   echo 'Exiting'
   exit 1
 fi
 
-# check if the playbook file exists
-__task "Checking if playbook $1 exists"
+# check if the var file exists
+__task "Checking if var file $1 exists"
 if [[ ! -e "$DOTFILES_DIR/vars/$1.yaml" ]]; then
   _task_failed
-  echo "playbook $1 doesn't exist"
-  echo -e "You can use the following playbooks \n"
+  echo -e "var file ${RED}${BOLD}$1${NC} doesn't exist"
+  echo -e "You can use the following var files \n"
   # print var filenames without file extension
   find "$DOTFILES_DIR/vars/" -type f -exec basename {} \; | sed 's/\.[^.]*$//'
   echo -e "\nExiting"
