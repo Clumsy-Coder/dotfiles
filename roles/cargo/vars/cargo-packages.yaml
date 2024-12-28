@@ -4,5 +4,6 @@ rust_packages:
   # - stylua
   # - bob-nvim        # version manager for neovim
   - bottom
+  - exa             # better ls
   - git-delta
   - tealdeer        # rust based tldr
