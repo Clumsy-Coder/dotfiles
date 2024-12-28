@@ -76,6 +76,28 @@ _task_done
 # ################################################################################################ #
 # run ansible playbook
 
+# display help message
+usage() {
+  # echo "Usage: $0 <var file> | --tags 'tag'"
+
+  message="
+  run default roles from a var file
+  dotfiles vars/<filename>.yaml
+
+  run a single role
+  dotfiles --tags <role name>
+
+  run multiple roles
+  dotfiles --tags <role name, role name>
+
+  NOTE: each of the commands can also include ansible playbook arguments at the end
+  Ex:
+  dotfiles vars/<filename>.yaml --ask-vault-password
+  "
+
+  echo "$message"
+}
+
 # check if the playbook is provided
 __task "Checking if playbook is provided"
 if [ -z "$1" ]; then
