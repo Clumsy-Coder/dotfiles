@@ -27,6 +27,14 @@ DOTFILES_DIR="$HOME/dotfiles"
 DOTFILES_LOG="$HOME/.dotfiles.log"
 
 # ################################################################################################ #
+# clone github repo if it doesn't exist already
+
+if ! [[ -d "$DOTFILES_DIR" ]]; then
+  echo "Cloning repository"
+  git clone --quiet https://github.com/Clumsy-Coder/dotfiles.git "$DOTFILES_DIR"
+fi
+
+# ################################################################################################ #
 # load shell files
 
 source "$DOTFILES_DIR/bin/colours.sh"
