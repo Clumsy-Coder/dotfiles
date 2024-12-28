@@ -103,9 +103,8 @@ __task "Checking if playbook is provided"
 if [ -z "$1" ]; then
   _task_failed
   echo "Playbook not provided."
-  echo
-  echo "Please provide a playbook to use"
-  echo "Ex: dotfiles macos"
+  usage
+  echo 'Exiting'
   exit 1
 fi
 
