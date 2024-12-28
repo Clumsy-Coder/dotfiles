@@ -1,20 +1,16 @@
 #!/usr/bin/env bash
 
 # obtained from
-#   https://github.com/frdmn/dotfiles/blob/3ecd59a400b1ce29aae67eb81899c844ac8abda9/dotfiles
+# - https://github.com/frdmn/dotfiles/blob/3ecd59a400b1ce29aae67eb81899c844ac8abda9/dotfiles
+# - https://github.com/TechDufus/dotfiles/blob/c476d74/bin/dotfiles
+# - https://youtu.be/hPPIScBt4Gw
 #
 # Usage:
-# to run a playbook
+# to run ansible playbook using macos var file
 #   dotfiles macos
 #
-# to run a playbook with all tags
-#   dotfiles macos
-#
-# to run a playbook with certain tags. Ex: run with tags `brew` and `gui`
-#   dotfiles macos --tags 'brew,gui'
-#
-# to list available tags for a playbook
-#   ansible-playbook ./playbooks/macos.yaml --list-tags
+# to run ansible playbook with certain roles. Ex: run with role `homebrew` and `astronvim-v4`
+#   dotfiles macos --tags 'homebrew, astronvim-v4'
 #
 # ################################################################################################ #
 
