@@ -121,13 +121,13 @@ if [[ ! -e "$DOTFILES_DIR/vars/$1.yaml" ]]; then
 fi
 
 __task "Running Ansible playbook $1"
-PLAYBOOK=$1
+VAR_FILE=$1
 # use `shift` to 'eat' the argument $1.
 # this is used because after providing the playbook, the rest of arguments are passed to ansible
 # obtained from
 # - https://stackoverflow.com/a/1537687/3053548
 shift
-ANSIBLE_CONFIG=${DOTFILES_DIR}/ansible.cfg ansible-playbook "${DOTFILES_DIR}/main.yaml" --extra-vars "playbook_name='$PLAYBOOK'" "$@"
+ANSIBLE_CONFIG=${DOTFILES_DIR}/ansible.cfg ansible-playbook "${DOTFILES_DIR}/main.yaml" --extra-vars "playbook_name='$VAR_FILE'" "$@"
 
 # ################################################################################################ #
 
