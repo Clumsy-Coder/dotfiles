@@ -22,6 +22,7 @@ default_roles:
   - ohmyzsh
   - ufw
   - xdg-ninja
+  - docker
   # gui roles
   - alacritty
   - kitty
