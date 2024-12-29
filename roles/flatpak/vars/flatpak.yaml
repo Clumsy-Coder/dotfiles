@@ -21,6 +21,7 @@ flatpak_packages:
   - io.github.flattool.Warehouse    # warehouse           https://flathub.org/apps/io.github.flattool.Warehouse
   - io.missioncenter.MissionCenter  # mission center      https://flathub.org/apps/io.missioncenter.MissionCenter
   - md.obsidian.Obsidian            # obsidian            https://flathub.org/apps/md.obsidian.Obsidian
+  - org.freedesktop.Bustle          # d-bus visualizer    https://flathub.org/apps/org.freedesktop.Bustle
   - org.localsend.localsend_app     # localsend           https://flathub.org/apps/org.localsend.localsend_app
   - org.qbittorrent.qBittorrent     # qbittorrent         https://flathub.org/apps/org.qbittorrent.qBittorrent
   - org.raspberrypi.rpi-imager      # raspberrypi imager  https://flathub.org/apps/org.raspberrypi.rpi-imager
