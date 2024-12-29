@@ -23,6 +23,7 @@ flatpak_packages:
   - md.obsidian.Obsidian            # obsidian            https://flathub.org/apps/md.obsidian.Obsidian
   - org.freedesktop.Bustle          # d-bus visualizer    https://flathub.org/apps/org.freedesktop.Bustle
   - org.gnome.Rhythmbox3            # linux itunes        https://flathub.org/apps/org.gnome.Rhythmbox3
+  - org.gnome.World.PikaBackup      # linux backup        https://flathub.org/apps/org.gnome.World.PikaBackup
   - org.localsend.localsend_app     # localsend           https://flathub.org/apps/org.localsend.localsend_app
   - org.qbittorrent.qBittorrent     # qbittorrent         https://flathub.org/apps/org.qbittorrent.qBittorrent
   - org.raspberrypi.rpi-imager      # raspberrypi imager  https://flathub.org/apps/org.raspberrypi.rpi-imager
