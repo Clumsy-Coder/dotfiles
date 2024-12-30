@@ -45,3 +45,73 @@
     name: "{{ ansible_env['USER'] }}"
   become: true
   when: install_kvm_packages is succeeded
+
+# ----------------------------------------------------------------------------------------------- #
+# install libvirt vagrant plugin
+# - https://vagrant-libvirt.github.io/vagrant-libvirt/installation.html#ubuntu--debian
+# - https://gist.github.com/PaulNeumann/81f299a7980f0b74cec9c5cc0508172b
+#
+# ensure deb-src enabled in apt.source
+# - popos
+#   - https://apt.pop-os.org/
+#   - add-apt-repository "deb-src http://apt.pop-os.org/ubuntu $(lsb_release -cs) universe"
+
+- name: "Check if vagrant is installed"
+  shell:
+    cmd: command -v vagrant > /dev/null 2>&1
+  register: is_vagrant_exist
+  ignore_errors: true
+  when: install_kvm_packages is succeeded
+
+- name: "Remove installed vagrant-libvirt"
+  apt:
+    name: "vagrant-libvirt"
+    state: absent
+    purge: true
+  become: true
+  when:
+    - install_kvm_packages is succeeded
+    - is_vagrant_exist.rc == 0
+
+- name: "Hold package vagrant-libvirt to prevent update"
+  ansible.builtin.dpkg_selections:
+    name: "vagrant-libvirt"
+    selection: hold
+  become: true
+  when:
+    - install_kvm_packages is succeeded
+    - is_vagrant_exist.rc == 0
+
+- name: "Install vagrant-libvirt packages"
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - qemu
+    - libvirt-daemon-system
+    - libvirt-dev
+    - ebtables
+    - libguestfs-tools
+  become: true
+  when:
+    - install_kvm_packages is succeeded
+    - is_vagrant_exist.rc == 0
+
+- name: "Install vagrant ruby bridge"
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - vagrant
+    - ruby-fog-libvirt
+  become: true
+  when:
+    - install_kvm_packages is succeeded
+    - is_vagrant_exist.rc == 0
+
+- name: "Install bridge to vagrant"
+  command:
+    cmd: vagrant plugin install vagrant-libvirt
+  when:
+    - install_kvm_packages is succeeded
+    - is_vagrant_exist.rc == 0
