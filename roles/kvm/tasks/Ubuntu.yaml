@@ -1,0 +1,47 @@
+---
+
+# obtained from
+# - https://www.linuxtechi.com/how-to-install-kvm-on-ubuntu-22-04/
+
+- name: "Install cpu-checker"
+  apt:
+    update_cache: true
+    name: "cpu-checker"
+  become: true
+
+- name: "Check if workstation supports KVM"
+  command:
+    cmd: kvm-ok
+  register: kvm_ok_results
+
+- name: "Install kvm packages"
+  apt:
+    name: "{{ item }}"
+  become: true
+  loop:
+    - qemu-kvm
+    - virt-manager
+    - libvirt-daemon-system
+    - virtinst
+    - libvirt-clients
+    - bridge-utils
+  when: "'can be used' in kvm_ok_results.stdout"
+  register: install_kvm_packages
+
+# https://www.linuxtechi.com/how-to-install-kvm-on-ubuntu-22-04/#4_Start_Enable_Virtualization_Daemon
+- name: "Add kvm to current user's group"
+  ansible.builtin.user:
+    append: true
+    groups: kvm
+    name: "{{ ansible_env['USER'] }}"
+  become: true
+  when: install_kvm_packages is succeeded
+
+# https://www.linuxtechi.com/how-to-install-kvm-on-ubuntu-22-04/#4_Start_Enable_Virtualization_Daemon
+- name: "Add libvirt to current user's group"
+  ansible.builtin.user:
+    append: true
+    groups: libvirt
+    name: "{{ ansible_env['USER'] }}"
+  become: true
+  when: install_kvm_packages is succeeded
