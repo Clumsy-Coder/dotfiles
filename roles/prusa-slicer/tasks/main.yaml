@@ -16,6 +16,18 @@
 # - https://askubuntu.com/a/162656/1112801
 # - https://gist.github.com/steinwaywhw/a4cd19cda655b8249d908261a62687f8
 
+- name: "Remove old prusa slicer files"
+  file:
+    name: "{{ item }}"
+    state: absent
+  loop:
+    - /usr/local/bin/Prusa-Slicer.AppImage
+    - /usr/local/bin/PrusaSlicer
+    - /usr/share/applications/prusa-slicer-gcode-viewer.desktop
+    - /usr/share/applications/prusa-slicer.desktop
+    - ~/.local/share/icons/prusa-slicer-gcode-viewer.png
+    - ~/.local/share/icons/prusa-slicer.png
+  become: true
 
 - name: "Create a temp folder in /tmp"
   ansible.builtin.file:
