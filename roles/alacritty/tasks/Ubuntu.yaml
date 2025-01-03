@@ -1,0 +1,159 @@
+---
+
+# get latest alacritty release metadata
+- name: "Download Latest Version JSON"
+  ansible.builtin.uri:
+    url: https://api.github.com/repos/alacritty/alacritty/releases/latest
+  register: alacritty_latest_version_json
+  changed_when: false
+
+- name: "Registering Alacritty Latest Release"
+  ansible.builtin.set_fact:
+    alacritty_latest_release: "{{ alacritty_latest_version_json.json.tag_name }}"
+
+- name: "Registering Alacritty Latest Version"
+  ansible.builtin.set_fact:
+    alacritty_latest_version: "{{ alacritty_latest_release.stdout | default('') }}"
+
+- name: Show alacritty_latest_release debug
+  ansible.builtin.debug:
+    var: alacritty_latest_release
+
+# get installed alacritty version
+- name: "Check if Alacritty is installed"
+  shell:
+    cmd: command -v alacritty > /dev/null 2>&1
+  register: is_alacritty_installed
+  ignore_errors: true
+  failed_when: false
+
+- name: "Get installed version"
+  # noqa risky-shell-pipe
+  shell:
+    cmd: |
+      alacritty --version | grep -Po "(\d+\.)+\d+" | xargs printf 'v%s'
+  register: installed_alacritty_version
+  when: is_alacritty_installed.rc == 0
+
+- name: "Show installed_alacritty_version"
+  ansible.builtin.debug:
+    var: installed_alacritty_version.stdout
+
+# ----------------------------------------------------------------------------------------------- #
+
+# make sure rust and cargo are installed
+- name: "Run role rust"
+  ansible.builtin.include_role:
+    name: rust
+
+# make sure pyenv and latest python is installed
+- name: "Run role pyenv"
+  ansible.builtin.include_role:
+    name: pyenv
+
+# install alacritty application
+- name: "Install Alacritty"
+  when: alacritty_latest_release not in installed_alacritty_version.stdout|default('')
+  block:
+    # make sure the directories exist
+    - name: "Create directories"
+      file:
+        dest: "{{ item }}"
+        state: directory
+        recurse: true
+      loop:
+        - ~/.local/bin
+        - ~/.local/share/applications
+        - ~/.local/share/icons/hicolor/scalable/apps
+        - ~/.local/share/icons/hicolor/symbolic/apps
+        - ~/.local/share/man/man1  # alternative location for storing manpages. Check env MANPATH
+        - ~/.local/share/man/man5  # alternative location for storing manpages. Check env MANPATH
+
+    - name: "Remove old Alacritty files"
+      file:
+        name: "{{ item }}"
+        state: absent
+      loop:
+        - ~/.local/bin/alacritty
+        - ~/.local/share/applications/Alacritty.desktop
+        - ~/.local/share/icons/hicolor/scalable/apps/Alacritty.svg
+        - ~/.local/share/icons/hicolor/symbolic/apps/Alacritty-symbolic.svg
+        - ~/.local/share/man/man1/alacritty.1.gz
+        - ~/.local/share/man/man1/alacritty-msg.1.gz
+        - ~/.local/share/man/man5/alacritty.5.gz
+        - ~/.local/share/man/man5/alacritty-bindings.5.gz
+
+    - name: "Clone alacritty repo tag {{ alacritty_latest_release }}"
+      git:
+        repo: https://github.com/alacritty/alacritty.git
+        dest: /tmp/alacritty
+        version: "{{ alacritty_latest_release }}"
+        depth: 1
+
+    # https://github.com/alacritty/alacritty/blob/7bd3b89/INSTALL.md#debianubuntu
+    - name: "Install build dependencies"
+      apt:
+        name: "{{ item }}"
+        state: present
+      loop:
+        # - python3
+        - cmake
+        - g++
+        - gzip
+        - libfontconfig1-dev
+        - libfreetype6-dev
+        - libxcb-xfixes0-dev
+        - libxkbcommon-dev
+        - pkg-config
+        - scdoc
+      become: true
+
+    - name: "Build Alacritty"
+      command:
+        cmd: cargo build --release
+        chdir: /tmp/alacritty/
+
+    # https://github.com/alacritty/alacritty/blob/master/INSTALL.md#manual-page
+    - name: "Add Alacritty man page"
+      shell:
+        cmd: |
+          set -o pipefail &&
+          scdoc < /tmp/alacritty/extra/man/alacritty.1.scd | gzip -c | sudo tee ~/.local/share/man/man1/alacritty.1.gz > /dev/null ; \
+          scdoc < /tmp/alacritty/extra/man/alacritty-msg.1.scd | gzip -c | sudo tee ~/.local/share/man/man1/alacritty-msg.1.gz > /dev/null ; \
+          scdoc < /tmp/alacritty/extra/man/alacritty.5.scd | gzip -c | sudo tee ~/.local/share/man/man5/alacritty.5.gz > /dev/null ; \
+          scdoc < /tmp/alacritty/extra/man/alacritty-bindings.5.scd | gzip -c | sudo tee ~/.local/share/man/man5/alacritty-bindings.5.gz > /dev/null ; \
+        executable: /bin/bash
+
+    - name: "Add Alacritty binary"
+      ansible.builtin.copy:
+        src: /tmp/alacritty/target/release/alacritty
+        dest: ~/.local/bin/alacritty
+        mode: '1744'
+
+    # https://gist.github.com/ales-tsurko/cc8cb59f6d5a1aa95512e81e3dfe64ff?permalink_comment_id=3515132#gistcomment-3515132
+    - name: "Add Alacritty icons"
+      ansible.builtin.copy:
+        src: "{{ item.src }}"
+        dest: "{{ item.dest }}"
+      loop:
+        - src: /tmp/alacritty/extra/logo/alacritty-term.svg
+          dest: ~/.local/share/icons/hicolor/scalable/apps/Alacritty.svg
+        - src: /tmp/alacritty/extra/logo/alacritty-simple.svg
+          dest: ~/.local/share/icons/hicolor/symbolic/apps/Alacritty-symbolic.svg
+
+    - name: "Add Desktop file"
+      ansible.builtin.copy:
+        src: /tmp/alacritty/extra/linux/Alacritty.desktop
+        dest: ~/.local/share/applications/Alacritty.desktop
+
+
+    # https://github.com/alacritty/alacritty/blob/master/INSTALL.md#terminfo
+    - name: "Update terminfo"
+      command:
+        cmd: "tic -xe alacritty,alacritty-direct /tmp/alacritty/extra/alacritty.info"
+      become: true
+
+    - name: "Remove /tmp/alacritty"
+      file:
+        path: /tmp/alacritty
+        state: absent
