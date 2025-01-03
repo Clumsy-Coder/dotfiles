@@ -8,14 +8,14 @@
     dest: "{{ item }}"
     state: directory
   loop:
+    - "~/.cache"
+    - "~/.config"
+    - "~/.config/wakatime"
+    - "~/.local"
+    - "~/.local/share/gnupg"
+    - "~/.var"
     - "~/Documents/code"
     - "~/Documents/temp-git-clone"
-    - "~/.local/share/gnupg"
-    - "~/.config/wakatime"
-    - "~/.config"
-    - "~/.local"
-    - "~/.cache"
-    - "~/.var"
 
 # - name: "Create directory for 'code'"
 #   file:
