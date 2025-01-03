@@ -7,15 +7,19 @@
   file:
     dest: "{{ item }}"
     state: directory
+    recurse: true
   loop:
-    - "~/.cache"
-    - "~/.config"
-    - "~/.config/wakatime"
-    - "~/.local"
-    - "~/.local/share/gnupg"
-    - "~/.var"
-    - "~/Documents/code"
-    - "~/Documents/temp-git-clone"
+    # - ~/.var
+    - ~/.cache
+    - ~/.config/wakatime
+    - ~/.local/bin
+    - ~/.local/share/applications
+    - ~/.local/share/gnupg         # create directory in order to use gpg for encrypting and decrypting
+    - ~/.local/share/icons
+    - ~/.local/share/man           # alternative location for storing manpages. Update env MANPATH
+    - ~/.local/state
+    - ~/Documents/code
+    - ~/Documents/temp-git-clone
 
 # - name: "Create directory for 'code'"
 #   file:
