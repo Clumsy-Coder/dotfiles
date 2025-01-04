@@ -50,6 +50,9 @@ if [ -d "$PYENV_DIR_PATH" ]; then
   # fi
 fi
 
+# alternative location to man pages
+export MANPATH=$XDG_DATA_HOME/man:$MANPATH
+
 # -------------------------------------------------------------------------------------------------#
 # MacOS only exports. $IS_MAC is set in zsh/checks.sh
 # -------------------------------------------------------------------------------------------------#
