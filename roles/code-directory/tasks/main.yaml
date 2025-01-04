@@ -21,14 +21,14 @@
     - ~/Documents/code
     - ~/Documents/temp-git-clone
 
-- name: "Link directory for 'code' to the home folder"
+- name: "Link files"
   file:
-    src: "~/Documents/code/"
-    dest: "~/code"
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
     state: link
-
-- name: "Link directory for 'temp-git-clone' to the home folder"
-  file:
-    src: "~/Documents/temp-git-clone/"
-    dest: "~/temp-git-clone"
-    state: "link"
+    # force: true
+  loop:
+    - src: ~/Documents/code
+      dest: ~/code
+    - src: ~/Documents/temp-git-clone
+      dest: ~/temp-git-clone
