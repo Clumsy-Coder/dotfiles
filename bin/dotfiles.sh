@@ -130,6 +130,13 @@ VAR_FILE=$1
 # this is used because after providing the playbook, the rest of arguments are passed to ansible
 # obtained from
 # - https://stackoverflow.com/a/1537687/3053548
+#
+# pass the name of the var file to ansible vars.
+# This will allow ansible to import the var file and run default_roles.
+# Ansible playbook will import the var file using var `playbook_name`.
+# This will load the default_roles and other vars when running the playbook
+# obtained from
+# - https://www.reddit.com/r/ansible/comments/1af8xat/passing_vars_file_argument_with_ansibleplaybook/
 shift
 ANSIBLE_CONFIG=${DOTFILES_DIR}/ansible.cfg ansible-playbook "${DOTFILES_DIR}/main.yaml" --extra-vars "playbook_name='$VAR_FILE'" "$@"
 
