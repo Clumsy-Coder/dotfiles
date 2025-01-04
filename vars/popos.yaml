@@ -81,3 +81,5 @@ ufw:
     comment: "HTTP dev"
   - port_number: 53317
     comment: "LocalSend"
+  - port_number: 57621              # https://community.spotify.com/t5/Android/Spotify-local-file-sync-ports/m-p/5444852/highlight/true#M192983
+    comment: "Spotify local sync"
