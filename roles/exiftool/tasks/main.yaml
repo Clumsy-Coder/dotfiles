@@ -1,0 +1,79 @@
+---
+
+# install exiftool
+#
+# obtained from
+# - https://exiftool.org/install.html
+
+# get list of tags
+- name: "Download List of tags"
+  ansible.builtin.uri:
+    url: https://api.github.com/repos/exiftool/exiftool/tags
+  register: exiftool_latest_tags_json
+  changed_when: false
+
+- name: "Registering exiftool latest tag"
+  ansible.builtin.set_fact:
+    latest_exiftool_version: "{{ exiftool_latest_tags_json.json[0].name | default('') }}"
+
+- name: "Show latest_exiftool_version debug"
+  ansible.builtin.debug:
+    var: latest_exiftool_version
+
+# get installed exiftool version
+- name: "Getting installed exiftool version"
+  ansible.builtin.command:
+    cmd: "exiftool -ver"
+  register: current_exiftool_version
+  changed_when: false
+  failed_when: false
+
+- name: "Show current_exiftool_version"
+  ansible.builtin.debug:
+    var: current_exiftool_version.stdout
+
+- name: "Install exiftool"
+  when: latest_exiftool_version not in current_exiftool_version.stdout | default('')
+  block:
+    - name: "Create temp directory"
+      file:
+        path: /tmp/exiftool
+        state: directory
+        force: true
+
+    - name: "Downloading exiftool tarball version {{ latest_exiftool_version }}"
+      ansible.builtin.get_url:
+        url: "https://exiftool.org/Image-ExifTool-{{ latest_exiftool_version }}.tar.gz"
+        dest: /tmp/exiftool.tar.gz
+        force: true
+
+    - name: "Extract files"
+      ansible.builtin.unarchive:
+        src: /tmp/exiftool.tar.gz
+        dest: /tmp/exiftool
+
+    - name: "Compile exiftool"
+      block:
+        - name: "Compile perl file"
+          command:
+            cmd: "perl Makefile.PL"
+            chdir: "/tmp/exiftool/Image-ExifTool-{{ latest_exiftool_version }}"
+
+        - name: "Run tests"
+          command:
+            cmd: "make test"
+            chdir: "/tmp/exiftool/Image-ExifTool-{{ latest_exiftool_version }}"
+
+        - name: "Compile files"
+          command:
+            cmd: "make install"
+            chdir: "/tmp/exiftool/Image-ExifTool-{{ latest_exiftool_version }}"
+          become: true
+
+    - name: "Remove temp files"
+      file:
+        path: "{{ item }}"
+        state: absent
+      loop:
+        - /tmp/exiftool/
+        - /tmp/exiftool.tar.gz
