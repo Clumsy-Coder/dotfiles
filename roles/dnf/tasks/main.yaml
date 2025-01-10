@@ -22,6 +22,32 @@
     create: true
   become: true
 
+  # obtained from
+  # - https://rpmfusion.org/Configuration#Command_Line_Setup_using_rpm
+  # - https://youtu.be/RrRpXs2pkzg?si=Hnu3EDDgyhoiGar4&t=296
+  # - https://serverfault.com/a/1021745
+- name: "Enable RPM fusion"
+  block:
+    - name: "Enable RPM fusion"
+      dnf:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm"
+        - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm"
+      become: true
+
+    # allows gui package manager to load packages from the newly added rpm fusion mirrors
+    # obtained from
+    # - https://rpmfusion.org/Configuration#AppStream_metadata
+    # - https://www.youtube.com/watch?v=RrRpXs2pkzg&t=362s
+    - name: "Install group package core"
+      dnf:
+        name: "@core"
+        state: present
+      become: true
+
+
 - name: "Update dnf packages"
   dnf:
     update_cache: true
