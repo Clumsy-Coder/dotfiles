@@ -54,6 +54,9 @@ case $dotfiles_os in
   pop)
     popos_setup
     ;;
+  fedora)
+    fedora_setup
+    ;;
   # arch)
   #   arch_setup
   #   ;;
