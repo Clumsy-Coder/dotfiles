@@ -5,6 +5,23 @@
 # - dnf_group_packages
 #
 # make sure to load it in the playbook
+
+- name: "Update dnf config file"
+  ansible.builtin.blockinfile:
+    path: /etc/dnf/dnf.conf
+    block: |
+      # added for speed
+      # obtained from
+      # - https://www.youtube.com/watch?v=RrRpXs2pkzg&t=50s
+      fastestmirror=True
+      max_parallel_downloads=10
+      defaultyes=True
+      keepcache=True
+    prepend_newline: true
+    append_newline: true
+    create: true
+  become: true
+
 - name: "Update dnf packages"
   dnf:
     update_cache: true
