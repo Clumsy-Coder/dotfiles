@@ -1,0 +1,35 @@
+---
+
+# this file will look for vars
+# - dnf_packages
+# - dnf_group_packages
+#
+# make sure to load it in the playbook
+- name: "Update dnf packages"
+  dnf:
+    update_cache: true
+  become: true
+
+- name: "Upgrade installed packages"
+  dnf:
+    update_only: true
+  become: true
+
+- name: "Install dnf packages"
+  dnf:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ dnf_packages }}"
+  become: true
+
+- name: "Install dnf group packages"
+  dnf:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ dnf_group_packages }}"
+  become: true
+
+- name: "Autoremove dnf packages"
+  dnf:
+    autoremove: true
+  become: true
