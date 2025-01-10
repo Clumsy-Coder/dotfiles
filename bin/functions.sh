@@ -111,6 +111,24 @@ function popos_setup() {
 
 # ----------------------------------------------------------------------------------------------- #
 
+function fedora_setup() {
+  if ! [ -x "$(command -v ansible)" ]; then
+    __task "Installing Ansible"
+    _cmd "sudo dnf check-update 2>&1 /dev/null"
+    _cmd "sudo dnf install ansible -y"
+  fi
+  if ! [ -x "$(command -v python3)" ]; then
+    __task "Installing Python3"
+    _cmd "sudo dnf install python3 -y"
+  fi
+  if ! [ -x "$(command -v git)" ]; then
+    __task "Installing git"
+    _cmd "sudo dnf install git -y"
+  fi
+}
+
+# ----------------------------------------------------------------------------------------------- #
+
 function arch_setup() {
   if ! [ -x "$(command -v ansible)" ]; then
     __task "Installing Ansible"
