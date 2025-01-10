@@ -5,6 +5,9 @@
 # - dnf_group_packages
 #
 # make sure to load it in the playbook
+#
+# installing group packages
+# - https://linuxconfig.org/how-to-work-with-dnf-package-groups
 
 - name: "Update dnf config file"
   ansible.builtin.blockinfile:
@@ -47,6 +50,33 @@
         state: present
       become: true
 
+# obtained from
+# - https://youtu.be/RrRpXs2pkzg?t=499&si=x9IKb-cs9gapNfaY
+- name: "Enable multimedia codecs"
+  block:
+    # obtained from
+    # - https://rpmfusion.org/Howto/Multimedia#Switch_to_full_ffmpeg
+    - name: "Switch to full ffmpeg"
+      command:
+        cmd: "sudo dnf swap ffmpeg-free ffmpeg --allowerasing -y"
+      become: true
+
+    # obtained from
+    # - https://rpmfusion.org/Howto/Multimedia#Install_additional_codec
+    # - https://www.youtube.com/watch?v=RrRpXs2pkzg&t=499s
+    - name: "Install/update media codecs"
+      shell:
+        cmd: |
+          dnf install @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
+          dnf update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
+      become: true
+
+    - name: "Install/update group package sound-and-video"
+      shell:
+        cmd: |
+          dnf install @sound-and-video -y
+          dnf update @sound-and-video -y
+      become: true
 
 - name: "Update dnf packages"
   dnf:
