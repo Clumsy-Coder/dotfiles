@@ -1,0 +1,8 @@
+---
+
+- name: "Install git"
+  ansible.builtin.dnf:
+    update_cache: true
+    name: git
+    state: present
+  become: true
