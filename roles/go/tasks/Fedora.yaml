@@ -1,0 +1,17 @@
+---
+
+- name: "Install dependencies"
+  dnf:
+    update_cache: true
+    name: "{{ item }}"
+    state: present
+  become: true
+  loop:
+    - curl
+    - gcc
+    - git
+    - findutils
+    - make
+    - rsync
+    - tar
+    - jq

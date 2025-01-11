@@ -3,23 +3,18 @@
 # obtained from
 # - https://github.com/TechDufus/dotfiles/blob/ac47994/roles/go/tasks/Ubuntu.yml#L1-L114
 
-- name: "Install dependencies"
-  ansible.builtin.apt:
-    pkg:
-      - 'curl'
-      - 'gcc'
-      - 'git'
-      - 'findutils'
-      - 'make'
-      - 'rsync'
-      - 'tar'
-      - 'jq'
-    state: present
-  register: apt_result
-  become: true
-  until: apt_result is success
-  retries: 1
-  delay: 2
+- name: "Checking for Distribution Config: {{ ansible_distribution }}"
+  ansible.builtin.stat:
+    path: "{{ role_path }}/tasks/{{ ansible_distribution }}.yaml"
+  register: distribution_config
+
+- name: "Run Tasks: {{ ansible_distribution }}"
+  ansible.builtin.include_tasks: "{{ ansible_distribution }}.yaml"
+  when: distribution_config.stat.exists
+
+# ----------------------------------------------------------------------------------------------- #
+# ----------------------------------------------------------------------------------------------- #
+# ----------------------------------------------------------------------------------------------- #
 
 - name: "Define GOARCH"
   ansible.builtin.set_fact:
