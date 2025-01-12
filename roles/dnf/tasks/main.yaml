@@ -72,6 +72,8 @@
       command:
         cmd: "dnf swap ffmpeg-free ffmpeg --allowerasing -y"
       become: true
+      register: switch_to_full_ffmpeg
+      failed_when: switch_to_full_ffmpeg.rc != 0
 
     # obtained from
     # - https://rpmfusion.org/Howto/Multimedia#Install_additional_codec
