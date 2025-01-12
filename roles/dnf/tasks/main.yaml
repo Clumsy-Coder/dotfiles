@@ -31,6 +31,18 @@
   # - https://serverfault.com/a/1021745
 - name: "Enable RPM fusion"
   block:
+    # obtained from
+    # - https://rpmfusion.org/keys
+    # - https://github.com/fabaff/fedora-ansible/blob/4d8d3f7/tasks/rpmfusion.yml#L1-L22
+    - name: "Add rpmfustion repo gpg keys"
+      ansible.builtin.rpm_key:
+        key: "{{ item }}"
+        state: present
+      with_items:
+        - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
+        - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
+      become: true
+
     - name: "Enable RPM fusion"
       dnf:
         name: "{{ item }}"
