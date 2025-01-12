@@ -70,7 +70,7 @@
     # - https://rpmfusion.org/Howto/Multimedia#Switch_to_full_ffmpeg
     - name: "Switch to full ffmpeg"
       command:
-        cmd: "sudo dnf swap ffmpeg-free ffmpeg --allowerasing -y"
+        cmd: "dnf swap ffmpeg-free ffmpeg --allowerasing -y"
       become: true
 
     # obtained from
