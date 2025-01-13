@@ -20,6 +20,7 @@
     repo: "https://github.com/Clumsy-Coder/astronvim-config-v4.git"
     version: "main"
     dest: "{{ zshenv.NVIM_CONFIG_DIR_PATH }}"
+    force: true
 
 # ----------------------------------------------------------------------------------------------- #
 # were doing this because the repo cloned earlier is a fork of https://github.com/AstroNvim/template.git
