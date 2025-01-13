@@ -1,6 +1,6 @@
 ---
 
-- name: PopOS dotfiles
+- name: Dotfiles bootstrap
   hosts: localhost
   connection: local
   # vars_files:
