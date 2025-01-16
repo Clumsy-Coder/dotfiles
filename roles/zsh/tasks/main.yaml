@@ -1,14 +1,14 @@
 ---
 
-- name: "Create {{ zshenv.XDG_CONFIG_HOME }}/zsh directory"
+- name: "Create directories"
   file:
-    path: "{{ zshenv.XDG_CONFIG_HOME }}/zsh"
+    path: "{{ item }}"
     state: directory
-
-- name: "Create {{ zshenv.HISTFILE_DIR_PATH }} directory"
-  file:
-    path: "{{ zshenv.HISTFILE_DIR_PATH }}"
-    state: directory
+    force: true
+    recurse: true
+  loop:
+    - "{{ zshenv.XDG_CONFIG_HOME }}/zsh"
+    - "{{ zshenv.HISTFILE_DIR_PATH }}"
 
 # link zshrc file
 - name: "Link zshrc to {{ zshenv.ZSHRC_PATH }}"
