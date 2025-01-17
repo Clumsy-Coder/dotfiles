@@ -31,3 +31,4 @@ flatpak_packages:
   - org.signal.Signal               # signal              https://flathub.org/apps/org.signal.Signal
   - org.videolan.VLC                # VLC                 https://flathub.org/apps/org.videolan.VLC
   - org.wireshark.Wireshark         # wireshark           https://flathub.org/apps/org.wireshark.Wireshark
+  - org.freedesktop.Piper           # logitech mouse      https://flathub.org/apps/org.freedesktop.Piper
