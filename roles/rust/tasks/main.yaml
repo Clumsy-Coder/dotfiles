@@ -23,3 +23,9 @@
 - name: "Update rust"
   command: rustup update
   when: cargo_exists
+
+- name: "Remove installer"
+  file:
+    path: /tmp/sh.rustup.rs
+    state: absent
+  when: cargo_exists is failed
