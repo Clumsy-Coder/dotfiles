@@ -5,6 +5,7 @@ pip3_packages:
   # - codespell
   # - gitlint
   # - ranger
+  # - s-tui               # CPU stress utility. https://www.youtube.com/watch?v=4isEhE2rvmA&t=44s
   # - vim-vint
   # - yamllint
   - dooit
