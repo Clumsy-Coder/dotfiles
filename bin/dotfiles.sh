@@ -30,6 +30,11 @@ if ! [[ -d "$DOTFILES_DIR" ]]; then
   git clone --quiet https://github.com/Clumsy-Coder/dotfiles.git "$DOTFILES_DIR"
 fi
 
+# add symlink to this script.
+# usage: dotfiles
+mkdir -p ~/.local/bin > /dev/null
+ln -sf "$DOTFILES_DIR/bin/dotfiles.sh" ~/.local/bin/dotfiles
+
 # ################################################################################################ #
 # load shell files
 
