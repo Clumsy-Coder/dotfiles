@@ -10,34 +10,21 @@
     - "{{ zshenv.XDG_CONFIG_HOME }}/zsh"
     - "{{ zshenv.HISTFILE_DIR_PATH }}"
 
-# link zshrc file
-- name: "Link zshrc to {{ zshenv.ZSHRC_PATH }}"
+- name: "Link files"
   file:
-    src: "{{ zshenv.DOTDIR }}/tools/zsh/.zshrc"
-    dest: "{{ zshenv.ZSHRC_PATH }}"
-    state: link
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
     force: true
-
-# link zshenv file
-- name: "Link zshenv to {{ zshenv.ZSHENV_PATH }}"
-  file:
-    src: "{{ zshenv.DOTDIR }}/tools/zsh/.zshenv"
-    dest: "{{ zshenv.ZSHENV_PATH }}"
     state: link
-
-# link zshenv file to $HOME
-- name: "Link zshenv to {{ zshenv.HOME }}"
-  file:
-    src: "{{ zshenv.DOTDIR }}/tools/zsh/.zshenv"
-    dest: "{{ zshenv.HOME }}/.zshenv"
-    state: link
-
-# link zlogin file
-- name: "Link zlogin to {{ zshenv.ZLOGIN_PATH }}"
-  file:
-    src: "{{ zshenv.DOTDIR }}/tools/zsh/.zlogin"
-    dest: "{{ zshenv.ZLOGIN_PATH }}"
-    state: link
+  loop:
+    - src: "{{ zshenv.DOTDIR }}/tools/zsh/.zshrc"
+      dest: "{{ zshenv.ZSHRC_PATH }}"
+    - src: "{{ zshenv.DOTDIR }}/tools/zsh/.zshenv"
+      dest: "{{ zshenv.ZSHENV_PATH }}"
+    - src: "{{ zshenv.DOTDIR }}/tools/zsh/.zshenv"
+      dest: "{{ zshenv.HOME }}/.zshenv"
+    - src: "{{ zshenv.DOTDIR }}/tools/zsh/.zlogin"
+      dest: "{{ zshenv.ZLOGIN_PATH }}"
 
 - name: "Link powerlevel10k config to {{ zshenv.ZDOTDIR }}/.p10k.zsh"
   file:
