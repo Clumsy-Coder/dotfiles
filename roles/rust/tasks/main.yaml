@@ -17,7 +17,7 @@
   when: cargo_exists is failed
 
 - name: "Install rust/cargo"
-  shell: /tmp/sh.rustup.rs -y
+  command: /tmp/sh.rustup.rs -y
   when: cargo_exists is failed
 
 - name: "Update rust"
