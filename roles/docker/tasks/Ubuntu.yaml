@@ -83,7 +83,6 @@
     path: "{{  ansible_user_dir }}/.local/lib/docker"
     state: directory
     mode: "0710"
-  become: true
 
 # - name: "Copy daemon.json"
 #   ansible.builtin.template:
