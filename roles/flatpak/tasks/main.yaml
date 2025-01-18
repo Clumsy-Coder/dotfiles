@@ -19,7 +19,7 @@
 # - https://www.reddit.com/r/ansible/comments/fk4qqc/comment/jlonhmf/
 - name: "Upgrade all flatpaks 📅"
   command:
-    cmd: flatpak update --noninteractive
+    cmd: flatpak update --noninteractive --user -y
   register: flatpak_update_output
   changed_when: "'app/' in flatpak_update_output.stdout"
   # become: true
