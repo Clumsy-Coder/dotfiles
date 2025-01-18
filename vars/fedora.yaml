@@ -1,0 +1,107 @@
+---
+
+default_roles:
+  - code-directory
+  - dnf
+  - git
+  - lazygit
+  - neofetch
+  - astronvim-v4
+  - tmux
+  - nvm
+  - npm
+  - pip3
+  - rust
+  - cargo
+  - go-packages
+  - vimv
+  - zsh
+  - ohmyzsh
+  - ufw
+  - xdg-ninja
+  - docker
+  # gui roles
+  - alacritty
+  - kitty
+  - nerdfonts
+  - flatpak
+  - postman
+
+dnf_packages:
+  # - autoconf
+  # - automake
+  # - bsd-games
+  # - cmake
+  # - figlet
+  # - fonts-powerline
+  # - g++
+  # - gettext
+  # - golang
+  # - powerline
+  - amd-gpu-firmware
+  - bat
+  - btop
+  - calibre
+  - curl
+  - fastfetch
+  - flatpak
+  - fzf
+  - gh
+  - git
+  - go
+  - htop
+  - jetbrains-mono-fonts
+  - luarocks
+  - nano
+  - ncdu
+  - neovim
+  - piper
+  - python3
+  - ripgrep
+  - solaar
+  - sushi
+  - tmux
+  - trash-cli
+  - tree
+  - ufw
+  - unzip
+  - urlview
+  - vim
+  - wavemon
+  - wget
+  - xsel
+  - zip
+  - zsh
+
+# dnf group packages
+# for more info run command
+# dnf info <group package (include @)>
+# or
+# dnf group info <group package (without @)>
+dnf_group_packages:
+  # - "@firefox"                # install firefox
+  # - "@hardware-support"
+  # - "@security-lab"           # Tools for security auditing, forensics, system rescue, and teaching security testing methodologies
+  - "@core"                     # needed after installing rpm fusion. https://rpmfusion.org/Configuration#AppStream_metadata
+  - "@development-tools"
+  - "@libreoffice"              # libre office suite
+  - "@multimedia"               # needed after installing media codecs. https://rpmfusion.org/Howto/Multimedia#Install_additional_codec
+  - "@sound-and-video"          # needed after installing media codecs. https://youtu.be/RrRpXs2pkzg?si=7fubSFxwnL9tajlO&t=562
+  - "@vagrant"
+  - "@virtualization"           # libvirt, virt-manager, qemu-kvm
+
+# ufw firewall rules
+# allow ports in 'ufw'
+#
+# used in role `ufw`
+ufw:
+  - port_number: 2200
+    comment: "SSH"
+  - port_number: 80
+    comment: "HTTP"
+  - port_number: 3000
+    comment: "HTTP dev"
+  - port_number: 53317
+    comment: "LocalSend"
+  - port_number: 57621              # https://community.spotify.com/t5/Android/Spotify-local-file-sync-ports/m-p/5444852/highlight/true#M192983
+    comment: "Spotify local sync"
