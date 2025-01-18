@@ -27,6 +27,6 @@
 - name: "Install flatpak packages. This will take a while"
   flatpak:
     name: "{{ item }}"
-    state: latest
+    state: present
     method: user
   loop: "{{ flatpak_packages }}"
