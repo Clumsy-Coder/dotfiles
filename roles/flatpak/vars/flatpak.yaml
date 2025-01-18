@@ -19,9 +19,11 @@ flatpak_packages:
   - com.visualstudio.code           # VScode              https://flathub.org/apps/com.visualstudio.code
   - com.vscodium.codium             # VScodium            https://flathub.org/apps/com.vscodium.codium
   - io.github.flattool.Warehouse    # warehouse           https://flathub.org/apps/io.github.flattool.Warehouse
+  - io.github.pwr_solaar.solaar     # logitech peripherals https://flathub.org/apps/io.github.pwr_solaar.solaar
   - io.missioncenter.MissionCenter  # mission center      https://flathub.org/apps/io.missioncenter.MissionCenter
   - md.obsidian.Obsidian            # obsidian            https://flathub.org/apps/md.obsidian.Obsidian
   - org.freedesktop.Bustle          # d-bus visualizer    https://flathub.org/apps/org.freedesktop.Bustle
+  - org.freedesktop.Piper           # logitech mouse      https://flathub.org/apps/org.freedesktop.Piper
   - org.gnome.Rhythmbox3            # linux itunes        https://flathub.org/apps/org.gnome.Rhythmbox3
   - org.gnome.World.PikaBackup      # linux backup        https://flathub.org/apps/org.gnome.World.PikaBackup
   - org.kiwix.desktop               # offline reader      https://flathub.org/apps/org.kiwix.desktop
@@ -31,5 +33,3 @@ flatpak_packages:
   - org.signal.Signal               # signal              https://flathub.org/apps/org.signal.Signal
   - org.videolan.VLC                # VLC                 https://flathub.org/apps/org.videolan.VLC
   - org.wireshark.Wireshark         # wireshark           https://flathub.org/apps/org.wireshark.Wireshark
-  - org.freedesktop.Piper           # logitech mouse      https://flathub.org/apps/org.freedesktop.Piper
-  - io.github.pwr_solaar.solaar     # logitech peripherals https://flathub.org/apps/io.github.pwr_solaar.solaar
