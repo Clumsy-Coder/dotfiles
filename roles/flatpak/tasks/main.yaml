@@ -12,7 +12,7 @@
     state: present
     method: user
   loop: "{{ flatpak_remotes }}"
-  become: true
+  # become: true
 
 # update installed flatpak packages
 # obtained from
@@ -22,7 +22,7 @@
     cmd: flatpak update --noninteractive
   register: flatpak_update_output
   changed_when: "'app/' in flatpak_update_output.stdout"
-  become: true
+  # become: true
 
 - name: "Install flatpak packages. This will take a while"
   flatpak:
