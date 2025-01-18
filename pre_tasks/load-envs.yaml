@@ -20,8 +20,8 @@
   changed_when: false
   tags: always
 
-# - name: "PRINT ENV"
-#   debug:
-#     msg: "{{ zshenv }}"
-#   tags:
-#     - always
+- name: "PRINT ENV"
+  debug:
+    var: zshenv
+  tags:
+    - always
