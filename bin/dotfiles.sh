@@ -94,17 +94,17 @@ usage() {
 
   message="
   run default roles from a var file
-  dotfiles vars/<filename>.yaml
+  dotfiles <var filename>.yaml
 
   run a single role
-  dotfiles --tags <role name>
+  dotfiles <var filename> --tags <role name>
 
   run multiple roles
-  dotfiles --tags <role name, role name>
+  dotfiles <var filename> --tags <role name, role name>
 
   NOTE: each of the commands can also include ansible playbook arguments at the end
   Ex:
-  dotfiles vars/<filename>.yaml --ask-vault-password
+  dotfiles <var filename> --ask-vault-password
   "
 
   echo "$message"
