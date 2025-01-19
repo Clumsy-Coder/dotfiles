@@ -14,6 +14,29 @@ print_available_var_files() {
   find "$DOTFILES_DIR/vars/" -type f -exec basename {} \; | sed 's/\.[^.]*$//'
 }
 
+# display help message
+usage() {
+  # echo "Usage: $0 <var file> | --tags 'tag'"
+
+  message="
+  run default roles from a var file
+  dotfiles <var filename>.yaml
+
+  run a single role
+  dotfiles <var filename> --tags <role name>
+
+  run multiple roles
+  dotfiles <var filename> --tags <role name, role name>
+
+  NOTE: each of the commands can also include ansible playbook arguments at the end
+  Ex:
+  dotfiles <var filename> --ask-vault-password
+  "
+
+  echo "$message"
+  print_available_var_files
+}
+
 # ----------------------------------------------------------------------------------------------- #
 # _header colorize the given argument with spacing
 function __task {
