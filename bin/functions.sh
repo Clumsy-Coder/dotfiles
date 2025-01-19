@@ -3,7 +3,18 @@
 # functions used in the dotfiles.sh file
 # obtained from
 # - https://github.com/TechDufus/dotfiles/blob/fb6b488/bin/dotfiles#L50-L210
+#
+# ----------------------------------------------------------------------------------------------- #
+# misc functions
 
+# print var files in $DOTFILES_DIR/vars/ directory without the file extension
+print_available_var_files() {
+  echo -e "You can use the following var files \n"
+  # print var filenames without file extension
+  find "$DOTFILES_DIR/vars/" -type f -exec basename {} \; | sed 's/\.[^.]*$//'
+}
+
+# ----------------------------------------------------------------------------------------------- #
 # _header colorize the given argument with spacing
 function __task {
   # if _task is called while a task was set, complete the previous
