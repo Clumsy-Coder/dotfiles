@@ -100,6 +100,7 @@ alias grep='grep --color'
 # alias gitc='git commit'
 # alias gitgr='git gr'
 # alias gitexcl='git ls-files --others -i --exclude-standard'
+alias lg='lazygit'
 
 # -------------------------------------------------------------------------------------------------#
 # NPM
