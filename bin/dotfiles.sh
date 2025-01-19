@@ -108,6 +108,7 @@ usage() {
   "
 
   echo "$message"
+  print_available_var_files
 }
 
 # check if the var file is provided
@@ -116,7 +117,7 @@ if [ -z "$1" ]; then
   _task_failed
   echo -e "Var file not provided.\n"
   usage
-  echo 'Exiting'
+  echo -e '\nExiting'
   exit 1
 fi
 
@@ -125,9 +126,8 @@ __task "Checking if var file $1 exists"
 if [[ ! -e "$DOTFILES_DIR/vars/$1.yaml" ]]; then
   _task_failed
   echo -e "var file ${RED}${BOLD}$1${NC} doesn't exist"
-  echo -e "You can use the following var files \n"
   # print var filenames without file extension
-  find "$DOTFILES_DIR/vars/" -type f -exec basename {} \; | sed 's/\.[^.]*$//'
+  print_available_var_files
   echo -e "\nExiting"
   exit 1
 fi
