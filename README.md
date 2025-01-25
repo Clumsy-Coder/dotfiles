@@ -4,6 +4,93 @@ my configs, settings, installation scripts, etc
 
 ## Quick start
 
+Run script and use a var file (without file extension) from [`./vars/`](./vars)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Clumsy-Coder/dotfiles/master/bin/dotfiles.sh | bash -s -- <var filename without file extension>
+```
+
+example:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Clumsy-Coder/dotfiles/master/bin/dotfiles.sh | bash -s -- fedora
+```
+
+### Run specific role
+
+To run a specfic role from [`./roles/`](./roles/) directory
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Clumsy-Coder/dotfiles/master/bin/dotfiles.sh | bash -s -- <var filename> --tags <role name>
+```
+
+example:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Clumsy-Coder/dotfiles/master/bin/dotfiles.sh | bash -s -- fedora --tags code-directory
+```
+
+example multiple roles:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Clumsy-Coder/dotfiles/master/bin/dotfiles.sh | bash -s -- fedora --tags 'code-directory, dnf'
+```
+
+## Usage
+
+This repo will be using Ansible to set up dotfiles, install apps, etc
+
+command [`dotfiles`](./bin/dotfiles.sh) is used for running Ansible playbook
+
+When running `dotfiles`, it expects a var file from [`./vars/`](./vars) directory (without the file extension).
+The var file must contain a var named `default_roles`. This var will be used to run roles stored in the [`./roles`](./roles)
+
+Ex: if a var file `foo.yaml` contains role `code-directory` and `git` in var `default_roles`; when running `dotfiles foo`, it will run roles `code-directory` and `git`
+
+### Default
+
+```bash
+dotfiles <var file>
+```
+
+Ex:
+
+```bash
+dotfiles fedora
+```
+
+### Run specific roles
+
+If you want to run a specific role, you need to provide the ansible argument `--tags <role name>`
+
+```bash
+dotfiles <var file> --tags <role name>
+```
+
+Ex:
+
+```bash
+dotfiles fedora --tags code-directory
+```
+
+### Run multiple specific roles
+
+To run multiple specific roles, separate the roles with a comma
+
+```bash
+dotfiles <var file> --tags 'role1, role2, role3'
+```
+
+Ex:
+
+```bash
+dotfiles fedora --tags 'code-directory, git, dnf'
+```
+
+---
+
+## Quick start
+
 Clone repo
 
 ```bash
