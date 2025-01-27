@@ -271,6 +271,7 @@ dotfiles/
 
 ## Inspiration
 
+- [Restructuring dotfiles for ansible](https://youtu.be/hPPIScBt4Gw)
 - [geerlingguy Mac Ansible setup video](https://youtu.be/1VhPVu5EK5o?si=3dpZaRqs_Ux5GK-E)
 - [geerlingguy Mac Ansible setup](https://github.com/geerlingguy/mac-dev-playbook)
 - [Run Ansible playbook in a script](https://github.com/frdmn/dotfiles/tree/master)
