@@ -47,6 +47,14 @@ The var file must contain a var named `default_roles`. This var will be used to 
 
 Ex: if a var file `foo.yaml` contains role `code-directory` and `git` in var `default_roles`; when running `dotfiles foo`, it will run roles `code-directory` and `git`
 
+### Supported OS
+
+dotfiles bootstrapping is supported in the following OS
+
+- Ubuntu
+- Pop!_OS
+- Fedora
+
 ### Default
 
 ```bash
