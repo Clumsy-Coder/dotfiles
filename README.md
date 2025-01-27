@@ -97,6 +97,66 @@ dotfiles fedora --tags 'code-directory, git, dnf'
 
 ---
 
+## How it works
+
+This repo uses ansible and ansible-playbook to setup the OS
+
+All dotfiles are stored in `./tools/` directory
+
+### `./bin/dotfiles.sh`
+
+The `./bin/dotfiles.sh` will
+
+- Check if the dotfiles repo is cloned on to the path defined in env `DOTFILES_DIR`
+- add a symbolic line of `./bin/dotfiles.sh` to `$HOME/.local/bin/dotfiles`
+  - run the command `dotfiles` from any directory
+- load file `./bin/colours.sh`
+- load file `./bin/functions.sh`
+- load file `./tools/zsh/.zshenv`
+- load file `./tools/zsh/exports.zsh`
+- install ansible on the supported OS
+- update git submodules
+- install packages from `./requirements.yaml` using ansible galaxy
+- check if a var file if not provided
+  - display help page
+  - exit program
+- check if var file doesn't exist
+  - display help page and available var file names
+  - exit program
+- run ansible playbook using the var file provided
+
+### Ansible
+
+Ansible `roles` are used for specific task, Ex: Installing `NVM`, configuring `Alacritty`. Some roles
+are OS specific.
+
+A single ansible playbook is used. It loads a var file (provided by when executing `./bin/dotfiles.sh`)
+which contains var `default_roles` that will run the listed roles
+
+Ansible `vars` are used to store any variables that be used in an Ansible `role`. Ex: list of apps to install on homebrew
+The directory `vars/` contains ansible var files used by ansible-playbook. Each file is corresponding
+to an OS.
+
+> [!NOTE]
+> Each var file in `./vars/` directory must contain a var `default_roles`. It's a list of roles to run if not specified by the user
+> Ex:
+>
+> ```yaml
+> default_roles:
+>  - code-directory
+>  - apt
+>  - git
+>  - lazygit
+>  - neofetch
+>  - neovim
+>  - astronvim-v4
+>  - tmux
+>  - nvm
+> ```
+
+
+---
+
 ## Quick start
 
 Clone repo
