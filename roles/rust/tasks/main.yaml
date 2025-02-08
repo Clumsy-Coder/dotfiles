@@ -22,7 +22,7 @@
 
 - name: "Update rust"
   command: rustup update
-  when: cargo_exists
+  when: cargo_exists is not failed
 
 - name: "Remove installer"
   file:
