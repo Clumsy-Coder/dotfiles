@@ -158,30 +158,38 @@ to an OS.
 
 ## File/Folder structure
 
+<!--
+Quick tip: to generate tree structure with URL, run the following command
+tree . -L 1 -a -C --dirsfirst -H "."
+-->
 <pre>
 dotfiles/
-├── <a href="./.editorconfig">.editorconfig</a>
-├── <a href="./.github/">.github/</a>
-├── <a href="./.gitignore">.gitignore</a>
-├── <a href="./.gitmodules">.gitmodules</a>
-├── <a href="./.luacheckrc">.luacheckrc</a>
-├── <a href="./.stylua.toml">.stylua.toml</a>
-├── <a href="./.yamllint">.yamllint</a>
-├── <a href="./LICENSE">LICENSE</a>
-├── <a href="./README.md">README.md</a>
-├── <a href="./ansible.cfg">ansible.cfg</a>                     # Ansible configs
-├── <a href="./dotbot-readme.md">dotbot-readme.md</a>                # Old docs for dotbot
-├── <a href="./dotfiles">dotfiles</a>                        # Script to run Ansible
-├── <a href="./hosts">hosts</a>                           # Ansible hosts
-├── <a href="./install-profile">install-profile</a>                 # used by dotbot. No longer in use
-├── <a href="./install-standalone">install-standalone</a>              # used by dotbot. No longer in use
-├── <a href="./docs/">docs/</a>                           # documentation assets. Ex: screenshots
-├── <a href="./meta/">meta/</a>                           # dotbot configs and profiles. No longer in use
-├── <a href="./playbooks/">playbooks/</a>                      # Ansible playbooks
-├── <a href="./requirements.yaml">requirements.yaml</a>               # Ansible Galaxy. needed before running Ansible
-├── <a href="./roles/">roles/</a>                          # Ansible roles
-├── <a href="./tools/">tools/</a>                          # dotfile configs
-└── <a href="./vars/">vars/</a>                           # Ansible vars
+├── <a class="DIR" href="./.github/">.github/</a>
+├── <a class="DIR" href="./bin/">bin/</a>                            # shell scripts to run dotfiles and ansible-playbook
+├── <a class="DIR" href="./docs/">docs/</a>                           # documentation assets. Ex: screenshots
+├── <a class="DIR" href="./meta/">meta/</a>                           # dotbot configs and profiles. No longer in use
+├── <a class="DIR" href="./pre_tasks/">pre_tasks/</a>                      # Task to run before anything else in ansible-playbook
+├── <a class="DIR" href="./roles/">roles/</a>                          # Ansible roles
+├── <a class="DIR" href="./tasks/">tasks/</a>                          # Ansible tasks
+├── <a class="DIR" href="./tools/">tools/</a>                          # dotfile configs
+├── <a class="DIR" href="./vars/">vars/</a>                           # Ansible vars
+├── <a class="NORM" href="./.ansible-lint">.ansible-lint</a>
+├── <a class="NORM" href="./.editorconfig">.editorconfig</a>
+├── <a class="NORM" href="./.gitignore">.gitignore</a>
+├── <a class="NORM" href="./.gitmodules">.gitmodules</a>
+├── <a class="NORM" href="./.luacheckrc">.luacheckrc</a>
+├── <a class="NORM" href="./.markdownlint.json">.markdownlint.json</a>
+├── <a class="NORM" href="./.stylua.toml">.stylua.toml</a>
+├── <a class="NORM" href="./.yamllint">.yamllint</a>
+├── <a class="NORM" href="./ansible.cfg">ansible.cfg</a>                     # Ansible configs
+├── <a class="NORM" href="./dotbot-readme.md">dotbot-readme.md</a>                # Old docs for dotbot
+├── <a class="NORM" href="./hosts">hosts</a>                           # Ansible hosts
+├── <a class="EXEC" href="./install-profile">install-profile</a>                 # used by dotbot. No longer in use
+├── <a class="EXEC" href="./install-standalone">install-standalone</a>              # used by dotbot. No longer in use
+├── <a class="NORM" href="./LICENSE">LICENSE</a>
+├── <a class="NORM" href="./main.yaml">main.yaml</a>                       # Main ansible playbook file
+├── <a class="NORM" href="./README.md">README.md</a>
+└── <a class="NORM" href="./requirements.yaml">requirements.yaml</a>               # Ansible Galaxy. needed before running Ansible
 </pre>
 
 ## Inspiration
