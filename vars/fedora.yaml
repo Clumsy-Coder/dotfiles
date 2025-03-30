@@ -57,6 +57,7 @@ dnf_packages:
   - neovim
   - piper
   - python3
+  - python3-pip
   - ripgrep
   - sushi
   - tmux
