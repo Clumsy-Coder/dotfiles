@@ -58,7 +58,6 @@ dnf_packages:
   - piper
   - python3
   - ripgrep
-  - solaar
   - sushi
   - tmux
   - trash-cli
