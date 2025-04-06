@@ -20,6 +20,7 @@ default_roles:
   - ufw
   - xdg-ninja
   - docker
+  - obsidian
   # gui roles
   - alacritty
   - kitty
