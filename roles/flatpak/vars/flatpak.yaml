@@ -10,10 +10,10 @@ flatpak_remotes:
 
 flatpak_packages:
   # - com.getpostman.Postman          # postman             https://flathub.org/apps/com.getpostman.Postman
-  # - com.prusa3d.PrusaSlicer         # prusa slicer        https://flathub.org/apps/com.prusa3d.PrusaSlicer
   - com.discordapp.Discord          # discord             https://flathub.org/apps/com.discordapp.Discord
   - com.github.tchx84.Flatseal      # flatseal            https://flathub.org/apps/com.github.tchx84.Flatseal
   - com.google.AndroidStudio        # Android studio      https://flathub.org/apps/com.google.AndroidStudio
+  - com.prusa3d.PrusaSlicer         # prusa slicer        https://flathub.org/apps/com.prusa3d.PrusaSlicer
   - com.spotify.Client              # spotify             https://flathub.org/apps/com.spotify.Client
   - com.sublimetext.three           # sublime text        https://flathub.org/apps/com.sublimetext.three
   - com.visualstudio.code           # VScode              https://flathub.org/apps/com.visualstudio.code
