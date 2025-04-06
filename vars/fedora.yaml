@@ -47,6 +47,7 @@ dnf_packages:
   - fzf
   - gh
   - git
+  - gnome-tweaks
   - go
   - htop
   - jetbrains-mono-fonts
