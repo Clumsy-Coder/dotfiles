@@ -53,7 +53,6 @@ dnf_packages:
   - nano
   - ncdu
   - neovim
-  - piper
   - python3
   - python3-pip
   - ripgrep
