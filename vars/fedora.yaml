@@ -40,7 +40,6 @@ dnf_packages:
   - amd-gpu-firmware
   - bat
   - btop
-  - calibre
   - curl
   - fastfetch
   - flatpak
