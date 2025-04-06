@@ -21,6 +21,7 @@
     - docker-engine-selinux
     - docker-engine
   become: true
+  ignore_errors: true
 
 - name: "Install package 'dnf-plugin-core'"
   dnf:
