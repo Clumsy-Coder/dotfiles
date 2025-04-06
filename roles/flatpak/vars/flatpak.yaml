@@ -9,8 +9,8 @@ flatpak_remotes:
     url: https://dl.flathub.org/repo/flathub.flatpakrepo
 
 flatpak_packages:
-  # - com.getpostman.Postman          # postman             https://flathub.org/apps/com.getpostman.Postman
   - com.discordapp.Discord          # discord             https://flathub.org/apps/com.discordapp.Discord
+  - com.getpostman.Postman          # postman             https://flathub.org/apps/com.getpostman.Postman
   - com.github.tchx84.Flatseal      # flatseal            https://flathub.org/apps/com.github.tchx84.Flatseal
   - com.google.AndroidStudio        # Android studio      https://flathub.org/apps/com.google.AndroidStudio
   - com.prusa3d.PrusaSlicer         # prusa slicer        https://flathub.org/apps/com.prusa3d.PrusaSlicer
