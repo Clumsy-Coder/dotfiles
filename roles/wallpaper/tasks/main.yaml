@@ -1,0 +1,9 @@
+---
+
+# clone wallpaper repo
+- name: "Clone repo. This will take a while"
+  git:
+    repo: git@github.com:Clumsy-Coder/wallpaper.git
+    dest: ~/Pictures/wallpaper
+    key_file: ~/.ssh/github-ssh
+    version: master
