@@ -1,0 +1,9 @@
+---
+
+# clone obsidian repo
+- name: "Clone repo"
+  git:
+    repo: git@github.com:Clumsy-Coder/mimir-library.git
+    dest: "{{ ansible_env.OBSIDIAN_DIR_PATH }}/mimir"
+    key_file: ~/.ssh/github-ssh
+    version: main
