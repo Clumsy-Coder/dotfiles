@@ -25,6 +25,7 @@ flatpak_packages:
   - md.obsidian.Obsidian            # obsidian            https://flathub.org/apps/md.obsidian.Obsidian
   - org.freedesktop.Bustle          # d-bus visualizer    https://flathub.org/apps/org.freedesktop.Bustle
   - org.freedesktop.Piper           # logitech mouse      https://flathub.org/apps/org.freedesktop.Piper
+  - org.gnome.Extensions            # Gnome extensions    https://flathub.org/apps/org.gnome.Extensions
   - org.gnome.Rhythmbox3            # linux itunes        https://flathub.org/apps/org.gnome.Rhythmbox3
   - org.gnome.World.PikaBackup      # linux backup        https://flathub.org/apps/org.gnome.World.PikaBackup
   - org.kiwix.desktop               # offline reader      https://flathub.org/apps/org.kiwix.desktop
