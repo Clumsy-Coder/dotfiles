@@ -25,6 +25,8 @@
       dest: "{{ zshenv.HOME }}/.zshenv"
     - src: "{{ zshenv.DOTDIR }}/tools/zsh/.zlogin"
       dest: "{{ zshenv.ZLOGIN_PATH }}"
+    - src: "{{ zshenv.DOTDIR }}/tools/zsh/bin/on.sh"        # for making new obsidian note
+      dest: "{{ ansible_env.HOME }}/.local/bin/on"
 
 - name: "Link powerlevel10k config to {{ zshenv.ZDOTDIR }}/.p10k.zsh"
   file:
