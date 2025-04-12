@@ -21,6 +21,7 @@ default_roles:
   - xdg-ninja
   - docker
   - obsidian
+  - yazi
   # gui roles
   - alacritty
   - kitty
