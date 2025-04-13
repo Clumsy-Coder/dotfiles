@@ -27,7 +27,7 @@ style = "Italic"
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
-style = "Regular"
+style = "SemiBold"
 
 [font.offset]
 x = 0
