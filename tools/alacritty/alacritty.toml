@@ -52,6 +52,6 @@ y = 0
 
 [general]
 live_config_reload = true
-import = ["~/dotfiles/tools/alacritty/colorscheme/material-design.colorscheme.toml"]
+import = ["~/dotfiles/tools/alacritty/colorscheme/catppuccin-mocha.toml"]
 
 [terminal]
