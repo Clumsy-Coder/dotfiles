@@ -1,0 +1,9 @@
+---
+
+# install Alacritty via dnf
+
+- name: "Install Alacritty"
+  dnf:
+    name: "alacritty"
+    state: present
+  become: true
