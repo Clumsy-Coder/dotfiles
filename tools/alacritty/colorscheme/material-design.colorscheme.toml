@@ -1,0 +1,57 @@
+# Colors (Material design Theme)
+# obtained from https://github.com/MartinSeeler/iterm2-material-design/blob/master/colors.md
+[colors.bright]
+black = "#B0BEC5"
+blue = "#80D8FF"
+cyan = "#A7FDEB"
+green = "#B9F6CA"
+magenta = "#FF80AB"
+red = "#FF8A80"
+white = "#FFFFFF"
+yellow = "#FFE57F"
+
+[colors.normal]
+black = "#546E7A"
+blue = "#40C4FF"
+cyan = "#64FCDA"
+green = "#5CF19E"
+magenta = "#FF4081"
+red = "#FF5252"
+white = "#FFFFFF"
+yellow = "#FFD740"
+
+[colors.primary]
+background = "#263238"
+foreground = "#ECEFF1"
+
+[colors.selected]
+background = "#607D8B"
+foreground = "#ECEFF1"
+
+[schemes.material-design.bright]
+black = "#B0BEC5"
+blue = "#80D8FF"
+cyan = "#A7FDEB"
+green = "#B9F6CA"
+magenta = "#FF80AB"
+red = "#FF8A80"
+white = "#FFFFFF"
+yellow = "#FFE57F"
+
+[schemes.material-design.normal]
+black = "#546E7A"
+blue = "#40C4FF"
+cyan = "#64FCDA"
+green = "#5CF19E"
+magenta = "#FF4081"
+red = "#FF5252"
+white = "#FFFFFF"
+yellow = "#FFD740"
+
+[schemes.material-design.primary]
+background = "#263238"
+foreground = "#ECEFF1"
+
+[schemes.material-design.selected]
+background = "#607D8B"
+foreground = "#ECEFF1"
