@@ -20,6 +20,7 @@
 # link Alacritty config file
 - name: "Link config file to {{ zshenv.ALACRITTY_CONFIG_PATH }}"
   file:
-    src: "{{ zshenv.DOTDIR }}/tools/alacritty/alacritty.yml"
+    src: "{{ zshenv.DOTDIR }}/tools/alacritty/alacritty.toml"
     dest: "{{ zshenv.ALACRITTY_CONFIG_PATH }}"
     state: link
+    force: true
