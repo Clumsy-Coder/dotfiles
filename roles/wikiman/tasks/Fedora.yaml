@@ -1,0 +1,70 @@
+---
+
+# get latest wikiman release metadata
+- name: "Download Latest Version JSON"
+  ansible.builtin.uri:
+    url: https://api.github.com/repos/filiparag/wikiman/releases/latest
+  register: wikiman_latest_version_json
+  changed_when: false
+
+# - name: "print version json"
+#   ansible.builtin.debug:
+#     var: wikiman_latest_version_json.json
+
+- name: "Registering wikiman Latest Release"
+  ansible.builtin.set_fact:
+    wikiman_latest_release: "{{ wikiman_latest_version_json.json.tag_name }}"
+
+- name: "Registering wikiman Latest Version"
+  ansible.builtin.set_fact:
+    wikiman_latest_version: "{{ wikiman_latest_release.stdout | default('') }}"
+
+- name: Show wikiman_latest_release debug
+  ansible.builtin.debug:
+    var: wikiman_latest_release
+
+# get installed wikiman version
+- name: "Check if wikiman is installed"
+  shell:
+    cmd: command -v wikiman > /dev/null 2>&1
+  register: is_wikiman_installed
+  ignore_errors: true
+  failed_when: false
+
+- name: "Get installed version"
+  # noqa risky-shell-pipe
+  shell:
+    cmd: |
+      wikiman -v | grep -Po "(\d+\.)+\d+" | xargs printf '%s'
+  register: installed_wikiman_version
+  when: is_wikiman_installed.rc == 0
+
+- name: "Show installed_wikiman_version"
+  ansible.builtin.debug:
+    var: installed_wikiman_version.stdout
+
+# ----------------------------------------------------------------------------------------------- #
+
+- name: "Install Wikiman"
+  when: wikiman_latest_release not in installed_wikiman_version.stdout|default('')
+  block:
+    # query json to get download url
+    # obtained from
+    # - https://docs.ansible.com/ansible/latest/collections/community/general/docsite/filter_guide_selecting_json_data.html
+    - name: "Get download url"
+      debug:
+        msg: "{{ wikiman_latest_version_json.json | json_query(download_url_query) }}"
+      vars:
+        download_url_query: "assets[?contains(name, 'rpm')].browser_download_url"
+      register: download_url
+
+    # install rpm package using download url
+    # NOTE: need to disable gpg check; if installing manually, it will show a comment
+    # obtained from
+    # - https://stackoverflow.com/a/73797059/3053548
+    - name: "Install wikiman"
+      dnf:
+        name: "{{ download_url.msg[0] }}"
+        state: installed
+        disable_gpg_check: true
+      become: true
