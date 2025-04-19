@@ -3,11 +3,11 @@
 pip3_packages:
   # - ansible
   # - codespell
+  # - dooit
   # - gitlint
   # - ranger
   # - s-tui               # CPU stress utility. https://www.youtube.com/watch?v=4isEhE2rvmA&t=44s
   # - vim-vint
   # - yamllint
-  - dooit
   - libtmux
   - jmespath              # needed for role `wikiman`. Used in json_query module
