@@ -10,3 +10,4 @@ pip3_packages:
   # - yamllint
   - dooit
   - libtmux
+  - jmespath              # needed for role `wikiman`. Used in json_query module
