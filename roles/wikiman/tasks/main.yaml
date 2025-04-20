@@ -65,3 +65,50 @@
       when: distribution_config.stat.exists
 
 # ----------------------------------------------------------------------------------------------- #
+
+# install wikiman sources
+
+- name: "Download wikiman makefile"
+  block:
+    - name: "Create temp directory"
+      file:
+        path: /tmp/wikiman-sources
+        state: directory
+
+    - name: "Download wikiman sources"
+      get_url:
+        url: https://raw.githubusercontent.com/filiparag/wikiman/master/Makefile
+        dest: /tmp/wikiman-sources/wikiman-makefile
+
+# available sources
+# obtained from:
+# - https://github.com/filiparag/wikiman#additional-documentation-sources
+# - https://github.com/filiparag/wikiman/blob/c2e64fd/Makefile#L155-L181
+- name: "Install wikiman sources"
+  loop:
+    - source-arch
+    # - source-gentoo
+    # - source-fbsd
+    # - source-tldr
+  block:
+    - name: "Download source {{ item }}"
+      command:
+        cmd: "make -f ./wikiman-makefile {{ item }}"
+        chdir: /tmp/wikiman-sources
+
+    - name: "Install source {{ item }}"
+      command:
+        cmd: make -f ./wikiman-makefile source-install
+        chdir: /tmp/wikiman-sources
+      become: true
+
+    - name: "Cleanup leftover files"
+      command:
+        cmd: make -f ./wikiman-makefile clean
+        chdir: /tmp/wikiman-sources
+      become: true
+
+- name: "Remove temp directory"
+  file:
+    path: /tmp/wikiman-sources
+    state: absent
