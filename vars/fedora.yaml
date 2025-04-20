@@ -22,6 +22,7 @@ default_roles:
   - docker
   - obsidian
   - yazi
+  - wikiman
   # gui roles
   - alacritty
   - kitty
