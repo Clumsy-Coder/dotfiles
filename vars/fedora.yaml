@@ -57,6 +57,7 @@ dnf_packages:
   - nano
   - ncdu
   - neovim
+  - perl-devel                # needed to run makefile in role `exiftool`
   - python3
   - python3-pip
   - ripgrep
