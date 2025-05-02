@@ -1,0 +1,50 @@
+# Github SSH key
+Host github.com
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/github-ssh
+
+# Pi-hole
+Host minerva-adjudicator
+  User pi
+  Hostname minerva-adjudicator.local
+  IdentityFile ~/.ssh/minerva-adjudicator
+
+# Monoprice select plus 3D printer
+Host hephaestus-monoprice
+  User pi
+  Hostname hephaestus-monoprice.local
+  IdentityFile ~/.ssh/hephaestus-monoprice
+
+# beelink ser5 max
+Host workhorse
+  User umar
+  # Hostname workhorse.local
+  # Hostname 192.168.1.90
+  Hostname workhorse.local
+  port 22
+  IdentityFile ~/.ssh/windows11
+# Ubuntu running in WSL2 on beelink ser5 max device
+Host ubuntu-wsl
+  User ubuntu
+  # Hostname workhorse.local
+  # Hostname 192.168.1.91
+  Hostname workhorse.local
+  port 2200
+  IdentityFile ~/.ssh/ubuntu-wsl
+  # ProxyJump workhorse
+Host ubuntu-wsl-24_04
+  User ubuntu-24_04
+  # Hostname workhorse.local
+  # Hostname 192.168.1.91
+  Hostname workhorse.local
+  port 2200
+  IdentityFile ~/.ssh/ubuntu-wsl
+  # ProxyJump workhorse
+Host popos
+  User umar
+  # Hostname workhorse.local
+  Hostname 192.168.1.91
+  # Hostname workhorse.local
+  port 2200
+  IdentityFile ~/.ssh/ubuntu-wsl
+  # ProxyJump workhorse
