@@ -23,6 +23,7 @@ flatpak_packages:
   - io.github.pwr_solaar.solaar     # logitech peripherals https://flathub.org/apps/io.github.pwr_solaar.solaar
   - io.missioncenter.MissionCenter  # mission center      https://flathub.org/apps/io.missioncenter.MissionCenter
   - md.obsidian.Obsidian            # obsidian            https://flathub.org/apps/md.obsidian.Obsidian
+  - org.angryip.ipscan              # ip scanner          https://flathub.org/apps/org.angryip.ipscan
   - org.freedesktop.Bustle          # d-bus visualizer    https://flathub.org/apps/org.freedesktop.Bustle
   - org.freedesktop.Piper           # logitech mouse      https://flathub.org/apps/org.freedesktop.Piper
   - org.gnome.Extensions            # Gnome extensions    https://flathub.org/apps/org.gnome.Extensions
