@@ -53,6 +53,9 @@ source "$DOTFILES_DIR/tools/zsh/exports.zsh"
 dotfiles_os=$(detect_os)
 __task "Loading Setup for detected OS: $dotfiles_os"
 case $dotfiles_os in
+  debian)
+    debian_setup
+    ;;
   ubuntu)
     ubuntu_setup
     ;;

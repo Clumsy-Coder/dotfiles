@@ -93,6 +93,35 @@ function _task_failed {
   _clear_task
 }
 
+function debian_setup() {
+  # https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html#installing-ansible-on-debian
+
+  debian_codename=$(lsb_release -cs)
+  UBUNTU_CODENAME=""
+  # assign ubuntu codename based on debian codename
+  case $debian_codename in
+    bookworm)
+      UBUNTU_CODENAME="jammy"
+      ;;
+    bullseye)
+      UBUNTU_CODENAME="focal"
+      ;;
+    buster)
+      UBUNTU_CODENAME="bionic"
+      ;;
+  esac
+
+  __task "Add APT keys"
+  _cmd "wget -O- 'https://keyserver.ubuntu.com/pks/lookup?fingerprint=on&op=get&search=0x6125E2A8C77F2818FB7BD15B93C4A3FD7BB9C367' | sudo gpg --yes --dearmour -o /usr/share/keyrings/ansible-archive-keyring.gpg"
+  _cmd "echo \"deb [signed-by=/usr/share/keyrings/ansible-archive-keyring.gpg] http://ppa.launchpad.net/ansible/ansible/ubuntu $UBUNTU_CODENAME main\" | sudo tee /etc/apt/sources.list.d/ansible.list"
+
+  if ! [ -x "$(command -v ansible)" ]; then
+    __task "Installing Ansible"
+    _cmd "sudo apt update"
+    _cmd "sudo apt install ansible -y"
+  fi
+}
+
 # ----------------------------------------------------------------------------------------------- #
 
 function ubuntu_setup() {
