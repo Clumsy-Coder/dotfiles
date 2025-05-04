@@ -73,7 +73,8 @@ case $dotfiles_os in
   #   ;;
   *)
     __task "Unsupported OS"
-    _cmd "echo 'Unsupported OS'"
+    _task_failed "echo 'Unsupported OS'"
+    exit 1
     ;;
 esac
 
