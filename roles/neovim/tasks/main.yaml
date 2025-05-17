@@ -39,7 +39,6 @@
     - curl
   when:
     ansible_os_family == "Darwin"
-  become: true
 
 - name: "Remove currently installed Neovim (built from source)"
   file:
