@@ -97,6 +97,9 @@ if [[ $IS_MAC -eq 1 ]]; then
   # use the openssl installed from homebrew
   export PATH="/usr/local/opt/openssl@3/bin:$PATH"
 
+  # add path ~/.local/bin
+  export PATH="$XDG_DATA_BIN:$PATH"
+
 fi # END if [[ $IS_MAC -eq 1 ]]; then
 # -------------------------------------------------------------------------------------------------#
 # Linux only exports. $IS_LINUX is set in zsh/checks.sh
