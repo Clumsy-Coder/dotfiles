@@ -68,9 +68,9 @@ case $dotfiles_os in
   # arch)
   #   arch_setup
   #   ;;
-  # darwin)
-  #   macos_setup
-  #   ;;
+  darwin)
+    macos_setup
+    ;;
   *)
     __task "Unsupported OS"
     _task_failed "echo 'Unsupported OS'"
