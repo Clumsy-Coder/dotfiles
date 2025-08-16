@@ -20,7 +20,7 @@
 
 - name: "Install Node Version Manager"
   shell:
-    cmd: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | PROFILE=/dev/null zsh
+    cmd: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | PROFILE=/dev/null bash
 
 - name: "Install latest NodeJS version"
   shell:
