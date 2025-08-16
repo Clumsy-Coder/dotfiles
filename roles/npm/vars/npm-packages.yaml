@@ -35,3 +35,4 @@ npm_packages:
   - npm-check-updates
   - npm-run-all
   - typescript
+  - yarn                # needed to install markdown-preview.nvim package
