@@ -1,5 +1,13 @@
 ---
 
+- name: "Install required packages"
+  dnf:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - xz
+  become: true
+
 - name: "Install Wikiman"
   when: wikiman_latest_release not in installed_wikiman_version.stdout|default('')
   block:
