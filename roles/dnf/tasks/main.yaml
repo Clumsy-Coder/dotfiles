@@ -65,6 +65,7 @@
 # obtained from
 # - https://youtu.be/RrRpXs2pkzg?t=499&si=x9IKb-cs9gapNfaY
 - name: "Enable multimedia codecs"
+  when: not ansible_host_environment_is_wsl
   block:
     # obtained from
     # - https://rpmfusion.org/Howto/Multimedia#Switch_to_full_ffmpeg
