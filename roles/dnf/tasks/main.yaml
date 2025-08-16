@@ -115,6 +115,7 @@
     state: present
   loop: "{{ dnf_group_packages }}"
   become: true
+  when: dnf_group_packages is defined
 
 - name: "Autoremove dnf packages"
   dnf:
