@@ -1,0 +1,71 @@
+---
+
+default_roles:
+  - code-directory
+  - dnf
+  - git
+  - lazygit
+  - astronvim-v4
+  - tmux
+  - nvm
+  - npm
+  - pip3
+  - rust
+  - cargo
+  - go-packages
+  - vimv
+  - zsh
+  - ohmyzsh
+  - xdg-ninja
+  # - obsidian
+  - yazi
+  # - wikiman
+
+dnf_packages:
+  # terminal based
+  - bat
+  - btop
+  - curl
+  - fastfetch
+  - fzf
+  - gh
+  - git
+  - go
+  - htop
+  - luarocks
+  - nano
+  - ncdu
+  - neovim
+  - perl-devel                # needed to run makefile in role `exiftool`
+  - python3
+  - python3-pip
+  - ripgrep
+  - tmux
+  - trash-cli
+  - tree
+  - unzip
+  - urlview
+  - vim
+  - wavemon
+  - wget
+  - xsel
+  - zip
+  - zsh
+  # gui based
+
+
+# # ufw firewall rules
+# # allow ports in 'ufw'
+# #
+# # used in role `ufw`
+# ufw:
+#   - port_number: 2200
+#     comment: "SSH"
+#   - port_number: 80
+#     comment: "HTTP"
+#   - port_number: 3000
+#     comment: "HTTP dev"
+#   - port_number: 53317
+#     comment: "LocalSend"
+#   - port_number: 57621              # https://community.spotify.com/t5/Android/Spotify-local-file-sync-ports/m-p/5444852/highlight/true#M192983
+#     comment: "Spotify local sync"
