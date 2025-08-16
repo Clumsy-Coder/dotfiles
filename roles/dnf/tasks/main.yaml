@@ -30,6 +30,7 @@
   # - https://youtu.be/RrRpXs2pkzg?si=Hnu3EDDgyhoiGar4&t=296
   # - https://serverfault.com/a/1021745
 - name: "Enable RPM fusion"
+  when: not ansible_host_environment_is_wsl
   block:
     # obtained from
     # - https://rpmfusion.org/keys
