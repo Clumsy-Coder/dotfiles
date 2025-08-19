@@ -9,7 +9,7 @@ ZINIT_REPO="https://github.com/zdharma-continuum/zinit.git"
 
 # install zinit IF not installed
 if [ ! -d "$ZINIT_HOME" ]; then
-  echo "Downloading zinit repo $ZINIT_REPO"
+  echo "Downloading zinit repo $ZINIT_REPO to $ZINIT_HOME"
   mkdir -p "$(dirname $ZINIT_HOME)"
   git clone --depth 1 "$ZINIT_REPO" "$ZINIT_HOME"
 fi
