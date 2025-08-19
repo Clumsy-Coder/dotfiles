@@ -1,0 +1,83 @@
+---
+# - include_vars: "astronvim.yaml"
+
+# remove old Neovim installed plugins
+- name: "Remove old Neovim plugins"
+  file:
+    path: "{{ item }}"
+    state: absent
+  with_items:
+    # - "{{ zshenv.NVIM_CONFIG_DIR_PATH }}"
+    - "{{ zshenv.NVIM_PACKER_DIR_PATH }}"
+    - "{{ zshenv.NVIM_PACKER_COMPILED_PATH }}"
+    - "{{ zshenv.XDG_DATA_HOME }}/nvim/lazy"
+    - "{{ zshenv.XDG_DATA_HOME }}/nvim/lazy-lock.json"
+    - "{{ zshenv.XDG_CACHE_HOME }}/nvim"
+
+# download latest Astronvim git repo
+- name: "Git clone Astronvim config"
+  git:
+    repo: "https://github.com/Clumsy-Coder/astronvim-config-v5.git"
+    version: "main"
+    dest: "{{ zshenv.NVIM_CONFIG_DIR_PATH }}"
+    force: true
+
+# ----------------------------------------------------------------------------------------------- #
+# were doing this because the repo cloned earlier is a fork of https://github.com/AstroNvim/template.git
+# adding a remote and branch allows it to easily apply changes from upstream to your own repo
+#
+# Ex: new changes from upstream
+# - checkout branch upstream
+# - pull changes
+# - checkout branch main
+# - rebase with branch `upstream`. Command: git rebase upstream
+# - checkout branch dev
+# - rebase with branch `main`. Command: git rebase main
+
+- name: "Add upstream remote and branch upstream/main"
+  block:
+    - name: "Add remote upstream"
+      # Git module does not know how to add remotes (yet...)
+      # Using command and silencing corresponding ansible-lint rule
+      # noqa command-instead-of-module
+      command:
+        cmd: git remote add upstream https://github.com/AstroNvim/template.git
+        chdir: "{{ zshenv.NVIM_CONFIG_DIR_PATH }}"
+      register: add_upstream_result
+      changed_when: add_upstream_result.rc == 0
+      failed_when:
+        - add_upstream_result.rc != 0
+        - add_upstream_result.stderr | default('') is not search("remote .* already exists")
+
+    - name: "Fetch upstream branches"
+      # noqa command-instead-of-module
+      command:
+        cmd: git fetch upstream
+        chdir: "{{ zshenv.NVIM_CONFIG_DIR_PATH }}"
+
+    - name: "Add branch 'upstream' pointing to upstream/main"
+      # noqa command-instead-of-module
+      command:
+        cmd: git checkout -b upstream upstream/main
+        chdir: "{{ zshenv.NVIM_CONFIG_DIR_PATH }}"
+      register: add_upstream_branch_result
+      changed_when: add_upstream_branch_result.rc == 0
+      failed_when:
+        - add_upstream_branch_result.rc != 0
+        - add_upstream_branch_result.stderr | default('') is not search("branch .* already exists")
+
+    - name: "Checkout branch 'dev'"
+      # noqa command-instead-of-module
+      command:
+        cmd: git checkout dev
+        chdir: "{{ zshenv.NVIM_CONFIG_DIR_PATH }}"
+
+# ----------------------------------------------------------------------------------------------- #
+
+# install astronvim plugins
+# install TreeSitter language packs after installing plugins
+#   running in async. Requires main thread to be blocked temporarily
+- name: "Install astronvim plugins"
+  command:
+    # cmd: nvim --headless -c 'autocmd User LazyDone quitall' -c 'sleep {{ astronvim_install_wait_seconds }}' -c 'quitall'
+    cmd: nvim --headless +q
