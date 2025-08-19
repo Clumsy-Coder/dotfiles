@@ -76,3 +76,4 @@ fi # END if [[ $IS_LINUX -eq 1 ]]; then
 # -------------------------------------------------------------------------------------------------#
 # Completion styline
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # case insensitive completion
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}" # add colour when tab Completing
