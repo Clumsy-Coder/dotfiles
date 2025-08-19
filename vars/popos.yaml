@@ -7,7 +7,7 @@ default_roles:
   - lazygit
   - neofetch
   - neovim
-  - astronvim-v4
+  - astronvim-v5
   - tmux
   - nvm
   - npm

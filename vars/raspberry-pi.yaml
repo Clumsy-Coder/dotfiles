@@ -10,7 +10,7 @@ default_roles:
   - nvm
   - npm
   - neovim
-  - astronvim-v4
+  - astronvim-v5
   - sshd
 
 # apt sources

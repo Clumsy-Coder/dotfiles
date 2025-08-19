@@ -5,7 +5,7 @@ default_roles:
   - dnf
   - git
   - lazygit
-  - astronvim-v4
+  - astronvim-v5
   - tmux
   - nvm
   - npm
