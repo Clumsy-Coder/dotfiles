@@ -72,3 +72,7 @@ if [[ $IS_LINUX -eq 1 ]]; then
   zinit snippet OMZP::systemd            # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/systemd
 
 fi # END if [[ $IS_LINUX -eq 1 ]]; then
+
+# -------------------------------------------------------------------------------------------------#
+# Completion styline
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # case insensitive completion
