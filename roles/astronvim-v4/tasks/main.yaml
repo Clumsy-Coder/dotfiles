@@ -10,16 +10,16 @@
     # - "{{ zshenv.NVIM_CONFIG_DIR_PATH }}"
     - "{{ zshenv.NVIM_PACKER_DIR_PATH }}"
     - "{{ zshenv.NVIM_PACKER_COMPILED_PATH }}"
-    - "{{ zshenv.XDG_DATA_HOME }}/nvim/lazy"
-    - "{{ zshenv.XDG_DATA_HOME }}/nvim/lazy-lock.json"
-    - "{{ zshenv.XDG_CACHE_HOME }}/nvim"
+    - "{{ zshenv.XDG_DATA_HOME }}/astronvim-v4/lazy"
+    - "{{ zshenv.XDG_DATA_HOME }}/astronvim-v4/lazy-lock.json"
+    - "{{ zshenv.XDG_CACHE_HOME }}/astronvim-v4"
 
 # download latest Astronvim git repo
 - name: "Git clone Astronvim config"
   git:
     repo: "https://github.com/Clumsy-Coder/astronvim-config-v4.git"
     version: "main"
-    dest: "{{ zshenv.NVIM_CONFIG_DIR_PATH }}"
+    dest: "{{ zshenv.XDG_CONFIG_HOME }}/astronvim-v4"
     force: true
 
 # ----------------------------------------------------------------------------------------------- #
@@ -31,3 +31,5 @@
   command:
     # cmd: nvim --headless -c 'autocmd User LazyDone quitall' -c 'sleep {{ astronvim_install_wait_seconds }}' -c 'quitall'
     cmd: nvim --headless +q
+  environment:
+    NVIM_APPNAME: astronvim-v4
