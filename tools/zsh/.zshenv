@@ -146,6 +146,11 @@ export ANTIGEN_COMPDUMP="$ADOTDIR/.zcompdump"
 
 # zsh zinit
 export ZINIT_HOME="$XDG_DATA_HOME/zinit"
+# set zinit config
+# declare -A ZINIT
+# https://github.com/zdharma-continuum/zinit#customizing-paths
+# https://github.com/zdharma-continuum/zinit/blob/04034e6/zinit.zsh#L3237-L3240
+# ZINIT[NO_ALIASES]=1    # disable setting zinit aliases. Ex: zi
 
 # alacritty
 export ALACRITTY_CONFIG_DIR_PATH="$XDG_CONFIG_HOME/alacritty"
