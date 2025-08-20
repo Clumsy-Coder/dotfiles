@@ -16,7 +16,6 @@ default_roles:
   - go-packages
   - vimv
   - zsh
-  - ohmyzsh
   - ufw
   - xdg-ninja
   - docker

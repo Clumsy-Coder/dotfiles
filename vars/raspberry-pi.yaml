@@ -6,7 +6,6 @@ default_roles:
   - git
   - neofetch
   - zsh
-  - ohmyzsh
   - nvm
   - npm
   - neovim

@@ -19,7 +19,6 @@ default_roles:
   - go-packages
   - vimv
   - zsh
-  - ohmyzsh
   - xdg-ninja
 
 apt_packages:

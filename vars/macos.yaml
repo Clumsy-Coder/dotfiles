@@ -16,7 +16,6 @@ default_roles:
   - go-packages
   - vimv
   - zsh
-  - ohmyzsh
   - xdg-ninja
   - yazi
   # gui roles
