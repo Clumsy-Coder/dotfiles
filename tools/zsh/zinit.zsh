@@ -86,6 +86,3 @@ autoload -Uz compinit && compinit
 # - https://github.com/zdharma-continuum/zinit#calling-compinit-without-turbo-mode
 # - https://youtu.be/ud7YxC33Z3w?t=964
 zinit cdreplay -q
-
-# shell integration
-eval "$(fzf --zsh)"
