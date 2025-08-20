@@ -53,6 +53,7 @@ zinit light wfxr/forgit                               # cmd utility for Git usin
 zinit light zsh-users/zsh-autosuggestions             # suggests commands as you type
 zinit light zsh-users/zsh-completions                 # additional completions for ZSH
 zinit light zsh-users/zsh-syntax-highlighting         # highlights commands as you type
+zinit light Aloxaf/fzf-tab                            # replace zsh default completion with fzf
 
 # load zsh-completions
 autoload -Uz compinit && compinit
@@ -77,3 +78,7 @@ fi # END if [[ $IS_LINUX -eq 1 ]]; then
 # Completion styline
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # case insensitive completion
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}" # add colour when tab Completing
+zstyle ':completion:*' menu no                          # disable the default completion menu. use fzf-tab
+
+# shell integration
+eval "$(fzf --zsh)"
