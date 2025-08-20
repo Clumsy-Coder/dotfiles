@@ -74,6 +74,7 @@ dnf_packages:
   - wget
   - xsel
   - zip
+  - zoxide
   - zsh
 
 # dnf group packages

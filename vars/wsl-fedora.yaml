@@ -50,6 +50,7 @@ dnf_packages:
   - wget
   - xsel
   - zip
+  - zoxide
   - zsh
   # gui based
 

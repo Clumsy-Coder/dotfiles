@@ -55,4 +55,5 @@ apt_packages:
   - wget
   - xsel
   - zip
+  - zoxide
   - zsh
