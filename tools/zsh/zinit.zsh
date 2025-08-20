@@ -77,6 +77,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # case insensitive compl
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}" # add colour when tab Completing
 zstyle ':completion:*' menu no                          # disable the default completion menu. use fzf-tab
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath' # preview directory contents when using fzf-tab
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath' # add zoxide tab completion
 
 # -------------------------------------------------------------------------------------------------#
 # load zsh-completions
