@@ -79,6 +79,7 @@ fi # END if [[ $IS_LINUX -eq 1 ]]; then
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # case insensitive completion
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}" # add colour when tab Completing
 zstyle ':completion:*' menu no                          # disable the default completion menu. use fzf-tab
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath' # preview directory contents when using fzf-tab
 
 # shell integration
 eval "$(fzf --zsh)"
