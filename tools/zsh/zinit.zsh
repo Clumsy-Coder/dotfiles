@@ -72,7 +72,7 @@ if [[ $IS_LINUX -eq 1 ]]; then
 fi # END if [[ $IS_LINUX -eq 1 ]]; then
 
 # -------------------------------------------------------------------------------------------------#
-# Completion styline
+# Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # case insensitive completion
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}" # add colour when tab Completing
 zstyle ':completion:*' menu no                          # disable the default completion menu. use fzf-tab
