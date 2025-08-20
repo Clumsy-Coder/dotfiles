@@ -82,6 +82,10 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath' # preview dir
 # load zsh-completions
 autoload -Uz compinit && compinit
 
-# -------------------------------------------------------------------------------------------------#
+# faster cached completions
+# - https://github.com/zdharma-continuum/zinit#calling-compinit-without-turbo-mode
+# - https://youtu.be/ud7YxC33Z3w?t=964
+zinit cdreplay -q
+
 # shell integration
 eval "$(fzf --zsh)"
