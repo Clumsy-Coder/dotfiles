@@ -55,9 +55,6 @@ zinit light zsh-users/zsh-completions                 # additional completions f
 zinit light zsh-users/zsh-syntax-highlighting         # highlights commands as you type
 zinit light Aloxaf/fzf-tab                            # replace zsh default completion with fzf
 
-# load zsh-completions
-autoload -Uz compinit && compinit
-
 # -------------------------------------------------------------------------------------------------#
 # MacOS only ZSH plugins. $IS_MAC is set in zsh/checks.sh
 # -------------------------------------------------------------------------------------------------#
@@ -81,5 +78,10 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}" # add colour when tab Co
 zstyle ':completion:*' menu no                          # disable the default completion menu. use fzf-tab
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath' # preview directory contents when using fzf-tab
 
+# -------------------------------------------------------------------------------------------------#
+# load zsh-completions
+autoload -Uz compinit && compinit
+
+# -------------------------------------------------------------------------------------------------#
 # shell integration
 eval "$(fzf --zsh)"
