@@ -57,25 +57,6 @@ alias echoPath='echo -e ${PATH//:/\\n}'  # print PATH entries line by line
 # -------------------------------------------------------------------------------------------------#
 alias ..='cd ..'
 
-alias documents='cd ~/Documents'
-alias downloads='cd ~/Downloads'
-alias desktop='cd ~/Desktop'
-alias googleDr='cd ~/Google\ Drive'
-alias development='cd ~/Documents/Development'
-alias android-dev='cd ~/Documents/Development/android'
-alias ios-dev='cd ~/Documents/Development/iOS'
-alias eclipse='cd ~/Documents/Development/eclipse'
-alias intellij='cd ~/Documents/Development/intellij'
-alias libraries='cd ~/Documents/Development/libraries'
-alias competition="cd ~/Documents/Development/programmingContest/gitRepo/programming-competition"
-alias kattis='cd ~/Documents/Development/programmingContest/gitRepo/programming-competition/kattis'
-alias uva='cd ~/Documents/Development/programmingContest/gitRepo/programming-competition/uva'
-alias web='cd ~/Documents/Development/web'
-alias phnGap='cd ~/Documents/Development/phoneGap'
-alias chengSrc='cd ~/Documents/Development/programmingContest/howardChengFiles/contest/algorithms/src'
-alias mampHtdocs='cd /Applications/MAMP/htdocs'
-alias pythonDev='cd ~/Documents/Development/python'
-
 # -------------------------------------------------------------------------------------------------#
 # directory information
 # -------------------------------------------------------------------------------------------------#
