@@ -65,12 +65,22 @@ alias ..='cd ..'
 # -------------------------------------------------------------------------------------------------#
 # directory information
 # -------------------------------------------------------------------------------------------------#
-alias ls-all-dir='ls -la | grep "^d"'                       # list all folders, even the hidden ones
-alias ls-dir='ls -l | grep "^d"'                            # list all folders
-alias ls='lse'
-alias l='ls'
-alias lse='exa -lahFHmguU --group-directories-first'  # use 'exa' to view directory contents
 alias cntFiles='ls -F | grep -v / | wc -l'                  # count number of folders in directory
+
+# alias if exa is installed
+if [ -x "$(command -v exa)" ]; then
+  # alias ls-all-dir='ls -la | grep "^d"'                       # list all folders, even the hidden ones
+  # alias ls-dir='ls -l | grep "^d"'                            # list all folders
+  # alias ls='lse'
+  # alias l='ls'
+  # alias lse='exa -lahFHmguU --group-directories-first'  # use 'exa' to view directory contents
+
+  alias ls="exa --group-directories-first"
+  alias l="ls -lhFHmguU"
+  alias ll="ls -lahFHmguU"
+else
+  alias ls="ls --color --group-directories-first"
+fi
 
 # -------------------------------------------------------------------------------------------------#
 # grep
