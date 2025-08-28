@@ -24,7 +24,6 @@ default_roles:
   - wikiman
   # gui roles
   - alacritty
-  - kitty
   - nerdfonts
   - flatpak
 
@@ -75,6 +74,8 @@ dnf_packages:
   - zip
   - zoxide
   - zsh
+  # gui apps
+  - kitty
 
 # dnf group packages
 # for more info run command
