@@ -18,7 +18,6 @@ default_roles:
   - zsh
   - ufw
   - xdg-ninja
-  - docker
   - obsidian
   - yazi
   - wikiman
