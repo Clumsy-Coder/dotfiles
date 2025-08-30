@@ -2,7 +2,7 @@
 #
 # https://yazi-rs.github.io/docs/configuration/overview
 
-[manager]
+[mgr]
 show_hidden = true
 sort_by = "natural"
 sort_dir_first = true
