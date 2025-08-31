@@ -2,6 +2,18 @@
 
 gnome_dock_apps:
   - org.gnome.Nautilus.desktop
-  - org.mozilla.firefox.desktop
   - org.gnome.Software.desktop
+  - io.missioncenter.MissionCenter.desktop
+  - org.mozilla.firefox.desktop
+  - com.sublimetext.three.desktop
+  - md.obsidian.Obsidian.desktop
   - kitty.desktop
+  - Alacritty.desktop
+  - org.signal.Signal.desktop
+  - com.discordapp.Discord.desktop
+  - com.getpostman.Postman.desktop
+  - com.visualstudio.code.desktop
+  - org.wireshark.Wireshark.desktop
+  - com.spotify.Client.desktop
+  - org.gnome.Rhythmbox3.desktop
+  - com.prusa3d.PrusaSlicer.desktop
