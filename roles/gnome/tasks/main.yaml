@@ -36,7 +36,13 @@
 
 # ── Dock settings ────────────────────────────────────────────────────────────────────────────────
 
-- name: Set GNOME favorites via dconf (idempotent, exact list)
+- name: "Dock: Remove exisitng apps from the dock"
+  community.general.dconf:
+    key: "/org/gnome/shell/favorite-apps"
+    # dconf expects a GLib array like: ['a.desktop','b.desktop']
+    value: "['']"
+
+- name: "Dock: Add apps to the dock"
   community.general.dconf:
     key: "/org/gnome/shell/favorite-apps"
     # dconf expects a GLib array like: ['a.desktop','b.desktop']
