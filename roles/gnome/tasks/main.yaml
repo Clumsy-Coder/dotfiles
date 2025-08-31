@@ -19,17 +19,17 @@
 
 # ── Mouse/touchpad settings ──────────────────────────────────────────────────────────────────────
 
-- name: "Enable touchpad tap-to-click"
+- name: "Touchpad: Enable touchpad tap-to-click"
   community.general.dconf:
     key: /org/gnome/desktop/peripherals/touchpad/tap-to-click
     value: true
 
-- name: "Disable touchpad natural scrolling"
+- name: "Touchpad: Disable touchpad natural scrolling"
   community.general.dconf:
     key: /org/gnome/desktop/peripherals/touchpad/natural-scroll
     value: false
 
-- name: "Enable touchpad two finger scrolling"
+- name: "Touchpad: Enable touchpad two finger scrolling"
   community.general.dconf:
     key: /org/gnome/desktop/peripherals/touchpad/two-finger-scrolling-enabled
     value: true
