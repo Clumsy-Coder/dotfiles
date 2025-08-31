@@ -1,0 +1,33 @@
+---
+
+# Setting up Gnome
+# obtained from
+# - https://linuxconfig.org/how-to-setup-gnome-using-ansible
+#
+# to get all the dconf configs, run the command
+# dconf dump /
+
+# ─────────────────────────────────────────────────────────────────────────────────────────────────
+
+# install package `psutil`
+# - name: "Add package `psutil` via pip"
+#   ansible.builtin.pip:
+#     name: psutil
+#     state: present
+
+# ── Mouse/touchpad settings ──────────────────────────────────────────────────────────────────────
+
+- name: "Enable touchpad tap-to-click"
+  community.general.dconf:
+    key: /org/gnome/desktop/peripherals/touchpad/tap-to-click
+    value: true
+
+- name: "Disable touchpad natural scrolling"
+  community.general.dconf:
+    key: /org/gnome/desktop/peripherals/touchpad/natural-scroll
+    value: false
+
+- name: "Enable touchpad two finger scrolling"
+  community.general.dconf:
+    key: /org/gnome/desktop/peripherals/touchpad/two-finger-scrolling-enabled
+    value: true
