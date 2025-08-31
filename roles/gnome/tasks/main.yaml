@@ -7,6 +7,8 @@
 # to get all the dconf configs, run the command
 # dconf dump /
 
+- include_vars: all.yaml
+
 # ─────────────────────────────────────────────────────────────────────────────────────────────────
 
 # install package `psutil`
@@ -31,3 +33,11 @@
   community.general.dconf:
     key: /org/gnome/desktop/peripherals/touchpad/two-finger-scrolling-enabled
     value: true
+
+# ── Dock settings ────────────────────────────────────────────────────────────────────────────────
+
+- name: Set GNOME favorites via dconf (idempotent, exact list)
+  community.general.dconf:
+    key: "/org/gnome/shell/favorite-apps"
+    # dconf expects a GLib array like: ['a.desktop','b.desktop']
+    value: "{{ (gnome_dock_apps | to_json) | replace('\"', \"'\") }}"
