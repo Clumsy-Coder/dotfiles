@@ -6,6 +6,5 @@
 - name: "Download vimv binary to /usr/local/bin/ folder"
   get_url:
     url: https://raw.githubusercontent.com/thameera/vimv/master/vimv
-    dest: /usr/local/bin/vimv
-    mode: '1700'
-  become: true
+    dest: "{{ zshenv.XDG_DATA_BIN }}/vimv"
+    mode: '700'
