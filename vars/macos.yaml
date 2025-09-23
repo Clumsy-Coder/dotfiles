@@ -23,3 +23,24 @@ default_roles:
   - kitty
   - nerdfonts
   - vscode-extensions
+
+# used in role code-directory
+create_directories:
+  # - ~/.var
+  - ~/.cache
+  - ~/.config/wakatime
+  - ~/.local/bin
+  - ~/.local/share/applications
+  - ~/.local/share/gnupg         # create directory in order to use gpg for encrypting and decrypting
+  - ~/.local/share/icons
+  - ~/.local/share/man           # alternative location for storing manpages. Update env MANPATH
+  - ~/.local/state
+  - ~/Documents/code
+  - ~/Documents/temp-git-clone
+
+# used in role code-directory
+link_directories:
+  - src: ~/Documents/code
+    dest: ~/code
+  - src: ~/Documents/temp-git-clone
+    dest: ~/temp-git-clone
