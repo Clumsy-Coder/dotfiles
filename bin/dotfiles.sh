@@ -65,6 +65,9 @@ case $dotfiles_os in
   fedora)
     fedora_setup
     ;;
+  kali)
+    kali_setup
+    ;;
   # arch)
   #   arch_setup
   #   ;;

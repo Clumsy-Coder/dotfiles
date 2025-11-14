@@ -124,6 +124,16 @@ function debian_setup() {
 
 # ----------------------------------------------------------------------------------------------- #
 
+function kali_setup() {
+  if ! [ -x "$(command -v ansible)" ]; then
+    __task "Installing Ansible"
+    _cmd "sudo apt update"
+    _cmd "sudo apt install ansible -y"
+  fi
+}
+
+# ----------------------------------------------------------------------------------------------- #
+
 function ubuntu_setup() {
   if ! dpkg -s ansible >/dev/null 2>&1; then
     __task "Installing Ansible"
