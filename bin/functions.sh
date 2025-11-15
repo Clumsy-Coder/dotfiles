@@ -127,6 +127,7 @@ function debian_setup() {
 function kali_setup() {
   # set locale to en_CA.UTF-8
   __task "Set locale to en_CA.UTF-8"
+  _cmd "sudo apt install locales -y"
   _cmd "sudo sed -i -e 's/en_US/en_CA/g' /etc/locale.conf"
   _cmd "echo 'LC_ALL=en_CA.UTF-8' | sudo tee -a /etc/locale.conf"
   _cmd "echo 'en_CA.UTF-8 UTF-8' | sudo tee -a /etc/locale.gen"
