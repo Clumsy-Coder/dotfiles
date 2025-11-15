@@ -19,6 +19,7 @@
   apt:
     upgrade: "yes"
   become: true
+  when: upgrade_apt_packages is defined and upgrade_apt_packages == True
 
 - name: "Install apt packages"
   apt:
