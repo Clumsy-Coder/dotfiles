@@ -126,14 +126,14 @@ function debian_setup() {
 
 function kali_setup() {
   # set locale to en_CA.UTF-8
-  if ! [ -x "$(command -v locale-gen)" ]; then
+  # if ! [ -x "$(command -v locale-gen)" ]; then
     __task "Set locale to en_CA.UTF-8"
     _cmd "sudo apt install locales -y"
     _cmd "sudo sed -i -e 's/en_US/en_CA/g' /etc/locale.conf"
     _cmd "sudo sed -zi '/LC_ALL=en_CA.UTF-8/!s/$/\nLC_ALL=en_CA.UTF-8/' /etc/locale.conf"
     _cmd "sudo sed -i 's/^# *\(en_CA.UTF-8 UTF-8\)/\1/' /etc/locale.gen"
     _cmd "sudo locale-gen"
-  fi
+  # fi
 
   if ! [ -x "$(command -v ansible)" ]; then
     __task "Installing Ansible"
