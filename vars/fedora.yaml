@@ -48,7 +48,6 @@ dnf_packages:
   - gh
   - git
   - gnome-tweaks
-  - go
   - htop
   - jetbrains-mono-fonts
   - luarocks
