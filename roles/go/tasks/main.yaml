@@ -110,3 +110,10 @@
       become: true
       notify:
         - Remove extracted go directory
+
+    - name: "Add symbolic link to golang bin file"
+      file:
+        src: /usr/local/go/bin/go
+        dest: /usr/local/bin/go
+        state: link
+      become: true
