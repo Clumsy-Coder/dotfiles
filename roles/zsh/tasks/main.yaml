@@ -23,7 +23,7 @@
       dest: "{{ zshenv.ZSHENV_PATH }}"
     - src: "{{ role_path }}/files/.zshenv"
       dest: "{{ zshenv.HOME }}/.zshenv"
-    - src: "{{ zshenv.DOTDIR }}/tools/zsh/.zlogin"
+    - src: "{{ role_path }}/files/.zlogin"
       dest: "{{ zshenv.ZLOGIN_PATH }}"
     - src: "{{ zshenv.DOTDIR }}/tools/zsh/bin/on.sh"        # for making new obsidian note
       dest: "{{ ansible_env.HOME }}/.local/bin/on"
