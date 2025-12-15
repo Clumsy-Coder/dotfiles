@@ -14,7 +14,7 @@ tree -a -H "." tools/zsh -L 1
 -->
 
 <pre>
-<a href="../../../../">dotfiles/</a>tools/zsh/
+<a href="../../../../../">dotfiles/</a>roles/zsh/files/
 ├── <a href="./.zlogin">.zlogin</a>
 ├── <a href="./.zshenv">.zshenv</a>
 ├── <a href="./.zshrc">.zshrc</a>
