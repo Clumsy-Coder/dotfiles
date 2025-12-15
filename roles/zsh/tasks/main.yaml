@@ -19,9 +19,9 @@
   loop:
     - src: "{{ role_path }}/files/.zshrc"
       dest: "{{ zshenv.ZSHRC_PATH }}"
-    - src: "{{ zshenv.DOTDIR }}/tools/zsh/.zshenv"
+    - src: "{{ role_path }}/files/.zshenv"
       dest: "{{ zshenv.ZSHENV_PATH }}"
-    - src: "{{ zshenv.DOTDIR }}/tools/zsh/.zshenv"
+    - src: "{{ role_path }}/files/.zshenv"
       dest: "{{ zshenv.HOME }}/.zshenv"
     - src: "{{ zshenv.DOTDIR }}/tools/zsh/.zlogin"
       dest: "{{ zshenv.ZLOGIN_PATH }}"
