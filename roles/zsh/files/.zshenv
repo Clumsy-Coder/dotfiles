@@ -71,7 +71,7 @@ export ZLOGIN_PATH="$ZDOTDIR/.zlogin"
 # - reload zsh with command 'omz reload'
 export ZSH_THEME_DIR_PATH="$ZSCRIPTDIR/theme"
 # export ZSH_THEME_DEFAULT="$ZSH_THEME_DIR_PATH/powerlevel10k/rainbow.zsh"
-export ZSH_THEME_DEFAULT="$ZSH_THEME_DIR_PATH/powerlevel10k/classic.zsh"
+export ZSH_THEME_DEFAULT="$ZSH_THEME_DIR_PATH/powerlevel10k/.p10k.zsh"
 # export ZSH_THEME_DEFAULT="$ZSH_THEME_DIR_PATH/powerlevel9k/powerlevel9k.zsh"
 
 # -------------------------------------------------------------------------------------------------#
