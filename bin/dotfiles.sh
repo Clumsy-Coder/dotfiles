@@ -45,7 +45,7 @@ source "$DOTFILES_DIR/bin/functions.sh"
 source "$DOTFILES_DIR/roles/zsh/files/.zshenv"
 # load zsh exports
 # mainly for loading pyenv
-source "$DOTFILES_DIR/tools/zsh/exports.zsh"
+source "$DOTFILES_DIR/roles/zsh/files/exports.zsh"
 
 # ################################################################################################ #
 # install ansible
