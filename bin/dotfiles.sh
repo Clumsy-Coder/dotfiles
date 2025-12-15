@@ -42,7 +42,7 @@ source "$DOTFILES_DIR/bin/colours.sh"
 source "$DOTFILES_DIR/bin/functions.sh"
 #
 # load ENVs so ansible can use ENVs
-source "$DOTFILES_DIR/tools/zsh/.zshenv"
+source "$DOTFILES_DIR/roles/zsh/files/.zshenv"
 # load zsh exports
 # mainly for loading pyenv
 source "$DOTFILES_DIR/tools/zsh/exports.zsh"
