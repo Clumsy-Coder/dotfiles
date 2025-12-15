@@ -17,7 +17,7 @@
     force: true
     state: link
   loop:
-    - src: "{{ zshenv.DOTDIR }}/tools/zsh/.zshrc"
+    - src: "{{ role_path }}/files/.zshrc"
       dest: "{{ zshenv.ZSHRC_PATH }}"
     - src: "{{ zshenv.DOTDIR }}/tools/zsh/.zshenv"
       dest: "{{ zshenv.ZSHENV_PATH }}"
