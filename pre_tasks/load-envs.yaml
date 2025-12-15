@@ -8,7 +8,7 @@
 # https://stackoverflow.com/a/74932715/3053548
 - name: "SOURCE ZSHENV"
   shell:
-    cmd: source {{ ansible_env.HOME }}/dotfiles/tools/zsh/.zshenv; env
+    cmd: source {{ ansible_env.HOME }}/dotfiles/roles/zsh/files/.zshenv; env
   register: out
   changed_when: false
   tags: always

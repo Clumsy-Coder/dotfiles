@@ -112,7 +112,7 @@ The `./bin/dotfiles.sh` will
   - run the command `dotfiles` from any directory
 - load file `./bin/colours.sh`
 - load file `./bin/functions.sh`
-- load file `./tools/zsh/.zshenv`
+- load file `./roles/zsh/files/.zshenv`
 - load file `./tools/zsh/exports.zsh`
 - install ansible on the supported OS
 - update git submodules
