@@ -16,7 +16,7 @@
 
 - name: "Link unbound config file"
   file:
-    src: "{{ zshenv.DOTDIR }}/tools/unbound/pi-hole.conf"
+    src: "{{ role_path }}/files/unbound/pi-hole.conf"
     dest: "/etc/unbound/unbound.conf.d/pi-hole.conf"
   become: true
 
