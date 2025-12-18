@@ -13,7 +13,7 @@
 
 - name: "Link config file to /etc/fail2ban/jail.local"
   file:
-    src: "{{ zshenv.DOTDIR }}/tools/fail2ban/jail.local"
+    src: "{{ role_path }}/files/jail.local"
     dest: "{{ zshenv.FAIL2BAN_JAIL_FILE_PATH }}"
     state: link
   become: true
