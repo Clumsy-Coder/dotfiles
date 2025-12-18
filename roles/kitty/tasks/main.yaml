@@ -14,7 +14,7 @@
 # link Kitty config folder
 - name: "Link folder to {{ zshenv.KITTY_CONFIG_DIRECTORY }}"
   file:
-    src: "{{ zshenv.DOTDIR }}/tools/kitty/"
+    src: "{{ role_path }}/files"
     dest: "{{ zshenv.KITTY_CONFIG_DIRECTORY }}"
     state: link
     force: true
