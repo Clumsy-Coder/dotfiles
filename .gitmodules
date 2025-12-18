@@ -3,6 +3,6 @@
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
 [submodule "tools/kitty/themes"]
-	path = tools/kitty/themes
+	path = roles/kitty/files/themes
 	url = https://github.com/dexpota/kitty-themes
 	ignore = dirty
