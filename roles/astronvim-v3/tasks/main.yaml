@@ -25,7 +25,7 @@
 # link astronvim config files
 - name: "Link config file to astronvim"
   file:
-    src: "{{ zshenv.DOTDIR }}/tools/astronvim"
+    src: "{{ role_path }}/tools/astronvim"
     dest: "{{ zshenv.ASTRO_NVIM_CONFIG_DIR_PATH }}"
     state: link
 
