@@ -5,6 +5,6 @@
 
 - name: "Link yazi config folder to ~/.config/yazi"
   file:
-    src: "{{ zshenv.DOTDIR }}/tools/yazi"
+    src: "{{ role_path }}/files"
     dest: "{{ zshenv.XDG_CONFIG_HOME }}/yazi"
     state: link
