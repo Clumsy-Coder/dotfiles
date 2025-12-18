@@ -20,7 +20,7 @@
 
 - name: "Link pihole adlists to /etc/pihole/adlists.conf"
   copy:
-    src: "{{ zshenv.DOTDIR }}/tools/pihole/adlists.conf"
+    src: "{{ role_path }}/files/pihole/adlists.conf"
     dest: "/etc/pihole/adlists.conf"
     owner: pihole
     group: pihole
