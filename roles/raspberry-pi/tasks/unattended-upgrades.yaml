@@ -4,7 +4,7 @@
 
 - name: "Link unattended-upgrades config file"
   file:
-    src: "{{ zshenv.DOTDIR }}/tools/unattended-upgrades/raspberry-config"
+    src: "{{ role_path }}/files/raspberry-config"
     dest: /etc/apt/apt.conf.d/50unattended-upgrades
     state: link
   become: true
