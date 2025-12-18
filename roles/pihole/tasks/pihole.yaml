@@ -12,7 +12,7 @@
 
 - name: "Link pihole setupVars to /etc/pihole/setupVars.conf"
   copy:
-    src: "{{ zshenv.DOTDIR }}/tools/pihole/setupVars.conf"
+    src: "{{ role_path }}/files/pihole/setupVars.conf"
     dest: "/etc/pihole/setupVars.conf"
     owner: pihole
     group: pihole
