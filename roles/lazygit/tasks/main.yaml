@@ -7,6 +7,6 @@
 
 - name: "Add LazyGit config to {{ zshenv.LAZYGIT_CONFIG_PATH }}"
   file:
-    src: "{{ zshenv.DOTDIR }}/tools/git/lazygit.yml"
+    src: "{{ role_path }}/files/lazygit.yml"
     dest: "{{ zshenv.LAZYGIT_CONFIG_PATH }}"
     state: link
