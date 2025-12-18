@@ -14,7 +14,7 @@
 
 - name: "Link NPM config file"
   file:
-    src: "{{ zshenv.DOTDIR }}/tools/npm/.npmrc"
+    src: "{{ role_path }}/files/.npmrc"
     dest: "{{ zshenv.NPM_CONFIG_USERCONFIG }}"
     state: link
 
