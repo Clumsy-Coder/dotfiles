@@ -26,7 +26,7 @@
 
 - name: "Add gitignore file to {{ zshenv.GIT_IGNORE_GLOBAL_PATH }}"
   file:
-    src: "{{ zshenv.DOTDIR }}/tools/git/.gitignore_global"
+    src: "{{ role_path }}/files/.gitignore_global"
     dest: "{{ zshenv.GIT_IGNORE_GLOBAL_PATH }}"
     state: link
 
