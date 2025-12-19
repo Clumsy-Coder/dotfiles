@@ -20,7 +20,7 @@
 
 - name: "Add gitconfig file to {{ zshenv.GIT_CONFIG_PATH }}"
   file:
-    src: "{{ zshenv.DOTDIR }}/tools/git/.gitconfig"
+    src: "{{ role_path }}/files/.gitconfig"
     dest: "{{ zshenv.GIT_CONFIG_PATH }}"
     state: link
 
