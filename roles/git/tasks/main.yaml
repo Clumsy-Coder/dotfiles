@@ -37,7 +37,7 @@
 
 - name: "Add git allowed signers to {{ zshenv.GIT_ALLOWED_SIGNERS }}"
   file:
-    src: "{{ zshenv.DOTDIR }}/tools/git/allowed_signers"
+    src: "{{ role_path }}/files/allowed_signers"
     dest: "{{ zshenv.GIT_ALLOWED_SIGNERS }}"
     state: link
 
