@@ -30,6 +30,12 @@
     dest: "{{ zshenv.GIT_IGNORE_GLOBAL_PATH }}"
     state: link
 
+- name: "Add commit template file to {{ zshenv.GIT_CONFIG_DIR_PATH }}/commit-template.txt"
+  file:
+    src: "{{ zshenv.GIT_TEMPLATE_PATH }}"
+    dest: "{{ zshenv.GIT_CONFIG_DIR_PATH }}/commit-template.txt"
+    state: link
+
 - name: "Create ~/.ssh directory"
   file:
     path: "{{ zshenv.HOME }}/.ssh"
