@@ -30,7 +30,7 @@
   diffFilter = delta --color-only         # shows coloured diff when using interactive command (ex: git add --patch)
 
 [commit]
-  template = ~/dotfiles/tools/git/git-commit-template-timmybytes.txt
+  template = ~/dotfiles/roles/git/files/git-commit-template-timmybytes.txt
   gpgsign = true
   # template = ~/dotfiles/tools/git/git-commit-template-joelparkerhenderson.txt
 
