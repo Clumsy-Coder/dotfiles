@@ -130,6 +130,7 @@ export GIT_CONFIG_DIR_PATH="$XDG_CONFIG_HOME/git"
 export GIT_CONFIG_PATH="$GIT_CONFIG_DIR_PATH/config"
 export GIT_IGNORE_GLOBAL_PATH="$GIT_CONFIG_DIR_PATH/.gitignore_global"
 export GIT_ATTRIBUTES_PATH="$GIT_CONFIG_DIR_PATH/.gitattributes"
+export GIT_TEMPLATE_PATH="$DOTDIR/roles/git/files/templates/git-commit-template-timmybytes.txt"
 export LAZYGIT_CONFIG_DIR_PATH="$XDG_CONFIG_HOME/lazygit"
 export LAZYGIT_CONFIG_PATH="$LAZYGIT_CONFIG_DIR_PATH/config.yml"
 # https://calebhearth.com/sign-git-with-ssh
