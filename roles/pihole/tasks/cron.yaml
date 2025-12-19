@@ -2,6 +2,6 @@
 
 - name: "Link pihole cron file"
   file:
-    src: "{{ zshenv.DOTDIR }}/tools/cron/pihole-autoupdate"
+    src: "{{ role_path }}/files/cron/pihole-autoupdate"
     dest: "/etc/cron.daily/pihole-autoupdate"
   become: true
