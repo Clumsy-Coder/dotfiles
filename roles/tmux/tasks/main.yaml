@@ -33,6 +33,6 @@
 # link local tmux config file
 - name: "Link local tmux config file {{ zshenv.DOTDIR }}/tools/tmux.conf to {{ ansible_env.TMUX_CONFIG_LOCAL_PATH }}"
   file:
-    src: "{{ zshenv.DOTDIR }}/tools/tmux/tmux.conf"
+    src: "{{ role_path }}/files/tmux.conf"
     dest: "{{ zshenv.TMUX_CONFIG_LOCAL_PATH }}"
     state: link
