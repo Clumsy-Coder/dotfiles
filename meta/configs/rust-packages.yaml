@@ -1,6 +1,0 @@
-# install Rust packages
-#
-# usage:
-# ./install-standalone rust-packages
-- shell:
-    - command: source tools/zsh/exports.zsh && grep -Ev '^#' $DOTBOT_INSTALL_LIST_PATH/cargo | xargs cargo install

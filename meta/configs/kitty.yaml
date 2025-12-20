@@ -1,6 +1,0 @@
-# linking kitty config file
-#
-# usage:
-# ./install-standalone kitty
-- link:
-    $KITTY_CONFIG_DIRECTORY: tools/kitty/

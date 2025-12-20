@@ -1,7 +1,0 @@
-# generates SSH keys and upload to destination
-#
-# usage:
-# ./install-standalone ssh-keygen
-- shell:
-    - command: $DOTBOT_INSTALL_SCRIPT_PATH/ssh-keygen.sh
-      stdin: true
