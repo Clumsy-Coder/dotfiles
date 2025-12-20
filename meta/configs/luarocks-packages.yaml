@@ -1,7 +1,0 @@
-# install luarocks packages 
-#
-# usage:
-# ./install-standalone luarocks-packages
-- shell:
-  - command: grep -Ev '^#' $DOTBOT_INSTALL_LIST_PATH/luarocks | xargs luarocks install
-    description: Installing luarocks packages

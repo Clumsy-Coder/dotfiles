@@ -1,6 +1,0 @@
-# linking alacritty config file
-#
-# usage:
-# ./install-standalone alacritty
-- link:
-    $ALACRITTY_CONFIG_PATH: tools/alacritty/alacritty.yml
