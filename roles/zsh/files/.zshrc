@@ -7,6 +7,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# load oh-my-zsh
+export ZSH=$OH_MY_ZSH_DIR_PATH
+source $ZSH/oh-my-zsh.sh
+
 #-------------------------------------------------------------------------------
 # load ZSH files
 # config inspired by https://github.com/cchamberlain/zdotdir/blob/master/.zshrc
