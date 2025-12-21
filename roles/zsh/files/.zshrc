@@ -8,8 +8,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # load oh-my-zsh
-export ZSH=$OH_MY_ZSH_DIR_PATH
-source $ZSH/oh-my-zsh.sh
+if [ -d $OH_MY_ZSH_DIR_PATH ]; then
+  export ZSH=$OH_MY_ZSH_DIR_PATH
+  source $ZSH/oh-my-zsh.sh
+fi
 
 #-------------------------------------------------------------------------------
 # load ZSH files
