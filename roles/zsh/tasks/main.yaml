@@ -22,13 +22,6 @@
     - src: "{{ role_path }}/files/zsh/functions/on.sh"        # for making new obsidian note
       dest: "{{ ansible_env.HOME }}/.local/bin/on"
 
-- name: "Link powerlevel10k config to {{ zshenv.ZDOTDIR }}/.p10k.zsh"
-  file:
-    src: "{{ zshenv.ZSH_THEME_DEFAULT }}"
-    dest: "{{ zshenv.ZDOTDIR }}/.p10k.zsh"
-    state: link
-  when: "'powerlevel10k' in lookup('env', 'ZSH_THEME_DEFAULT')"
-
 - name: "Change default shell to ZSH"
   ansible.builtin.user:
     name: "{{ ansible_env['USER'] }}"
