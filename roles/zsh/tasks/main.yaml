@@ -17,14 +17,8 @@
     force: true
     state: link
   loop:
-    - src: "{{ role_path }}/files/.zshrc"
-      dest: "{{ zshenv.ZSHRC_PATH }}"
-    - src: "{{ role_path }}/files/.zshenv"
-      dest: "{{ zshenv.ZSHENV_PATH }}"
-    - src: "{{ role_path }}/files/.zshenv"
-      dest: "{{ zshenv.HOME }}/.zshenv"
-    - src: "{{ role_path }}/files/.zlogin"
-      dest: "{{ zshenv.ZLOGIN_PATH }}"
+    - src: "{{ role_path }}/files/zsh/"
+      dest: "{{ zshenv.XDG_CONFIG_HOME }}/zsh"
     - src: "{{ role_path }}/files/zsh/functions/on.sh"        # for making new obsidian note
       dest: "{{ ansible_env.HOME }}/.local/bin/on"
 
