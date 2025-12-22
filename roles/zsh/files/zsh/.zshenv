@@ -28,7 +28,7 @@ export XDG_VIDEOS_DIR="$HOME/Videos"
 # DIRECTORIES
 export DOTDIR="$HOME/dotfiles"                                      # used by zshenv and ansible (to link files, etc)
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-export ZSCRIPTDIR="$DOTDIR/roles/zsh/files"
+export ZSCRIPTDIR="$DOTDIR/roles/zsh/files/zsh"
 export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"    # generate zsh completions. also oh-my-zsh uses it. https://github.com/ohmyzsh/ohmyzsh/blob/a26d72baa27a46cfd2f35afa789529dccf7fc212/oh-my-zsh.sh#L105-L108
 export ZSH_COMPCACHE="$XDG_CACHE_HOME/zsh/zcompcache"
 export ZSH_CACHE_DIR="$XDG_CACHE_HOME/oh-my-zsh"                    # oh-my-zsh cache dir. https://github.com/ohmyzsh/ohmyzsh/blob/a26d72baa27a46cfd2f35afa789529dccf7fc212/oh-my-zsh.sh#L44-L48
