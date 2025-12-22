@@ -96,3 +96,8 @@ alias grep='grep --color'
 # alias ncu='ncu -g'                                              # checks updates for npm. Checks global packages
 #
 # -------------------------------------------------------------------------------------------------#
+
+# All custom functions and completions
+for file in $DOTDIR/roles/zsh/files/zsh/aliases/*.zsh; do
+  source "$file"
+done
