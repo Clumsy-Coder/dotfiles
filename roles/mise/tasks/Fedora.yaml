@@ -1,0 +1,20 @@
+---
+
+# obtained from
+# - https://mise.jdx.dev/installing-mise.html#dnf
+
+- name: "Update dnf packages"
+  dnf:
+    update_cache: true
+  become: true
+
+- name: "Enable dnf copr for mise"
+  community.general.copr:
+    name: jdxcode/mise
+  become: true
+
+- name: "Install mise"
+  ansible.builtin.dnf:
+    name: mise
+    state: present
+  become: true
