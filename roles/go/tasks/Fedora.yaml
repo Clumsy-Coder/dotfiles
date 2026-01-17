@@ -1,17 +1,11 @@
 ---
 
-- name: "Install dependencies"
-  dnf:
-    update_cache: true
-    name: "{{ item }}"
-    state: present
-  become: true
-  loop:
-    - curl
-    - gcc
-    - git
-    - findutils
-    - make
-    - rsync
-    - tar
-    - jq
+# obtained from
+# - https://mise.jdx.dev/lang/go.html#go
+
+# - name: "Get latest version of Golang"
+#   ansible.builtin.command: "mise latest go"
+#   register: golang_latest_version
+
+- name: "Install latest Golang"
+  ansible.builtin.command: "mise use -g go@latest"
