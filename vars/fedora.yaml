@@ -59,7 +59,6 @@ dnf_packages:
   - neovim
   - perl-devel                # needed to run makefile in role `exiftool`
   - ripgrep
-  - sushi
   - tmux
   - trash-cli
   - tree
@@ -76,6 +75,7 @@ dnf_packages:
   # gui apps
   - gnome-tweaks
   - kitty
+  - sushi
 
 # dnf group packages
 # for more info run command
