@@ -7,5 +7,4 @@ cargo_packages:
   - exa             # better ls
   - git-delta
   - tealdeer        # rust based tldr
-  - yazi-fm         # terminal file browser. https://yazi-rs.github.io/docs/installation#cargo
-  - yazi-cli
+  - yazi-build      # terminal file browser. https://yazi-rs.github.io/docs/installation/#crates
