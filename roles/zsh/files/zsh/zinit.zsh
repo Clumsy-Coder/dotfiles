@@ -37,6 +37,7 @@ zinit snippet OMZP::copyfile           # https://github.com/ohmyzsh/ohmyzsh/tree
 zinit snippet OMZP::extract            # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/extract
 zinit snippet OMZP::git                # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
 zinit snippet OMZP::history            # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/history
+zinit snippet OMZP::mise               # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/mise
 zinit snippet OMZP::nmap               # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/nmap
 zinit snippet OMZP::npm                # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/npm
 zinit snippet OMZP::nvm                # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/nvm
