@@ -34,3 +34,4 @@ source "$ZSCRIPTDIR/zinit.zsh"
 # shell integration
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+eval "$(mise activate zsh)"         # load mise PATH. https://mise.jdx.dev/getting-started.html#activate-mise
