@@ -51,7 +51,6 @@ dnf_packages:
   - fzf
   - gh
   - git
-  - gnome-tweaks
   - htop
   - jetbrains-mono-fonts
   - luarocks
@@ -75,6 +74,7 @@ dnf_packages:
   - zoxide
   - zsh
   # gui apps
+  - gnome-tweaks
   - kitty
 
 # dnf group packages
