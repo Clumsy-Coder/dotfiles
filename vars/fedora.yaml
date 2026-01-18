@@ -39,6 +39,8 @@ dnf_packages:
   # - gettext
   # - golang
   # - powerline
+  # - python3
+  # - python3-pip
   - NetworkManager-tui
   - amd-gpu-firmware
   - bat
@@ -57,8 +59,6 @@ dnf_packages:
   - ncdu
   - neovim
   - perl-devel                # needed to run makefile in role `exiftool`
-  - python3
-  - python3-pip
   - ripgrep
   - sushi
   - tmux
