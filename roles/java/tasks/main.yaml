@@ -1,0 +1,8 @@
+---
+
+# install Java using mise
+# obtained from
+# - https://mise.jdx.dev/lang/java.html
+
+- name: "Install latest Java"
+  ansible.builtin.command: "mise use -g java@latest"
