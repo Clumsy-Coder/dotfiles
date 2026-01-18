@@ -8,7 +8,7 @@ default_roles:
   - neofetch
   - astronvim-v5
   - tmux
-  - nvm
+  - nodejs
   - npm
   - python
   - pip3
