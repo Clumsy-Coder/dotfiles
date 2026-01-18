@@ -1,0 +1,8 @@
+---
+
+# install Node.js using mise
+# obtained from
+# - https://mise.jdx.dev/lang/node.html
+
+- name: "Install Node.js LTS"
+  ansible.builtin.command: "mise use -g nodejs@lts"
