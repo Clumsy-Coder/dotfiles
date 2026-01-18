@@ -10,6 +10,7 @@ default_roles:
   - tmux
   - nvm
   - npm
+  - python
   - pip3
   - rust
   - cargo
