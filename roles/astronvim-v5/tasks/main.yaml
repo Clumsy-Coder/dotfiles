@@ -23,56 +23,6 @@
     force: true
 
 # ----------------------------------------------------------------------------------------------- #
-# were doing this because the repo cloned earlier is a fork of https://github.com/AstroNvim/template.git
-# adding a remote and branch allows it to easily apply changes from upstream to your own repo
-#
-# Ex: new changes from upstream
-# - checkout branch upstream
-# - pull changes
-# - checkout branch main
-# - rebase with branch `upstream`. Command: git rebase upstream
-# - checkout branch dev
-# - rebase with branch `main`. Command: git rebase main
-
-- name: "Add upstream remote and branch upstream/main"
-  block:
-    - name: "Add remote upstream"
-      # Git module does not know how to add remotes (yet...)
-      # Using command and silencing corresponding ansible-lint rule
-      # noqa command-instead-of-module
-      command:
-        cmd: git remote add upstream https://github.com/AstroNvim/template.git
-        chdir: "{{ zshenv.NVIM_CONFIG_DIR_PATH }}"
-      register: add_upstream_result
-      changed_when: add_upstream_result.rc == 0
-      failed_when:
-        - add_upstream_result.rc != 0
-        - add_upstream_result.stderr | default('') is not search("remote .* already exists")
-
-    - name: "Fetch upstream branches"
-      # noqa command-instead-of-module
-      command:
-        cmd: git fetch upstream
-        chdir: "{{ zshenv.NVIM_CONFIG_DIR_PATH }}"
-
-    - name: "Add branch 'upstream' pointing to upstream/main"
-      # noqa command-instead-of-module
-      command:
-        cmd: git checkout -b upstream upstream/main
-        chdir: "{{ zshenv.NVIM_CONFIG_DIR_PATH }}"
-      register: add_upstream_branch_result
-      changed_when: add_upstream_branch_result.rc == 0
-      failed_when:
-        - add_upstream_branch_result.rc != 0
-        - add_upstream_branch_result.stderr | default('') is not search("branch .* already exists")
-
-    - name: "Checkout branch 'dev'"
-      # noqa command-instead-of-module
-      command:
-        cmd: git checkout dev
-        chdir: "{{ zshenv.NVIM_CONFIG_DIR_PATH }}"
-
-# ----------------------------------------------------------------------------------------------- #
 
 # install astronvim plugins
 # install TreeSitter language packs after installing plugins
