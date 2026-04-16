@@ -37,3 +37,4 @@ flatpak_packages:
   - org.signal.Signal               # signal              https://flathub.org/apps/org.signal.Signal
   - org.videolan.VLC                # VLC                 https://flathub.org/apps/org.videolan.VLC
   - org.wireshark.Wireshark         # wireshark           https://flathub.org/apps/org.wireshark.Wireshark
+  - com.obsproject.Studio           # OBS studio          https://flathub.org/en/apps/com.obsproject.Studio
