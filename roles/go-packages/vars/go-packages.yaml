@@ -6,3 +6,4 @@ go_packages:
   # - "github.com/rhysd/actionlint/cmd/actionlint@latest"
   - "github.com/dundee/gdu/v5/cmd/gdu@latest"
   - "github.com/jesseduffield/lazygit@latest"
+  - "github.com/jesseduffield/lazydocker@latest"
