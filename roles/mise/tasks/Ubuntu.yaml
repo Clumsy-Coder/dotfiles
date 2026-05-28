@@ -1,0 +1,19 @@
+---
+
+# obtained from
+# - https://mise.jdx.dev/installing-mise.html#apt
+
+- name: "Update APT cache"
+  ansible.builtin.apt:
+    update_cache: true
+  become: true
+
+- name: "Install dependencies"
+  ansible.builtin.apt:
+    pkg:
+      - curl
+  become: true
+
+- name: "Install APT keyrings"
+  ansible.builtin.command: "install -dm 755 /etc/apt/keyrings"
+  become: true
