@@ -3,3 +3,4 @@ node_modules/
 .zcompdump*
 antigen.zsh.zwc
 tools/vagrant/boxes
+roles/yazi/files/plugins
